@@ -10,5 +10,5 @@ COMMIT=${COMMIT:?Variable not set}
 
 curl \
     -H "Authorization: token ${GITHUB_TOKEN}" \
-    https://api.github.com/repos/tiangolo/github-actions-sandbox/issues/${PR}/comments \
+    https://api.github.com/repos/khulnasoft/github-actions-sandbox/issues/${PR}/comments \
     -d '{"body": "📝 Docs preview for commit '"${COMMIT} at: ${DEPLOY_URL}"'"}'
