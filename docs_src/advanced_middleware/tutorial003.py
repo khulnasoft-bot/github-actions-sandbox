@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.middleware.gzip import GZipMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.gzip import GZipMiddleware
 
-app = FastAPI()
+app = ReadyAPI()
 
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 

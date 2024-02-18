@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel, Field
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

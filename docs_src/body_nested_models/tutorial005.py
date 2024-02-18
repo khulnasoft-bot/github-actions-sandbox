@@ -1,9 +1,9 @@
 from typing import Set, Union
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel, HttpUrl
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Image(BaseModel):

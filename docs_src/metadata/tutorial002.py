@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI(openapi_url="/api/v1/openapi.json")
+app = ReadyAPI(openapi_url="/api/v1/openapi.json")
 
 
 @app.get("/items/")

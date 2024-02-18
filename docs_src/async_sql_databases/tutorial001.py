@@ -2,7 +2,7 @@ from typing import List
 
 import databases
 import sqlalchemy
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 # SQLAlchemy specific code, as with any other app
@@ -39,7 +39,7 @@ class Note(BaseModel):
     completed: bool
 
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.on_event("startup")

@@ -1,10 +1,10 @@
-from fastapi import FastAPI, Request, status
-from fastapi.encoders import jsonable_encoder
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from readyapi import ReadyAPI, Request, status
+from readyapi.encoders import jsonable_encoder
+from readyapi.exceptions import RequestValidationError
+from readyapi.responses import JSONResponse
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.exception_handler(RequestValidationError)

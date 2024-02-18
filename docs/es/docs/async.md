@@ -45,11 +45,11 @@ Si simplemente no lo sabes, usa `def` normal.
 
 ---
 
-**Nota**: puedes mezclar `def` y `async def` en tus *path operation functions* tanto como lo necesites y definir cada una utilizando la mejor opción para ti. FastAPI hará lo correcto con ellos.
+**Nota**: puedes mezclar `def` y `async def` en tus *path operation functions* tanto como lo necesites y definir cada una utilizando la mejor opción para ti. ReadyAPI hará lo correcto con ellos.
 
-De todos modos, en cualquiera de los casos anteriores, FastAPI seguirá funcionando de forma asíncrona y será extremadamente rápido.
+De todos modos, en cualquiera de los casos anteriores, ReadyAPI seguirá funcionando de forma asíncrona y será extremadamente rápido.
 
-Pero siguiendo los pasos anteriores, FastAPI podrá hacer algunas optimizaciones de rendimiento.
+Pero siguiendo los pasos anteriores, ReadyAPI podrá hacer algunas optimizaciones de rendimiento.
 
 ## Detalles Técnicos
 
@@ -104,36 +104,36 @@ Para entender las diferencias, imagina la siguiente historia sobre hamburguesas:
 
 Vas con la persona que te gusta 😍 a pedir comida rápida 🍔, haces cola mientras el cajero 💁 recoge los pedidos de las personas de delante tuyo.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-01.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-01.png" alt="illustration">
 
 Llega tu turno, haces tu pedido de 2 hamburguesas impresionantes para esa persona 😍 y para ti.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-02.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-02.png" alt="illustration">
 
 El cajero 💁 le dice algo al chico de la cocina 👨‍🍳 para que sepa que tiene que preparar tus hamburguesas 🍔 (a pesar de que actualmente está preparando las de los clientes anteriores).
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-03.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-03.png" alt="illustration">
 
 Pagas 💸.
 El cajero 💁 te da el número de tu turno.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-04.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-04.png" alt="illustration">
 
 Mientras esperas, vas con esa persona 😍 y eliges una mesa, se sientan y hablan durante un rato largo (ya que las hamburguesas son muy impresionantes y necesitan un rato para prepararse ✨🍔✨).
 
 Mientras te sientas en la mesa con esa persona 😍, esperando las hamburguesas 🍔, puedes disfrutar ese tiempo admirando lo increíble, inteligente, y bien que se ve ✨😍✨.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-05.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-05.png" alt="illustration">
 
 Mientras esperas y hablas con esa persona 😍, de vez en cuando, verificas el número del mostrador para ver si ya es tu turno.
 
 Al final, en algún momento, llega tu turno. Vas al mostrador, coges tus hamburguesas 🍔 y vuelves a la mesa.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-06.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-06.png" alt="illustration">
 
 Tú y esa persona 😍 se comen las hamburguesas 🍔 y la pasan genial ✨.
 
-<img src="https://fastapi.tiangolo.com/img/async/concurrent-burgers/concurrent-burgers-07.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/concurrent-burgers/concurrent-burgers-07.png" alt="illustration">
 
 !!! info
      Las ilustraciones fueron creados por <a href="https://www.instagram.com/ketrinadrawsalot" class="external-link" target="_blank">Ketrina Thompson</a>. 🎨
@@ -166,35 +166,35 @@ Haces la cola mientras varios cajeros (digamos 8) que a la vez son cocineros �
 
 Todos los que están antes de ti están esperando 🕙 que sus hamburguesas 🍔 estén listas antes de dejar el mostrador porque cada uno de los 8 cajeros prepara la hamburguesa de inmediato antes de recibir el siguiente pedido.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-01.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-01.png" alt="illustration">
 
 Entonces finalmente es tu turno, haces tu pedido de 2 hamburguesas 🍔 impresionantes para esa persona 😍 y para ti.
 
 Pagas 💸.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-02.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-02.png" alt="illustration">
 
 El cajero va a la cocina 👨‍🍳.
 
 Esperas, de pie frente al mostrador 🕙, para que nadie más recoja tus hamburguesas 🍔, ya que no hay números para los turnos.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-03.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-03.png" alt="illustration">
 
 Como tu y esa persona 😍 están ocupados en impedir que alguien se ponga delante y recoja tus hamburguesas apenas llegan 🕙, tampoco puedes prestarle atención a esa persona 😞.
 
 Este es un trabajo "síncrono", estás "sincronizado" con el cajero / cocinero 👨‍🍳. Tienes que esperar y estar allí en el momento exacto en que el cajero / cocinero 👨‍🍳 termina las hamburguesas 🍔 y te las da, o de lo contrario, alguien más podría cogerlas.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-04.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-04.png" alt="illustration">
 
 Luego, el cajero / cocinero 👨‍🍳 finalmente regresa con tus hamburguesas 🍔, después de mucho tiempo esperando 🕙 frente al mostrador.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-05.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-05.png" alt="illustration">
 
 Cojes tus hamburguesas 🍔 y vas a la mesa con esa persona 😍.
 
 Sólo las comes y listo 🍔 ⏹.
 
-<img src="https://fastapi.tiangolo.com/img/async/parallel-burgers/parallel-burgers-06.png" alt="illustration">
+<img src="https://readyapi.khulnasoft.com/img/async/parallel-burgers/parallel-burgers-06.png" alt="illustration">
 
 No has hablado ni coqueteado mucho, ya que has pasado la mayor parte del tiempo esperando 🕙 frente al mostrador 😞.
 
@@ -243,7 +243,7 @@ A pesar de que la especificación principal para Python web asíncrono (ASGI) se
 
 Ese tipo de asincronía es lo que hizo popular a NodeJS (aunque NodeJS no es paralelo) y esa es la fortaleza de Go como lenguaje de programación.
 
-Y ese es el mismo nivel de rendimiento que obtienes con **FastAPI**.
+Y ese es el mismo nivel de rendimiento que obtienes con **ReadyAPI**.
 
 Y como puede tener paralelismo y asincronía al mismo tiempo, obtienes un mayor rendimiento que la mayoría de los frameworks de NodeJS probados y a la par con Go, que es un lenguaje compilado más cercano a C <a href="https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=query&l=zijmkf-1" class="external-link" target="_blank">(todo gracias Starlette)</a>.
 
@@ -286,11 +286,11 @@ Por ejemplo:
 
 ### Concurrencia + Paralelismo: Web + Machine Learning
 
-Con **FastAPI** puedes aprovechar la concurrencia que es muy común para el desarrollo web (atractivo principal de NodeJS).
+Con **ReadyAPI** puedes aprovechar la concurrencia que es muy común para el desarrollo web (atractivo principal de NodeJS).
 
 Pero también puedes aprovechar los beneficios del paralelismo y el multiprocesamiento (tener múltiples procesos ejecutándose en paralelo) para cargas de trabajo **CPU bound** como las de los sistemas de Machine Learning.
 
-Eso, más el simple hecho de que Python es el lenguaje principal para **Data Science**, Machine Learning y especialmente Deep Learning, hacen de FastAPI una muy buena combinación para las API y aplicaciones web de Data Science / Machine Learning (entre muchas otras).
+Eso, más el simple hecho de que Python es el lenguaje principal para **Data Science**, Machine Learning y especialmente Deep Learning, hacen de ReadyAPI una muy buena combinación para las API y aplicaciones web de Data Science / Machine Learning (entre muchas otras).
 
 Para ver cómo lograr este paralelismo en producción, consulta la sección sobre [Despliegue](deployment/index.md){.internal-link target=_blank}.
 
@@ -351,9 +351,9 @@ Pero al mismo tiempo, las funciones definidas con `async def` deben ser "esperad
 
 Entonces, relacionado con la paradoja del huevo y la gallina, ¿cómo se llama a la primera función `async`?
 
-Si estás trabajando con **FastAPI** no tienes que preocuparte por eso, porque esa "primera" función será tu *path operation function*, y FastAPI sabrá cómo hacer lo pertinente.
+Si estás trabajando con **ReadyAPI** no tienes que preocuparte por eso, porque esa "primera" función será tu *path operation function*, y ReadyAPI sabrá cómo hacer lo pertinente.
 
-En el caso de que desees usar `async` / `await` sin FastAPI, <a href="https://docs.python.org/3/library/asyncio-task.html#coroutine" class="external-link" target="_blank">revisa la documentación oficial de Python</a>.
+En el caso de que desees usar `async` / `await` sin ReadyAPI, <a href="https://docs.python.org/3/library/asyncio-task.html#coroutine" class="external-link" target="_blank">revisa la documentación oficial de Python</a>.
 
 ### Otras formas de código asíncrono
 
@@ -383,24 +383,24 @@ Veamos la misma frase de arriba:
 
 Eso ya debería tener más sentido ahora. ✨
 
-Todo eso es lo que impulsa FastAPI (a través de Starlette) y lo que hace que tenga un rendimiento tan impresionante.
+Todo eso es lo que impulsa ReadyAPI (a través de Starlette) y lo que hace que tenga un rendimiento tan impresionante.
 
 ## Detalles muy técnicos
 
 !!! warning "Advertencia"
     Probablemente puedas saltarte esto.
 
-    Estos son detalles muy técnicos de cómo **FastAPI** funciona a muy bajo nivel.
+    Estos son detalles muy técnicos de cómo **ReadyAPI** funciona a muy bajo nivel.
 
-    Si tienes bastante conocimiento técnico (coroutines, threads, bloqueos, etc.) y tienes curiosidad acerca de cómo FastAPI gestiona `async def` vs `def` normal, continúa.
+    Si tienes bastante conocimiento técnico (coroutines, threads, bloqueos, etc.) y tienes curiosidad acerca de cómo ReadyAPI gestiona `async def` vs `def` normal, continúa.
 
 ### Path operation functions
 
 Cuando declaras una *path operation function* con `def` normal en lugar de `async def`, se ejecuta en un threadpool externo que luego es "<abbr title="En español: esperado. Usando await.">awaited</abbr>", en lugar de ser llamado directamente (ya que bloquearía el servidor).
 
-Si vienes de otro framework asíncrono que no funciona de la manera descrita anteriormente y estás acostumbrado a definir *path operation functions* del tipo sólo cálculo con `def` simple para una pequeña ganancia de rendimiento (aproximadamente 100 nanosegundos), ten en cuenta que en **FastAPI** el efecto sería bastante opuesto. En estos casos, es mejor usar `async def` a menos que tus *path operation functions* usen un código que realice el bloqueo <abbr title="Input/Output: disk reading or writing, network communications.">I/O</abbr>.
+Si vienes de otro framework asíncrono que no funciona de la manera descrita anteriormente y estás acostumbrado a definir *path operation functions* del tipo sólo cálculo con `def` simple para una pequeña ganancia de rendimiento (aproximadamente 100 nanosegundos), ten en cuenta que en **ReadyAPI** el efecto sería bastante opuesto. En estos casos, es mejor usar `async def` a menos que tus *path operation functions* usen un código que realice el bloqueo <abbr title="Input/Output: disk reading or writing, network communications.">I/O</abbr>.
 
-Aún así, en ambas situaciones, es probable que **FastAPI** sea [aún más rápido](/#rendimiento){.Internal-link target=_blank} que (o al menos comparable) a tu framework anterior.
+Aún así, en ambas situaciones, es probable que **ReadyAPI** sea [aún más rápido](/#rendimiento){.Internal-link target=_blank} que (o al menos comparable) a tu framework anterior.
 
 ### Dependencias
 
@@ -412,9 +412,9 @@ Puedes tener múltiples dependencias y subdependencias que se requieren unas a o
 
 ### Otras funciones de utilidades
 
-Cualquier otra función de utilidad que llames directamente se puede crear con `def` o `async def` normales y FastAPI no afectará la manera en que la llames.
+Cualquier otra función de utilidad que llames directamente se puede crear con `def` o `async def` normales y ReadyAPI no afectará la manera en que la llames.
 
-Esto contrasta con las funciones que FastAPI llama por ti: las *path operation functions* y dependencias.
+Esto contrasta con las funciones que ReadyAPI llama por ti: las *path operation functions* y dependencias.
 
 Si tu función de utilidad es creada con `def` normal, se llamará directamente (tal cual la escribes en tu código), no en un threadpool, si la función se crea con `async def`, entonces debes usar `await` con esa función cuando la llamas en tu código.
 

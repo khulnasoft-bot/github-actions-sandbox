@@ -1,7 +1,7 @@
-from fastapi import Depends, FastAPI
-from fastapi.testclient import TestClient
+from readyapi import Depends, ReadyAPI
+from readyapi.testclient import TestClient
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 async def common_parameters(q: str | None = None, skip: int = 0, limit: int = 100):

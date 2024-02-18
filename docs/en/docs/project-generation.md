@@ -4,24 +4,24 @@ You can use a project generator to get started, as it includes a lot of the init
 
 A project generator will always have a very opinionated setup that you should update and adapt for your own needs, but it might be a good starting point for your project.
 
-## Full Stack FastAPI PostgreSQL
+## Full Stack ReadyAPI PostgreSQL
 
-GitHub: <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" class="external-link" target="_blank">https://github.com/tiangolo/full-stack-fastapi-postgresql</a>
+GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
-### Full Stack FastAPI PostgreSQL - Features
+### Full Stack ReadyAPI PostgreSQL - Features
 
 * Full **Docker** integration (Docker based).
 * Docker Swarm Mode deployment.
 * **Docker Compose** integration and optimization for local development.
 * **Production ready** Python web server using Uvicorn and Gunicorn.
-* Python <a href="https://github.com/tiangolo/fastapi" class="external-link" target="_blank">**FastAPI**</a> backend:
+* Python <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">**ReadyAPI**</a> backend:
     * **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic).
     * **Intuitive**: Great editor support. <abbr title="also known as auto-complete, autocompletion, IntelliSense">Completion</abbr> everywhere. Less time debugging.
     * **Easy**: Designed to be easy to use and learn. Less time reading docs.
     * **Short**: Minimize code duplication. Multiple features from each parameter declaration.
     * **Robust**: Get production-ready code. With automatic interactive documentation.
     * **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> and <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
-    * <a href="https://fastapi.tiangolo.com/features/" class="external-link" target="_blank">**Many other features**</a> including automatic validation, serialization, interactive documentation, authentication with OAuth2 JWT tokens, etc.
+    * <a href="https://readyapi.khulnasoft.com/features/" class="external-link" target="_blank">**Many other features**</a> including automatic validation, serialization, interactive documentation, authentication with OAuth2 JWT tokens, etc.
 * **Secure password** hashing by default.
 * **JWT token** authentication.
 * **SQLAlchemy** models (independent of Flask extensions, so they can be used with Celery workers directly).
@@ -52,29 +52,29 @@ GitHub: <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" clas
 * Traefik integration, including Let's Encrypt **HTTPS** certificates automatic generation.
 * GitLab **CI** (continuous integration), including frontend and backend testing.
 
-## Full Stack FastAPI Couchbase
+## Full Stack ReadyAPI Couchbase
 
-GitHub: <a href="https://github.com/tiangolo/full-stack-fastapi-couchbase" class="external-link" target="_blank">https://github.com/tiangolo/full-stack-fastapi-couchbase</a>
+GitHub: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
 
 ⚠️ **WARNING** ⚠️
 
 If you are starting a new project from scratch, check the alternatives here.
 
-For example, the project generator <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" class="external-link" target="_blank">Full Stack FastAPI PostgreSQL</a> might be a better alternative, as it is actively maintained and used. And it includes all the new features and improvements.
+For example, the project generator <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">Full Stack ReadyAPI PostgreSQL</a> might be a better alternative, as it is actively maintained and used. And it includes all the new features and improvements.
 
 You are still free to use the Couchbase-based generator if you want to, it should probably still work fine, and if you already have a project generated with it that's fine as well (and you probably already updated it to suit your needs).
 
 You can read more about it in the docs for the repo.
 
-## Full Stack FastAPI MongoDB
+## Full Stack ReadyAPI MongoDB
 
 ...might come later, depending on my time availability and other factors. 😅 🎉
 
-## Machine Learning models with spaCy and FastAPI
+## Machine Learning models with spaCy and ReadyAPI
 
-GitHub: <a href="https://github.com/microsoft/cookiecutter-spacy-fastapi" class="external-link" target="_blank">https://github.com/microsoft/cookiecutter-spacy-fastapi</a>
+GitHub: <a href="https://github.com/microsoft/cookiecutter-spacy-readyapi" class="external-link" target="_blank">https://github.com/microsoft/cookiecutter-spacy-readyapi</a>
 
-### Machine Learning models with spaCy and FastAPI - Features
+### Machine Learning models with spaCy and ReadyAPI - Features
 
 * **spaCy** NER model integration.
 * **Azure Cognitive Search** request format built in.

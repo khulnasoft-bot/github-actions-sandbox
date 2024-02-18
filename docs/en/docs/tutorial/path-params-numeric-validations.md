@@ -4,7 +4,7 @@ In the same way that you can declare more validations and metadata for query par
 
 ## Import Path
 
-First, import `Path` from `fastapi`, and import `Annotated`:
+First, import `Path` from `readyapi`, and import `Annotated`:
 
 === "Python 3.10+"
 
@@ -43,11 +43,11 @@ First, import `Path` from `fastapi`, and import `Annotated`:
     ```
 
 !!! info
-    FastAPI added support for `Annotated` (and started recommending it) in version 0.95.0.
+    ReadyAPI added support for `Annotated` (and started recommending it) in version 0.95.0.
 
     If you have an older version, you would get errors when trying to use `Annotated`.
 
-    Make sure you [Upgrade the FastAPI version](../deployment/versions.md#upgrading-the-fastapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
+    Make sure you [Upgrade the ReadyAPI version](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
 
 ## Declare metadata
 
@@ -113,7 +113,7 @@ Python will complain if you put a value with a "default" before a value that doe
 
 But you can re-order them, and have the value without a default (the query parameter `q`) first.
 
-It doesn't matter for **FastAPI**. It will detect the parameters by their names, types and default declarations (`Query`, `Path`, etc), it doesn't care about the order.
+It doesn't matter for **ReadyAPI**. It will detect the parameters by their names, types and default declarations (`Query`, `Path`, etc), it doesn't care about the order.
 
 So, you can declare your function as:
 
@@ -283,7 +283,7 @@ And you can also declare numeric validations:
     All of them share the same parameters for additional validation and metadata you have seen.
 
 !!! note "Technical Details"
-    When you import `Query`, `Path` and others from `fastapi`, they are actually functions.
+    When you import `Query`, `Path` and others from `readyapi`, they are actually functions.
 
     That when called, return instances of classes of the same name.
 

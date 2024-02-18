@@ -1,6 +1,6 @@
-# FastAPI People
+# ReadyAPI People
 
-FastAPIには、様々なバックグラウンドの人々を歓迎する素晴らしいコミュニティがあります。
+ReadyAPIには、様々なバックグラウンドの人々を歓迎する素晴らしいコミュニティがあります。
 
 ## Creator - Maintainer
 
@@ -19,25 +19,25 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 
 {% endif %}
 
-私は **FastAPI** の作成者および Maintainer です。詳しくは [FastAPIを応援 - ヘルプの入手 - 開発者とつながる](help-fastapi.md#開発者とつながる){.internal-link target=_blank} に記載しています。
+私は **ReadyAPI** の作成者および Maintainer です。詳しくは [ReadyAPIを応援 - ヘルプの入手 - 開発者とつながる](help-readyapi.md#開発者とつながる){.internal-link target=_blank} に記載しています。
 
 ...ところで、ここではコミュニティを紹介したいと思います。
 
 ---
 
-**FastAPI** は、コミュニティから多くのサポートを受けています。そこで、彼らの貢献にスポットライトを当てたいと思います。
+**ReadyAPI** は、コミュニティから多くのサポートを受けています。そこで、彼らの貢献にスポットライトを当てたいと思います。
 
 紹介するのは次のような人々です:
 
-* [GitHub issuesで他の人を助ける](help-fastapi.md#help-others-with-issues-in-github){.internal-link target=_blank}。
-* [プルリクエストをする](help-fastapi.md#create-a-pull-request){.internal-link target=_blank}。
+* [GitHub issuesで他の人を助ける](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=_blank}。
+* [プルリクエストをする](help-readyapi.md#create-a-pull-request){.internal-link target=_blank}。
 * プルリクエストのレビューをする ([特に翻訳に重要](contributing.md#translations){.internal-link target=_blank})。
 
 彼らに大きな拍手を。👏 🙇
 
 ## 先月最もアクティブだったユーザー
 
-彼らは、先月の[GitHub issuesで最も多くの人を助けた](help-fastapi.md#help-others-with-issues-in-github){.internal-link target=_blank}ユーザーです。☕
+彼らは、先月の[GitHub issuesで最も多くの人を助けた](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=_blank}ユーザーです。☕
 
 {% if people %}
 <div class="user-list user-list-center">
@@ -51,9 +51,9 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 
 ## Experts
 
-**FastAPI experts** を紹介します。🤓
+**ReadyAPI experts** を紹介します。🤓
 
-彼らは、*これまでに* [GitHub issuesで最も多くの人を助けた](help-fastapi.md#help-others-with-issues-in-github){.internal-link target=_blank}ユーザーです。
+彼らは、*これまでに* [GitHub issuesで最も多くの人を助けた](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=_blank}ユーザーです。
 
 多くの人を助けることでexpertsであると示されています。✨
 
@@ -71,7 +71,7 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 
 **Top Contributors** を紹介します。👷
 
-彼らは、*マージされた* [最も多くのプルリクエストを作成した](help-fastapi.md#create-a-pull-request){.internal-link target=_blank}ユーザーです。
+彼らは、*マージされた* [最も多くのプルリクエストを作成した](help-readyapi.md#create-a-pull-request){.internal-link target=_blank}ユーザーです。
 
 ソースコード、ドキュメント、翻訳などに貢献してくれました。📦
 
@@ -85,7 +85,7 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 </div>
 {% endif %}
 
-他にもたくさん (100人以上) の contributors がいます。<a href="https://github.com/tiangolo/fastapi/graphs/contributors" class="external-link" target="_blank">FastAPI GitHub Contributors ページ</a>ですべての contributors を確認できます。👷
+他にもたくさん (100人以上) の contributors がいます。<a href="https://github.com/khulnasoft/readyapi/graphs/contributors" class="external-link" target="_blank">ReadyAPI GitHub Contributors ページ</a>ですべての contributors を確認できます。👷
 
 ## Top Reviewers
 
@@ -113,7 +113,7 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 
 **Sponsors** を紹介します。😎
 
-彼らは、<a href="https://github.com/sponsors/tiangolo" class="external-link" target="_blank">GitHub Sponsors</a> を介して私の **FastAPI** などに関する活動を支援してくれています。
+彼らは、<a href="https://github.com/sponsors/khulnasoft" class="external-link" target="_blank">GitHub Sponsors</a> を介して私の **ReadyAPI** などに関する活動を支援してくれています。
 
 {% if sponsors %}
 
@@ -172,7 +172,7 @@ FastAPIには、様々なバックグラウンドの人々を歓迎する素晴�
 
 特に、他の人の issues を支援したり、翻訳のプルリクエストを確認したりするなど、通常は目立たず、多くの場合、より困難な作業を含みます。
 
-データは毎月集計されます。<a href="https://github.com/tiangolo/fastapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">ソースコードはこちら</a>で確認できます。
+データは毎月集計されます。<a href="https://github.com/khulnasoft/readyapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">ソースコードはこちら</a>で確認できます。
 
 ここでは、スポンサーの貢献も強調しています。
 

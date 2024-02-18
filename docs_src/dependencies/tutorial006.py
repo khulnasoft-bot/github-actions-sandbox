@@ -1,6 +1,6 @@
-from fastapi import Depends, FastAPI, Header, HTTPException
+from readyapi import Depends, ReadyAPI, Header, HTTPException
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 async def verify_token(x_token: str = Header()):

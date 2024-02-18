@@ -1,6 +1,6 @@
-name: "Generate FastAPI People"
-description: "Generate the data for the FastAPI People page"
-author: "Sebastián Ramírez <tiangolo@gmail.com>"
+name: "Generate ReadyAPI People"
+description: "Generate the data for the ReadyAPI People page"
+author: "Sebastián Ramírez <khulnasoft@gmail.com>"
 inputs:
   token:
     description: 'User token, to read the GitHub API. Can be passed in using {{ secrets.PEOPLE_TOKEN }}'

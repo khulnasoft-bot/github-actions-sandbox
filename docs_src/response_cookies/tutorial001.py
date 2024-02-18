@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import JSONResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.post("/cookie/")

@@ -1,6 +1,6 @@
 # クエリパラメータと文字列の検証
 
-**FastAPI** ではパラメータの追加情報とバリデーションを宣言することができます。
+**ReadyAPI** ではパラメータの追加情報とバリデーションを宣言することができます。
 
 以下のアプリケーションを例にしてみましょう:
 
@@ -8,19 +8,19 @@
 {!../../../docs_src/query_params_str_validations/tutorial001.py!}
 ```
 
-クエリパラメータ `q` は `Optional[str]` 型で、`None` を許容する `str` 型を意味しており、デフォルトは `None` です。そのため、FastAPIはそれが必須ではないと理解します。
+クエリパラメータ `q` は `Optional[str]` 型で、`None` を許容する `str` 型を意味しており、デフォルトは `None` です。そのため、ReadyAPIはそれが必須ではないと理解します。
 
 !!! note "備考"
-    FastAPIは、 `q` はデフォルト値が `=None` であるため、必須ではないと理解します。
+    ReadyAPIは、 `q` はデフォルト値が `=None` であるため、必須ではないと理解します。
 
-    `Optional[str]` における `Optional` はFastAPIには利用されませんが、エディターによるより良いサポートとエラー検出を可能にします。
+    `Optional[str]` における `Optional` はReadyAPIには利用されませんが、エディターによるより良いサポートとエラー検出を可能にします。
 ## バリデーションの追加
 
 `q`はオプショナルですが、もし値が渡されてきた場合には、**50文字を超えないこと**を強制してみましょう。
 
 ### `Query`のインポート
 
-そのために、まずは`fastapi`から`Query`をインポートします:
+そのために、まずは`readyapi`から`Query`をインポートします:
 
 ```Python hl_lines="3"
 {!../../../docs_src/query_params_str_validations/tutorial002.py!}
@@ -51,7 +51,7 @@ q: Optional[str] = None
 しかし、これはクエリパラメータとして明示的に宣言しています。
 
 !!! info "情報"
-    FastAPIは以下の部分を気にすることを覚えておいてください:
+    ReadyAPIは以下の部分を気にすることを覚えておいてください:
 
     ```Python
     = None
@@ -99,7 +99,7 @@ q: Union[str, None] = Query(default=None, max_length=50)
 
 もしこれらすべての **正規表現**のアイデアについて迷っていても、心配しないでください。多くの人にとって難しい話題です。正規表現を必要としなくても、まだ、多くのことができます。
 
-しかし、あなたがそれらを必要とし、学ぶときにはすでに、 **FastAPI**で直接それらを使用することができます。
+しかし、あなたがそれらを必要とし、学ぶときにはすでに、 **ReadyAPI**で直接それらを使用することができます。
 
 ## デフォルト値
 
@@ -143,7 +143,7 @@ q: Union[str, None] = Query(default=None, min_length=3)
 !!! info "情報"
     これまで`...`を見たことがない方へ: これは特殊な単一値です。<a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">Pythonの一部であり、"Ellipsis"と呼ばれています</a>。
 
-これは **FastAPI** にこのパラメータが必須であることを知らせます。
+これは **ReadyAPI** にこのパラメータが必須であることを知らせます。
 
 ## クエリパラメータのリスト / 複数の値
 
@@ -179,7 +179,7 @@ http://localhost:8000/items/?q=foo&q=bar
 
 対話的APIドキュメントは複数の値を許可するために自動的に更新されます。
 
-<img src="https://fastapi.tiangolo.com/img/tutorial/query-params-str-validations/image02.png">
+<img src="https://readyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image02.png">
 
 ### デフォルト値を持つ、クエリパラメータのリスト / 複数の値
 
@@ -215,7 +215,7 @@ http://localhost:8000/items/
 ```
 
 !!! note "備考"
-    この場合、FastAPIはリストの内容をチェックしないことを覚えておいてください。
+    この場合、ReadyAPIはリストの内容をチェックしないことを覚えておいてください。
 
     例えば`List[int]`はリストの内容が整数であるかどうかをチェックします(そして、文書化します)。しかし`list`だけではそうしません。
 
@@ -278,7 +278,7 @@ http://127.0.0.1:8000/items/?item-query=foobaritems
 
 ドキュメントは以下のようになります:
 
-<img src="https://fastapi.tiangolo.com/img/tutorial/query-params-str-validations/image01.png">
+<img src="https://readyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image01.png">
 
 ## まとめ
 

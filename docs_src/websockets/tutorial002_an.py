@@ -1,18 +1,18 @@
 from typing import Union
 
-from fastapi import (
+from readyapi import (
     Cookie,
     Depends,
-    FastAPI,
+    ReadyAPI,
     Query,
     WebSocket,
     WebSocketException,
     status,
 )
-from fastapi.responses import HTMLResponse
+from readyapi.responses import HTMLResponse
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

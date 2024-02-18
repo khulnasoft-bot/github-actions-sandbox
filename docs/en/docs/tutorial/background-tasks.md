@@ -19,7 +19,7 @@ First, import `BackgroundTasks` and define a parameter in your *path operation f
 {!../../../docs_src/background_tasks/tutorial001.py!}
 ```
 
-**FastAPI** will create the object of type `BackgroundTasks` for you and pass it as that parameter.
+**ReadyAPI** will create the object of type `BackgroundTasks` for you and pass it as that parameter.
 
 ## Create a task function
 
@@ -27,7 +27,7 @@ Create a function to be run as the background task.
 
 It is just a standard function that can receive parameters.
 
-It can be an `async def` or normal `def` function, **FastAPI** will know how to handle it correctly.
+It can be an `async def` or normal `def` function, **ReadyAPI** will know how to handle it correctly.
 
 In this case, the task function will write to a file (simulating sending an email).
 
@@ -55,7 +55,7 @@ Inside of your *path operation function*, pass your task function to the *backgr
 
 Using `BackgroundTasks` also works with the dependency injection system, you can declare a parameter of type `BackgroundTasks` at multiple levels: in a *path operation function*, in a dependency (dependable), in a sub-dependency, etc.
 
-**FastAPI** knows what to do in each case and how to re-use the same object, so that all the background tasks are merged together and are run in the background afterwards:
+**ReadyAPI** knows what to do in each case and how to re-use the same object, so that all the background tasks are merged together and are run in the background afterwards:
 
 === "Python 3.10+"
 
@@ -103,11 +103,11 @@ And then another background task generated at the *path operation function* will
 
 The class `BackgroundTasks` comes directly from <a href="https://www.starlette.io/background/" class="external-link" target="_blank">`starlette.background`</a>.
 
-It is imported/included directly into FastAPI so that you can import it from `fastapi` and avoid accidentally importing the alternative `BackgroundTask` (without the `s` at the end) from `starlette.background`.
+It is imported/included directly into ReadyAPI so that you can import it from `readyapi` and avoid accidentally importing the alternative `BackgroundTask` (without the `s` at the end) from `starlette.background`.
 
-By only using `BackgroundTasks` (and not `BackgroundTask`), it's then possible to use it as a *path operation function* parameter and have **FastAPI** handle the rest for you, just like when using the `Request` object directly.
+By only using `BackgroundTasks` (and not `BackgroundTask`), it's then possible to use it as a *path operation function* parameter and have **ReadyAPI** handle the rest for you, just like when using the `Request` object directly.
 
-It's still possible to use `BackgroundTask` alone in FastAPI, but you have to create the object in your code and return a Starlette `Response` including it.
+It's still possible to use `BackgroundTask` alone in ReadyAPI, but you have to create the object in your code and return a Starlette `Response` including it.
 
 You can see more details in <a href="https://www.starlette.io/background/" class="external-link" target="_blank">Starlette's official docs for Background Tasks</a>.
 
@@ -119,7 +119,7 @@ They tend to require more complex configurations, a message/job queue manager, l
 
 To see an example, check the [Project Generators](../project-generation.md){.internal-link target=_blank}, they all include Celery already configured.
 
-But if you need to access variables and objects from the same **FastAPI** app, or you need to perform small background tasks (like sending an email notification), you can simply just use `BackgroundTasks`.
+But if you need to access variables and objects from the same **ReadyAPI** app, or you need to perform small background tasks (like sending an email notification), you can simply just use `BackgroundTasks`.
 
 ## Recap
 

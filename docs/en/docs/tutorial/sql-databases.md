@@ -1,6 +1,6 @@
 # SQL (Relational) Databases
 
-**FastAPI** doesn't require you to use a SQL (relational) database.
+**ReadyAPI** doesn't require you to use a SQL (relational) database.
 
 But you can use any relational database that you want.
 
@@ -19,16 +19,16 @@ In this example, we'll use **SQLite**, because it uses a single file and Python 
 Later, for your production application, you might want to use a database server like **PostgreSQL**.
 
 !!! tip
-    There is an official project generator with **FastAPI** and **PostgreSQL**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql" class="external-link" target="_blank">https://github.com/tiangolo/full-stack-fastapi-postgresql</a>
+    There is an official project generator with **ReadyAPI** and **PostgreSQL**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-postgresql</a>
 
 !!! note
     Notice that most of the code is the standard `SQLAlchemy` code you would use with any framework.
 
-    The **FastAPI** specific code is as small as always.
+    The **ReadyAPI** specific code is as small as always.
 
 ## ORMs
 
-**FastAPI** works with any database and any style of library to talk to the database.
+**ReadyAPI** works with any database and any style of library to talk to the database.
 
 A common pattern is to use an "ORM": an "object-relational mapping" library.
 
@@ -154,7 +154,7 @@ connect_args={"check_same_thread": False}
 
     This is to prevent accidentally sharing the same connection for different things (for different requests).
 
-    But in FastAPI, using normal functions (`def`) more than one thread could interact with the database for the same request, so we need to make SQLite know that it should allow that with `connect_args={"check_same_thread": False}`.
+    But in ReadyAPI, using normal functions (`def`) more than one thread could interact with the database for the same request, so we need to make SQLite know that it should allow that with `connect_args={"check_same_thread": False}`.
 
     Also, we will make sure each request gets its own database connection session in a dependency, so there's no need for that default mechanism.
 
@@ -473,7 +473,7 @@ The steps are:
 
     `Item(**item.dict(), owner_id=user_id)`
 
-## Main **FastAPI** app
+## Main **ReadyAPI** app
 
 And now in the file `sql_app/main.py` let's integrate and use all the other parts we created before.
 
@@ -501,7 +501,7 @@ And you would also use Alembic for "migrations" (that's its main job).
 
 A "migration" is the set of steps needed whenever you change the structure of your SQLAlchemy models, add a new attribute, etc. to replicate those changes in the database, add a new column, a new table, etc.
 
-You can find an example of Alembic in a FastAPI project in the templates from [Project Generation - Template](../project-generation.md){.internal-link target=_blank}. Specifically in <a href="https://github.com/tiangolo/full-stack-fastapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/alembic/" class="external-link" target="_blank">the `alembic` directory in the source code</a>.
+You can find an example of Alembic in a ReadyAPI project in the templates from [Project Generation - Template](../project-generation.md){.internal-link target=_blank}. Specifically in <a href="https://github.com/khulnasoft/full-stack-readyapi-postgresql/tree/master/%7B%7Bcookiecutter.project_slug%7D%7D/backend/app/alembic/" class="external-link" target="_blank">the `alembic` directory in the source code</a>.
 
 ### Create a dependency
 
@@ -557,9 +557,9 @@ This will then give us better editor support inside the *path operation function
 
     But by declaring the type as `Session`, the editor now can know the available methods (`.add()`, `.query()`, `.commit()`, etc) and can provide better support (like completion). The type declaration doesn't affect the actual object.
 
-### Create your **FastAPI** *path operations*
+### Create your **ReadyAPI** *path operations*
 
-Now, finally, here's the standard **FastAPI** *path operations* code.
+Now, finally, here's the standard **ReadyAPI** *path operations* code.
 
 === "Python 3.9+"
 
@@ -624,11 +624,11 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 ## Migrations
 
-Because we are using SQLAlchemy directly and we don't require any kind of plug-in for it to work with **FastAPI**, we could integrate database <abbr title="Automatically updating the database to have any new column we define in our models.">migrations</abbr> with <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">Alembic</a> directly.
+Because we are using SQLAlchemy directly and we don't require any kind of plug-in for it to work with **ReadyAPI**, we could integrate database <abbr title="Automatically updating the database to have any new column we define in our models.">migrations</abbr> with <a href="https://alembic.sqlalchemy.org" class="external-link" target="_blank">Alembic</a> directly.
 
-And as the code related to SQLAlchemy and the SQLAlchemy models lives in separate independent files, you would even be able to perform the migrations with Alembic without having to install FastAPI, Pydantic, or anything else.
+And as the code related to SQLAlchemy and the SQLAlchemy models lives in separate independent files, you would even be able to perform the migrations with Alembic without having to install ReadyAPI, Pydantic, or anything else.
 
-The same way, you would be able to use the same SQLAlchemy models and utilities in other parts of your code that are not related to **FastAPI**.
+The same way, you would be able to use the same SQLAlchemy models and utilities in other parts of your code that are not related to **ReadyAPI**.
 
 For example, in a background task worker with <a href="https://docs.celeryq.dev" class="external-link" target="_blank">Celery</a>, <a href="https://python-rq.org/" class="external-link" target="_blank">RQ</a>, or <a href="https://arq-docs.helpmanual.io/" class="external-link" target="_blank">ARQ</a>.
 
@@ -715,13 +715,13 @@ $ uvicorn sql_app.main:app --reload
 
 And then, you can open your browser at <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
 
-And you will be able to interact with your **FastAPI** application, reading data from a real database:
+And you will be able to interact with your **ReadyAPI** application, reading data from a real database:
 
 <img src="/img/tutorial/sql-databases/image01.png">
 
 ## Interact with the database directly
 
-If you want to explore the SQLite database (file) directly, independently of FastAPI, to debug its contents, add tables, columns, records, modify data, etc. you can use <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">DB Browser for SQLite</a>.
+If you want to explore the SQLite database (file) directly, independently of ReadyAPI, to debug its contents, add tables, columns, records, modify data, etc. you can use <a href="https://sqlitebrowser.org/" class="external-link" target="_blank">DB Browser for SQLite</a>.
 
 It will look like this:
 
@@ -781,6 +781,6 @@ Adding a **middleware** here is similar to what a dependency with `yield` does, 
     It's probably better to use dependencies with `yield` when they are enough for the use case.
 
 !!! info
-    Dependencies with `yield` were added recently to **FastAPI**.
+    Dependencies with `yield` were added recently to **ReadyAPI**.
 
     A previous version of this tutorial only had the examples with a middleware and there are probably several applications using the middleware for database session management.

@@ -1,5 +1,5 @@
-from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import JSONResponse
 from pydantic import BaseModel
 
 
@@ -12,7 +12,7 @@ class Message(BaseModel):
     message: str
 
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get(

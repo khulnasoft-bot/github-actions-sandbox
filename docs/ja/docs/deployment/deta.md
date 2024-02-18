@@ -1,24 +1,24 @@
 # Deta にデプロイ
 
-このセクションでは、**FastAPI** アプリケーションを <a href="https://www.deta.sh/?ref=fastapi" class="external-link" target="_blank">Deta</a> の無料プランを利用して、簡単にデプロイする方法を学習します。🎁
+このセクションでは、**ReadyAPI** アプリケーションを <a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Deta</a> の無料プランを利用して、簡単にデプロイする方法を学習します。🎁
 
 所要時間は約**10分**です。
 
 !!! info "備考"
-    <a href="https://www.deta.sh/?ref=fastapi" class="external-link" target="_blank">Deta</a> は **FastAPI** のスポンサーです。🎉
+    <a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Deta</a> は **ReadyAPI** のスポンサーです。🎉
 
-## ベーシックな **FastAPI** アプリ
+## ベーシックな **ReadyAPI** アプリ
 
-* アプリのためのディレクトリ (例えば `./fastapideta/`) を作成し、その中に入ってください。
+* アプリのためのディレクトリ (例えば `./readyapideta/`) を作成し、その中に入ってください。
 
-### FastAPI のコード
+### ReadyAPI のコード
 
 * 以下の `main.py` ファイルを作成してください:
 
 ```Python
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -36,7 +36,7 @@ def read_item(item_id: int):
 では、同じディレクトリに以下の `requirements.txt` ファイルを作成してください:
 
 ```text
-fastapi
+readyapi
 ```
 
 !!! tip "豆知識"
@@ -44,7 +44,7 @@ fastapi
 
 ### ディレクトリ構造
 
-以下の2つのファイルと1つの `./fastapideta/` ディレクトリがあるはずです:
+以下の2つのファイルと1つの `./readyapideta/` ディレクトリがあるはずです:
 
 ```
 .
@@ -54,7 +54,7 @@ fastapi
 
 ## Detaの無料アカウントの作成
 
-それでは、<a href="https://www.deta.sh/?ref=fastapi" class="external-link" target="_blank">Detaの無料アカウント</a>を作成しましょう。必要なものはメールアドレスとパスワードだけです。
+それでは、<a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Detaの無料アカウント</a>を作成しましょう。必要なものはメールアドレスとパスワードだけです。
 
 クレジットカードさえ必要ありません。
 
@@ -107,7 +107,7 @@ Available Commands:
 </div>
 
 !!! tip "豆知識"
-    CLI のインストールに問題が発生した場合は、<a href="https://docs.deta.sh/docs/micros/getting_started?ref=fastapi" class="external-link" target="_blank">Deta 公式ドキュメント</a>を参照してください。
+    CLI のインストールに問題が発生した場合は、<a href="https://docs.deta.sh/docs/micros/getting_started?ref=readyapi" class="external-link" target="_blank">Deta 公式ドキュメント</a>を参照してください。
 
 ## CLIでログイン
 
@@ -140,7 +140,7 @@ Successfully created a new micro
 // Notice the "endpoint" 🔍
 
 {
-    "name": "fastapideta",
+    "name": "readyapideta",
     "runtime": "python3.7",
     "endpoint": "https://qltnci.deta.dev",
     "visor": "enabled",
@@ -153,7 +153,7 @@ Adding dependencies...
 ---> 100%
 
 
-Successfully installed fastapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
+Successfully installed readyapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
 ```
 
 </div>
@@ -162,7 +162,7 @@ Successfully installed fastapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
 
 ```JSON hl_lines="4"
 {
-        "name": "fastapideta",
+        "name": "readyapideta",
         "runtime": "python3.7",
         "endpoint": "https://qltnci.deta.dev",
         "visor": "enabled",
@@ -177,7 +177,7 @@ Successfully installed fastapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
 
 それでは、`endpoint` URLをブラウザで開いてみましょう。上記の例では `https://qltnci.deta.dev` ですが、あなたのURLは異なるはずです。
 
-FastAPIアプリから返ってきたJSONレスポンスが表示されます:
+ReadyAPIアプリから返ってきたJSONレスポンスが表示されます:
 
 ```JSON
 {
@@ -211,7 +211,7 @@ Successfully disabled http auth
 
 ## HTTPS
 
-おめでとうございます！あなたの FastAPI アプリが Deta へデプロイされました！🎉 🍰
+おめでとうございます！あなたの ReadyAPI アプリが Deta へデプロイされました！🎉 🍰
 
 また、DetaがHTTPSを正しく処理するため、その処理を行う必要がなく、クライアントは暗号化された安全な通信が利用できます。✅ 🔒
 
@@ -235,6 +235,6 @@ ID `5` の例を示します。
 
 ## さらに詳しく知る
 
-様々な箇所で永続的にデータを保存したくなるでしょう。そのためには <a href="https://docs.deta.sh/docs/base/py_tutorial?ref=fastapi" class="external-link" target="_blank">Deta Base</a> を使用できます。惜しみない **無料利用枠** もあります。
+様々な箇所で永続的にデータを保存したくなるでしょう。そのためには <a href="https://docs.deta.sh/docs/base/py_tutorial?ref=readyapi" class="external-link" target="_blank">Deta Base</a> を使用できます。惜しみない **無料利用枠** もあります。
 
-詳しくは <a href="https://docs.deta.sh?ref=fastapi" class="external-link" target="_blank">Deta ドキュメント</a>を参照してください。
+詳しくは <a href="https://docs.deta.sh?ref=readyapi" class="external-link" target="_blank">Deta ドキュメント</a>を参照してください。

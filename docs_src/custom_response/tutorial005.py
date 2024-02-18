@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import PlainTextResponse
+from readyapi import ReadyAPI
+from readyapi.responses import PlainTextResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/", response_class=PlainTextResponse)

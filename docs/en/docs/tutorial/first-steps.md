@@ -1,6 +1,6 @@
 # First Steps
 
-The simplest FastAPI file could look like this:
+The simplest ReadyAPI file could look like this:
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -28,7 +28,7 @@ $ uvicorn main:app --reload
     The command `uvicorn main:app` refers to:
 
     * `main`: the file `main.py` (the Python "module").
-    * `app`: the object created inside of `main.py` with the line `app = FastAPI()`.
+    * `app`: the object created inside of `main.py` with the line `app = ReadyAPI()`.
     * `--reload`: make the server restart after code changes. Only use for development.
 
 In the output, there's a line with something like:
@@ -55,7 +55,7 @@ Now go to <a href="http://127.0.0.1:8000/docs" class="external-link" target="_bl
 
 You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ### Alternative API docs
 
@@ -63,11 +63,11 @@ And now, go to <a href="http://127.0.0.1:8000/redoc" class="external-link" targe
 
 You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
 ### OpenAPI
 
-**FastAPI** generates a "schema" with all your API using the **OpenAPI** standard for defining APIs.
+**ReadyAPI** generates a "schema" with all your API using the **OpenAPI** standard for defining APIs.
 
 #### "Schema"
 
@@ -91,7 +91,7 @@ OpenAPI defines an API schema for your API. And that schema includes definitions
 
 #### Check the `openapi.json`
 
-If you are curious about how the raw OpenAPI schema looks like, FastAPI automatically generates a JSON (schema) with the descriptions of all your API.
+If you are curious about how the raw OpenAPI schema looks like, ReadyAPI automatically generates a JSON (schema) with the descriptions of all your API.
 
 You can see it directly at: <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -101,7 +101,7 @@ It will show a JSON starting with something like:
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "FastAPI",
+        "title": "ReadyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -122,32 +122,32 @@ It will show a JSON starting with something like:
 
 The OpenAPI schema is what powers the two interactive documentation systems included.
 
-And there are dozens of alternatives, all based on OpenAPI. You could easily add any of those alternatives to your application built with **FastAPI**.
+And there are dozens of alternatives, all based on OpenAPI. You could easily add any of those alternatives to your application built with **ReadyAPI**.
 
 You could also use it to generate code automatically, for clients that communicate with your API. For example, frontend, mobile or IoT applications.
 
 ## Recap, step by step
 
-### Step 1: import `FastAPI`
+### Step 1: import `ReadyAPI`
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`FastAPI` is a Python class that provides all the functionality for your API.
+`ReadyAPI` is a Python class that provides all the functionality for your API.
 
 !!! note "Technical Details"
-    `FastAPI` is a class that inherits directly from `Starlette`.
+    `ReadyAPI` is a class that inherits directly from `Starlette`.
 
-    You can use all the <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> functionality with `FastAPI` too.
+    You can use all the <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> functionality with `ReadyAPI` too.
 
-### Step 2: create a `FastAPI` "instance"
+### Step 2: create a `ReadyAPI` "instance"
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Here the `app` variable will be an "instance" of the class `FastAPI`.
+Here the `app` variable will be an "instance" of the class `ReadyAPI`.
 
 This will be the main point of interaction to create all your API.
 
@@ -245,7 +245,7 @@ We are going to call them "**operations**" too.
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-The `@app.get("/")` tells **FastAPI** that the function right below is in charge of handling requests that go to:
+The `@app.get("/")` tells **ReadyAPI** that the function right below is in charge of handling requests that go to:
 
 * the path `/`
 * using a <abbr title="an HTTP GET method"><code>get</code> operation</abbr>
@@ -257,7 +257,7 @@ The `@app.get("/")` tells **FastAPI** that the function right below is in charge
 
     A "decorator" takes the function below and does something with it.
 
-    In our case, this decorator tells **FastAPI** that the function below corresponds to the **path** `/` with an **operation** `get`.
+    In our case, this decorator tells **ReadyAPI** that the function below corresponds to the **path** `/` with an **operation** `get`.
 
     It is the "**path operation decorator**".
 
@@ -277,7 +277,7 @@ And the more exotic ones:
 !!! tip
     You are free to use each operation (HTTP method) as you wish.
 
-    **FastAPI** doesn't enforce any specific meaning.
+    **ReadyAPI** doesn't enforce any specific meaning.
 
     The information here is presented as a guideline, not a requirement.
 
@@ -297,7 +297,7 @@ This is our "**path operation function**":
 
 This is a Python function.
 
-It will be called by **FastAPI** whenever it receives a request to the URL "`/`" using a `GET` operation.
+It will be called by **ReadyAPI** whenever it receives a request to the URL "`/`" using a `GET` operation.
 
 In this case, it is an `async` function.
 
@@ -326,7 +326,7 @@ There are many other objects and models that will be automatically converted to 
 
 ## Recap
 
-* Import `FastAPI`.
+* Import `ReadyAPI`.
 * Create an `app` instance.
 * Write a **path operation decorator** (like `@app.get("/")`).
 * Write a **path operation function** (like `def root(): ...` above).

@@ -1,10 +1,10 @@
 from functools import lru_cache
 
-from fastapi import Depends, FastAPI
+from readyapi import Depends, ReadyAPI
 
 from .config import Settings
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @lru_cache()

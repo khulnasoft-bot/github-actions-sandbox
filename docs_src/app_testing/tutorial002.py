@@ -1,8 +1,8 @@
-from fastapi import FastAPI
-from fastapi.testclient import TestClient
-from fastapi.websockets import WebSocket
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
+from readyapi.websockets import WebSocket
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")

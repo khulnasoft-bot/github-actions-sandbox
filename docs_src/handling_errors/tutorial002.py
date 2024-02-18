@@ -1,6 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from readyapi import ReadyAPI, HTTPException
 
-app = FastAPI()
+app = ReadyAPI()
 
 items = {"foo": "The Foo Wrestlers"}
 

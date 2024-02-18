@@ -1,7 +1,7 @@
-from fastapi import FastAPI, Response
-from fastapi.responses import RedirectResponse
+from readyapi import ReadyAPI, Response
+from readyapi.responses import RedirectResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/portal", response_model=None)

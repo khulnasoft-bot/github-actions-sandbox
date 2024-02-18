@@ -9,7 +9,7 @@ When you need to receive form fields instead of JSON, you can use `Form`.
 
 ## Import `Form`
 
-Import `Form` from `fastapi`:
+Import `Form` from `readyapi`:
 
 === "Python 3.9+"
 
@@ -73,7 +73,7 @@ With `Form` you can declare the same configurations as with `Body` (and `Query`,
 
 The way HTML forms (`<form></form>`) sends the data to the server normally uses a "special" encoding for that data, it's different from JSON.
 
-**FastAPI** will make sure to read that data from the right place instead of JSON.
+**ReadyAPI** will make sure to read that data from the right place instead of JSON.
 
 !!! note "Technical Details"
     Data from forms is normally encoded using the "media type" `application/x-www-form-urlencoded`.
@@ -85,7 +85,7 @@ The way HTML forms (`<form></form>`) sends the data to the server normally uses 
 !!! warning
     You can declare multiple `Form` parameters in a *path operation*, but you can't also declare `Body` fields that you expect to receive as JSON, as the request will have the body encoded using `application/x-www-form-urlencoded` instead of `application/json`.
 
-    This is not a limitation of **FastAPI**, it's part of the HTTP protocol.
+    This is not a limitation of **ReadyAPI**, it's part of the HTTP protocol.
 
 ## Recap
 

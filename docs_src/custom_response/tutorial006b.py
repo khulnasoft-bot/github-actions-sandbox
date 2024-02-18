@@ -1,9 +1,9 @@
-from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
+from readyapi import ReadyAPI
+from readyapi.responses import RedirectResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
-@app.get("/fastapi", response_class=RedirectResponse)
-async def redirect_fastapi():
-    return "https://fastapi.tiangolo.com"
+@app.get("/readyapi", response_class=RedirectResponse)
+async def redirect_readyapi():
+    return "https://readyapi.khulnasoft.com"

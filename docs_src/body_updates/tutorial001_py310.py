@@ -1,8 +1,8 @@
-from fastapi import FastAPI
-from fastapi.encoders import jsonable_encoder
+from readyapi import ReadyAPI
+from readyapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

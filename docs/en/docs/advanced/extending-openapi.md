@@ -15,7 +15,7 @@ In this section you will see how.
 
 The normal (default) process, is as follows.
 
-A `FastAPI` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
+A `ReadyAPI` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
 
 As part of the application object creation, a *path operation* for `/openapi.json` (or for whatever you set your `openapi_url`) is registered.
 
@@ -23,7 +23,7 @@ It just returns a JSON response with the result of the application's `.openapi()
 
 By default, what the method `.openapi()` does is check the property `.openapi_schema` to see if it has contents and return them.
 
-If it doesn't, it generates them using the utility function at `fastapi.openapi.utils.get_openapi`.
+If it doesn't, it generates them using the utility function at `readyapi.openapi.utils.get_openapi`.
 
 And that function `get_openapi()` receives as parameters:
 
@@ -39,9 +39,9 @@ Using the information above, you can use the same utility function to generate t
 
 For example, let's add <a href="https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md#x-logo" class="external-link" target="_blank">ReDoc's OpenAPI extension to include a custom logo</a>.
 
-### Normal **FastAPI**
+### Normal **ReadyAPI**
 
-First, write all your **FastAPI** application as normally:
+First, write all your **ReadyAPI** application as normally:
 
 ```Python hl_lines="1  4  7-9"
 {!../../../docs_src/extending_openapi/tutorial001.py!}
@@ -85,7 +85,7 @@ Now you can replace the `.openapi()` method with your new function.
 
 ### Check it
 
-Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **FastAPI**'s logo):
+Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **ReadyAPI**'s logo):
 
 <img src="/img/tutorial/extending-openapi/image01.png">
 
@@ -99,7 +99,7 @@ But it's possible to customize it, you can set a specific CDN, or serve the file
 
 That's useful, for example, if you need your app to keep working even while offline, without open Internet access, or in a local network.
 
-Here you'll see how to serve those files yourself, in the same FastAPI app, and configure the docs to use them.
+Here you'll see how to serve those files yourself, in the same ReadyAPI app, and configure the docs to use them.
 
 ### Project file structure
 
@@ -189,7 +189,7 @@ Now we can configure the app to use those static files for the docs.
 
 The first step is to disable the automatic docs, as those use the CDN by default.
 
-To disable them, set their URLs to `None` when creating your `FastAPI` app:
+To disable them, set their URLs to `None` when creating your `ReadyAPI` app:
 
 ```Python hl_lines="9"
 {!../../../docs_src/extending_openapi/tutorial002.py!}
@@ -199,7 +199,7 @@ To disable them, set their URLs to `None` when creating your `FastAPI` app:
 
 Now you can create the *path operations* for the custom docs.
 
-You can re-use FastAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
+You can re-use ReadyAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
 
 * `openapi_url`: the URL where the HTML page for the docs can get the OpenAPI schema for your API. You can use here the attribute `app.openapi_url`.
 * `title`: the title of your API.
@@ -238,11 +238,11 @@ And even without Internet, you would be able to see the docs for your API and in
 
 You can configure some extra <a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration" class="external-link" target="_blank">Swagger UI parameters</a>.
 
-To configure them, pass the `swagger_ui_parameters` argument when creating the `FastAPI()` app object or to the `get_swagger_ui_html()` function.
+To configure them, pass the `swagger_ui_parameters` argument when creating the `ReadyAPI()` app object or to the `get_swagger_ui_html()` function.
 
 `swagger_ui_parameters` receives a dictionary with the configurations passed to Swagger UI directly.
 
-FastAPI converts the configurations to **JSON** to make them compatible with JavaScript, as that's what Swagger UI needs.
+ReadyAPI converts the configurations to **JSON** to make them compatible with JavaScript, as that's what Swagger UI needs.
 
 ### Disable Syntax Highlighting
 
@@ -276,7 +276,7 @@ That configuration would change the syntax highlighting color theme:
 
 ### Change Default Swagger UI Parameters
 
-FastAPI includes some default configuration parameters appropriate for most of the use cases.
+ReadyAPI includes some default configuration parameters appropriate for most of the use cases.
 
 It includes these default configurations:
 
@@ -296,7 +296,7 @@ To see all the other possible configurations you can use, read the official <a h
 
 Swagger UI also allows other configurations to be **JavaScript-only** objects (for example, JavaScript functions).
 
-FastAPI also includes these JavaScript-only `presets` settings:
+ReadyAPI also includes these JavaScript-only `presets` settings:
 
 ```JavaScript
 presets: [

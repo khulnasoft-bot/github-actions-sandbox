@@ -1,6 +1,6 @@
 # Dependencies with yield
 
-FastAPI supports dependencies that do some <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>extra steps after finishing</abbr>.
+ReadyAPI supports dependencies that do some <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>extra steps after finishing</abbr>.
 
 To do this, use `yield` instead of `return`, and write the extra steps after.
 
@@ -13,9 +13,9 @@ To do this, use `yield` instead of `return`, and write the extra steps after.
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager" class="external-link" target="_blank">`@contextlib.contextmanager`</a> or
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.asynccontextmanager" class="external-link" target="_blank">`@contextlib.asynccontextmanager`</a>
 
-    would be valid to use as a **FastAPI** dependency.
+    would be valid to use as a **ReadyAPI** dependency.
 
-    In fact, FastAPI uses those two decorators internally.
+    In fact, ReadyAPI uses those two decorators internally.
 
 ## A database dependency with `yield`
 
@@ -42,7 +42,7 @@ The code following the `yield` statement is executed after the response has been
 !!! tip
     You can use `async` or normal functions.
 
-    **FastAPI** will do the right thing with each, the same as with normal dependencies.
+    **ReadyAPI** will do the right thing with each, the same as with normal dependencies.
 
 ## A dependency with `yield` and `try`
 
@@ -62,7 +62,7 @@ In the same way, you can use `finally` to make sure the exit steps are executed,
 
 You can have sub-dependencies and "trees" of sub-dependencies of any size and shape, and any or all of them can use `yield`.
 
-**FastAPI** will make sure that the "exit code" in each dependency with `yield` is run in the correct order.
+**ReadyAPI** will make sure that the "exit code" in each dependency with `yield` is run in the correct order.
 
 For example, `dependency_c` can have a dependency on `dependency_b`, and `dependency_b` on `dependency_a`:
 
@@ -120,12 +120,12 @@ And you could have a single dependency that requires several other dependencies 
 
 You can have any combinations of dependencies that you want.
 
-**FastAPI** will make sure everything is run in the correct order.
+**ReadyAPI** will make sure everything is run in the correct order.
 
 !!! note "Technical Details"
     This works thanks to Python's <a href="https://docs.python.org/3/library/contextlib.html" class="external-link" target="_blank">Context Managers</a>.
 
-    **FastAPI** uses them internally to achieve this.
+    **ReadyAPI** uses them internally to achieve this.
 
 ## Dependencies with `yield` and `HTTPException`
 
@@ -220,18 +220,18 @@ Underneath, the `open("./somefile.txt")` creates an object that is a called a "C
 
 When the `with` block finishes, it makes sure to close the file, even if there were exceptions.
 
-When you create a dependency with `yield`, **FastAPI** will internally convert it to a context manager, and combine it with some other related tools.
+When you create a dependency with `yield`, **ReadyAPI** will internally convert it to a context manager, and combine it with some other related tools.
 
 ### Using context managers in dependencies with `yield`
 
 !!! warning
     This is, more or less, an "advanced" idea.
 
-    If you are just starting with **FastAPI** you might want to skip it for now.
+    If you are just starting with **ReadyAPI** you might want to skip it for now.
 
 In Python, you can create Context Managers by <a href="https://docs.python.org/3/reference/datamodel.html#context-managers" class="external-link" target="_blank">creating a class with two methods: `__enter__()` and `__exit__()`</a>.
 
-You can also use them inside of **FastAPI** dependencies with `yield` by using
+You can also use them inside of **ReadyAPI** dependencies with `yield` by using
 `with` or `async with` statements inside of the dependency function:
 
 ```Python hl_lines="1-9  13"
@@ -246,8 +246,8 @@ You can also use them inside of **FastAPI** dependencies with `yield` by using
 
     using them to decorate a function with a single `yield`.
 
-    That's what **FastAPI** uses internally for dependencies with `yield`.
+    That's what **ReadyAPI** uses internally for dependencies with `yield`.
 
-    But you don't have to use the decorators for FastAPI dependencies (and you shouldn't).
+    But you don't have to use the decorators for ReadyAPI dependencies (and you shouldn't).
 
-    FastAPI will do it for you internally.
+    ReadyAPI will do it for you internally.

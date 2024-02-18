@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from fastapi import Cookie, Depends, FastAPI
+from readyapi import Cookie, Depends, ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def query_extractor(q: str | None = None):

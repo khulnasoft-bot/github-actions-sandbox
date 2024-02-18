@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Response, status
+from readyapi import ReadyAPI, Response, status
 
-app = FastAPI()
+app = ReadyAPI()
 
 tasks = {"foo": "Listen to the Bar Fighters"}
 

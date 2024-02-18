@@ -1,13 +1,13 @@
 # 外部リンク・記事
 
-**FastAPI**には、絶えず成長している素晴らしいコミュニティがあります。
+**ReadyAPI**には、絶えず成長している素晴らしいコミュニティがあります。
 
-**FastAPI**に関連する投稿、記事、ツール、およびプロジェクトは多数あります。
+**ReadyAPI**に関連する投稿、記事、ツール、およびプロジェクトは多数あります。
 
 それらの不完全なリストを以下に示します。
 
 !!! tip "豆知識"
-    ここにまだ載っていない**FastAPI**に関連する記事、プロジェクト、ツールなどがある場合は、 <a href="https://github.com/tiangolo/fastapi/edit/master/docs/en/data/external_links.yml" class="external-link" target="_blank">プルリクエストして下さい</a>。
+    ここにまだ載っていない**ReadyAPI**に関連する記事、プロジェクト、ツールなどがある場合は、 <a href="https://github.com/khulnasoft/readyapi/edit/master/docs/en/data/external_links.yml" class="external-link" target="_blank">プルリクエストして下さい</a>。
 
 ## 記事
 
@@ -76,7 +76,7 @@
 
 ## プロジェクト
 
-`fastapi`トピックの最新のGitHubプロジェクト:
+`readyapi`トピックの最新のGitHubプロジェクト:
 
 <div class="github-topic-projects">
 </div>

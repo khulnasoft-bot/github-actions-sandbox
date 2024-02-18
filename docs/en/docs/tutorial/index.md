@@ -2,7 +2,7 @@
 
 Here's a change in the docs.
 
-This tutorial shows you how to use **FastAPI** with most of its features, step by step.
+This tutorial shows you how to use **ReadyAPI** with most of its features, step by step.
 
 Each section gradually builds on the previous ones, but it's structured to separate topics, so that you can go directly to any specific one to solve your specific API needs.
 
@@ -32,20 +32,20 @@ $ uvicorn main:app --reload
 
 It is **HIGHLY encouraged** that you write or copy the code, edit it and run it locally.
 
-Using it in your editor is what really shows you the benefits of FastAPI, seeing how little code you have to write, all the type checks, autocompletion, etc.
+Using it in your editor is what really shows you the benefits of ReadyAPI, seeing how little code you have to write, all the type checks, autocompletion, etc.
 
 ---
 
-## Install FastAPI
+## Install ReadyAPI
 
-The first step is to install FastAPI.
+The first step is to install ReadyAPI.
 
 For the tutorial, you might want to install it with all the optional dependencies and features:
 
 <div class="termy">
 
 ```console
-$ pip install "fastapi[all]"
+$ pip install "readyapi[all]"
 
 ---> 100%
 ```
@@ -60,7 +60,7 @@ $ pip install "fastapi[all]"
     This is what you would probably do once you want to deploy your application to production:
 
     ```
-    pip install fastapi
+    pip install readyapi
     ```
 
     Also install `uvicorn` to work as the server:

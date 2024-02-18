@@ -1,6 +1,6 @@
 # Códigos de estado adicionales
 
-Por defecto, **FastAPI** devolverá las respuestas utilizando una `JSONResponse`, poniendo el contenido que devuelves en tu *operación de path* dentro de esa `JSONResponse`.
+Por defecto, **ReadyAPI** devolverá las respuestas utilizando una `JSONResponse`, poniendo el contenido que devuelves en tu *operación de path* dentro de esa `JSONResponse`.
 
 Utilizará el código de estado por defecto, o el que hayas asignado en tu *operación de path*.
 
@@ -28,10 +28,10 @@ Para conseguir esto importa `JSONResponse` y devuelve ahí directamente tu conte
 !!! note "Detalles Técnicos"
     También podrías utilizar `from starlette.responses import JSONResponse`.
 
-    **FastAPI** provee las mismas `starlette.responses` que `fastapi.responses` simplemente como una convención para ti, el desarrollador. Pero la mayoría de las respuestas disponibles vienen directamente de Starlette. Lo mismo con `status`.
+    **ReadyAPI** provee las mismas `starlette.responses` que `readyapi.responses` simplemente como una convención para ti, el desarrollador. Pero la mayoría de las respuestas disponibles vienen directamente de Starlette. Lo mismo con `status`.
 
 ## OpenAPI y documentación de API
 
-Si quieres devolver códigos de estado y respuestas adicionales directamente, estas no estarán incluidas en el schema de OpenAPI (documentación de API), porque FastAPI no tiene una manera de conocer de antemano lo que vas a devolver.
+Si quieres devolver códigos de estado y respuestas adicionales directamente, estas no estarán incluidas en el schema de OpenAPI (documentación de API), porque ReadyAPI no tiene una manera de conocer de antemano lo que vas a devolver.
 
 Pero puedes documentar eso en tu código usando [Respuestas Adicionales](additional-responses.md){.internal-link target=_blank}.

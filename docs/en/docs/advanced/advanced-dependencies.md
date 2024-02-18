@@ -39,7 +39,7 @@ To do that, we declare a method `__call__`:
     {!> ../../../docs_src/dependencies/tutorial011.py!}
     ```
 
-In this case, this `__call__` is what **FastAPI** will use to check for additional parameters and sub-dependencies, and this is what will be called to pass a value to the parameter in your *path operation function* later.
+In this case, this `__call__` is what **ReadyAPI** will use to check for additional parameters and sub-dependencies, and this is what will be called to pass a value to the parameter in your *path operation function* later.
 
 ## Parameterize the instance
 
@@ -66,7 +66,7 @@ And now, we can use `__init__` to declare the parameters of the instance that we
     {!> ../../../docs_src/dependencies/tutorial011.py!}
     ```
 
-In this case, **FastAPI** won't ever touch or care about `__init__`, we will use it directly in our code.
+In this case, **ReadyAPI** won't ever touch or care about `__init__`, we will use it directly in our code.
 
 ## Create an instance
 
@@ -99,7 +99,7 @@ And that way we are able to "parameterize" our dependency, that now has `"bar"` 
 
 Then, we could use this `checker` in a `Depends(checker)`, instead of `Depends(FixedContentQueryChecker)`, because the dependency is the instance, `checker`, not the class itself.
 
-And when solving the dependency, **FastAPI** will call this `checker` like:
+And when solving the dependency, **ReadyAPI** will call this `checker` like:
 
 ```Python
 checker(q="somequery")

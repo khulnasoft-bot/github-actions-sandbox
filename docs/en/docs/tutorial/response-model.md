@@ -22,7 +22,7 @@ You can use **type annotations** the same way you would for input data in functi
     {!> ../../../docs_src/response_model/tutorial001_01.py!}
     ```
 
-FastAPI will use this return type to:
+ReadyAPI will use this return type to:
 
 * **Validate** the returned data.
     * If the data is invalid (e.g. you are missing a field), it means that *your* app code is broken, not returning what it should, and it will return a server error instead of returning incorrect data. This way you and your clients can be certain that they will receive the data and the data shape expected.
@@ -76,18 +76,18 @@ You can use the `response_model` parameter in any of the *path operations*:
 
 `response_model` receives the same type you would declare for a Pydantic model field, so, it can be a Pydantic model, but it can also be, e.g. a `list` of Pydantic models, like `List[Item]`.
 
-FastAPI will use this `response_model` to do all the data documentation, validation, etc. and also to **convert and filter the output data** to its type declaration.
+ReadyAPI will use this `response_model` to do all the data documentation, validation, etc. and also to **convert and filter the output data** to its type declaration.
 
 !!! tip
     If you have strict type checks in your editor, mypy, etc, you can declare the function return type as `Any`.
 
-    That way you tell the editor that you are intentionally returning anything. But FastAPI will still do the data documentation, validation, filtering, etc. with the `response_model`.
+    That way you tell the editor that you are intentionally returning anything. But ReadyAPI will still do the data documentation, validation, filtering, etc. with the `response_model`.
 
 ### `response_model` Priority
 
-If you declare both a return type and a `response_model`, the `response_model` will take priority and be used by FastAPI.
+If you declare both a return type and a `response_model`, the `response_model` will take priority and be used by ReadyAPI.
 
-This way you can add correct type annotations to your functions even when you are returning a type different than the response model, to be used by the editor and tools like mypy. And still you can have FastAPI do the data validation, documentation, etc. using the `response_model`.
+This way you can add correct type annotations to your functions even when you are returning a type different than the response model, to be used by the editor and tools like mypy. And still you can have ReadyAPI do the data validation, documentation, etc. using the `response_model`.
 
 You can also use `response_model=None` to disable creating a response model for that *path operation*, you might need to do it if you are adding type annotations for things that are not valid Pydantic fields, you will see an example of that in one of the sections below.
 
@@ -180,7 +180,7 @@ Here, even though our *path operation function* is returning the same input user
     {!> ../../../docs_src/response_model/tutorial003.py!}
     ```
 
-So, **FastAPI** will take care of filtering out all the data that is not declared in the output model (using Pydantic).
+So, **ReadyAPI** will take care of filtering out all the data that is not declared in the output model (using Pydantic).
 
 ### `response_model` or Return Type
 
@@ -194,13 +194,13 @@ That's why in this example we have to declare it in the `response_model` paramet
 
 Let's continue from the previous example. We wanted to **annotate the function with one type** but return something that includes **more data**.
 
-We want FastAPI to keep **filtering** the data using the response model.
+We want ReadyAPI to keep **filtering** the data using the response model.
 
 In the previous example, because the classes were different, we had to use the `response_model` parameter. But that also means that we don't get the support from the editor and tools checking the function return type.
 
 But in most of the cases where we need to do something like this, we want the model just to **filter/remove** some of the data as in this example.
 
-And in those cases, we can use classes and inheritance to take advantage of function **type annotations** to get better support in the editor and tools, and still get the FastAPI **data filtering**.
+And in those cases, we can use classes and inheritance to take advantage of function **type annotations** to get better support in the editor and tools, and still get the ReadyAPI **data filtering**.
 
 === "Python 3.10+"
 
@@ -214,7 +214,7 @@ And in those cases, we can use classes and inheritance to take advantage of func
     {!> ../../../docs_src/response_model/tutorial003_01.py!}
     ```
 
-With this, we get tooling support, from editors and mypy as this code is correct in terms of types, but we also get the data filtering from FastAPI.
+With this, we get tooling support, from editors and mypy as this code is correct in terms of types, but we also get the data filtering from ReadyAPI.
 
 How does this work? Let's check that out. 🤓
 
@@ -228,11 +228,11 @@ We annotate the function return type as `BaseUser`, but we are actually returnin
 
 The editor, mypy, and other tools won't complain about this because, in typing terms, `UserIn` is a subclass of `BaseUser`, which means it's a *valid* type when what is expected is anything that is a `BaseUser`.
 
-### FastAPI Data Filtering
+### ReadyAPI Data Filtering
 
-Now, for FastAPI, it will see the return type and make sure that what you return includes **only** the fields that are declared in the type.
+Now, for ReadyAPI, it will see the return type and make sure that what you return includes **only** the fields that are declared in the type.
 
-FastAPI does several things internally with Pydantic to make sure that those same rules of class inheritance are not used for the returned data filtering, otherwise you could end up returning much more data than what you expected.
+ReadyAPI does several things internally with Pydantic to make sure that those same rules of class inheritance are not used for the returned data filtering, otherwise you could end up returning much more data than what you expected.
 
 This way, you can get the best of both worlds: type annotations with **tooling support** and **data filtering**.
 
@@ -258,7 +258,7 @@ The most common case would be [returning a Response directly as explained later 
 {!> ../../../docs_src/response_model/tutorial003_02.py!}
 ```
 
-This simple case is handled automatically by FastAPI because the return type annotation is the class (or a subclass) of `Response`.
+This simple case is handled automatically by ReadyAPI because the return type annotation is the class (or a subclass) of `Response`.
 
 And tools will also be happy because both `RedirectResponse` and `JSONResponse` are subclasses of `Response`, so the type annotation is correct.
 
@@ -270,11 +270,11 @@ You can also use a subclass of `Response` in the type annotation:
 {!> ../../../docs_src/response_model/tutorial003_03.py!}
 ```
 
-This will also work because `RedirectResponse` is a subclass of `Response`, and FastAPI will automatically handle this simple case.
+This will also work because `RedirectResponse` is a subclass of `Response`, and ReadyAPI will automatically handle this simple case.
 
 ### Invalid Return Type Annotations
 
-But when you return some other arbitrary object that is not a valid Pydantic type (e.g. a database object) and you annotate it like that in the function, FastAPI will try to create a Pydantic response model from that type annotation, and will fail.
+But when you return some other arbitrary object that is not a valid Pydantic type (e.g. a database object) and you annotate it like that in the function, ReadyAPI will try to create a Pydantic response model from that type annotation, and will fail.
 
 The same would happen if you had something like a <abbr title='A union between multiple types means "any of these types".'>union</abbr> between different types where one or more of them are not valid Pydantic types, for example this would fail 💥:
 
@@ -294,7 +294,7 @@ The same would happen if you had something like a <abbr title='A union between m
 
 ### Disable Response Model
 
-Continuing from the example above, you might not want to have the default data validation, documentation, filtering, etc. that is performed by FastAPI.
+Continuing from the example above, you might not want to have the default data validation, documentation, filtering, etc. that is performed by ReadyAPI.
 
 But you might want to still keep the return type annotation in the function to get the support from tools like editors and type checkers (e.g. mypy).
 
@@ -312,7 +312,7 @@ In this case, you can disable the response model generation by setting `response
     {!> ../../../docs_src/response_model/tutorial003_05.py!}
     ```
 
-This will make FastAPI skip the response model generation and that way you can have any return type annotations you need without it affecting your FastAPI application. 🤓
+This will make ReadyAPI skip the response model generation and that way you can have any return type annotations you need without it affecting your ReadyAPI application. 🤓
 
 ## Response Model encoding parameters
 
@@ -378,7 +378,7 @@ So, if you send a request to that *path operation* for the item with ID `foo`, t
 ```
 
 !!! info
-    FastAPI uses Pydantic model's `.dict()` with <a href="https://pydantic-docs.helpmanual.io/usage/exporting_models/#modeldict" class="external-link" target="_blank">its `exclude_unset` parameter</a> to achieve this.
+    ReadyAPI uses Pydantic model's `.dict()` with <a href="https://pydantic-docs.helpmanual.io/usage/exporting_models/#modeldict" class="external-link" target="_blank">its `exclude_unset` parameter</a> to achieve this.
 
 !!! info
     You can also use:
@@ -417,7 +417,7 @@ If the data has the same values as the default ones, like the item with ID `baz`
 }
 ```
 
-FastAPI is smart enough (actually, Pydantic is smart enough) to realize that, even though `description`, `tax`, and `tags` have the same values as the defaults, they were set explicitly (instead of taken from the defaults).
+ReadyAPI is smart enough (actually, Pydantic is smart enough) to realize that, even though `description`, `tax`, and `tags` have the same values as the defaults, they were set explicitly (instead of taken from the defaults).
 
 So, they will be included in the JSON response.
 
@@ -460,7 +460,7 @@ This can be used as a quick shortcut if you have only one Pydantic model and wan
 
 #### Using `list`s instead of `set`s
 
-If you forget to use a `set` and use a `list` or `tuple` instead, FastAPI will still convert it to a `set` and it will work correctly:
+If you forget to use a `set` and use a `list` or `tuple` instead, ReadyAPI will still convert it to a `set` and it will work correctly:
 
 === "Python 3.10+"
 

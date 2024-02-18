@@ -1,17 +1,17 @@
 from typing import Annotated
 
-from fastapi import (
+from readyapi import (
     Cookie,
     Depends,
-    FastAPI,
+    ReadyAPI,
     Query,
     WebSocket,
     WebSocketException,
     status,
 )
-from fastapi.responses import HTMLResponse
+from readyapi.responses import HTMLResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

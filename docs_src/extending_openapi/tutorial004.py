@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
+app = ReadyAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
 
 
 @app.get("/users/{username}")

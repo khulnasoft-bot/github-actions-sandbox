@@ -1,6 +1,6 @@
 # Middleware
 
-You can add middleware to **FastAPI** applications.
+You can add middleware to **ReadyAPI** applications.
 
 A "middleware" is a function that works with every **request** before it is processed by any specific *path operation*. And also with every **response** before returning it.
 
@@ -40,7 +40,7 @@ The middleware function receives:
 !!! note "Technical Details"
     You could also use `from starlette.requests import Request`.
 
-    **FastAPI** provides it as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides it as a convenience for you, the developer. But it comes directly from Starlette.
 
 ### Before and after the `response`
 

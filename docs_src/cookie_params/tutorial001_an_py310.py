@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from fastapi import Cookie, FastAPI
+from readyapi import Cookie, ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")

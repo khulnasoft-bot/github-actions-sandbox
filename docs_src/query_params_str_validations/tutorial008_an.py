@@ -1,9 +1,9 @@
 from typing import Union
 
-from fastapi import FastAPI, Query
+from readyapi import ReadyAPI, Query
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
 description = """
 ChimichangApp API helps you do awesome stuff. 🚀
@@ -15,7 +15,7 @@ You will be able to:
 * **Read users** (_not implemented_).
 """
 
-app = FastAPI(
+app = ReadyAPI(
     title="ChimichangApp",
     description=description,
     version="0.0.1",

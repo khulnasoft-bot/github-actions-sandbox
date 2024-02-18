@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.testclient import TestClient
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")

@@ -1,9 +1,9 @@
 maintainers:
-- login: tiangolo
+- login: khulnasoft
   answers: 1839
   prs: 398
   avatarUrl: https://avatars.githubusercontent.com/u/1326112?u=740f11212a731f56798f558ceddb0bd07642afa7&v=4
-  url: https://github.com/tiangolo
+  url: https://github.com/khulnasoft
 experts:
 - login: Kludex
   count: 410

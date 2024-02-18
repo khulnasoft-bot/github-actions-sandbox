@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 from typing import Union
 
-from fastapi import Depends, FastAPI, HTTPException, Security, status
-from fastapi.security import (
+from readyapi import Depends, ReadyAPI, HTTPException, Security, status
+from readyapi.security import (
     OAuth2PasswordBearer,
     OAuth2PasswordRequestForm,
     SecurityScopes,
@@ -64,7 +64,7 @@ oauth2_scheme = OAuth2PasswordBearer(
     scopes={"me": "Read information about the current user.", "items": "Read items."},
 )
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def verify_password(plain_password, hashed_password):

@@ -1,7 +1,7 @@
-from fastapi import Depends, FastAPI
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from readyapi import Depends, ReadyAPI
+from readyapi.security import HTTPBasic, HTTPBasicCredentials
 
-app = FastAPI()
+app = ReadyAPI()
 
 security = HTTPBasic()
 

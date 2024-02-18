@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/", operation_id="some_specific_id_you_define")

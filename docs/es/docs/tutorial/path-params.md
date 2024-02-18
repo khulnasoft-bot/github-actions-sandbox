@@ -38,7 +38,7 @@ Si corres este ejemplo y abres tu navegador en <a href="http://127.0.0.1:8000/it
 !!! check "Revisa"
     Observa que el valor que recibió (y devolvió) tu función es `3`, como un Python `int`, y no un string `"3"`.
 
-    Entonces, con esa declaración de tipos **FastAPI** te da <abbr title="convertir el string que viene de un HTTP request a datos de Python">"parsing"</abbr> automático del request.
+    Entonces, con esa declaración de tipos **ReadyAPI** te da <abbr title="convertir el string que viene de un HTTP request a datos de Python">"parsing"</abbr> automático del request.
 
 ## Validación de datos
 
@@ -64,7 +64,7 @@ debido a que el parámetro de path `item_id` tenía el valor `"foo"`, que no es 
 El mismo error aparecería si pasaras un `float` en vez de un `int` como en: <a href="http://127.0.0.1:8000/items/4.2" class="external-link" target="_blank">http://127.0.0.1:8000/items/4.2</a>
 
 !!! check "Revisa"
-    Así, con la misma declaración de tipo de Python, **FastAPI** te da validación de datos.
+    Así, con la misma declaración de tipo de Python, **ReadyAPI** te da validación de datos.
 
     Observa que el error también muestra claramente el punto exacto en el que no pasó la validación.
 
@@ -77,7 +77,7 @@ Cuando abras tu navegador en <a href="http://127.0.0.1:8000/docs" class="externa
 <img src="/img/tutorial/path-params/image01.png">
 
 !!! check "Revisa"
-    Nuevamente, con la misma declaración de tipo de Python, **FastAPI** te da documentación automática e interactiva (integrándose con Swagger UI)
+    Nuevamente, con la misma declaración de tipo de Python, **ReadyAPI** te da documentación automática e interactiva (integrándose con Swagger UI)
 
     Observa que el parámetro de path está declarado como un integer.
 
@@ -85,7 +85,7 @@ Cuando abras tu navegador en <a href="http://127.0.0.1:8000/docs" class="externa
 
 Debido a que el schema generado es del estándar <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md" class="external-link" target="_blank">OpenAPI</a> hay muchas herramientas compatibles.
 
-Es por esto que **FastAPI** mismo provee una documentación alternativa de la API (usando ReDoc), a la que puedes acceder en <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
+Es por esto que **ReadyAPI** mismo provee una documentación alternativa de la API (usando ReDoc), a la que puedes acceder en <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>:
 
 <img src="/img/tutorial/path-params/image02.png">
 
@@ -205,7 +205,7 @@ Entonces, la URL para ese archivo sería algo como: `/files/home/johndoe/myfile.
 
 OpenAPI no soporta una manera de declarar un *parámetro de path* que contenga un path, dado que esto podría llevar a escenarios que son difíciles de probar y definir.
 
-Sin embargo, lo puedes hacer en **FastAPI** usando una de las herramientas internas de Starlette.
+Sin embargo, lo puedes hacer en **ReadyAPI** usando una de las herramientas internas de Starlette.
 
 La documentación seguirá funcionando, aunque no añadirá ninguna información diciendo que el parámetro debería contener un path.
 
@@ -232,7 +232,7 @@ Entonces lo puedes usar con:
 
 ## Repaso
 
-Con **FastAPI**, usando declaraciones de tipo de Python intuitivas y estándares, obtienes:
+Con **ReadyAPI**, usando declaraciones de tipo de Python intuitivas y estándares, obtienes:
 
 * Soporte en el editor: chequeos de errores, auto-completado, etc.
 * "<abbr title="convertir el string que viene de un HTTP request a datos de Python">Parsing</abbr>" de datos
@@ -241,4 +241,4 @@ Con **FastAPI**, usando declaraciones de tipo de Python intuitivas y estándares
 
 Solo tienes que declararlos una vez.
 
-Esa es probablemente la principal ventaja visible de **FastAPI**  sobre otros frameworks alternativos (aparte del rendimiento puro).
+Esa es probablemente la principal ventaja visible de **ReadyAPI**  sobre otros frameworks alternativos (aparte del rendimiento puro).

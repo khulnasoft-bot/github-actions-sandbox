@@ -1,8 +1,8 @@
 from typing import Union
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/users/{user_id}/items/{item_id}")

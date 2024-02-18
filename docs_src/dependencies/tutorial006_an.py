@@ -1,7 +1,7 @@
-from fastapi import Depends, FastAPI, Header, HTTPException
+from readyapi import Depends, ReadyAPI, Header, HTTPException
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 async def verify_token(x_token: Annotated[str, Header()]):

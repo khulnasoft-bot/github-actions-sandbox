@@ -1,6 +1,6 @@
-site_name: FastAPI
-site_description: FastAPI framework, high performance, easy to learn, fast to code, ready for production
-site_url: https://fastapi.tiangolo.com/ja/
+site_name: ReadyAPI
+site_description: ReadyAPI framework, high performance, easy to learn, fast to code, ready for production
+site_url: https://readyapi.khulnasoft.com/ja/
 theme:
   name: material
   custom_dir: overrides
@@ -25,24 +25,24 @@ theme:
   - content.tabs.link
   icon:
     repo: fontawesome/brands/github-alt
-  logo: https://fastapi.tiangolo.com/img/icon-white.svg
-  favicon: https://fastapi.tiangolo.com/img/favicon.png
+  logo: https://readyapi.khulnasoft.com/img/icon-white.svg
+  favicon: https://readyapi.khulnasoft.com/img/favicon.png
   language: ja
-repo_name: tiangolo/fastapi
-repo_url: https://github.com/tiangolo/fastapi
+repo_name: khulnasoft/readyapi
+repo_url: https://github.com/khulnasoft/readyapi
 edit_uri: ''
 plugins:
 - search
 - markdownextradata:
     data: data
 nav:
-- FastAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
   - ja: /ja/
 - features.md
-- fastapi-people.md
+- readyapi-people.md
 - チュートリアル - ユーザーガイド:
   - tutorial/index.md
   - tutorial/first-steps.md
@@ -83,7 +83,7 @@ nav:
 - history-design-future.md
 - external-links.md
 - benchmarks.md
-- help-fastapi.md
+- help-readyapi.md
 - contributing.md
 markdown_extensions:
 - toc:
@@ -110,19 +110,19 @@ extra:
     property: G-YNEVN69SC3
   social:
   - icon: fontawesome/brands/github-alt
-    link: https://github.com/tiangolo/fastapi
+    link: https://github.com/khulnasoft/readyapi
   - icon: fontawesome/brands/discord
     link: https://discord.gg/VQjSZaeJmf
   - icon: fontawesome/brands/twitter
-    link: https://twitter.com/fastapi
+    link: https://twitter.com/readyapi
   - icon: fontawesome/brands/linkedin
-    link: https://www.linkedin.com/in/tiangolo
+    link: https://www.linkedin.com/in/khulnasoft
   - icon: fontawesome/brands/dev
-    link: https://dev.to/tiangolo
+    link: https://dev.to/khulnasoft
   - icon: fontawesome/brands/medium
-    link: https://medium.com/@tiangolo
+    link: https://medium.com/@khulnasoft
   - icon: fontawesome/solid/globe
-    link: https://tiangolo.com
+    link: https://khulnasoft.com
   alternate:
   - link: /
     name: en - English
@@ -131,8 +131,8 @@ extra:
   - link: /ja/
     name: ja - 日本語
 extra_css:
-- https://fastapi.tiangolo.com/css/termynal.css
-- https://fastapi.tiangolo.com/css/custom.css
+- https://readyapi.khulnasoft.com/css/termynal.css
+- https://readyapi.khulnasoft.com/css/custom.css
 extra_javascript:
-- https://fastapi.tiangolo.com/js/termynal.js
-- https://fastapi.tiangolo.com/js/custom.js
+- https://readyapi.khulnasoft.com/js/termynal.js
+- https://readyapi.khulnasoft.com/js/custom.js

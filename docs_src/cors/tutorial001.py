@@ -1,11 +1,11 @@
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.cors import CORSMiddleware
 
-app = FastAPI()
+app = ReadyAPI()
 
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
+    "http://localhost.khulnasoft.com",
+    "https://localhost.khulnasoft.com",
     "http://localhost",
     "http://localhost:8080",
 ]

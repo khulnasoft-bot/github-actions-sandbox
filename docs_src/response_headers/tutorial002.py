@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Response
+from readyapi import ReadyAPI, Response
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/headers-and-object/")

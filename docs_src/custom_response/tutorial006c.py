@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
+from readyapi import ReadyAPI
+from readyapi.responses import RedirectResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/pydantic", response_class=RedirectResponse, status_code=302)

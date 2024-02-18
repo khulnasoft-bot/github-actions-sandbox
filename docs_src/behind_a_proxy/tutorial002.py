@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Request
+from readyapi import ReadyAPI, Request
 
-app = FastAPI(root_path="/api/v1")
+app = ReadyAPI(root_path="/api/v1")
 
 
 @app.get("/app")

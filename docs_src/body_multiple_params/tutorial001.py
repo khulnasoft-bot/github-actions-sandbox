@@ -1,9 +1,9 @@
 from typing import Union
 
-from fastapi import FastAPI, Path
+from readyapi import ReadyAPI, Path
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

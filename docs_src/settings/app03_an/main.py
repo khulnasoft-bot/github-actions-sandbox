@@ -1,11 +1,11 @@
 from functools import lru_cache
 from typing import Annotated
 
-from fastapi import Depends, FastAPI
+from readyapi import Depends, ReadyAPI
 
 from . import config
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @lru_cache()

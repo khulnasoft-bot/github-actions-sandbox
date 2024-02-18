@@ -1,6 +1,6 @@
 # 開発 - 貢献
 
-まず、[FastAPIを応援 - ヘルプの入手](help-fastapi.md){.internal-link target=_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
+まず、[ReadyAPIを応援 - ヘルプの入手](help-readyapi.md){.internal-link target=_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
 
 ## 開発
 
@@ -65,7 +65,7 @@ $ python -m venv env
     ```console
     $ which pip
 
-    some/directory/fastapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -77,7 +77,7 @@ $ python -m venv env
     ```console
     $ Get-Command pip
 
-    some/directory/fastapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -104,13 +104,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-これで、すべての依存関係とFastAPIを、ローカル環境にインストールします。
+これで、すべての依存関係とReadyAPIを、ローカル環境にインストールします。
 
-#### ローカル環境でFastAPIを使う
+#### ローカル環境でReadyAPIを使う
 
-FastAPIをインポートして使用するPythonファイルを作成し、ローカル環境で実行すると、ローカルのFastAPIソースコードが使用されます。
+ReadyAPIをインポートして使用するPythonファイルを作成し、ローカル環境で実行すると、ローカルのReadyAPIソースコードが使用されます。
 
-そして、`-e` でインストールされているローカルのFastAPIソースコードを更新した場合、そのPythonファイルを再度実行すると、更新したばかりの新しいバージョンのFastAPIが使用されます。
+そして、`-e` でインストールされているローカルのReadyAPIソースコードを更新した場合、そのPythonファイルを再度実行すると、更新したばかりの新しいバージョンのReadyAPIが使用されます。
 
 これにより、ローカルバージョンを「インストール」しなくても、すべての変更をテストできます。
 
@@ -128,7 +128,7 @@ $ bash scripts/format.sh
 
 また、すべてのインポートを自動でソートします。
 
-正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、FastAPIをローカル環境にインストールしている必要があります。
+正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、ReadyAPIをローカル環境にインストールしている必要があります。
 
 ### インポートの整形
 
@@ -197,7 +197,7 @@ $ python ./scripts/docs.py live
 
 ここでは、`./scripts/docs.py`のスクリプトを`python`プログラムで直接使う方法を説明します。
 
-ですが<a href="https://typer.tiangolo.com/typer-cli/" class="external-link" target="_blank">Typer CLI</a>を使用して、インストール完了後にターミナルでの自動補完もできます。
+ですが<a href="https://typer.khulnasoft.com/typer-cli/" class="external-link" target="_blank">Typer CLI</a>を使用して、インストール完了後にターミナルでの自動補完もできます。
 
 Typer CLIをインストールする場合、次のコマンドで補完をインストールできます:
 
@@ -236,14 +236,14 @@ Uvicornはデフォルトでポート`8000`を使用するため、ポート`800
 
 #### 豆知識とガイドライン
 
-* あなたの言語の<a href="https://github.com/tiangolo/fastapi/pulls" class="external-link" target="_blank">今あるプルリクエスト</a>を確認し、変更や承認をするレビューを追加します。
+* あなたの言語の<a href="https://github.com/khulnasoft/readyapi/pulls" class="external-link" target="_blank">今あるプルリクエスト</a>を確認し、変更や承認をするレビューを追加します。
 
 !!! tip "豆知識"
     すでにあるプルリクエストに<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request" class="external-link" target="_blank">修正提案つきのコメントを追加</a>できます。
 
     修正提案の承認のために<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews" class="external-link" target="_blank">プルリクエストのレビューの追加</a>のドキュメントを確認してください。
 
-* <a href="https://github.com/tiangolo/fastapi/issues" class="external-link" target="_blank">issues</a>をチェックして、あなたの言語に対応する翻訳があるかどうかを確認してください。
+* <a href="https://github.com/khulnasoft/readyapi/issues" class="external-link" target="_blank">issues</a>をチェックして、あなたの言語に対応する翻訳があるかどうかを確認してください。
 
 * 翻訳したページごとに1つのプルリクエストを追加します。これにより、他のユーザーがレビューしやすくなります。
 
@@ -283,7 +283,7 @@ $ python ./scripts/docs.py live es
 
 これで<a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> を開いて、変更を確認できます。
 
-FastAPI docs Webサイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
+ReadyAPI docs Webサイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
 
 しかし、このようにローカルで実行すると、翻訳済みのページのみが表示されます。
 
@@ -313,10 +313,10 @@ docs/en/docs/mkdocs.yml
 * 設定ファイルの中で、`docs/features.md`が記述されている箇所を見つけます:
 
 ```YAML hl_lines="8"
-site_name: FastAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- FastAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -332,10 +332,10 @@ docs/es/docs/mkdocs.yml
 * 英語とまったく同じ場所に追加します。例えば:
 
 ```YAML hl_lines="8"
-site_name: FastAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- FastAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -398,7 +398,7 @@ jinja2.exceptions.TemplateNotFound: partials/language/xx.html
 その必要がある場合は、新しい言語の`mkdocs.yml`を次のように編集してください:
 
 ```YAML hl_lines="5"
-site_name: FastAPI
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

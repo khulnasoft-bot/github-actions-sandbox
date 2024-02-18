@@ -1,8 +1,8 @@
 from typing import Dict
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.post("/index-weights/")

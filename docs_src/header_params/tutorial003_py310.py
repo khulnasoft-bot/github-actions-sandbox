@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Header
+from readyapi import ReadyAPI, Header
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")

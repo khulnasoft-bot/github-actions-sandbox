@@ -1,6 +1,6 @@
 # Run a Server Manually - Uvicorn
 
-The main thing you need to run a **FastAPI** application in a remote server machine is an ASGI server program like **Uvicorn**.
+The main thing you need to run a **ReadyAPI** application in a remote server machine is an ASGI server program like **Uvicorn**.
 
 There are 3 main alternatives:
 
@@ -94,7 +94,7 @@ You can then run your application the same way you have done in the tutorials, b
 
 ## Hypercorn with Trio
 
-Starlette and **FastAPI** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
+Starlette and **ReadyAPI** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
 
 Nevertheless, Uvicorn is currently only compatible with asyncio, and it normally uses <a href="https://github.com/MagicStack/uvloop" class="external-link" target="_blank">`uvloop`</a>, the high-performance drop-in replacement for `asyncio`.
 

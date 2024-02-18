@@ -4,7 +4,7 @@
 
 ## オリジン
 
-オリジンはプロトコル (`http`、`https`) とドメイン (`myapp.com`、`localhost`、`localhost.tiangolo.com`) とポート (`80`、`443`、`8080`) の組み合わせです。
+オリジンはプロトコル (`http`、`https`) とドメイン (`myapp.com`、`localhost`、`localhost.khulnasoft.com`) とポート (`80`、`443`、`8080`) の組み合わせです。
 
 したがって、以下はすべて異なるオリジンです:
 
@@ -34,11 +34,11 @@
 
 ## `CORSMiddleware` の使用
 
-**FastAPI** アプリケーションでは `CORSMiddleware` を使用して、CORSに関する設定ができます。
+**ReadyAPI** アプリケーションでは `CORSMiddleware` を使用して、CORSに関する設定ができます。
 
 * `CORSMiddleware`をインポートします。
 * 許可されたオリジンのリストを (文字列として) 作成します。
-* これを「ミドルウェア」として **FastAPI** アプリケーションに追加します。
+* これを「ミドルウェア」として **ReadyAPI** アプリケーションに追加します。
 
 以下も、バックエンドに許可させるかどうか指定できます:
 
@@ -81,4 +81,4 @@
 !!! note "技術詳細"
     `from starlette.middleware.cors import CORSMiddleware` も使用できます。
 
-    **FastAPI** は、開発者の利便性を高めるために、`fastapi.middleware` でいくつかのミドルウェアを提供します。利用可能なミドルウェアのほとんどは、Starletteから直接提供されています。
+    **ReadyAPI** は、開発者の利便性を高めるために、`readyapi.middleware` でいくつかのミドルウェアを提供します。利用可能なミドルウェアのほとんどは、Starletteから直接提供されています。

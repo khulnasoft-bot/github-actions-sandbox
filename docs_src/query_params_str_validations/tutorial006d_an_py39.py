@@ -1,9 +1,9 @@
 from typing import Annotated
 
-from fastapi import FastAPI, Query
+from readyapi import ReadyAPI, Query
 from pydantic import Required
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")

@@ -1,9 +1,9 @@
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
+from readyapi import ReadyAPI, Request
+from readyapi.responses import HTMLResponse
+from readyapi.staticfiles import StaticFiles
+from readyapi.templating import Jinja2Templates
 
-app = FastAPI()
+app = ReadyAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

@@ -1,7 +1,7 @@
-from fastapi import FastAPI, WebSocket
-from fastapi.responses import HTMLResponse
+from readyapi import ReadyAPI, WebSocket
+from readyapi.responses import HTMLResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

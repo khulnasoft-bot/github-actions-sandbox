@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Union
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
 
 @dataclass
@@ -12,7 +12,7 @@ class Item:
     tax: Union[float, None] = None
 
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.post("/items/")

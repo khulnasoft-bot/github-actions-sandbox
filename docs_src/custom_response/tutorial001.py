@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import UJSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import UJSONResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/", response_class=UJSONResponse)

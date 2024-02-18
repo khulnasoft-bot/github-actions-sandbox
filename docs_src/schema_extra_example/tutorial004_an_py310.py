@@ -1,9 +1,9 @@
 from typing import Annotated
 
-from fastapi import Body, FastAPI
+from readyapi import Body, ReadyAPI
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):
@@ -33,7 +33,7 @@ async def update_item(
                 },
                 "converted": {
                     "summary": "An example with converted data",
-                    "description": "FastAPI can convert price `strings` to actual `numbers` automatically",
+                    "description": "ReadyAPI can convert price `strings` to actual `numbers` automatically",
                     "value": {
                         "name": "Bar",
                         "price": "35.4",

@@ -1,7 +1,7 @@
-from fastapi import FastAPI, File, Form, UploadFile
+from readyapi import ReadyAPI, File, Form, UploadFile
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.post("/files/")

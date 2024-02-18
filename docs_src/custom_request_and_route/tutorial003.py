@@ -1,8 +1,8 @@
 import time
 from typing import Callable
 
-from fastapi import APIRouter, FastAPI, Request, Response
-from fastapi.routing import APIRoute
+from readyapi import APIRouter, ReadyAPI, Request, Response
+from readyapi.routing import APIRoute
 
 
 class TimedRoute(APIRoute):
@@ -22,7 +22,7 @@ class TimedRoute(APIRoute):
         return custom_route_handler
 
 
-app = FastAPI()
+app = ReadyAPI()
 router = APIRouter(route_class=TimedRoute)
 
 

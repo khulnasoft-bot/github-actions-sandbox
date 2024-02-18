@@ -1,8 +1,8 @@
-from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from readyapi import ReadyAPI
+from readyapi.responses import FileResponse
 
 some_file_path = "large-video-file.mp4"
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")

@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Image(BaseModel):

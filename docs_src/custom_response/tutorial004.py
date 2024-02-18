@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from readyapi import ReadyAPI
+from readyapi.responses import HTMLResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def generate_html_response():

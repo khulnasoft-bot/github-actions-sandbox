@@ -1,6 +1,6 @@
-from fastapi import FastAPI
-from fastapi.staticfiles import StaticFiles
+from readyapi import ReadyAPI
+from readyapi.staticfiles import StaticFiles
 
-app = FastAPI()
+app = ReadyAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")

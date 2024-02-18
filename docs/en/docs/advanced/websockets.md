@@ -1,6 +1,6 @@
 # WebSockets
 
-You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSockets</a> with **FastAPI**.
+You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSockets</a> with **ReadyAPI**.
 
 ## Install `WebSockets`
 
@@ -44,7 +44,7 @@ But it's the simplest way to focus on the server-side of WebSockets and have a w
 
 ## Create a `websocket`
 
-In your **FastAPI** application, create a `websocket`:
+In your **ReadyAPI** application, create a `websocket`:
 
 ```Python hl_lines="1  46-47"
 {!../../../docs_src/websockets/tutorial001.py!}
@@ -53,7 +53,7 @@ In your **FastAPI** application, create a `websocket`:
 !!! note "Technical Details"
     You could also use `from starlette.websockets import WebSocket`.
 
-    **FastAPI** provides the same `WebSocket` directly just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `WebSocket` directly just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Await for messages and send messages
 
@@ -89,7 +89,7 @@ You can type messages in the input box, and send them:
 
 <img src="/img/tutorial/websockets/image02.png">
 
-And your **FastAPI** application with WebSockets will respond back:
+And your **ReadyAPI** application with WebSockets will respond back:
 
 <img src="/img/tutorial/websockets/image03.png">
 
@@ -101,7 +101,7 @@ And all of them will use the same WebSocket connection.
 
 ## Using `Depends` and others
 
-In WebSocket endpoints you can import from `fastapi` and use:
+In WebSocket endpoints you can import from `readyapi` and use:
 
 * `Depends`
 * `Security`
@@ -110,7 +110,7 @@ In WebSocket endpoints you can import from `fastapi` and use:
 * `Path`
 * `Query`
 
-They work the same way as for other FastAPI endpoints/*path operations*:
+They work the same way as for other ReadyAPI endpoints/*path operations*:
 
 === "Python 3.10+"
 
@@ -214,7 +214,7 @@ Client #1596980209979 left the chat
 
     But have in mind that, as everything is handled in memory, in a single list, it will only work while the process is running, and will only work with a single process.
 
-    If you need something easy to integrate with FastAPI but that is more robust, supported by Redis, PostgreSQL or others, check <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a>.
+    If you need something easy to integrate with ReadyAPI but that is more robust, supported by Redis, PostgreSQL or others, check <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a>.
 
 ## More info
 

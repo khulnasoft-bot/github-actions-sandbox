@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/app")
@@ -8,7 +8,7 @@ def read_main():
     return {"message": "Hello World from main app"}
 
 
-subapi = FastAPI()
+subapi = ReadyAPI()
 
 
 @subapi.get("/sub")

@@ -1,8 +1,8 @@
-from fastapi import FastAPI, Query
+from readyapi import ReadyAPI, Query
 from pydantic import Required
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")

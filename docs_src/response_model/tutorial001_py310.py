@@ -1,9 +1,9 @@
 from typing import Any
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

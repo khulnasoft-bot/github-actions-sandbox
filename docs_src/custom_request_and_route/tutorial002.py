@@ -1,8 +1,8 @@
 from typing import Callable, List
 
-from fastapi import Body, FastAPI, HTTPException, Request, Response
-from fastapi.exceptions import RequestValidationError
-from fastapi.routing import APIRoute
+from readyapi import Body, ReadyAPI, HTTPException, Request, Response
+from readyapi.exceptions import RequestValidationError
+from readyapi.routing import APIRoute
 
 
 class ValidationErrorLoggingRoute(APIRoute):
@@ -20,7 +20,7 @@ class ValidationErrorLoggingRoute(APIRoute):
         return custom_route_handler
 
 
-app = FastAPI()
+app = ReadyAPI()
 app.router.route_class = ValidationErrorLoggingRoute
 
 

@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import ORJSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import ORJSONResponse
 
-app = FastAPI(default_response_class=ORJSONResponse)
+app = ReadyAPI(default_response_class=ORJSONResponse)
 
 
 @app.get("/items/")

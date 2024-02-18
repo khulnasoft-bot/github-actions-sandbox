@@ -1,4 +1,4 @@
-name: FastAPI People
+name: ReadyAPI People
 
 on:
   schedule:
@@ -11,7 +11,7 @@ on:
         default: false
 
 jobs:
-  fastapi-people:
+  readyapi-people:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

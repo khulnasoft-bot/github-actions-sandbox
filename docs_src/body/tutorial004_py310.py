@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 
@@ -9,7 +9,7 @@ class Item(BaseModel):
     tax: float | None = None
 
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.put("/items/{item_id}")

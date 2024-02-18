@@ -2,23 +2,23 @@
 
 このセクションでは以下の使い方の紹介とガイドへのリンクが確認できます:
 
-* **5分**程度で、**FastAPI** のアプリケーションを、パフォーマンスを最大限に発揮するDockerイメージ (コンテナ)にする。
+* **5分**程度で、**ReadyAPI** のアプリケーションを、パフォーマンスを最大限に発揮するDockerイメージ (コンテナ)にする。
 * (オプション) 開発者として必要な範囲でHTTPSを理解する。
 * **20分**程度で、自動的なHTTPS生成とともにDockerのSwarmモード クラスタをセットアップする (月5ドルのシンプルなサーバー上で)。
-* **10分**程度で、DockerのSwarmモード クラスタを使って、HTTPSなどを使用した完全な**FastAPI** アプリケーションの作成とデプロイ。
+* **10分**程度で、DockerのSwarmモード クラスタを使って、HTTPSなどを使用した完全な**ReadyAPI** アプリケーションの作成とデプロイ。
 
 デプロイのために、<a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a> を利用できます。セキュリティ、再現性、開発のシンプルさなどに利点があります。
 
 Dockerを使う場合、公式のDockerイメージが利用できます:
 
-## <a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker" class="external-link" target="_blank">tiangolo/uvicorn-gunicorn-fastapi</a>
+## <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>
 
 このイメージは「自動チューニング」機構を含んでいます。犠牲を払うことなく、ただコードを加えるだけで自動的に高パフォーマンスを実現できます。
 
 ただし、環境変数や設定ファイルを使って全ての設定の変更や更新を行えます。
 
 !!! tip "豆知識"
-    全ての設定とオプションを確認するには、Dockerイメージページを開いて下さい: <a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker" class="external-link" target="_blank">tiangolo/uvicorn-gunicorn-fastapi</a>.
+    全ての設定とオプションを確認するには、Dockerイメージページを開いて下さい: <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>.
 
 ## `Dockerfile` の作成
 
@@ -26,7 +26,7 @@ Dockerを使う場合、公式のDockerイメージが利用できます:
 * 以下の`Dockerfile` を作成:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.7
 
 COPY ./app /app
 ```
@@ -36,7 +36,7 @@ COPY ./app /app
 [Bigger Applications with Multiple Files](tutorial/bigger-applications.md){.internal-link target=_blank} セクションに倣う場合は、`Dockerfile` は上記の代わりに、以下の様になるかもしれません:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.7
 
 COPY ./app /app/app
 ```
@@ -50,7 +50,7 @@ Raspberry Pi (ARMプロセッサ搭載)やそれ以外のアーキテクチャ�
 ```Dockerfile
 FROM python:3.7
 
-RUN pip install fastapi uvicorn
+RUN pip install readyapi uvicorn
 
 EXPOSE 80
 
@@ -59,7 +59,7 @@ COPY ./app /app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 ```
 
-## **FastAPI** コードの作成
+## **ReadyAPI** コードの作成
 
 * `app` ディレクトリを作成し、移動。
 * 以下の`main.py` ファイルを作成:
@@ -67,9 +67,9 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 ```Python
 from typing import Optional
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -94,7 +94,7 @@ def read_item(item_id: int, q: Optional[str] = None):
 ## Dockerイメージをビルド
 
 * プロジェクトディレクトリ (`app` ディレクトリを含んだ、`Dockerfile` のある場所) へ移動
-* FastAPIイメージのビルド:
+* ReadyAPIイメージのビルド:
 
 <div class="termy">
 
@@ -118,7 +118,7 @@ $ docker run -d --name mycontainer -p 80:80 myimage
 
 </div>
 
-これで、Dockerコンテナ内に最適化されたFastAPIサーバが動作しています。使用しているサーバ (そしてCPUコア数) に沿った自動チューニングが行われています。
+これで、Dockerコンテナ内に最適化されたReadyAPIサーバが動作しています。使用しているサーバ (そしてCPUコア数) に沿った自動チューニングが行われています。
 
 ## 確認
 
@@ -136,7 +136,7 @@ DockerコンテナのURLで確認できるはずです。例えば: <a href="htt
 
 自動生成された対話的APIドキュメントが確認できます (<a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>によって提供されます):
 
-![Swagger UI](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ## その他のAPIドキュメント
 
@@ -144,7 +144,7 @@ DockerコンテナのURLで確認できるはずです。例えば: <a href="htt
 
 他の自動生成された対話的なAPIドキュメントが確認できます (<a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>によって提供されます):
 
-![ReDoc](https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
 ## Traefik
 
@@ -166,11 +166,11 @@ Docker Swarmモードを使用することで、1台のマシンの「クラス�
 
 TraefikおよびHTTPS処理を備えたDocker Swarm Modeクラスターをセットアップするには、次のガイドに従います:
 
-### <a href="https://medium.com/@tiangolo/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" class="external-link" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a>
+### <a href="https://medium.com/@khulnasoft/docker-swarm-mode-and-traefik-for-a-https-cluster-20328dba6232" class="external-link" target="_blank">Docker Swarm Mode and Traefik for an HTTPS cluster</a>
 
-### FastAPIアプリケーションのデプロイ
+### ReadyAPIアプリケーションのデプロイ
 
-すべてを設定するための最も簡単な方法は、[**FastAPI** Project Generators](../project-generation.md){.internal-link target=_blank}を使用することでしょう。
+すべてを設定するための最も簡単な方法は、[**ReadyAPI** Project Generators](../project-generation.md){.internal-link target=_blank}を使用することでしょう。
 
 上述したTraefikとHTTPSを備えたDocker Swarm クラスタが統合されるように設計されています。
 

@@ -1,6 +1,6 @@
-from fastapi import FastAPI, Request
+from readyapi import ReadyAPI, Request
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def magic_data_reader(raw_body: bytes):

@@ -1,11 +1,11 @@
-# FastAPI in Containers - Docker
+# ReadyAPI in Containers - Docker
 
-When deploying FastAPI applications a common approach is to build a **Linux container image**. It's normally done using <a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a>. You can then deploy that container image in one of a few possible ways.
+When deploying ReadyAPI applications a common approach is to build a **Linux container image**. It's normally done using <a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a>. You can then deploy that container image in one of a few possible ways.
 
 Using Linux containers has several advantages including **security**, **replicability**, **simplicity**, and others.
 
 !!! tip
-    In a hurry and already know this stuff? Jump to the [`Dockerfile` below 👇](#build-a-docker-image-for-fastapi).
+    In a hurry and already know this stuff? Jump to the [`Dockerfile` below 👇](#build-a-docker-image-for-readyapi).
 
 <details>
 <summary>Dockerfile Preview 👀</summary>
@@ -88,11 +88,11 @@ A container normally has a **single process**, but it's also possible to start s
 
 But it's not possible to have a running container without **at least one running process**. If the main process stops, the container stops.
 
-## Build a Docker Image for FastAPI
+## Build a Docker Image for ReadyAPI
 
 Okay, let's build something now! 🚀
 
-I'll show you how to build a **Docker image** for FastAPI **from scratch**, based on the **official Python** image.
+I'll show you how to build a **Docker image** for ReadyAPI **from scratch**, based on the **official Python** image.
 
 This is what you would want to do in **most cases**, for example:
 
@@ -108,12 +108,12 @@ It would depend mainly on the tool you use to **install** those requirements.
 
 The most common way to do it is to have a file `requirements.txt` with the package names and their versions, one per line.
 
-You would of course use the same ideas you read in [About FastAPI versions](./versions.md){.internal-link target=_blank} to set the ranges of versions.
+You would of course use the same ideas you read in [About ReadyAPI versions](./versions.md){.internal-link target=_blank} to set the ranges of versions.
 
 For example, your `requirements.txt` could look like:
 
 ```
-fastapi>=0.68.0,<0.69.0
+readyapi>=0.68.0,<0.69.0
 pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
 ```
@@ -125,7 +125,7 @@ And you would normally install those package dependencies with `pip`, for exampl
 ```console
 $ pip install -r requirements.txt
 ---> 100%
-Successfully installed fastapi pydantic uvicorn
+Successfully installed readyapi pydantic uvicorn
 ```
 
 </div>
@@ -135,7 +135,7 @@ Successfully installed fastapi pydantic uvicorn
 
     I'll show you an example using Poetry later in a section below. 👇
 
-### Create the **FastAPI** Code
+### Create the **ReadyAPI** Code
 
 * Create an `app` directory and enter it.
 * Create an empty file `__init__.py`.
@@ -144,9 +144,9 @@ Successfully installed fastapi pydantic uvicorn
 ```Python
 from typing import Union
 
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -281,7 +281,7 @@ COPY ./app /code/app
 Now that all the files are in place, let's build the container image.
 
 * Go to the project directory (in where your `Dockerfile` is, containing your `app` directory).
-* Build your FastAPI image:
+* Build your ReadyAPI image:
 
 <div class="termy">
 
@@ -326,7 +326,7 @@ Now you can go to <a href="http://192.168.99.100/docs" class="external-link" tar
 
 You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ## Alternative API docs
 
@@ -334,11 +334,11 @@ And you can also go to <a href="http://192.168.99.100/redoc" class="external-lin
 
 You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
-## Build a Docker Image with a Single-File FastAPI
+## Build a Docker Image with a Single-File ReadyAPI
 
-If your FastAPI is a single file, for example, `main.py` without an `./app` directory, your file structure could look like this:
+If your ReadyAPI is a single file, for example, `main.py` without an `./app` directory, your file structure could look like this:
 
 ```
 .
@@ -369,7 +369,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 
 2. Run Uvicorn and tell it to import the `app` object from `main` (instead of importing from `app.main`).
 
-Then adjust the Uvicorn command to use the new module `main` instead of `app.main` to import the FastAPI object `app`.
+Then adjust the Uvicorn command to use the new module `main` instead of `app.main` to import the ReadyAPI object `app`.
 
 ## Deployment Concepts
 
@@ -390,7 +390,7 @@ Let's review these **deployment concepts** in terms of containers:
 
 ## HTTPS
 
-If we focus just on the **container image** for a FastAPI application (and later the running **container**), HTTPS normally would be handled **externally** by another tool.
+If we focus just on the **container image** for a ReadyAPI application (and later the running **container**), HTTPS normally would be handled **externally** by another tool.
 
 It could be another container, for example with <a href="https://traefik.io/" class="external-link" target="_blank">Traefik</a>, handling **HTTPS** and **automatic** acquisition of **certificates**.
 
@@ -432,7 +432,7 @@ And when working with containers, the same system you use to start and manage th
 
 When working with **Kubernetes** or similar distributed container management systems, using their internal networking mechanisms would allow the single **load balancer** that is listening on the main **port** to transmit communication (requests) to possibly **multiple containers** running your app.
 
-Each of these containers running your app would normally have **just one process** (e.g. a Uvicorn process running your FastAPI application). They would all be **identical containers**, running the same thing, but each with its own process, memory, etc. That way you would take advantage of **parallelization** in **different cores** of the CPU, or even in **different machines**.
+Each of these containers running your app would normally have **just one process** (e.g. a Uvicorn process running your ReadyAPI application). They would all be **identical containers**, running the same thing, but each with its own process, memory, etc. That way you would take advantage of **parallelization** in **different cores** of the CPU, or even in **different machines**.
 
 And the distributed container system with the **load balancer** would **distribute the requests** to each one of the containers with your app **in turns**. So, each request could be handled by one of the multiple **replicated containers** running your app.
 
@@ -518,19 +518,19 @@ There is an official Docker image that includes Gunicorn running with Uvicorn wo
 
 This image would be useful mainly in the situations described above in: [Containers with Multiple Processes and Special Cases](#containers-with-multiple-processes-and-special-cases).
 
-* <a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker" class="external-link" target="_blank">tiangolo/uvicorn-gunicorn-fastapi</a>.
+* <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>.
 
 !!! warning
-    There's a high chance that you **don't** need this base image or any other similar one, and would be better off by building the image from scratch as [described above in: Build a Docker Image for FastAPI](#build-a-docker-image-for-fastapi).
+    There's a high chance that you **don't** need this base image or any other similar one, and would be better off by building the image from scratch as [described above in: Build a Docker Image for ReadyAPI](#build-a-docker-image-for-readyapi).
 
 This image has an **auto-tuning** mechanism included to set the **number of worker processes** based on the CPU cores available.
 
 It has **sensible defaults**, but you can still change and update all the configurations with **environment variables** or configuration files.
 
-It also supports running <a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker#pre_start_path" class="external-link" target="_blank">**previous steps before starting**</a> with a script.
+It also supports running <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker#pre_start_path" class="external-link" target="_blank">**previous steps before starting**</a> with a script.
 
 !!! tip
-    To see all the configurations and options, go to the Docker image page: <a href="https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker" class="external-link" target="_blank">tiangolo/uvicorn-gunicorn-fastapi</a>.
+    To see all the configurations and options, go to the Docker image page: <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>.
 
 ### Number of Processes on the Official Docker Image
 
@@ -549,7 +549,7 @@ So, if your application consumes a lot of memory (for example with machine learn
 Here's how you would create a `Dockerfile` based on this image:
 
 ```Dockerfile
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.9
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -563,7 +563,7 @@ COPY ./app /app
 If you followed the section about creating [Bigger Applications with Multiple Files](../tutorial/bigger-applications.md){.internal-link target=_blank}, your `Dockerfile` might instead look like:
 
 ```Dockerfile hl_lines="7"
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.9
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -574,7 +574,7 @@ COPY ./app /app/app
 
 ### When to Use
 
-You should probably **not** use this official base image (or any other similar one) if you are using **Kubernetes** (or others) and you are already setting **replication** at the cluster level, with multiple **containers**. In those cases, you are better off **building an image from scratch** as described above: [Build a Docker Image for FastAPI](#build-a-docker-image-for-fastapi).
+You should probably **not** use this official base image (or any other similar one) if you are using **Kubernetes** (or others) and you are already setting **replication** at the cluster level, with multiple **containers**. In those cases, you are better off **building an image from scratch** as described above: [Build a Docker Image for ReadyAPI](#build-a-docker-image-for-readyapi).
 
 This image would be useful mainly in the special cases described above in [Containers with Multiple Processes and Special Cases](#containers-with-multiple-processes-and-special-cases). For example, if your application is **simple enough** that setting a default number of processes based on the CPU works well, you don't want to bother with manually configuring the replication at the cluster level, and you are not running more than one container with your app. Or if you are deploying with **Docker Compose**, running on a single server, etc.
 
@@ -695,4 +695,4 @@ In most cases, you probably won't want to use any base image, and instead **buil
 
 Taking care of the **order** of instructions in the `Dockerfile` and the **Docker cache** you can **minimize build times**, to maximize your productivity (and avoid boredom). 😎
 
-In certain special cases, you might want to use the official Docker image for FastAPI. 🤓
+In certain special cases, you might want to use the official Docker image for ReadyAPI. 🤓

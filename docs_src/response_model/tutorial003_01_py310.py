@@ -1,7 +1,7 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel, EmailStr
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class BaseUser(BaseModel):

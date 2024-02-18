@@ -1,5 +1,5 @@
-from fastapi import FastAPI
-from fastapi.middleware.wsgi import WSGIMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.wsgi import WSGIMiddleware
 from flask import Flask, request
 from markupsafe import escape
 
@@ -12,7 +12,7 @@ def flask_main():
     return f"Hello, {escape(name)} from Flask!"
 
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.get("/v2")

@@ -1,4 +1,4 @@
-from fastapi import Depends
+from readyapi import Depends
 
 
 async def dependency_a():

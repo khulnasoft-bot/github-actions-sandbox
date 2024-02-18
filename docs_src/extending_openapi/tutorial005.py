@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI(swagger_ui_parameters={"deepLinking": False})
+app = ReadyAPI(swagger_ui_parameters={"deepLinking": False})
 
 
 @app.get("/users/{username}")

@@ -1,6 +1,6 @@
-from fastapi import FastAPI, File, Form, UploadFile
+from readyapi import ReadyAPI, File, Form, UploadFile
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.post("/files/")

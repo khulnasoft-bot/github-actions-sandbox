@@ -1,8 +1,8 @@
 # Características
 
-## Características de FastAPI
+## Características de ReadyAPI
 
-**FastAPI** te provee lo siguiente:
+**ReadyAPI** te provee lo siguiente:
 
 ### Basado en estándares abiertos
 
@@ -17,17 +17,17 @@ Documentación interactiva de la API e interfaces web de exploración. Hay múlt
 
 * <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank"><strong>Swagger UI</strong></a>, con exploración interactiva, llama y prueba tu API directamente desde tu navegador.
 
-![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png)
+![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
 
 * Documentación alternativa de la API con <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank"><strong>ReDoc</strong></a>.
 
-![ReDoc](https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png)
+![ReDoc](https://readyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
 
 ### Simplemente Python moderno
 
 Todo está basado en las declaraciones de tipo de **Python 3.6** estándar (gracias a Pydantic). No necesitas aprender una sintáxis nueva, solo Python moderno.
 
-Si necesitas un repaso de 2 minutos de cómo usar los tipos de Python (así no uses FastAPI) prueba el tutorial corto: [Python Types](python-types.md){.internal-link target=_blank}.
+Si necesitas un repaso de 2 minutos de cómo usar los tipos de Python (así no uses ReadyAPI) prueba el tutorial corto: [Python Types](python-types.md){.internal-link target=_blank}.
 
 Escribes Python estándar con tipos así:
 
@@ -74,7 +74,7 @@ El framework fue diseñado en su totalidad para ser fácil e intuitivo de usar. 
 
 En la última encuesta a desarrolladores de Python fue claro que <a href="https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features" class="external-link" target="_blank">la característica más usada es el "autocompletado"</a>.
 
-El framework **FastAPI** está creado para satisfacer eso. El autocompletado funciona en todas partes.
+El framework **ReadyAPI** está creado para satisfacer eso. El autocompletado funciona en todas partes.
 
 No vas a tener que volver a la documentación seguido.
 
@@ -82,11 +82,11 @@ Así es como tu editor te puede ayudar:
 
 * en <a href="https://code.visualstudio.com/" class="external-link" target="_blank">Visual Studio Code</a>:
 
-![editor support](https://fastapi.tiangolo.com/img/vscode-completion.png)
+![editor support](https://readyapi.khulnasoft.com/img/vscode-completion.png)
 
 * en <a href="https://www.jetbrains.com/pycharm/" class="external-link" target="_blank">PyCharm</a>:
 
-![editor support](https://fastapi.tiangolo.com/img/pycharm-completion.png)
+![editor support](https://readyapi.khulnasoft.com/img/pycharm-completion.png)
 
 Obtendrás completado para tu código que podrías haber considerado imposible antes. Por ejemplo, el key `price` dentro del JSON body (que podría haber estado anidado) que viene de un request.
 
@@ -133,7 +133,7 @@ Todo ha sido construido como herramientas y componentes reutilizables que son f�
 
 ### Dependency Injection
 
-FastAPI incluye un sistema de <abbr title='En español: Inyección de Dependencias. También conocido en inglés cómo: "components", "resources", "services", "providers"'><strong>Dependency Injection</strong></abbr> extremadamente poderoso y fácil de usar.
+ReadyAPI incluye un sistema de <abbr title='En español: Inyección de Dependencias. También conocido en inglés cómo: "components", "resources", "services", "providers"'><strong>Dependency Injection</strong></abbr> extremadamente poderoso y fácil de usar.
 
 * Inclusive las dependencias pueden tener dependencias creando una jerarquía o un **"grafo" de dependencias**.
 * Todas son **manejadas automáticamente** por el framework.
@@ -156,11 +156,11 @@ Cualquier integración está diseñada para que sea tan sencilla de usar (con de
 
 ## Características de Starlette
 
-**FastAPI** está basado y es completamente compatible con <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. Tanto así, que cualquier código de Starlette que tengas también funcionará.
+**ReadyAPI** está basado y es completamente compatible con <a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette</strong></a>. Tanto así, que cualquier código de Starlette que tengas también funcionará.
 
-`FastAPI` es realmente una sub-clase de `Starlette`. Así que, si ya conoces o usas Starlette, muchas de las características funcionarán de la misma manera.
+`ReadyAPI` es realmente una sub-clase de `Starlette`. Así que, si ya conoces o usas Starlette, muchas de las características funcionarán de la misma manera.
 
-Con **FastAPI** obtienes todas las características de **Starlette** (porque FastAPI es simplemente Starlette en esteroides):
+Con **ReadyAPI** obtienes todas las características de **Starlette** (porque ReadyAPI es simplemente Starlette en esteroides):
 
 * Desempeño realmente impresionante. Es uno <a href="https://github.com/encode/starlette#performance" class="external-link" target="_blank"> de los frameworks de Python más rápidos, a la par con **NodeJS** y **Go**</a>.
 * Soporte para **WebSocket**.
@@ -175,7 +175,7 @@ Con **FastAPI** obtienes todas las características de **Starlette** (porque Fas
 
 ## Características de Pydantic
 
-**FastAPI** está basado y es completamente compatible con <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. Tanto así, que cualquier código de Pydantic que tengas también funcionará.
+**ReadyAPI** está basado y es completamente compatible con <a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic</strong></a>. Tanto así, que cualquier código de Pydantic que tengas también funcionará.
 
 Esto incluye a librerías externas basadas en Pydantic como <abbr title="Object-Relational Mapper">ORM</abbr>s y <abbr title="Object-Document Mapper">ODM</abbr>s para bases de datos.
 
@@ -183,7 +183,7 @@ Esto también significa que en muchos casos puedes pasar el mismo objeto que obt
 
 Lo mismo aplica para el sentido contrario. En muchos casos puedes pasarle el objeto que obtienes de la base de datos **directamente al cliente**.
 
-Con **FastAPI** obtienes todas las características de **Pydantic** (dado que FastAPI está basado en Pydantic para todo el manejo de datos):
+Con **ReadyAPI** obtienes todas las características de **Pydantic** (dado que ReadyAPI está basado en Pydantic para todo el manejo de datos):
 
 * **Sin dificultades para entender**:
     * No necesitas aprender un nuevo micro-lenguaje de definición de schemas.

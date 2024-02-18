@@ -1,9 +1,9 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.exceptions import RequestValidationError
-from fastapi.responses import PlainTextResponse
+from readyapi import ReadyAPI, HTTPException
+from readyapi.exceptions import RequestValidationError
+from readyapi.responses import PlainTextResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 @app.exception_handler(StarletteHTTPException)

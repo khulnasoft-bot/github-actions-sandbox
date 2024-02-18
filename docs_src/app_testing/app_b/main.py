@@ -1,6 +1,6 @@
 from typing import Union
 
-from fastapi import FastAPI, Header, HTTPException
+from readyapi import ReadyAPI, Header, HTTPException
 from pydantic import BaseModel
 
 fake_secret_token = "coneofsilence"
@@ -10,7 +10,7 @@ fake_db = {
     "bar": {"id": "bar", "title": "Bar", "description": "The bartenders"},
 }
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

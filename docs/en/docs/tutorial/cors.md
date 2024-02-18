@@ -4,7 +4,7 @@
 
 ## Origin
 
-An origin is the combination of protocol (`http`, `https`), domain (`myapp.com`, `localhost`, `localhost.tiangolo.com`), and port (`80`, `443`, `8080`).
+An origin is the combination of protocol (`http`, `https`), domain (`myapp.com`, `localhost`, `localhost.khulnasoft.com`), and port (`80`, `443`, `8080`).
 
 So, all these are different origins:
 
@@ -34,11 +34,11 @@ So, for everything to work correctly, it's better to specify explicitly the allo
 
 ## Use `CORSMiddleware`
 
-You can configure it in your **FastAPI** application using the `CORSMiddleware`.
+You can configure it in your **ReadyAPI** application using the `CORSMiddleware`.
 
 * Import `CORSMiddleware`.
 * Create a list of allowed origins (as strings).
-* Add it as a "middleware" to your **FastAPI** application.
+* Add it as a "middleware" to your **ReadyAPI** application.
 
 You can also specify if your backend allows:
 
@@ -81,4 +81,4 @@ For more info about <abbr title="Cross-Origin Resource Sharing">CORS</abbr>, che
 !!! note "Technical Details"
     You could also use `from starlette.middleware.cors import CORSMiddleware`.
 
-    **FastAPI** provides several middlewares in `fastapi.middleware` just as a convenience for you, the developer. But most of the available middlewares come directly from Starlette.
+    **ReadyAPI** provides several middlewares in `readyapi.middleware` just as a convenience for you, the developer. But most of the available middlewares come directly from Starlette.

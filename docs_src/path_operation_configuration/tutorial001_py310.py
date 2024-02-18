@@ -1,7 +1,7 @@
-from fastapi import FastAPI, status
+from readyapi import ReadyAPI, status
 from pydantic import BaseModel
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

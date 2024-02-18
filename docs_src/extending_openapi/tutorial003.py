@@ -1,6 +1,6 @@
-from fastapi import FastAPI
+from readyapi import ReadyAPI
 
-app = FastAPI(swagger_ui_parameters={"syntaxHighlight": False})
+app = ReadyAPI(swagger_ui_parameters={"syntaxHighlight": False})
 
 
 @app.get("/users/{username}")

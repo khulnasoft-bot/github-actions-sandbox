@@ -1,6 +1,6 @@
-from fastapi import Depends, FastAPI
+from readyapi import Depends, ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class FixedContentQueryChecker:

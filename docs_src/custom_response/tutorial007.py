@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
+from readyapi import ReadyAPI
+from readyapi.responses import StreamingResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 async def fake_video_streamer():

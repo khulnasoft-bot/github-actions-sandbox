@@ -1,10 +1,10 @@
 from typing import Union
 
-from fastapi import Body, FastAPI
+from readyapi import Body, ReadyAPI
 from pydantic import BaseModel
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

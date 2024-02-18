@@ -6,7 +6,7 @@ And it normally is a complex and "difficult" topic.
 
 In many frameworks and systems just handling security and authentication takes a big amount of effort and code (in many cases it can be 50% or more of all the code written).
 
-**FastAPI** provides several tools to help you deal with **Security** easily, rapidly, in a standard way, without having to study and learn all the security specifications.
+**ReadyAPI** provides several tools to help you deal with **Security** easily, rapidly, in a standard way, without having to study and learn all the security specifications.
 
 But first, let's check some small concepts.
 
@@ -58,7 +58,7 @@ It is not very popular or used nowadays.
 
 OpenAPI (previously known as Swagger) is the open specification for building APIs (now part of the Linux Foundation).
 
-**FastAPI** is based on **OpenAPI**.
+**ReadyAPI** is based on **OpenAPI**.
 
 That's what makes it possible to have multiple automatic interactive documentation interfaces, code generation, etc.
 
@@ -90,12 +90,12 @@ OpenAPI defines the following security schemes:
 !!! tip
     Integrating other authentication/authorization providers like Google, Facebook, Twitter, GitHub, etc. is also possible and relatively easy.
 
-    The most complex problem is building an authentication/authorization provider like those, but **FastAPI** gives you the tools to do it easily, while doing the heavy lifting for you.
+    The most complex problem is building an authentication/authorization provider like those, but **ReadyAPI** gives you the tools to do it easily, while doing the heavy lifting for you.
 
-## **FastAPI** utilities
+## **ReadyAPI** utilities
 
-FastAPI provides several tools for each of these security schemes in the `fastapi.security` module that simplify using these security mechanisms.
+ReadyAPI provides several tools for each of these security schemes in the `readyapi.security` module that simplify using these security mechanisms.
 
-In the next chapters you will see how to add security to your API using those tools provided by **FastAPI**.
+In the next chapters you will see how to add security to your API using those tools provided by **ReadyAPI**.
 
 And you will also see how it gets automatically integrated into the interactive documentation system.

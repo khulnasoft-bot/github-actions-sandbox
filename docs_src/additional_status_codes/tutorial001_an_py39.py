@@ -1,9 +1,9 @@
 from typing import Annotated, Union
 
-from fastapi import Body, FastAPI, status
-from fastapi.responses import JSONResponse
+from readyapi import Body, ReadyAPI, status
+from readyapi.responses import JSONResponse
 
-app = FastAPI()
+app = ReadyAPI()
 
 items = {"foo": {"name": "Fighters", "size": 6}, "bar": {"name": "Tenders", "size": 3}}
 

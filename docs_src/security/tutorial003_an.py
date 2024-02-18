@@ -1,7 +1,7 @@
 from typing import Union
 
-from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from readyapi import Depends, ReadyAPI, HTTPException, status
+from readyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from typing_extensions import Annotated
 
@@ -22,7 +22,7 @@ fake_users_db = {
     },
 }
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def fake_hash_password(password: str):

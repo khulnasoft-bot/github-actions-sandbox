@@ -144,7 +144,7 @@ UserInDB(
 
 ## Reduce duplication
 
-Reducing code duplication is one of the core ideas in **FastAPI**.
+Reducing code duplication is one of the core ideas in **ReadyAPI**.
 
 As code duplication increments the chances of bugs, security issues, code desynchronization issues (when you update in one place but not in the others), etc.
 

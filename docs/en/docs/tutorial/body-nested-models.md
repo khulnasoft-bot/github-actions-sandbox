@@ -1,6 +1,6 @@
 # Body - Nested Models
 
-With **FastAPI**, you can define, validate, document, and use arbitrarily deeply nested models (thanks to Pydantic).
+With **ReadyAPI**, you can define, validate, document, and use arbitrarily deeply nested models (thanks to Pydantic).
 
 ## List fields
 
@@ -165,7 +165,7 @@ And then we can use it as the type of an attribute:
     {!> ../../../docs_src/body_nested_models/tutorial004.py!}
     ```
 
-This would mean that **FastAPI** would expect a body similar to:
+This would mean that **ReadyAPI** would expect a body similar to:
 
 ```JSON
 {
@@ -181,7 +181,7 @@ This would mean that **FastAPI** would expect a body similar to:
 }
 ```
 
-Again, doing just that declaration, with **FastAPI** you get:
+Again, doing just that declaration, with **ReadyAPI** you get:
 
 * Editor support (completion, etc), even for nested models
 * Data conversion
@@ -371,7 +371,7 @@ In this case, you would accept any `dict` as long as it has `int` keys with `flo
 
 ## Recap
 
-With **FastAPI** you have the maximum flexibility provided by Pydantic models, while keeping your code simple, short and elegant.
+With **ReadyAPI** you have the maximum flexibility provided by Pydantic models, while keeping your code simple, short and elegant.
 
 But with all the benefits:
 

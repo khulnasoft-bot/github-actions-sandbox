@@ -1,7 +1,7 @@
-from fastapi import Depends, FastAPI
+from readyapi import Depends, ReadyAPI
 from typing_extensions import Annotated
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 class FixedContentQueryChecker:

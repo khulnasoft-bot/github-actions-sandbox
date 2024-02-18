@@ -1,8 +1,8 @@
 from typing import Union
 
-from fastapi import Cookie, Depends, FastAPI
+from readyapi import Cookie, Depends, ReadyAPI
 
-app = FastAPI()
+app = ReadyAPI()
 
 
 def query_extractor(q: Union[str, None] = None):
