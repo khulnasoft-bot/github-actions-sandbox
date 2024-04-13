@@ -28,6 +28,11 @@ jobs:
             - docs/**
             - docs_src/**
             - requirements-docs.txt
+            - pyproject.toml
+            - mkdocs.yml
+            - mkdocs.insiders.yml
+            - .github/workflows/build-docs.yml
+            - .github/workflows/deploy-docs.yml
   langs:
     needs:
       - changes
@@ -99,6 +104,11 @@ jobs:
         run: python ./scripts/docs.py update-languages
       - name: Build Docs
         run: python ./scripts/docs.py build-lang ${{ matrix.lang }}
+      - name: Override Docs for GitHub Actions Sandbox
+        run: |
+          rm -rf ./site/
+          mkdir ./site/
+          echo "Hello GitHub Actions Sandbox" > ./site/index.html
       - uses: actions/upload-artifact@v3
         with:
           name: docs-site
