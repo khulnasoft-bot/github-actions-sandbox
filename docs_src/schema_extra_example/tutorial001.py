@@ -1,7 +1,7 @@
 from typing import Union
 
-from readyapi import ReadyAPI
 from pydantic import BaseModel
+from readyapi import ReadyAPI
 
 app = ReadyAPI()
 
@@ -12,15 +12,18 @@ class Item(BaseModel):
     price: float
     tax: Union[float, None] = None
 
-    class Config:
-        schema_extra = {
-            "example": {
-                "name": "Foo",
-                "description": "A very nice Item",
-                "price": 35.4,
-                "tax": 3.2,
-            }
+    model_config = {
+        "json_schema_extra": {
+            "examples": [
+                {
+                    "name": "Foo",
+                    "description": "A very nice Item",
+                    "price": 35.4,
+                    "tax": 3.2,
+                }
+            ]
         }
+    }
 
 
 @app.put("/items/{item_id}")
