@@ -1,7 +1,7 @@
 from typing import Union
 
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
-from readyapi import ReadyAPI
 
 
 class Item(BaseModel):
@@ -11,9 +11,9 @@ class Item(BaseModel):
     tax: Union[float, None] = None
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.put("/items/{item_id}")
-async def update_item(item_id: int, item: Item):
+async def create_item(item_id: int, item: Item):
     return {"item_id": item_id, **item.dict()}

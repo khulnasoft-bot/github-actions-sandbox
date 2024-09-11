@@ -4,17 +4,17 @@ You can serve static files automatically from a directory using `StaticFiles`.
 
 ## Use `StaticFiles`
 
-* Import `StaticFiles`.
-* "Mount" a `StaticFiles()` instance in a specific path.
+- Import `StaticFiles`.
+- "Mount" a `StaticFiles()` instance in a specific path.
 
 ```Python hl_lines="2  6"
 {!../../../docs_src/static_files/tutorial001.py!}
 ```
 
 !!! note "Technical Details"
-    You could also use `from starlette.staticfiles import StaticFiles`.
+You could also use `from starlette.staticfiles import StaticFiles`.
 
-    **ReadyAPI** provides the same `starlette.staticfiles` as `readyapi.staticfiles` just as a convenience for you, the developer. But it actually comes directly from Starlette.
+    **RaedyAPI** provides the same `starlette.staticfiles` as `raedyapi.staticfiles` just as a convenience for you, the developer. But it actually comes directly from Starlette.
 
 ### What is "Mounting"
 
@@ -30,7 +30,7 @@ The first `"/static"` refers to the sub-path this "sub-application" will be "mou
 
 The `directory="static"` refers to the name of the directory that contains your static files.
 
-The `name="static"` gives it a name that can be used internally by **ReadyAPI**.
+The `name="static"` gives it a name that can be used internally by **RaedyAPI**.
 
 All these parameters can be different than "`static`", adjust them with the needs and specific details of your own application.
 

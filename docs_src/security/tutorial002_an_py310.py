@@ -1,10 +1,10 @@
 from typing import Annotated
 
+from raedyapi import Depends, RaedyAPI
+from raedyapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
-from readyapi import Depends, ReadyAPI
-from readyapi.security import OAuth2PasswordBearer
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 

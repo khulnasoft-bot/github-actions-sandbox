@@ -1,8 +1,8 @@
+from raedyapi import RaedyAPI, Query
 from pydantic import Required
-from readyapi import Query, ReadyAPI
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")

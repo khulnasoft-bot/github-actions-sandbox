@@ -1,7 +1,7 @@
-from readyapi import ReadyAPI
-from readyapi.responses import HTMLResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import HTMLResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/", response_class=HTMLResponse)

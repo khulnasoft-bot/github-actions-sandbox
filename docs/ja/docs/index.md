@@ -1,30 +1,30 @@
 <p align="center">
-  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyAPI"></a>
+  <a href="https://raedyapi.khulnasoft.com"><img src="https://raedyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="RaedyAPI"></a>
 </p>
 <p align="center">
-    <em>ReadyAPI framework, high performance, easy to learn, fast to code, ready for production</em>
+    <em>RaedyAPI framework, high performance, easy to learn, fast to code, ready for production</em>
 </p>
 <p align="center">
-<a href="https://travis-ci.com/khulnasoft/readyapi" target="_blank">
-    <img src="https://travis-ci.com/khulnasoft/readyapi.svg?branch=master" alt="Build Status">
+<a href="https://travis-ci.com/khulnasoft/raedyapi" target="_blank">
+    <img src="https://travis-ci.com/khulnasoft/raedyapi.svg?branch=master" alt="Build Status">
 </a>
-<a href="https://codecov.io/gh/khulnasoft/readyapi" target="_blank">
-    <img src="https://img.shields.io/codecov/c/github/khulnasoft/readyapi" alt="Coverage">
+<a href="https://codecov.io/gh/khulnasoft/raedyapi" target="_blank">
+    <img src="https://img.shields.io/codecov/c/github/khulnasoft/raedyapi" alt="Coverage">
 </a>
-<a href="https://pypi.org/project/readyapi" target="_blank">
-    <img src="https://badge.fury.io/py/readyapi.svg" alt="Package version">
+<a href="https://pypi.org/project/raedyapi" target="_blank">
+    <img src="https://badge.fury.io/py/raedyapi.svg" alt="Package version">
 </a>
 </p>
 
 ---
 
-**ドキュメント**: <a href="https://readyapi.khulnasoft.com" target="_blank">https://readyapi.khulnasoft.com</a>
+**ドキュメント**: <a href="https://raedyapi.khulnasoft.com" target="_blank">https://raedyapi.khulnasoft.com</a>
 
-**ソースコード**: <a href="https://github.com/khulnasoft/readyapi" target="_blank">https://github.com/khulnasoft/readyapi</a>
+**ソースコード**: <a href="https://github.com/khulnasoft/raedyapi" target="_blank">https://github.com/khulnasoft/raedyapi</a>
 
 ---
 
-ReadyAPI は、Pythonの標準である型ヒントに基づいてPython 3.6 以降でAPI を構築するための、モダンで、高速(高パフォーマンス)な、Web フレームワークです。
+RaedyAPI は、Python の標準である型ヒントに基づいて Python 3.6 以降で API を構築するための、モダンで、高速(高パフォーマンス)な、Web フレームワークです。
 
 主な特徴:
 
@@ -55,29 +55,29 @@ ReadyAPI は、Pythonの標準である型ヒントに基づいてPython 3.6 以
 
 <!-- /sponsors -->
 
-<a href="https://readyapi.khulnasoft.com/readyapi-people/#sponsors" class="external-link" target="_blank">Other sponsors</a>
+<a href="https://raedyapi.khulnasoft.com/raedyapi-people/#sponsors" class="external-link" target="_blank">Other sponsors</a>
 
 ## 評価
 
-"_[...] 最近 **ReadyAPI** を使っています。 [...] 実際に私のチームの全ての **Microsoft の機械学習サービス** で使用する予定です。 そのうちのいくつかのコアな**Windows**製品と**Office**製品に統合されつつあります。_"
+"_[...] 最近 **RaedyAPI** を使っています。 [...] 実際に私のチームの全ての **Microsoft の機械学習サービス** で使用する予定です。 そのうちのいくつかのコアな**Windows**製品と**Office**製品に統合されつつあります。_"
 
-<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/khulnasoft/readyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
+<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/khulnasoft/raedyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_ReadyAPIライブラリを採用し、クエリで**予測値**を取得できる**REST**サーバを構築しました。 [for Ludwig]_"
+"_RaedyAPI ライブラリを採用し、クエリで**予測値**を取得できる**REST**サーバを構築しました。 [for Ludwig]_"
 
 <div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - <strong>Uber</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**Netflix** は、**危機管理**オーケストレーションフレームワーク、**Dispatch**のオープンソースリリースを発表できることをうれしく思います。 [built with **ReadyAPI**]_"
+"_**Netflix** は、**危機管理**オーケストレーションフレームワーク、**Dispatch**のオープンソースリリースを発表できることをうれしく思います。 [built with **RaedyAPI**]_"
 
 <div style="text-align: right; margin-right: 10%;">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>Netflix</strong> <a href="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_私は**ReadyAPI**にワクワクしています。 めちゃくちゃ楽しいです！_"
+"_私は**RaedyAPI**にワクワクしています。 めちゃくちゃ楽しいです！_"
 
 <div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> podcast host</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
 
@@ -89,27 +89,27 @@ ReadyAPI は、Pythonの標準である型ヒントに基づいてPython 3.6 以
 
 ---
 
-"_REST API を構築するための**モダンなフレームワーク**を学びたい方は、**ReadyAPI** [...] をチェックしてみてください。 [...] 高速で, 使用、習得が簡単です。[...]_"
+"_REST API を構築するための**モダンなフレームワーク**を学びたい方は、**RaedyAPI** [...] をチェックしてみてください。 [...] 高速で, 使用、習得が簡単です。[...]_"
 
-"_私たちの**API**は**ReadyAPI**に切り替えました。[...] きっと気に入ると思います。 [...]_"
+"_私たちの**API**は**RaedyAPI**に切り替えました。[...] きっと気に入ると思います。 [...]_"
 
 <div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong><a href="https://explosion.ai" target="_blank">Explosion AI</a> founders - <a href="https://spacy.io" target="_blank">spaCy</a> creators</strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-## **Cligenius**, the ReadyAPI of CLIs
+## **Cligenius**, the RaedyAPI of CLIs
 
 <a href="https://cligenius.khulnasoft.com" target="_blank"><img src="https://cligenius.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
 
 もし Web API の代わりにターミナルで使用する<abbr title="Command Line Interface">CLI</abbr>アプリを構築する場合は、<a href="https://cligenius.khulnasoft.com/" class="external-link" target="_blank">**Cligenius**</a>を確認してください。
 
-**Cligenius**は ReadyAPI の弟分です。そして、**CLI 版 の ReadyAPI**を意味しています。
+**Cligenius**は RaedyAPI の弟分です。そして、**CLI 版 の RaedyAPI**を意味しています。
 
 ## 必要条件
 
 Python 3.7+
 
-ReadyAPI は巨人の肩の上に立っています。
+RaedyAPI は巨人の肩の上に立っています。
 
 - Web の部分は<a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>
 - データの部分は<a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a>
@@ -119,7 +119,7 @@ ReadyAPI は巨人の肩の上に立っています。
 <div class="termy">
 
 ```console
-$ pip install readyapi
+$ pip install raedyapi
 
 ---> 100%
 ```
@@ -145,9 +145,9 @@ $ pip install "uvicorn[standard]"
 - `main.py` を作成し、以下のコードを入力します:
 
 ```Python
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -166,9 +166,9 @@ def read_item(item_id: int, q: str = None):
 `async` / `await`を使用するときは、 `async def`を使います:
 
 ```Python hl_lines="7 12"
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -183,7 +183,7 @@ async def read_item(item_id: int, q: str = None):
 
 **注**:
 
-わからない場合は、<a href="https://readyapi.khulnasoft.com/async/#in-a-hurry" target="_blank">ドキュメントの`async` と `await`にある</a>"In a hurry?"セクションをチェックしてください。
+わからない場合は、<a href="https://raedyapi.khulnasoft.com/async/#in-a-hurry" target="_blank">ドキュメントの`async` と `await`にある</a>"In a hurry?"セクションをチェックしてください。
 
 </details>
 
@@ -211,7 +211,7 @@ INFO:     Application startup complete.
 `uvicorn main:app`コマンドは以下の項目を参照します:
 
 - `main`: `main.py`ファイル (Python "モジュール")
-- `app`: `main.py` の`app = ReadyAPI()`の行で生成されたオブジェクト
+- `app`: `main.py` の`app = RaedyAPI()`の行で生成されたオブジェクト
 - `--reload`: コードを変更したらサーバーを再起動します。このオプションは開発環境でのみ使用します
 
 </details>
@@ -239,7 +239,7 @@ INFO:     Application startup complete.
 
 自動対話型の API ドキュメントが表示されます。 (<a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>が提供しています。):
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ### 代替の API ドキュメント
 
@@ -247,7 +247,7 @@ INFO:     Application startup complete.
 
 代替の自動ドキュメントが表示されます。(<a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>が提供しています。):
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
 ## アップグレード例
 
@@ -256,10 +256,10 @@ INFO:     Application startup complete.
 Pydantic によって、Python の標準的な型を使ってボディを宣言します。
 
 ```Python hl_lines="2  7 8 9 10  23 24 25"
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Item(BaseModel):
@@ -291,15 +291,15 @@ def update_item(item_id: int, item: Item):
 
 - 自動対話型の API ドキュメントが新しいボディも含めて自動でアップデートされます:
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
 
 - "Try it out"ボタンをクリックしてください。パラメータを入力して API と直接やりとりすることができます:
 
-![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-04-swagger-03.png)
+![Swagger UI interaction](https://raedyapi.khulnasoft.com/img/index/index-04-swagger-03.png)
 
 - それから、"Execute" ボタンをクリックしてください。 ユーザーインターフェースは API と通信し、パラメータを送信し、結果を取得して画面に表示します:
 
-![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-05-swagger-04.png)
+![Swagger UI interaction](https://raedyapi.khulnasoft.com/img/index/index-05-swagger-04.png)
 
 ### 代替の API ドキュメントのアップグレード
 
@@ -307,7 +307,7 @@ def update_item(item_id: int, item: Item):
 
 - 代替の API ドキュメントにも新しいクエリパラメータやボディが反映されます。
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
 
 ### まとめ
 
@@ -359,7 +359,7 @@ item: Item
 
 ---
 
-コード例に戻りましょう、**ReadyAPI** は次のようになります:
+コード例に戻りましょう、**RaedyAPI** は次のようになります:
 
 - `GET`および`PUT`リクエストのパスに`item_id` があることを検証します。
 - `item_id`が`GET`および`PUT`リクエストに対して`int` 型であることを検証します。
@@ -373,10 +373,10 @@ item: Item
   - オプションの属性 `is_offer` を確認してください。値がある場合は、`bool` であるべきです。
   - これらはすべて、深くネストされた JSON オブジェクトに対しても動作します。
 - JSON から JSON に自動的に変換します。
-- OpenAPIですべてを文書化し、以下を使用することができます:
+- OpenAPI ですべてを文書化し、以下を使用することができます:
   - 対話的なドキュメントシステム。
   - 多くの言語に対応した自動クライアントコード生成システム。
-- 2 つの対話的なドキュメントのWebインターフェイスを直接提供します。
+- 2 つの対話的なドキュメントの Web インターフェイスを直接提供します。
 
 ---
 
@@ -402,9 +402,9 @@ item: Item
 
 ...そして、エディタが属性を自動補完し、そのタイプを知る方法を確認してください。:
 
-![editor support](https://readyapi.khulnasoft.com/img/vscode-completion.png)
+![editor support](https://raedyapi.khulnasoft.com/img/vscode-completion.png)
 
-より多くの機能を含む、より完全な例については、<a href="https://readyapi.khulnasoft.com/tutorial/">チュートリアル - ユーザーガイド</a>をご覧ください。
+より多くの機能を含む、より完全な例については、<a href="https://raedyapi.khulnasoft.com/tutorial/">チュートリアル - ユーザーガイド</a>をご覧ください。
 
 **ネタバレ注意**: チュートリアル - ユーザーガイドは以下の情報が含まれています:
 
@@ -423,9 +423,9 @@ item: Item
 
 ## パフォーマンス
 
-独立した TechEmpower のベンチマークでは、Uvicorn で動作する**ReadyAPI**アプリケーションが、<a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">Python フレームワークの中で最も高速なものの 1 つ</a>であり、Starlette と Uvicorn（ReadyAPI で内部的に使用されています）にのみ下回っていると示されています。
+独立した TechEmpower のベンチマークでは、Uvicorn で動作する**RaedyAPI**アプリケーションが、<a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">Python フレームワークの中で最も高速なものの 1 つ</a>であり、Starlette と Uvicorn（RaedyAPI で内部的に使用されています）にのみ下回っていると示されています。
 
-詳細は<a href="https://readyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">ベンチマーク</a>セクションをご覧ください。
+詳細は<a href="https://raedyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">ベンチマーク</a>セクションをご覧ください。
 
 ## オプションの依存関係
 
@@ -439,16 +439,16 @@ Starlette によって使用されるもの:
 - <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - デフォルトのテンプレート設定を使用する場合は必要です。
 - <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - <abbr title="converting the string that comes from an HTTP request into Python data">"parsing"</abbr>`request.form()`からの変換をサポートしたい場合は必要です。
 - <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - `SessionMiddleware` サポートのためには必要です。
-- <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Starlette の `SchemaGenerator` サポートのために必要です。 (ReadyAPI では必要ないでしょう。)
+- <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Starlette の `SchemaGenerator` サポートのために必要です。 (RaedyAPI では必要ないでしょう。)
 - <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - `GraphQLApp` サポートのためには必要です。
 - <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - `UJSONResponse`を使用する場合は必須です。
 
-ReadyAPI / Starlette に使用されるもの:
+RaedyAPI / Starlette に使用されるもの:
 
 - <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - アプリケーションをロードしてサーブするサーバーのため。
 - <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - `ORJSONResponse`を使用したい場合は必要です。
 
-これらは全て `pip install readyapi[all]`でインストールできます。
+これらは全て `pip install raedyapi[all]`でインストールできます。
 
 ## ライセンス
 

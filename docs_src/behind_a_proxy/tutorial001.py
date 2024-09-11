@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI, Request
+from raedyapi import RaedyAPI, Request
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/app")

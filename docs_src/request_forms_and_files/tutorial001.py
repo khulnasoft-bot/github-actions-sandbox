@@ -1,6 +1,6 @@
-from readyapi import File, Form, ReadyAPI, UploadFile
+from raedyapi import RaedyAPI, File, Form, UploadFile
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/files/")

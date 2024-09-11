@@ -1,8 +1,8 @@
-from readyapi import ReadyAPI
-from readyapi.responses import FileResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import FileResponse
 
 some_file_path = "large-video-file.mp4"
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")

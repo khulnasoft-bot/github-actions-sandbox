@@ -1,7 +1,7 @@
 # Extending OpenAPI
 
 !!! warning
-    This is a rather advanced feature. You probably can skip it.
+This is a rather advanced feature. You probably can skip it.
 
     If you are just following the tutorial - user guide, you can probably skip this section.
 
@@ -15,23 +15,23 @@ In this section you will see how.
 
 The normal (default) process, is as follows.
 
-A `ReadyAPI` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
+A `RaedyAPI` application (instance) has an `.openapi()` method that is expected to return the OpenAPI schema.
 
-As part of the application object creation, a *path operation* for `/openapi.json` (or for whatever you set your `openapi_url`) is registered.
+As part of the application object creation, a _path operation_ for `/openapi.json` (or for whatever you set your `openapi_url`) is registered.
 
 It just returns a JSON response with the result of the application's `.openapi()` method.
 
 By default, what the method `.openapi()` does is check the property `.openapi_schema` to see if it has contents and return them.
 
-If it doesn't, it generates them using the utility function at `readyapi.openapi.utils.get_openapi`.
+If it doesn't, it generates them using the utility function at `raedyapi.openapi.utils.get_openapi`.
 
 And that function `get_openapi()` receives as parameters:
 
-* `title`: The OpenAPI title, shown in the docs.
-* `version`: The version of your API, e.g. `2.5.0`.
-* `openapi_version`: The version of the OpenAPI specification used. By default, the latest: `3.0.2`.
-* `description`: The description of your API.
-* `routes`: A list of routes, these are each of the registered *path operations*. They are taken from `app.routes`.
+- `title`: The OpenAPI title, shown in the docs.
+- `version`: The version of your API, e.g. `2.5.0`.
+- `openapi_version`: The version of the OpenAPI specification used. By default, the latest: `3.0.2`.
+- `description`: The description of your API.
+- `routes`: A list of routes, these are each of the registered _path operations_. They are taken from `app.routes`.
 
 ## Overriding the defaults
 
@@ -39,9 +39,9 @@ Using the information above, you can use the same utility function to generate t
 
 For example, let's add <a href="https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md#x-logo" class="external-link" target="_blank">ReDoc's OpenAPI extension to include a custom logo</a>.
 
-### Normal **ReadyAPI**
+### Normal **RaedyAPI**
 
-First, write all your **ReadyAPI** application as normally:
+First, write all your **RaedyAPI** application as normally:
 
 ```Python hl_lines="1  4  7-9"
 {!../../../docs_src/extending_openapi/tutorial001.py!}
@@ -85,7 +85,7 @@ Now you can replace the `.openapi()` method with your new function.
 
 ### Check it
 
-Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **ReadyAPI**'s logo):
+Once you go to <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a> you will see that you are using your custom logo (in this example, **RaedyAPI**'s logo):
 
 <img src="/img/tutorial/extending-openapi/image01.png">
 
@@ -99,7 +99,7 @@ But it's possible to customize it, you can set a specific CDN, or serve the file
 
 That's useful, for example, if you need your app to keep working even while offline, without open Internet access, or in a local network.
 
-Here you'll see how to serve those files yourself, in the same ReadyAPI app, and configure the docs to use them.
+Here you'll see how to serve those files yourself, in the same RaedyAPI app, and configure the docs to use them.
 
 ### Project file structure
 
@@ -132,12 +132,12 @@ You can probably right-click each link and select an option similar to `Save lin
 
 **Swagger UI** uses the files:
 
-* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui-bundle.js" class="external-link" target="_blank">`swagger-ui-bundle.js`</a>
-* <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui.css" class="external-link" target="_blank">`swagger-ui.css`</a>
+- <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui-bundle.js" class="external-link" target="_blank">`swagger-ui-bundle.js`</a>
+- <a href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@4/swagger-ui.css" class="external-link" target="_blank">`swagger-ui.css`</a>
 
 And **ReDoc** uses the file:
 
-* <a href="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js" class="external-link" target="_blank">`redoc.standalone.js`</a>
+- <a href="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js" class="external-link" target="_blank">`redoc.standalone.js`</a>
 
 After that, your file structure could look like:
 
@@ -154,8 +154,8 @@ After that, your file structure could look like:
 
 ### Serve the static files
 
-* Import `StaticFiles`.
-* "Mount" a `StaticFiles()` instance in a specific path.
+- Import `StaticFiles`.
+- "Mount" a `StaticFiles()` instance in a specific path.
 
 ```Python hl_lines="7  11"
 {!../../../docs_src/extending_openapi/tutorial002.py!}
@@ -189,7 +189,7 @@ Now we can configure the app to use those static files for the docs.
 
 The first step is to disable the automatic docs, as those use the CDN by default.
 
-To disable them, set their URLs to `None` when creating your `ReadyAPI` app:
+To disable them, set their URLs to `None` when creating your `RaedyAPI` app:
 
 ```Python hl_lines="9"
 {!../../../docs_src/extending_openapi/tutorial002.py!}
@@ -197,15 +197,15 @@ To disable them, set their URLs to `None` when creating your `ReadyAPI` app:
 
 ### Include the custom docs
 
-Now you can create the *path operations* for the custom docs.
+Now you can create the _path operations_ for the custom docs.
 
-You can re-use ReadyAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
+You can re-use RaedyAPI's internal functions to create the HTML pages for the docs, and pass them the needed arguments:
 
-* `openapi_url`: the URL where the HTML page for the docs can get the OpenAPI schema for your API. You can use here the attribute `app.openapi_url`.
-* `title`: the title of your API.
-* `oauth2_redirect_url`: you can use `app.swagger_ui_oauth2_redirect_url` here to use the default.
-* `swagger_js_url`: the URL where the HTML for your Swagger UI docs can get the **JavaScript** file. This is the one that your own app is now serving.
-* `swagger_css_url`: the URL where the HTML for your Swagger UI docs can get the **CSS** file. This is the one that your own app is now serving.
+- `openapi_url`: the URL where the HTML page for the docs can get the OpenAPI schema for your API. You can use here the attribute `app.openapi_url`.
+- `title`: the title of your API.
+- `oauth2_redirect_url`: you can use `app.swagger_ui_oauth2_redirect_url` here to use the default.
+- `swagger_js_url`: the URL where the HTML for your Swagger UI docs can get the **JavaScript** file. This is the one that your own app is now serving.
+- `swagger_css_url`: the URL where the HTML for your Swagger UI docs can get the **CSS** file. This is the one that your own app is now serving.
 
 And similarly for ReDoc...
 
@@ -214,15 +214,15 @@ And similarly for ReDoc...
 ```
 
 !!! tip
-    The *path operation* for `swagger_ui_redirect` is a helper for when you use OAuth2.
+The _path operation_ for `swagger_ui_redirect` is a helper for when you use OAuth2.
 
     If you integrate your API with an OAuth2 provider, you will be able to authenticate and come back to the API docs with the acquired credentials. And interact with it using the real OAuth2 authentication.
 
     Swagger UI will handle it behind the scenes for you, but it needs this "redirect" helper.
 
-### Create a *path operation* to test it
+### Create a _path operation_ to test it
 
-Now, to be able to test that everything works, create a *path operation*:
+Now, to be able to test that everything works, create a _path operation_:
 
 ```Python hl_lines="39-41"
 {!../../../docs_src/extending_openapi/tutorial002.py!}
@@ -238,11 +238,11 @@ And even without Internet, you would be able to see the docs for your API and in
 
 You can configure some extra <a href="https://swagger.io/docs/open-source-tools/swagger-ui/usage/configuration" class="external-link" target="_blank">Swagger UI parameters</a>.
 
-To configure them, pass the `swagger_ui_parameters` argument when creating the `ReadyAPI()` app object or to the `get_swagger_ui_html()` function.
+To configure them, pass the `swagger_ui_parameters` argument when creating the `RaedyAPI()` app object or to the `get_swagger_ui_html()` function.
 
 `swagger_ui_parameters` receives a dictionary with the configurations passed to Swagger UI directly.
 
-ReadyAPI converts the configurations to **JSON** to make them compatible with JavaScript, as that's what Swagger UI needs.
+RaedyAPI converts the configurations to **JSON** to make them compatible with JavaScript, as that's what Swagger UI needs.
 
 ### Disable Syntax Highlighting
 
@@ -276,7 +276,7 @@ That configuration would change the syntax highlighting color theme:
 
 ### Change Default Swagger UI Parameters
 
-ReadyAPI includes some default configuration parameters appropriate for most of the use cases.
+RaedyAPI includes some default configuration parameters appropriate for most of the use cases.
 
 It includes these default configurations:
 
@@ -296,7 +296,7 @@ To see all the other possible configurations you can use, read the official <a h
 
 Swagger UI also allows other configurations to be **JavaScript-only** objects (for example, JavaScript functions).
 
-ReadyAPI also includes these JavaScript-only `presets` settings:
+RaedyAPI also includes these JavaScript-only `presets` settings:
 
 ```JavaScript
 presets: [
@@ -307,4 +307,4 @@ presets: [
 
 These are **JavaScript** objects, not strings, so you can't pass them from Python code directly.
 
-If you need to use JavaScript-only configurations like those, you can use one of the methods above. Override all the Swagger UI *path operation* and manually write any JavaScript you need.
+If you need to use JavaScript-only configurations like those, you can use one of the methods above. Override all the Swagger UI _path operation_ and manually write any JavaScript you need.

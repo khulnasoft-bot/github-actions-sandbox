@@ -1,4 +1,4 @@
-from readyapi import Depends
+from raedyapi import Depends
 from typing_extensions import Annotated
 
 

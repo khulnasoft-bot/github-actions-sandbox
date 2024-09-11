@@ -6,13 +6,13 @@ And it normally is a complex and "difficult" topic.
 
 In many frameworks and systems just handling security and authentication takes a big amount of effort and code (in many cases it can be 50% or more of all the code written).
 
-**ReadyAPI** provides several tools to help you deal with **Security** easily, rapidly, in a standard way, without having to study and learn all the security specifications.
+**RaedyAPI** provides several tools to help you deal with **Security** easily, rapidly, in a standard way, without having to study and learn all the security specifications.
 
 But first, let's check some small concepts.
 
 ## In a hurry?
 
-If you don't care about any of these terms and you just need to add security with authentication based on username and password *right now*, skip to the next chapters.
+If you don't care about any of these terms and you just need to add security with authentication based on username and password _right now_, skip to the next chapters.
 
 ## OAuth2
 
@@ -33,8 +33,7 @@ It is not very popular or used nowadays.
 OAuth2 doesn't specify how to encrypt the communication, it expects you to have your application served with HTTPS.
 
 !!! tip
-    In the section about **deployment** you will see how to set up HTTPS for free, using Traefik and Let's Encrypt.
-
+In the section about **deployment** you will see how to set up HTTPS for free, using Traefik and Let's Encrypt.
 
 ## OpenID Connect
 
@@ -58,7 +57,7 @@ It is not very popular or used nowadays.
 
 OpenAPI (previously known as Swagger) is the open specification for building APIs (now part of the Linux Foundation).
 
-**ReadyAPI** is based on **OpenAPI**.
+**RaedyAPI** is based on **OpenAPI**.
 
 That's what makes it possible to have multiple automatic interactive documentation interfaces, code generation, etc.
 
@@ -68,34 +67,33 @@ By using them, you can take advantage of all these standard-based tools, includi
 
 OpenAPI defines the following security schemes:
 
-* `apiKey`: an application specific key that can come from:
-    * A query parameter.
-    * A header.
-    * A cookie.
-* `http`: standard HTTP authentication systems, including:
-    * `bearer`: a header `Authorization` with a value of `Bearer ` plus a token. This is inherited from OAuth2.
-    * HTTP Basic authentication.
-    * HTTP Digest, etc.
-* `oauth2`: all the OAuth2 ways to handle security (called "flows").
-    * Several of these flows are appropriate for building an OAuth 2.0 authentication provider (like Google, Facebook, Twitter, GitHub, etc):
-        * `implicit`
-        * `clientCredentials`
-        * `authorizationCode`
-    * But there is one specific "flow" that can be perfectly used for handling authentication in the same application directly:
-        * `password`: some next chapters will cover examples of this.
-* `openIdConnect`: has a way to define how to discover OAuth2 authentication data automatically.
-    * This automatic discovery is what is defined in the OpenID Connect specification.
-
+- `apiKey`: an application specific key that can come from:
+  - A query parameter.
+  - A header.
+  - A cookie.
+- `http`: standard HTTP authentication systems, including:
+  - `bearer`: a header `Authorization` with a value of `Bearer ` plus a token. This is inherited from OAuth2.
+  - HTTP Basic authentication.
+  - HTTP Digest, etc.
+- `oauth2`: all the OAuth2 ways to handle security (called "flows").
+  - Several of these flows are appropriate for building an OAuth 2.0 authentication provider (like Google, Facebook, Twitter, GitHub, etc):
+    - `implicit`
+    - `clientCredentials`
+    - `authorizationCode`
+  - But there is one specific "flow" that can be perfectly used for handling authentication in the same application directly:
+    - `password`: some next chapters will cover examples of this.
+- `openIdConnect`: has a way to define how to discover OAuth2 authentication data automatically.
+  - This automatic discovery is what is defined in the OpenID Connect specification.
 
 !!! tip
-    Integrating other authentication/authorization providers like Google, Facebook, Twitter, GitHub, etc. is also possible and relatively easy.
+Integrating other authentication/authorization providers like Google, Facebook, Twitter, GitHub, etc. is also possible and relatively easy.
 
-    The most complex problem is building an authentication/authorization provider like those, but **ReadyAPI** gives you the tools to do it easily, while doing the heavy lifting for you.
+    The most complex problem is building an authentication/authorization provider like those, but **RaedyAPI** gives you the tools to do it easily, while doing the heavy lifting for you.
 
-## **ReadyAPI** utilities
+## **RaedyAPI** utilities
 
-ReadyAPI provides several tools for each of these security schemes in the `readyapi.security` module that simplify using these security mechanisms.
+RaedyAPI provides several tools for each of these security schemes in the `raedyapi.security` module that simplify using these security mechanisms.
 
-In the next chapters you will see how to add security to your API using those tools provided by **ReadyAPI**.
+In the next chapters you will see how to add security to your API using those tools provided by **RaedyAPI**.
 
 And you will also see how it gets automatically integrated into the interactive documentation system.

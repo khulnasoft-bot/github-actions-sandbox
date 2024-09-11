@@ -1,11 +1,11 @@
-# ReadyAPI in Containers - Docker
+# RaedyAPI in Containers - Docker
 
-When deploying ReadyAPI applications a common approach is to build a **Linux container image**. It's normally done using <a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a>. You can then deploy that container image in one of a few possible ways.
+When deploying RaedyAPI applications a common approach is to build a **Linux container image**. It's normally done using <a href="https://www.docker.com/" class="external-link" target="_blank">**Docker**</a>. You can then deploy that container image in one of a few possible ways.
 
 Using Linux containers has several advantages including **security**, **replicability**, **simplicity**, and others.
 
 !!! tip
-    In a hurry and already know this stuff? Jump to the [`Dockerfile` below 👇](#build-a-docker-image-for-readyapi).
+In a hurry and already know this stuff? Jump to the [`Dockerfile` below 👇](#build-a-docker-image-for-raedyapi).
 
 <details>
 <summary>Dockerfile Preview 👀</summary>
@@ -63,10 +63,10 @@ For example, there's an official <a href="https://hub.docker.com/_/python" class
 
 And there are many other images for different things like databases, for example for:
 
-* <a href="https://hub.docker.com/_/postgres" class="external-link" target="_blank">PostgreSQL</a>
-* <a href="https://hub.docker.com/_/mysql" class="external-link" target="_blank">MySQL</a>
-* <a href="https://hub.docker.com/_/mongo" class="external-link" target="_blank">MongoDB</a>
-* <a href="https://hub.docker.com/_/redis" class="external-link" target="_blank">Redis</a>, etc.
+- <a href="https://hub.docker.com/_/postgres" class="external-link" target="_blank">PostgreSQL</a>
+- <a href="https://hub.docker.com/_/mysql" class="external-link" target="_blank">MySQL</a>
+- <a href="https://hub.docker.com/_/mongo" class="external-link" target="_blank">MongoDB</a>
+- <a href="https://hub.docker.com/_/redis" class="external-link" target="_blank">Redis</a>, etc.
 
 By using a pre-made container image it's very easy to **combine** and use different tools. For example, to try out a new database. In most cases, you can use the **official images**, and just configure them with environment variables.
 
@@ -88,17 +88,17 @@ A container normally has a **single process**, but it's also possible to start s
 
 But it's not possible to have a running container without **at least one running process**. If the main process stops, the container stops.
 
-## Build a Docker Image for ReadyAPI
+## Build a Docker Image for RaedyAPI
 
 Okay, let's build something now! 🚀
 
-I'll show you how to build a **Docker image** for ReadyAPI **from scratch**, based on the **official Python** image.
+I'll show you how to build a **Docker image** for RaedyAPI **from scratch**, based on the **official Python** image.
 
 This is what you would want to do in **most cases**, for example:
 
-* Using **Kubernetes** or similar tools
-* When running on a **Raspberry Pi**
-* Using a cloud service that would run a container image for you, etc.
+- Using **Kubernetes** or similar tools
+- When running on a **Raspberry Pi**
+- Using a cloud service that would run a container image for you, etc.
 
 ### Package Requirements
 
@@ -108,12 +108,12 @@ It would depend mainly on the tool you use to **install** those requirements.
 
 The most common way to do it is to have a file `requirements.txt` with the package names and their versions, one per line.
 
-You would of course use the same ideas you read in [About ReadyAPI versions](./versions.md){.internal-link target=_blank} to set the ranges of versions.
+You would of course use the same ideas you read in [About RaedyAPI versions](./versions.md){.internal-link target=\_blank} to set the ranges of versions.
 
 For example, your `requirements.txt` could look like:
 
 ```
-readyapi>=0.68.0,<0.69.0
+raedyapi>=0.68.0,<0.69.0
 pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
 ```
@@ -125,28 +125,28 @@ And you would normally install those package dependencies with `pip`, for exampl
 ```console
 $ pip install -r requirements.txt
 ---> 100%
-Successfully installed readyapi pydantic uvicorn
+Successfully installed raedyapi pydantic uvicorn
 ```
 
 </div>
 
 !!! info
-    There are other formats and tools to define and install package dependencies.
+There are other formats and tools to define and install package dependencies.
 
     I'll show you an example using Poetry later in a section below. 👇
 
-### Create the **ReadyAPI** Code
+### Create the **RaedyAPI** Code
 
-* Create an `app` directory and enter it.
-* Create an empty file `__init__.py`.
-* Create a `main.py` file with:
+- Create an `app` directory and enter it.
+- Create an empty file `__init__.py`.
+- Create a `main.py` file with:
 
 ```Python
 from typing import Union
 
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -187,43 +187,43 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 
 2. Set the current working directory to `/code`.
 
-    This is where we'll put the `requirements.txt` file and the `app` directory.
+   This is where we'll put the `requirements.txt` file and the `app` directory.
 
 3. Copy the file with the requirements to the `/code` directory.
 
-    Copy **only** the file with the requirements first, not the rest of the code.
+   Copy **only** the file with the requirements first, not the rest of the code.
 
-    As this file **doesn't change often**, Docker will detect it and use the **cache** for this step, enabling the cache for the next step too.
+   As this file **doesn't change often**, Docker will detect it and use the **cache** for this step, enabling the cache for the next step too.
 
 4. Install the package dependencies in the requirements file.
 
-    The `--no-cache-dir` option tells `pip` to not save the downloaded packages locally, as that is only if `pip` was going to be run again to install the same packages, but that's not the case when working with containers.
+   The `--no-cache-dir` option tells `pip` to not save the downloaded packages locally, as that is only if `pip` was going to be run again to install the same packages, but that's not the case when working with containers.
 
-    !!! note
-        The `--no-cache-dir` is only related to `pip`, it has nothing to do with Docker or containers.
+   !!! note
+   The `--no-cache-dir` is only related to `pip`, it has nothing to do with Docker or containers.
 
-    The `--upgrade` option tells `pip` to upgrade the packages if they are already installed.
+   The `--upgrade` option tells `pip` to upgrade the packages if they are already installed.
 
-    Because the previous step copying the file could be detected by the **Docker cache**, this step will also **use the Docker cache** when available.
+   Because the previous step copying the file could be detected by the **Docker cache**, this step will also **use the Docker cache** when available.
 
-    Using the cache in this step will **save** you a lot of **time** when building the image again and again during development, instead of **downloading and installing** all the dependencies **every time**.
+   Using the cache in this step will **save** you a lot of **time** when building the image again and again during development, instead of **downloading and installing** all the dependencies **every time**.
 
 5. Copy the `./app` directory inside the `/code` directory.
 
-    As this has all the code which is what **changes most frequently** the Docker **cache** won't be used for this or any **following steps** easily.
+   As this has all the code which is what **changes most frequently** the Docker **cache** won't be used for this or any **following steps** easily.
 
-    So, it's important to put this **near the end** of the `Dockerfile`, to optimize the container image build times.
+   So, it's important to put this **near the end** of the `Dockerfile`, to optimize the container image build times.
 
 6. Set the **command** to run the `uvicorn` server.
 
-    `CMD` takes a list of strings, each of these strings is what you would type in the command line separated by spaces.
+   `CMD` takes a list of strings, each of these strings is what you would type in the command line separated by spaces.
 
-    This command will be run from the **current working directory**, the same `/code` directory you set above with `WORKDIR /code`.
+   This command will be run from the **current working directory**, the same `/code` directory you set above with `WORKDIR /code`.
 
-    Because the program will be started at `/code` and inside of it is the directory `./app` with your code, **Uvicorn** will be able to see and **import** `app` from `app.main`.
+   Because the program will be started at `/code` and inside of it is the directory `./app` with your code, **Uvicorn** will be able to see and **import** `app` from `app.main`.
 
 !!! tip
-    Review what each line does by clicking each number bubble in the code. 👆
+Review what each line does by clicking each number bubble in the code. 👆
 
 You should now have a directory structure like:
 
@@ -280,8 +280,8 @@ COPY ./app /code/app
 
 Now that all the files are in place, let's build the container image.
 
-* Go to the project directory (in where your `Dockerfile` is, containing your `app` directory).
-* Build your ReadyAPI image:
+- Go to the project directory (in where your `Dockerfile` is, containing your `app` directory).
+- Build your RaedyAPI image:
 
 <div class="termy">
 
@@ -294,13 +294,13 @@ $ docker build -t myimage .
 </div>
 
 !!! tip
-    Notice the `.` at the end, it's equivalent to `./`, it tells Docker the directory to use to build the container image.
+Notice the `.` at the end, it's equivalent to `./`, it tells Docker the directory to use to build the container image.
 
     In this case, it's the same current directory (`.`).
 
 ### Start the Docker Container
 
-* Run a container based on your image:
+- Run a container based on your image:
 
 <div class="termy">
 
@@ -326,7 +326,7 @@ Now you can go to <a href="http://192.168.99.100/docs" class="external-link" tar
 
 You will see the automatic interactive API documentation (provided by <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ## Alternative API docs
 
@@ -334,11 +334,11 @@ And you can also go to <a href="http://192.168.99.100/redoc" class="external-lin
 
 You will see the alternative automatic documentation (provided by <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
-## Build a Docker Image with a Single-File ReadyAPI
+## Build a Docker Image with a Single-File RaedyAPI
 
-If your ReadyAPI is a single file, for example, `main.py` without an `./app` directory, your file structure could look like this:
+If your RaedyAPI is a single file, for example, `main.py` without an `./app` directory, your file structure could look like this:
 
 ```
 .
@@ -369,11 +369,11 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
 
 2. Run Uvicorn and tell it to import the `app` object from `main` (instead of importing from `app.main`).
 
-Then adjust the Uvicorn command to use the new module `main` instead of `app.main` to import the ReadyAPI object `app`.
+Then adjust the Uvicorn command to use the new module `main` instead of `app.main` to import the RaedyAPI object `app`.
 
 ## Deployment Concepts
 
-Let's talk again about some of the same [Deployment Concepts](./concepts.md){.internal-link target=_blank} in terms of containers.
+Let's talk again about some of the same [Deployment Concepts](./concepts.md){.internal-link target=\_blank} in terms of containers.
 
 Containers are mainly a tool to simplify the process of **building and deploying** an application, but they don't enforce a particular approach to handle these **deployment concepts**, and there are several possible strategies.
 
@@ -381,21 +381,21 @@ The **good news** is that with each different strategy there's a way to cover al
 
 Let's review these **deployment concepts** in terms of containers:
 
-* HTTPS
-* Running on startup
-* Restarts
-* Replication (the number of processes running)
-* Memory
-* Previous steps before starting
+- HTTPS
+- Running on startup
+- Restarts
+- Replication (the number of processes running)
+- Memory
+- Previous steps before starting
 
 ## HTTPS
 
-If we focus just on the **container image** for a ReadyAPI application (and later the running **container**), HTTPS normally would be handled **externally** by another tool.
+If we focus just on the **container image** for a RaedyAPI application (and later the running **container**), HTTPS normally would be handled **externally** by another tool.
 
 It could be another container, for example with <a href="https://traefik.io/" class="external-link" target="_blank">Traefik</a>, handling **HTTPS** and **automatic** acquisition of **certificates**.
 
 !!! tip
-    Traefik has integrations with Docker, Kubernetes, and others, so it's very easy to set up and configure HTTPS for your containers with it.
+Traefik has integrations with Docker, Kubernetes, and others, so it's very easy to set up and configure HTTPS for your containers with it.
 
 Alternatively, HTTPS could be handled by a cloud provider as one of their services (while still running the application in a container).
 
@@ -424,7 +424,7 @@ When using containers, you would normally have some component **listening on the
 As this component would take the **load** of requests and distribute that among the workers in a (hopefully) **balanced** way, it is also commonly called a **Load Balancer**.
 
 !!! tip
-    The same **TLS Termination Proxy** component used for HTTPS would probably also be a **Load Balancer**.
+The same **TLS Termination Proxy** component used for HTTPS would probably also be a **Load Balancer**.
 
 And when working with containers, the same system you use to start and manage them would already have internal tools to transmit the **network communication** (e.g. HTTP requests) from that **load balancer** (that could also be a **TLS Termination Proxy**) to the container(s) with your app.
 
@@ -432,11 +432,11 @@ And when working with containers, the same system you use to start and manage th
 
 When working with **Kubernetes** or similar distributed container management systems, using their internal networking mechanisms would allow the single **load balancer** that is listening on the main **port** to transmit communication (requests) to possibly **multiple containers** running your app.
 
-Each of these containers running your app would normally have **just one process** (e.g. a Uvicorn process running your ReadyAPI application). They would all be **identical containers**, running the same thing, but each with its own process, memory, etc. That way you would take advantage of **parallelization** in **different cores** of the CPU, or even in **different machines**.
+Each of these containers running your app would normally have **just one process** (e.g. a Uvicorn process running your RaedyAPI application). They would all be **identical containers**, running the same thing, but each with its own process, memory, etc. That way you would take advantage of **parallelization** in **different cores** of the CPU, or even in **different machines**.
 
 And the distributed container system with the **load balancer** would **distribute the requests** to each one of the containers with your app **in turns**. So, each request could be handled by one of the multiple **replicated containers** running your app.
 
-And normally this **load balancer** would be able to handle requests that go to *other* apps in your cluster (e.g. to a different domain, or under a different URL path prefix), and would transmit that communication to the right containers for *that other* application running in your cluster.
+And normally this **load balancer** would be able to handle requests that go to _other_ apps in your cluster (e.g. to a different domain, or under a different URL path prefix), and would transmit that communication to the right containers for _that other_ application running in your cluster.
 
 ### One Process per Container
 
@@ -478,12 +478,12 @@ Then, in that case, it could be simpler to have **one container** with **multipl
 
 The main point is, **none** of these are **rules written in stone** that you have to blindly follow. You can use these ideas to **evaluate your own use case** and decide what is the best approach for your system, checking out how to manage the concepts of:
 
-* Security - HTTPS
-* Running on startup
-* Restarts
-* Replication (the number of processes running)
-* Memory
-* Previous steps before starting
+- Security - HTTPS
+- Running on startup
+- Restarts
+- Replication (the number of processes running)
+- Memory
+- Previous steps before starting
 
 ## Memory
 
@@ -504,7 +504,7 @@ If you are using containers (e.g. Docker, Kubernetes), then there are two main a
 If you have **multiple containers**, probably each one running a **single process** (for example, in a **Kubernetes** cluster), then you would probably want to have a **separate container** doing the work of the **previous steps** in a single container, running a single process, **before** running the replicated worker containers.
 
 !!! info
-    If you are using Kubernetes, this would probably be an <a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/" class="external-link" target="_blank">Init Container</a>.
+If you are using Kubernetes, this would probably be an <a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/" class="external-link" target="_blank">Init Container</a>.
 
 If in your use case there's no problem in running those previous steps **multiple times in parallel** (for example if you are not running database migrations, but just checking if the database is ready yet), then you could also just put them in each container right before starting the main process.
 
@@ -514,23 +514,23 @@ If you have a simple setup, with a **single container** that then starts multipl
 
 ## Official Docker Image with Gunicorn - Uvicorn
 
-There is an official Docker image that includes Gunicorn running with Uvicorn workers, as detailed in a previous chapter: [Server Workers - Gunicorn with Uvicorn](./server-workers.md){.internal-link target=_blank}.
+There is an official Docker image that includes Gunicorn running with Uvicorn workers, as detailed in a previous chapter: [Server Workers - Gunicorn with Uvicorn](./server-workers.md){.internal-link target=\_blank}.
 
 This image would be useful mainly in the situations described above in: [Containers with Multiple Processes and Special Cases](#containers-with-multiple-processes-and-special-cases).
 
-* <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>.
+- <a href="https://github.com/khulnasoft/uvicorn-gunicorn-raedyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-raedyapi</a>.
 
 !!! warning
-    There's a high chance that you **don't** need this base image or any other similar one, and would be better off by building the image from scratch as [described above in: Build a Docker Image for ReadyAPI](#build-a-docker-image-for-readyapi).
+There's a high chance that you **don't** need this base image or any other similar one, and would be better off by building the image from scratch as [described above in: Build a Docker Image for RaedyAPI](#build-a-docker-image-for-raedyapi).
 
 This image has an **auto-tuning** mechanism included to set the **number of worker processes** based on the CPU cores available.
 
 It has **sensible defaults**, but you can still change and update all the configurations with **environment variables** or configuration files.
 
-It also supports running <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker#pre_start_path" class="external-link" target="_blank">**previous steps before starting**</a> with a script.
+It also supports running <a href="https://github.com/khulnasoft/uvicorn-gunicorn-raedyapi-docker#pre_start_path" class="external-link" target="_blank">**previous steps before starting**</a> with a script.
 
 !!! tip
-    To see all the configurations and options, go to the Docker image page: <a href="https://github.com/khulnasoft/uvicorn-gunicorn-readyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-readyapi</a>.
+To see all the configurations and options, go to the Docker image page: <a href="https://github.com/khulnasoft/uvicorn-gunicorn-raedyapi-docker" class="external-link" target="_blank">khulnasoft/uvicorn-gunicorn-raedyapi</a>.
 
 ### Number of Processes on the Official Docker Image
 
@@ -549,7 +549,7 @@ So, if your application consumes a lot of memory (for example with machine learn
 Here's how you would create a `Dockerfile` based on this image:
 
 ```Dockerfile
-FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.9
+FROM khulnasoft/uvicorn-gunicorn-raedyapi:python3.9
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -560,10 +560,10 @@ COPY ./app /app
 
 ### Bigger Applications
 
-If you followed the section about creating [Bigger Applications with Multiple Files](../tutorial/bigger-applications.md){.internal-link target=_blank}, your `Dockerfile` might instead look like:
+If you followed the section about creating [Bigger Applications with Multiple Files](../tutorial/bigger-applications.md){.internal-link target=\_blank}, your `Dockerfile` might instead look like:
 
 ```Dockerfile hl_lines="7"
-FROM khulnasoft/uvicorn-gunicorn-readyapi:python3.9
+FROM khulnasoft/uvicorn-gunicorn-raedyapi:python3.9
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -574,7 +574,7 @@ COPY ./app /app/app
 
 ### When to Use
 
-You should probably **not** use this official base image (or any other similar one) if you are using **Kubernetes** (or others) and you are already setting **replication** at the cluster level, with multiple **containers**. In those cases, you are better off **building an image from scratch** as described above: [Build a Docker Image for ReadyAPI](#build-a-docker-image-for-readyapi).
+You should probably **not** use this official base image (or any other similar one) if you are using **Kubernetes** (or others) and you are already setting **replication** at the cluster level, with multiple **containers**. In those cases, you are better off **building an image from scratch** as described above: [Build a Docker Image for RaedyAPI](#build-a-docker-image-for-raedyapi).
 
 This image would be useful mainly in the special cases described above in [Containers with Multiple Processes and Special Cases](#containers-with-multiple-processes-and-special-cases). For example, if your application is **simple enough** that setting a default number of processes based on the CPU works well, you don't want to bother with manually configuring the replication at the cluster level, and you are not running more than one container with your app. Or if you are deploying with **Docker Compose**, running on a single server, etc.
 
@@ -584,11 +584,11 @@ After having a Container (Docker) Image there are several ways to deploy it.
 
 For example:
 
-* With **Docker Compose** in a single server
-* With a **Kubernetes** cluster
-* With a Docker Swarm Mode cluster
-* With another tool like Nomad
-* With a cloud service that takes your container image and deploys it
+- With **Docker Compose** in a single server
+- With a **Kubernetes** cluster
+- With a Docker Swarm Mode cluster
+- With another tool like Nomad
+- With a cloud service that takes your container image and deploys it
 
 ## Docker Image with Poetry
 
@@ -633,13 +633,13 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 
 2. Set `/tmp` as the current working directory.
 
-    Here's where we will generate the file `requirements.txt`
+   Here's where we will generate the file `requirements.txt`
 
 3. Install Poetry in this Docker stage.
 
 4. Copy the `pyproject.toml` and `poetry.lock` files to the `/tmp` directory.
 
-    Because it uses `./poetry.lock*` (ending with a `*`), it won't crash if that file is not available yet.
+   Because it uses `./poetry.lock*` (ending with a `*`), it won't crash if that file is not available yet.
 
 5. Generate the `requirements.txt` file.
 
@@ -649,7 +649,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 
 8. Copy the `requirements.txt` file to the `/code` directory.
 
-    This file only lives in the previous Docker stage, that's why we use `--from-requirements-stage` to copy it.
+   This file only lives in the previous Docker stage, that's why we use `--from-requirements-stage` to copy it.
 
 9. Install the package dependencies in the generated `requirements.txt` file.
 
@@ -658,7 +658,7 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
 11. Run the `uvicorn` command, telling it to use the `app` object imported from `app.main`.
 
 !!! tip
-    Click the bubble numbers to see what each line does.
+Click the bubble numbers to see what each line does.
 
 A **Docker stage** is a part of a `Dockerfile` that works as a **temporary container image** that is only used to generate some files to be used later.
 
@@ -684,15 +684,15 @@ CMD ["uvicorn", "app.main:app", "--proxy-headers", "--host", "0.0.0.0", "--port"
 
 Using container systems (e.g. with **Docker** and **Kubernetes**) it becomes fairly straightforward to handle all the **deployment concepts**:
 
-* HTTPS
-* Running on startup
-* Restarts
-* Replication (the number of processes running)
-* Memory
-* Previous steps before starting
+- HTTPS
+- Running on startup
+- Restarts
+- Replication (the number of processes running)
+- Memory
+- Previous steps before starting
 
 In most cases, you probably won't want to use any base image, and instead **build a container image from scratch** one based on the official Python Docker image.
 
 Taking care of the **order** of instructions in the `Dockerfile` and the **Docker cache** you can **minimize build times**, to maximize your productivity (and avoid boredom). 😎
 
-In certain special cases, you might want to use the official Docker image for ReadyAPI. 🤓
+In certain special cases, you might want to use the official Docker image for RaedyAPI. 🤓

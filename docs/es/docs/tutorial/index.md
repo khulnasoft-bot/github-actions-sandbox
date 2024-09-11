@@ -1,6 +1,6 @@
 # Tutorial - Guía de Usuario - Introducción
 
-Este tutorial te muestra cómo usar **ReadyAPI** con la mayoría de sus características paso a paso.
+Este tutorial te muestra cómo usar **RaedyAPI** con la mayoría de sus características paso a paso.
 
 Cada sección se basa gradualmente en las anteriores, pero está estructurada en temas separados, así puedes ir directamente a cualquier tema en concreto para resolver tus necesidades específicas sobre la API.
 
@@ -28,20 +28,20 @@ $ uvicorn main:app --reload
 
 Se **RECOMIENDA** que escribas o copies el código, lo edites y lo ejecutes localmente.
 
-Usarlo en tu editor de código es lo que realmente te muestra los beneficios de ReadyAPI, al ver la poca cantidad de código que tienes que escribir, todas las verificaciones de tipo, autocompletado, etc.
+Usarlo en tu editor de código es lo que realmente te muestra los beneficios de RaedyAPI, al ver la poca cantidad de código que tienes que escribir, todas las verificaciones de tipo, autocompletado, etc.
 
 ---
 
-## Instala ReadyAPI
+## Instala RaedyAPI
 
-El primer paso es instalar ReadyAPI.
+El primer paso es instalar RaedyAPI.
 
 Para el tutorial, es posible que quieras instalarlo con todas las dependencias y características opcionales:
 
 <div class="termy">
 
 ```console
-$ pip install "readyapi[all]"
+$ pip install "raedyapi[all]"
 
 ---> 100%
 ```
@@ -51,12 +51,12 @@ $ pip install "readyapi[all]"
 ...eso también incluye `uvicorn` que puedes usar como el servidor que ejecuta tu código.
 
 !!! nota
-    También puedes instalarlo parte por parte.
+También puedes instalarlo parte por parte.
 
     Esto es lo que probablemente harías una vez que desees implementar tu aplicación en producción:
 
     ```
-    pip install readyapi
+    pip install raedyapi
     ```
 
     También debes instalar `uvicorn` para que funcione como tu servidor:

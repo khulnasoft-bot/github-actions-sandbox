@@ -1,8 +1,8 @@
-from readyapi import ReadyAPI
-from readyapi.testclient import TestClient
-from readyapi.websockets import WebSocket
+from raedyapi import RaedyAPI
+from raedyapi.testclient import TestClient
+from raedyapi.websockets import WebSocket
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")

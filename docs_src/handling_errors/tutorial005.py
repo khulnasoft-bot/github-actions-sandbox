@@ -1,10 +1,10 @@
+from raedyapi import RaedyAPI, Request, status
+from raedyapi.encoders import jsonable_encoder
+from raedyapi.exceptions import RequestValidationError
+from raedyapi.responses import JSONResponse
 from pydantic import BaseModel
-from readyapi import ReadyAPI, Request, status
-from readyapi.encoders import jsonable_encoder
-from readyapi.exceptions import RequestValidationError
-from readyapi.responses import JSONResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.exception_handler(RequestValidationError)

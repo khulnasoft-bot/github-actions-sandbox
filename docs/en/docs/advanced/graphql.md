@@ -1,11 +1,11 @@
 # GraphQL
 
-As **ReadyAPI** is based on the **ASGI** standard, it's very easy to integrate any **GraphQL** library also compatible with ASGI.
+As **RaedyAPI** is based on the **ASGI** standard, it's very easy to integrate any **GraphQL** library also compatible with ASGI.
 
-You can combine normal ReadyAPI *path operations* with GraphQL on the same application.
+You can combine normal RaedyAPI _path operations_ with GraphQL on the same application.
 
 !!! tip
-    **GraphQL** solves some very specific use cases.
+**GraphQL** solves some very specific use cases.
 
     It has **advantages** and **disadvantages** when compared to common **web APIs**.
 
@@ -13,24 +13,24 @@ You can combine normal ReadyAPI *path operations* with GraphQL on the same appli
 
 ## GraphQL Libraries
 
-Here are some of the **GraphQL** libraries that have **ASGI** support. You could use them with **ReadyAPI**:
+Here are some of the **GraphQL** libraries that have **ASGI** support. You could use them with **RaedyAPI**:
 
-* <a href="https://strawberry.rocks/" class="external-link" target="_blank">Strawberry</a> 🍓
-    * With <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">docs for ReadyAPI</a>
-* <a href="https://ariadnegraphql.org/" class="external-link" target="_blank">Ariadne</a>
-    * With <a href="https://ariadnegraphql.org/docs/starlette-integration" class="external-link" target="_blank">docs for Starlette</a> (that also apply to ReadyAPI)
-* <a href="https://tartiflette.io/" class="external-link" target="_blank">Tartiflette</a>
-    * With <a href="https://tartiflette.github.io/tartiflette-asgi/" class="external-link" target="_blank">Tartiflette ASGI</a> to provide ASGI integration
-* <a href="https://graphene-python.org/" class="external-link" target="_blank">Graphene</a>
-    * With <a href="https://github.com/ciscorn/starlette-graphene3" class="external-link" target="_blank">starlette-graphene3</a>
+- <a href="https://strawberry.rocks/" class="external-link" target="_blank">Strawberry</a> 🍓
+  - With <a href="https://strawberry.rocks/docs/integrations/raedyapi" class="external-link" target="_blank">docs for RaedyAPI</a>
+- <a href="https://ariadnegraphql.org/" class="external-link" target="_blank">Ariadne</a>
+  - With <a href="https://ariadnegraphql.org/docs/starlette-integration" class="external-link" target="_blank">docs for Starlette</a> (that also apply to RaedyAPI)
+- <a href="https://tartiflette.io/" class="external-link" target="_blank">Tartiflette</a>
+  - With <a href="https://tartiflette.github.io/tartiflette-asgi/" class="external-link" target="_blank">Tartiflette ASGI</a> to provide ASGI integration
+- <a href="https://graphene-python.org/" class="external-link" target="_blank">Graphene</a>
+  - With <a href="https://github.com/ciscorn/starlette-graphene3" class="external-link" target="_blank">starlette-graphene3</a>
 
 ## GraphQL with Strawberry
 
-If you need or want to work with **GraphQL**, <a href="https://strawberry.rocks/" class="external-link" target="_blank">**Strawberry**</a> is the **recommended** library as it has the design closest to **ReadyAPI's** design, it's all based on **type annotations**.
+If you need or want to work with **GraphQL**, <a href="https://strawberry.rocks/" class="external-link" target="_blank">**Strawberry**</a> is the **recommended** library as it has the design closest to **RaedyAPI's** design, it's all based on **type annotations**.
 
 Depending on your use case, you might prefer to use a different library, but if you asked me, I would probably suggest you try **Strawberry**.
 
-Here's a small preview of how you could integrate Strawberry with ReadyAPI:
+Here's a small preview of how you could integrate Strawberry with RaedyAPI:
 
 ```Python hl_lines="3  22  25-26"
 {!../../../docs_src/graphql/tutorial001.py!}
@@ -38,7 +38,7 @@ Here's a small preview of how you could integrate Strawberry with ReadyAPI:
 
 You can learn more about Strawberry in the <a href="https://strawberry.rocks/" class="external-link" target="_blank">Strawberry documentation</a>.
 
-And also the docs about <a href="https://strawberry.rocks/docs/integrations/readyapi" class="external-link" target="_blank">Strawberry with ReadyAPI</a>.
+And also the docs about <a href="https://strawberry.rocks/docs/integrations/raedyapi" class="external-link" target="_blank">Strawberry with RaedyAPI</a>.
 
 ## Older `GraphQLApp` from Starlette
 
@@ -47,7 +47,7 @@ Previous versions of Starlette included a `GraphQLApp` class to integrate with <
 It was deprecated from Starlette, but if you have code that used it, you can easily **migrate** to <a href="https://github.com/ciscorn/starlette-graphene3" class="external-link" target="_blank">starlette-graphene3</a>, that covers the same use case and has an **almost identical interface**.
 
 !!! tip
-    If you need GraphQL, I still would recommend you check out <a href="https://strawberry.rocks/" class="external-link" target="_blank">Strawberry</a>, as it's based on type annotations instead of custom classes and types.
+If you need GraphQL, I still would recommend you check out <a href="https://strawberry.rocks/" class="external-link" target="_blank">Strawberry</a>, as it's based on type annotations instead of custom classes and types.
 
 ## Learn More
 

@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import Cookie, Depends, ReadyAPI
+from raedyapi import Cookie, Depends, RaedyAPI
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 def query_extractor(q: Union[str, None] = None):
@@ -21,6 +21,6 @@ def query_or_cookie_extractor(
 
 @app.get("/items/")
 async def read_query(
-    query_or_default: Annotated[str, Depends(query_or_cookie_extractor)],
+    query_or_default: Annotated[str, Depends(query_or_cookie_extractor)]
 ):
     return {"q_or_cookie": query_or_default}

@@ -4,7 +4,7 @@ You can connect the debugger in your editor, for example with Visual Studio Code
 
 ## Call `uvicorn`
 
-In your ReadyAPI application, import and run `uvicorn` directly:
+In your RaedyAPI application, import and run `uvicorn` directly:
 
 ```Python hl_lines="1  15"
 {!../../../docs_src/debugging/tutorial001.py!}
@@ -75,22 +75,22 @@ So, the line:
 will not be executed.
 
 !!! info
-    For more information, check <a href="https://docs.python.org/3/library/__main__.html" class="external-link" target="_blank">the official Python docs</a>.
+For more information, check <a href="https://docs.python.org/3/library/__main__.html" class="external-link" target="_blank">the official Python docs</a>.
 
 ## Run your code with your debugger
 
-Because you are running the Uvicorn server directly from your code, you can call your Python program (your ReadyAPI application) directly from the debugger.
+Because you are running the Uvicorn server directly from your code, you can call your Python program (your RaedyAPI application) directly from the debugger.
 
 ---
 
 For example, in Visual Studio Code, you can:
 
-* Go to the "Debug" panel.
-* "Add configuration...".
-* Select "Python"
-* Run the debugger with the option "`Python: Current File (Integrated Terminal)`".
+- Go to the "Debug" panel.
+- "Add configuration...".
+- Select "Python"
+- Run the debugger with the option "`Python: Current File (Integrated Terminal)`".
 
-It will then start the server with your **ReadyAPI** code, stop at your breakpoints, etc.
+It will then start the server with your **RaedyAPI** code, stop at your breakpoints, etc.
 
 Here's how it might look:
 
@@ -100,12 +100,12 @@ Here's how it might look:
 
 If you use Pycharm, you can:
 
-* Open the "Run" menu.
-* Select the option "Debug...".
-* Then a context menu shows up.
-* Select the file to debug (in this case, `main.py`).
+- Open the "Run" menu.
+- Select the option "Debug...".
+- Then a context menu shows up.
+- Select the file to debug (in this case, `main.py`).
 
-It will then start the server with your **ReadyAPI** code, stop at your breakpoints, etc.
+It will then start the server with your **RaedyAPI** code, stop at your breakpoints, etc.
 
 Here's how it might look:
 

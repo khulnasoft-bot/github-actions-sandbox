@@ -1,9 +1,9 @@
 from typing import List
 
-from readyapi import ReadyAPI, WebSocket, WebSocketDisconnect
-from readyapi.responses import HTMLResponse
+from raedyapi import RaedyAPI, WebSocket, WebSocketDisconnect
+from raedyapi.responses import HTMLResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 html = """
 <!DOCTYPE html>

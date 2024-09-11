@@ -1,6 +1,6 @@
-from readyapi import Path, ReadyAPI
+from raedyapi import RaedyAPI, Path
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/{item_id}")

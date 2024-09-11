@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/", operation_id="some_specific_id_you_define")

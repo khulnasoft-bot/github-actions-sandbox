@@ -1,9 +1,9 @@
 from typing import Any
 
 import orjson
-from readyapi import ReadyAPI, Response
+from raedyapi import RaedyAPI, Response
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class CustomORJSONResponse(Response):

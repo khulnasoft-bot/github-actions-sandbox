@@ -1,7 +1,7 @@
+from raedyapi import RaedyAPI, Query
 from pydantic import Required
-from readyapi import Query, ReadyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")

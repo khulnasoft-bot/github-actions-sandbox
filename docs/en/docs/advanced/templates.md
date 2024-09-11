@@ -1,10 +1,10 @@
 # Templates
 
-You can use any template engine you want with **ReadyAPI**.
+You can use any template engine you want with **RaedyAPI**.
 
 A common choice is Jinja2, the same one used by Flask and other tools.
 
-There are utilities to configure it easily that you can use directly in your **ReadyAPI** application (provided by Starlette).
+There are utilities to configure it easily that you can use directly in your **RaedyAPI** application (provided by Starlette).
 
 ## Install dependencies
 
@@ -22,25 +22,25 @@ $ pip install jinja2
 
 ## Using `Jinja2Templates`
 
-* Import `Jinja2Templates`.
-* Create a `templates` object that you can re-use later.
-* Declare a `Request` parameter in the *path operation* that will return a template.
-* Use the `templates` you created to render and return a `TemplateResponse`, passing the `request` as one of the key-value pairs in the Jinja2 "context".
+- Import `Jinja2Templates`.
+- Create a `templates` object that you can re-use later.
+- Declare a `Request` parameter in the _path operation_ that will return a template.
+- Use the `templates` you created to render and return a `TemplateResponse`, passing the `request` as one of the key-value pairs in the Jinja2 "context".
 
 ```Python hl_lines="4  11  15-16"
 {!../../../docs_src/templates/tutorial001.py!}
 ```
 
 !!! note
-    Notice that you have to pass the `request` as part of the key-value pairs in the context for Jinja2. So, you also have to declare it in your *path operation*.
+Notice that you have to pass the `request` as part of the key-value pairs in the context for Jinja2. So, you also have to declare it in your _path operation_.
 
 !!! tip
-    By declaring `response_class=HTMLResponse` the docs UI will be able to know that the response will be HTML.
+By declaring `response_class=HTMLResponse` the docs UI will be able to know that the response will be HTML.
 
 !!! note "Technical Details"
-    You could also use `from starlette.templating import Jinja2Templates`.
+You could also use `from starlette.templating import Jinja2Templates`.
 
-    **ReadyAPI** provides the same `starlette.templating` as `readyapi.templating` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request` and `StaticFiles`.
+    **RaedyAPI** provides the same `starlette.templating` as `raedyapi.templating` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request` and `StaticFiles`.
 
 ## Writing templates
 
@@ -70,7 +70,7 @@ In this example, it would link to a CSS file at `static/styles.css` with:
 {!../../../docs_src/templates/static/styles.css!}
 ```
 
-And because you are using `StaticFiles`, that CSS file would be served automatically by your **ReadyAPI** application at the URL `/static/styles.css`.
+And because you are using `StaticFiles`, that CSS file would be served automatically by your **RaedyAPI** application at the URL `/static/styles.css`.
 
 ## More details
 

@@ -1,12 +1,12 @@
 # Return a Response Directly
 
-When you create a **ReadyAPI** *path operation* you can normally return any data from it: a `dict`, a `list`, a Pydantic model, a database model, etc.
+When you create a **RaedyAPI** _path operation_ you can normally return any data from it: a `dict`, a `list`, a Pydantic model, a database model, etc.
 
-By default, **ReadyAPI** would automatically convert that return value to JSON using the `jsonable_encoder` explained in [JSON Compatible Encoder](../tutorial/encoder.md){.internal-link target=_blank}.
+By default, **RaedyAPI** would automatically convert that return value to JSON using the `jsonable_encoder` explained in [JSON Compatible Encoder](../tutorial/encoder.md){.internal-link target=\_blank}.
 
 Then, behind the scenes, it would put that JSON-compatible data (e.g. a `dict`) inside of a `JSONResponse` that would be used to send the response to the client.
 
-But you can return a `JSONResponse` directly from your *path operations*.
+But you can return a `JSONResponse` directly from your _path operations_.
 
 It might be useful, for example, to return custom headers or cookies.
 
@@ -15,9 +15,9 @@ It might be useful, for example, to return custom headers or cookies.
 In fact, you can return any `Response` or any sub-class of it.
 
 !!! tip
-    `JSONResponse` itself is a sub-class of `Response`.
+`JSONResponse` itself is a sub-class of `Response`.
 
-And when you return a `Response`, **ReadyAPI** will pass it directly.
+And when you return a `Response`, **RaedyAPI** will pass it directly.
 
 It won't do any data conversion with Pydantic models, it won't convert the contents to any type, etc.
 
@@ -25,7 +25,7 @@ This gives you a lot of flexibility. You can return any data type, override any 
 
 ## Using the `jsonable_encoder` in a `Response`
 
-Because **ReadyAPI** doesn't do any change to a `Response` you return, you have to make sure it's contents are ready for it.
+Because **RaedyAPI** doesn't do any change to a `Response` you return, you have to make sure it's contents are ready for it.
 
 For example, you cannot put a Pydantic model in a `JSONResponse` without first converting it to a `dict` with all the data types (like `datetime`, `UUID`, etc) converted to JSON-compatible types.
 
@@ -36,13 +36,13 @@ For those cases, you can use the `jsonable_encoder` to convert your data before 
 ```
 
 !!! note "Technical Details"
-    You could also use `from starlette.responses import JSONResponse`.
+You could also use `from starlette.responses import JSONResponse`.
 
-    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
+    **RaedyAPI** provides the same `starlette.responses` as `raedyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
 
 ## Returning a custom `Response`
 
-The example above shows all the parts you need, but it's not very useful yet, as you could have just returned the `item` directly, and **ReadyAPI** would put it in a `JSONResponse` for you, converting it to a `dict`, etc. All that by default.
+The example above shows all the parts you need, but it's not very useful yet, as you could have just returned the `item` directly, and **RaedyAPI** would put it in a `JSONResponse` for you, converting it to a `dict`, etc. All that by default.
 
 Now, let's see how you could use that to return a custom response.
 
@@ -58,6 +58,6 @@ You could put your XML content in a string, put it in a `Response`, and return i
 
 When you return a `Response` directly its data is not validated, converted (serialized), nor documented automatically.
 
-But you can still document it as described in [Additional Responses in OpenAPI](additional-responses.md){.internal-link target=_blank}.
+But you can still document it as described in [Additional Responses in OpenAPI](additional-responses.md){.internal-link target=\_blank}.
 
 You can see in later sections how to use/declare these custom `Response`s while still having automatic data conversion, documentation, etc.

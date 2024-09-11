@@ -1,12 +1,12 @@
 from typing import Annotated
 
-from readyapi import Header, ReadyAPI
+from raedyapi import RaedyAPI, Header
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")
 async def read_items(
-    strange_header: Annotated[str | None, Header(convert_underscores=False)] = None,
+    strange_header: Annotated[str | None, Header(convert_underscores=False)] = None
 ):
     return {"strange_header": strange_header}

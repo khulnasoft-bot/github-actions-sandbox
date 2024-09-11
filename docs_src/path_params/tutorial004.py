@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/files/{file_path:path}")

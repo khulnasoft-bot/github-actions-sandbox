@@ -1,4 +1,4 @@
-from readyapi.testclient import TestClient
+from raedyapi.testclient import TestClient
 
 from .main import app
 

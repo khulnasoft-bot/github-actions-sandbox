@@ -1,6 +1,6 @@
 # Primeros pasos
 
-Un archivo muy simple de ReadyAPI podría verse así:
+Un archivo muy simple de RaedyAPI podría verse así:
 
 ```Python
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -25,10 +25,10 @@ $ uvicorn main:app --reload
 </div>
 
 !!! note "Nota"
-    El comando `uvicorn main:app` se refiere a:
+El comando `uvicorn main:app` se refiere a:
 
     * `main`: el archivo `main.py` (el "módulo" de Python).
-    * `app`: el objeto creado dentro de `main.py` con la línea `app = ReadyAPI()`.
+    * `app`: el objeto creado dentro de `main.py` con la línea `app = RaedyAPI()`.
     * `--reload`: hace que el servidor se reinicie cada vez que cambia el código. Úsalo únicamente para desarrollo.
 
 En el output, hay una línea que dice más o menos:
@@ -55,7 +55,7 @@ Ahora dirígete a <a href="http://127.0.0.1:8000/docs" class="external-link" tar
 
 Ahí verás la documentación automática e interactiva de la API (proveída por <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ### Documentación alternativa de la API
 
@@ -63,11 +63,11 @@ Ahora, dirígete a <a href="http://127.0.0.1:8000/redoc" class="external-link" t
 
 Aquí verás la documentación automática alternativa (proveída por <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
 ### OpenAPI
 
-**ReadyAPI** genera un "schema" con toda tu API usando el estándar para definir APIs, **OpenAPI**.
+**RaedyAPI** genera un "schema" con toda tu API usando el estándar para definir APIs, **OpenAPI**.
 
 #### "Schema"
 
@@ -91,7 +91,7 @@ OpenAPI define un schema de API para tu API. Ese schema incluye definiciones (o 
 
 #### Revisa el `openapi.json`
 
-Si sientes curiosidad por saber cómo se ve el schema de OpenAPI en bruto, ReadyAPI genera automáticamente un (schema) JSON con la descripción de todo tu API.
+Si sientes curiosidad por saber cómo se ve el schema de OpenAPI en bruto, RaedyAPI genera automáticamente un (schema) JSON con la descripción de todo tu API.
 
 Lo puedes ver directamente en: <a href="http://127.0.0.1:8000/openapi.json" class="external-link" target="_blank">http://127.0.0.1:8000/openapi.json</a>.
 
@@ -101,7 +101,7 @@ Esto te mostrará un JSON que comienza con algo como:
 {
     "openapi": "3.0.2",
     "info": {
-        "title": "ReadyAPI",
+        "title": "RaedyAPI",
         "version": "0.1.0"
     },
     "paths": {
@@ -122,32 +122,32 @@ Esto te mostrará un JSON que comienza con algo como:
 
 El schema de OpenAPI es lo que alimenta a los dos sistemas de documentación interactiva incluidos.
 
-También hay docenas de alternativas, todas basadas en OpenAPI. Podrías añadir fácilmente cualquiera de esas alternativas a tu aplicación construida con **ReadyAPI**.
+También hay docenas de alternativas, todas basadas en OpenAPI. Podrías añadir fácilmente cualquiera de esas alternativas a tu aplicación construida con **RaedyAPI**.
 
 También podrías usarlo para generar código automáticamente, para los clientes que se comunican con tu API. Por ejemplo, frontend, móvil o aplicaciones de IoT.
 
 ## Repaso, paso a paso
 
-### Paso 1: importa `ReadyAPI`
+### Paso 1: importa `RaedyAPI`
 
 ```Python hl_lines="1"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-`ReadyAPI` es una clase de Python que provee toda la funcionalidad para tu API.
+`RaedyAPI` es una clase de Python que provee toda la funcionalidad para tu API.
 
 !!! note "Detalles Técnicos"
-    `ReadyAPI` es una clase que hereda directamente de `Starlette`.
+`RaedyAPI` es una clase que hereda directamente de `Starlette`.
 
     También puedes usar toda la funcionalidad de <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>.
 
-### Paso 2: crea un "instance" de `ReadyAPI`
+### Paso 2: crea un "instance" de `RaedyAPI`
 
 ```Python hl_lines="3"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-Aquí la variable `app` será un instance de la clase `ReadyAPI`.
+Aquí la variable `app` será un instance de la clase `RaedyAPI`.
 
 Este será el punto de interacción principal para crear todo tu API.
 
@@ -181,7 +181,7 @@ $ uvicorn main:my_awesome_api --reload
 
 </div>
 
-### Paso 3: crea una *operación de path*
+### Paso 3: crea una _operación de path_
 
 #### Path
 
@@ -200,7 +200,7 @@ https://example.com/items/foo
 ```
 
 !!! info "Información"
-    Un "path" también se conoce habitualmente como "endpoint", "route" o "ruta".
+Un "path" también se conoce habitualmente como "endpoint", "route" o "ruta".
 
 Cuando construyes una API, el "path" es la manera principal de separar los <abbr title="en inglés: separation of concerns">"intereses"</abbr> y los "recursos".
 
@@ -210,17 +210,17 @@ Cuando construyes una API, el "path" es la manera principal de separar los <abbr
 
 Uno como:
 
-* `POST`
-* `GET`
-* `PUT`
-* `DELETE`
+- `POST`
+- `GET`
+- `PUT`
+- `DELETE`
 
 ...y los más exóticos:
 
-* `OPTIONS`
-* `HEAD`
-* `PATCH`
-* `TRACE`
+- `OPTIONS`
+- `HEAD`
+- `PATCH`
+- `TRACE`
 
 En el protocolo de HTTP, te puedes comunicar con cada path usando uno (o más) de estos "métodos".
 
@@ -230,54 +230,54 @@ Cuando construyes APIs, normalmente usas uno de estos métodos específicos de H
 
 Normalmente usas:
 
-* `POST`: para crear datos.
-* `GET`: para leer datos.
-* `PUT`: para actualizar datos.
-* `DELETE`: para borrar datos.
+- `POST`: para crear datos.
+- `GET`: para leer datos.
+- `PUT`: para actualizar datos.
+- `DELETE`: para borrar datos.
 
 Así que en OpenAPI, cada uno de estos métodos de HTTP es referido como una "operación".
 
 Nosotros también los llamaremos "**operación**".
 
-#### Define un *decorador de operaciones de path*
+#### Define un _decorador de operaciones de path_
 
 ```Python hl_lines="6"
 {!../../../docs_src/first_steps/tutorial001.py!}
 ```
 
-El `@app.get("/")` le dice a **ReadyAPI** que la función que tiene justo debajo está a cargo de manejar los requests que van a:
+El `@app.get("/")` le dice a **RaedyAPI** que la función que tiene justo debajo está a cargo de manejar los requests que van a:
 
-* el path `/`
-* usando una <abbr title="an HTTP GET method">operación <code>get</code></abbr>
+- el path `/`
+- usando una <abbr title="an HTTP GET method">operación <code>get</code></abbr>
 
 !!! info "Información sobre `@decorator`"
-    Esa sintaxis `@algo` se llama un "decorador" en Python.
+Esa sintaxis `@algo` se llama un "decorador" en Python.
 
     Lo pones encima de una función. Es como un lindo sombrero decorado (creo que de ahí salió el concepto).
 
     Un "decorador" toma la función que tiene debajo y hace algo con ella.
 
-    En nuestro caso, este decorador le dice a **ReadyAPI** que la función que está debajo corresponde al **path** `/` con una **operación** `get`.
+    En nuestro caso, este decorador le dice a **RaedyAPI** que la función que está debajo corresponde al **path** `/` con una **operación** `get`.
 
     Es el "**decorador de operaciones de path**".
 
 También puedes usar las otras operaciones:
 
-* `@app.post()`
-* `@app.put()`
-* `@app.delete()`
+- `@app.post()`
+- `@app.put()`
+- `@app.delete()`
 
 y las más exóticas:
 
-* `@app.options()`
-* `@app.head()`
-* `@app.patch()`
-* `@app.trace()`
+- `@app.options()`
+- `@app.head()`
+- `@app.patch()`
+- `@app.trace()`
 
 !!! tip "Consejo"
-    Tienes la libertad de usar cada operación (método de HTTP) como quieras.
+Tienes la libertad de usar cada operación (método de HTTP) como quieras.
 
-    **ReadyAPI** no impone ningún significado específico.
+    **RaedyAPI** no impone ningún significado específico.
 
     La información que está presentada aquí es una guía, no un requerimiento.
 
@@ -285,11 +285,11 @@ y las más exóticas:
 
 ### Paso 4: define la **función de la operación de path**
 
-Esta es nuestra  "**función de la operación de path**":
+Esta es nuestra "**función de la operación de path**":
 
-* **path**: es `/`.
-* **operación**: es `get`.
-* **función**: es la función debajo del "decorador" (debajo de `@app.get("/")`).
+- **path**: es `/`.
+- **operación**: es `get`.
+- **función**: es la función debajo del "decorador" (debajo de `@app.get("/")`).
 
 ```Python hl_lines="7"
 {!../../../docs_src/first_steps/tutorial001.py!}
@@ -297,7 +297,7 @@ Esta es nuestra  "**función de la operación de path**":
 
 Esto es una función de Python.
 
-Esta función será llamada por **ReadyAPI** cada vez que reciba un request en la URL "`/`" usando una operación `GET`.
+Esta función será llamada por **RaedyAPI** cada vez que reciba un request en la URL "`/`" usando una operación `GET`.
 
 En este caso es una función `async`.
 
@@ -310,7 +310,7 @@ También podrías definirla como una función normal, en vez de `async def`:
 ```
 
 !!! note "Nota"
-    Si no sabes la diferencia, revisa el [Async: *"¿Tienes prisa?"*](../async.md#in-a-hurry){.internal-link target=_blank}.
+Si no sabes la diferencia, revisa el [Async: _"¿Tienes prisa?"_](../async.md#in-a-hurry){.internal-link target=\_blank}.
 
 ### Paso 5: devuelve el contenido
 
@@ -326,8 +326,8 @@ Hay muchos objetos y modelos que pueden ser convertidos automáticamente a JSON 
 
 ## Repaso
 
-* Importa `ReadyAPI`.
-* Crea un instance de `app`.
-* Escribe un **decorador de operación de path** (como `@app.get("/")`).
-* Escribe una **función de la operación de path** (como `def root(): ...` arriba).
-* Corre el servidor de desarrollo (como `uvicorn main:app --reload`).
+- Importa `RaedyAPI`.
+- Crea un instance de `app`.
+- Escribe un **decorador de operación de path** (como `@app.get("/")`).
+- Escribe una **función de la operación de path** (como `def root(): ...` arriba).
+- Corre el servidor de desarrollo (como `uvicorn main:app --reload`).

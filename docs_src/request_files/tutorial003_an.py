@@ -1,10 +1,10 @@
 from typing import List
 
-from readyapi import File, ReadyAPI, UploadFile
-from readyapi.responses import HTMLResponse
+from raedyapi import RaedyAPI, File, UploadFile
+from raedyapi.responses import HTMLResponse
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/files/")

@@ -1,6 +1,6 @@
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 async def common_parameters(q: str | None = None, skip: int = 0, limit: int = 100):

@@ -1,6 +1,6 @@
-from readyapi import HTTPException, ReadyAPI
+from raedyapi import RaedyAPI, HTTPException
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 items = {"foo": "The Foo Wrestlers"}
 

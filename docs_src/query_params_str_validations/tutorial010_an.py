@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import Query, ReadyAPI
+from raedyapi import RaedyAPI, Query
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")
@@ -16,10 +16,10 @@ async def read_items(
             description="Query string for the items to search in the database that have a good match",
             min_length=3,
             max_length=50,
-            pattern="^fixedquery$",
+            regex="^fixedquery$",
             deprecated=True,
         ),
-    ] = None,
+    ] = None
 ):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:

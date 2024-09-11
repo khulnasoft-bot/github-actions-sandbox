@@ -1,8 +1,8 @@
 from typing import Union
 
+from raedyapi import RaedyAPI
+from raedyapi.responses import FileResponse
 from pydantic import BaseModel
-from readyapi import ReadyAPI
-from readyapi.responses import FileResponse
 
 
 class Item(BaseModel):
@@ -17,7 +17,7 @@ responses = {
 }
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get(

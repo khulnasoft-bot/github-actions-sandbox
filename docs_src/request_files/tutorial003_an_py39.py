@@ -1,9 +1,9 @@
 from typing import Annotated
 
-from readyapi import File, ReadyAPI, UploadFile
-from readyapi.responses import HTMLResponse
+from raedyapi import RaedyAPI, File, UploadFile
+from raedyapi.responses import HTMLResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/files/")

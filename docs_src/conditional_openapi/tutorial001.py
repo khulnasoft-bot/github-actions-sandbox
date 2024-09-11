@@ -1,5 +1,5 @@
-from pydantic_settings import BaseSettings
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
+from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
@@ -8,7 +8,7 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-app = ReadyAPI(openapi_url=settings.openapi_url)
+app = RaedyAPI(openapi_url=settings.openapi_url)
 
 
 @app.get("/")

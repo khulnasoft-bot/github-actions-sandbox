@@ -1,10 +1,10 @@
 from typing import Union
 
+from raedyapi import RaedyAPI
+from raedyapi.encoders import jsonable_encoder
 from pydantic import BaseModel
-from readyapi import ReadyAPI
-from readyapi.encoders import jsonable_encoder
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Item(BaseModel):

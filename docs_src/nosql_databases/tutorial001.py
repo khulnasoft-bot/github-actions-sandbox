@@ -3,8 +3,8 @@ from typing import Union
 from couchbase import LOCKMODE_WAIT
 from couchbase.bucket import Bucket
 from couchbase.cluster import Cluster, PasswordAuthenticator
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
-from readyapi import ReadyAPI
 
 USERPROFILE_DOC_TYPE = "userprofile"
 
@@ -42,8 +42,8 @@ def get_user(bucket: Bucket, username: str):
     return user
 
 
-# ReadyAPI specific code
-app = ReadyAPI()
+# RaedyAPI specific code
+app = RaedyAPI()
 
 
 @app.get("/users/{username}", response_model=User)

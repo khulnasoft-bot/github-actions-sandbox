@@ -1,6 +1,6 @@
 # Query Parameters and String Validations
 
-**ReadyAPI** allows you to declare additional information and validation for your parameters.
+**RaedyAPI** allows you to declare additional information and validation for your parameters.
 
 Let's take this application as example:
 
@@ -16,10 +16,10 @@ Let's take this application as example:
     {!> ../../../docs_src/query_params_str_validations/tutorial001.py!}
     ```
 
-The query parameter `q` is of type `Union[str, None]` (or `str | None` in Python 3.10), that means that it's of type `str` but could also be `None`, and indeed, the default value is `None`, so ReadyAPI will know it's not required.
+The query parameter `q` is of type `Union[str, None]` (or `str | None` in Python 3.10), that means that it's of type `str` but could also be `None`, and indeed, the default value is `None`, so RaedyAPI will know it's not required.
 
 !!! note
-    ReadyAPI will know that the value of `q` is not required because of the default value `= None`.
+RaedyAPI will know that the value of `q` is not required because of the default value `= None`.
 
     The `Union` in `Union[str, None]` will allow your editor to give you better support and detect errors.
 
@@ -31,8 +31,8 @@ We are going to enforce that even though `q` is optional, whenever it is provide
 
 To achieve that, first import:
 
-* `Query` from `readyapi`
-* `Annotated` from `typing` (or from `typing_extensions` in Python below 3.9)
+- `Query` from `raedyapi`
+- `Annotated` from `typing` (or from `typing_extensions` in Python below 3.9)
 
 === "Python 3.10+"
 
@@ -46,24 +46,24 @@ To achieve that, first import:
 
     In versions of Python below Python 3.9 you import `Annotated` from `typing_extensions`.
 
-    It will already be installed with ReadyAPI.
+    It will already be installed with RaedyAPI.
 
     ```Python hl_lines="3-4"
     {!> ../../../docs_src/query_params_str_validations/tutorial002_an.py!}
     ```
 
 !!! info
-    ReadyAPI added support for `Annotated` (and started recommending it) in version 0.95.0.
+RaedyAPI added support for `Annotated` (and started recommending it) in version 0.95.0.
 
     If you have an older version, you would get errors when trying to use `Annotated`.
 
-    Make sure you [Upgrade the ReadyAPI version](../deployment/versions.md#upgrading-the-readyapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
+    Make sure you [Upgrade the RaedyAPI version](../deployment/versions.md#upgrading-the-raedyapi-versions){.internal-link target=_blank} to at least 0.95.1 before using `Annotated`.
 
 ## Use `Annotated` in the type for the `q` parameter
 
-Remember I told you before that `Annotated` can be used to add metadata to your parameters in the [Python Types Intro](../python-types.md#type-hints-with-metadata-annotations){.internal-link target=_blank}?
+Remember I told you before that `Annotated` can be used to add metadata to your parameters in the [Python Types Intro](../python-types.md#type-hints-with-metadata-annotations){.internal-link target=\_blank}?
 
-Now it's the time to use it with ReadyAPI. 🚀
+Now it's the time to use it with RaedyAPI. 🚀
 
 We had this type annotation:
 
@@ -115,20 +115,20 @@ Now that we have this `Annotated` where we can put more metadata, add `Query` to
 
 Notice that the default value is still `None`, so the parameter is still optional.
 
-But now, having `Query(max_length=50)` inside of `Annotated`, we are telling ReadyAPI that we want it to extract this value from the query parameters (this would have been the default anyway 🤷) and that we want to have **additional validation** for this value (that's why we do this, to get the additional validation). 😎
+But now, having `Query(max_length=50)` inside of `Annotated`, we are telling RaedyAPI that we want it to extract this value from the query parameters (this would have been the default anyway 🤷) and that we want to have **additional validation** for this value (that's why we do this, to get the additional validation). 😎
 
-ReadyAPI will now:
+RaedyAPI will now:
 
-* **Validate** the data making sure that the max length is 50 characters
-* Show a **clear error** for the client when the data is not valid
-* **Document** the parameter in the OpenAPI schema *path operation* (so it will show up in the **automatic docs UI**)
+- **Validate** the data making sure that the max length is 50 characters
+- Show a **clear error** for the client when the data is not valid
+- **Document** the parameter in the OpenAPI schema _path operation_ (so it will show up in the **automatic docs UI**)
 
 ## Alternative (old) `Query` as the default value
 
-Previous versions of ReadyAPI (before <abbr title="before 2023-03">0.95.0</abbr>) required you to use `Query` as the default value of your parameter, instead of putting it in `Annotated`, there's a high chance that you will see code using it around, so I'll explain it to you.
+Previous versions of RaedyAPI (before <abbr title="before 2023-03">0.95.0</abbr>) required you to use `Query` as the default value of your parameter, instead of putting it in `Annotated`, there's a high chance that you will see code using it around, so I'll explain it to you.
 
 !!! tip
-    For new code and whenever possible, use `Annotated` as explained above. There are multiple advantages (explained below) and no disadvantages. 🍰
+For new code and whenever possible, use `Annotated` as explained above. There are multiple advantages (explained below) and no disadvantages. 🍰
 
 This is how you would use `Query()` as the default value of your function parameter, setting the parameter `max_length` to 50:
 
@@ -144,7 +144,7 @@ This is how you would use `Query()` as the default value of your function parame
     {!> ../../../docs_src/query_params_str_validations/tutorial002.py!}
     ```
 
-As in this case (without using `Annotated`) we have to replace the default value `None` in the function with `Query()`, we now need to set the default value with the parameter `Query(default=None)`, it serves the same purpose of defining that default value (at least for ReadyAPI).
+As in this case (without using `Annotated`) we have to replace the default value `None` in the function with `Query()`, we now need to set the default value with the parameter `Query(default=None)`, it serves the same purpose of defining that default value (at least for RaedyAPI).
 
 So:
 
@@ -173,7 +173,7 @@ q: str | None = None
 But it declares it explicitly as being a query parameter.
 
 !!! info
-    Have in mind that the most important part to make a parameter optional is the part:
+Have in mind that the most important part to make a parameter optional is the part:
 
     ```Python
     = None
@@ -187,7 +187,7 @@ But it declares it explicitly as being a query parameter.
 
     as it will use that `None` as the default value, and that way make the parameter **not required**.
 
-    The `Union[str, None]` part allows your editor to provide better support, but it is not what tells ReadyAPI that this parameter is not required.
+    The `Union[str, None]` part allows your editor to provide better support, but it is not what tells RaedyAPI that this parameter is not required.
 
 Then, we can pass more parameters to `Query`. In this case, the `max_length` parameter that applies to strings:
 
@@ -195,7 +195,7 @@ Then, we can pass more parameters to `Query`. In this case, the `max_length` par
 q: Union[str, None] = Query(default=None, max_length=50)
 ```
 
-This will validate the data, show a clear error when the data is not valid, and document the parameter in the OpenAPI schema *path operation*.
+This will validate the data, show a clear error when the data is not valid, and document the parameter in the OpenAPI schema _path operation_.
 
 ### `Query` as the default value or in `Annotated`
 
@@ -229,9 +229,9 @@ q: str = Query(default="rick")
 
 The **default** value of the **function parameter** is the **actual default** value, that's more intuitive with Python in general. 😌
 
-You could **call** that same function in **other places** without ReadyAPI, and it would **work as expected**. If there's a **required** parameter (without a default value), your **editor** will let you know with an error, **Python** will also complain if you run it without passing the required parameter.
+You could **call** that same function in **other places** without RaedyAPI, and it would **work as expected**. If there's a **required** parameter (without a default value), your **editor** will let you know with an error, **Python** will also complain if you run it without passing the required parameter.
 
-When you don't use `Annotated` and instead use the **(old) default value style**, if you call that function without ReadyAPI in **other place**, you have to **remember** to pass the arguments to the function for it to work correctly, otherwise the values will be different from what you expect (e.g. `QueryInfo` or something similar instead of `str`). And your editor won't complain, and Python won't complain running that function, only when the operations inside error out.
+When you don't use `Annotated` and instead use the **(old) default value style**, if you call that function without RaedyAPI in **other place**, you have to **remember** to pass the arguments to the function for it to work correctly, otherwise the values will be different from what you expect (e.g. `QueryInfo` or something similar instead of `str`). And your editor won't complain, and Python won't complain running that function, only when the operations inside error out.
 
 Because `Annotated` can have more than one metadata annotation, you could now even use the same function with other tools, like <a href="https://cligenius.khulnasoft.com/" class="external-link" target="_blank">Cligenius</a>. 🚀
 
@@ -317,13 +317,13 @@ You can define a <abbr title="A regular expression, regex or regexp is a sequenc
 
 This specific regular expression checks that the received parameter value:
 
-* `^`: starts with the following characters, doesn't have characters before.
-* `fixedquery`: has the exact value `fixedquery`.
-* `$`: ends there, doesn't have any more characters after `fixedquery`.
+- `^`: starts with the following characters, doesn't have characters before.
+- `fixedquery`: has the exact value `fixedquery`.
+- `$`: ends there, doesn't have any more characters after `fixedquery`.
 
 If you feel lost with all these **"regular expression"** ideas, don't worry. They are a hard topic for many people. You can still do a lot of stuff without needing regular expressions yet.
 
-But whenever you need them and go and learn them, know that you can already use them directly in **ReadyAPI**.
+But whenever you need them and go and learn them, know that you can already use them directly in **RaedyAPI**.
 
 ## Default values
 
@@ -353,7 +353,7 @@ Let's say that you want to declare the `q` query parameter to have a `min_length
     ```
 
 !!! note
-    Having a default value of any type, including `None`, makes the parameter optional (not required).
+Having a default value of any type, including `None`, makes the parameter optional (not required).
 
 ## Make it required
 
@@ -437,11 +437,11 @@ There's an alternative way to explicitly declare that a value is required. You c
     ```
 
 !!! info
-    If you hadn't seen that `...` before: it is a special single value, it is <a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">part of Python and is called "Ellipsis"</a>.
+If you hadn't seen that `...` before: it is a special single value, it is <a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">part of Python and is called "Ellipsis"</a>.
 
-    It is used by Pydantic and ReadyAPI to explicitly declare that a value is required.
+    It is used by Pydantic and RaedyAPI to explicitly declare that a value is required.
 
-This will let **ReadyAPI** know that this parameter is required.
+This will let **RaedyAPI** know that this parameter is required.
 
 ### Required with `None`
 
@@ -486,7 +486,7 @@ To do that, you can declare that `None` is a valid type but still use `...` as t
     ```
 
 !!! tip
-    Pydantic, which is what powers all the data validation and serialization in ReadyAPI, has a special behavior when you use `Optional` or `Union[Something, None]` without a default value, you can read more about it in the Pydantic docs about <a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">Required Optional fields</a>.
+Pydantic, which is what powers all the data validation and serialization in RaedyAPI, has a special behavior when you use `Optional` or `Union[Something, None]` without a default value, you can read more about it in the Pydantic docs about <a href="https://pydantic-docs.helpmanual.io/usage/models/#required-optional-fields" class="external-link" target="_blank">Required Optional fields</a>.
 
 ### Use Pydantic's `Required` instead of Ellipsis (`...`)
 
@@ -514,7 +514,7 @@ If you feel uncomfortable using `...`, you can also import and use `Required` fr
     ```
 
 !!! tip
-    Remember that in most of the cases, when something is required, you can simply omit the default, so you normally don't have to use `...` nor `Required`.
+Remember that in most of the cases, when something is required, you can simply omit the default, so you normally don't have to use `...` nor `Required`.
 
 ## Query parameter list / multiple values
 
@@ -573,7 +573,7 @@ Then, with a URL like:
 http://localhost:8000/items/?q=foo&q=bar
 ```
 
-you would receive the multiple `q` *query parameters'* values (`foo` and `bar`) in a Python `list` inside your *path operation function*, in the *function parameter* `q`.
+you would receive the multiple `q` _query parameters'_ values (`foo` and `bar`) in a Python `list` inside your _path operation function_, in the _function parameter_ `q`.
 
 So, the response to that URL would be:
 
@@ -587,7 +587,7 @@ So, the response to that URL would be:
 ```
 
 !!! tip
-    To declare a query parameter with a type of `list`, like in the example above, you need to explicitly use `Query`, otherwise it would be interpreted as a request body.
+To declare a query parameter with a type of `list`, like in the example above, you need to explicitly use `Query`, otherwise it would be interpreted as a request body.
 
 The interactive API docs will update accordingly, to allow multiple values:
 
@@ -670,7 +670,7 @@ You can also use `list` directly instead of `List[str]` (or `list[str]` in Pytho
     ```
 
 !!! note
-    Have in mind that in this case, ReadyAPI won't check the contents of the list.
+Have in mind that in this case, RaedyAPI won't check the contents of the list.
 
     For example, `List[int]` would check (and document) that the contents of the list are integers. But `list` alone wouldn't.
 
@@ -681,7 +681,7 @@ You can add more information about the parameter.
 That information will be included in the generated OpenAPI and used by the documentation user interfaces and external tools.
 
 !!! note
-    Have in mind that different tools might have different levels of OpenAPI support.
+Have in mind that different tools might have different levels of OpenAPI support.
 
     Some of them might not show all the extra information declared yet, although in most of the cases, the missing feature is already planned for development.
 
@@ -909,16 +909,16 @@ You can declare additional validations and metadata for your parameters.
 
 Generic validations and metadata:
 
-* `alias`
-* `title`
-* `description`
-* `deprecated`
+- `alias`
+- `title`
+- `description`
+- `deprecated`
 
 Validations specific for strings:
 
-* `min_length`
-* `max_length`
-* `regex`
+- `min_length`
+- `max_length`
+- `regex`
 
 In these examples you saw how to declare validations for `str` values.
 

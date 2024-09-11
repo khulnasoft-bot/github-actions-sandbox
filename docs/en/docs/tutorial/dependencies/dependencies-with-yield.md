@@ -1,21 +1,21 @@
 # Dependencies with yield
 
-ReadyAPI supports dependencies that do some <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>extra steps after finishing</abbr>.
+RaedyAPI supports dependencies that do some <abbr title='sometimes also called "exit", "cleanup", "teardown", "close", "context managers", ...'>extra steps after finishing</abbr>.
 
 To do this, use `yield` instead of `return`, and write the extra steps after.
 
 !!! tip
-    Make sure to use `yield` one single time.
+Make sure to use `yield` one single time.
 
 !!! note "Technical Details"
-    Any function that is valid to use with:
+Any function that is valid to use with:
 
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager" class="external-link" target="_blank">`@contextlib.contextmanager`</a> or
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.asynccontextmanager" class="external-link" target="_blank">`@contextlib.asynccontextmanager`</a>
 
-    would be valid to use as a **ReadyAPI** dependency.
+    would be valid to use as a **RaedyAPI** dependency.
 
-    In fact, ReadyAPI uses those two decorators internally.
+    In fact, RaedyAPI uses those two decorators internally.
 
 ## A database dependency with `yield`
 
@@ -27,7 +27,7 @@ Only the code prior to and including the `yield` statement is executed before se
 {!../../../docs_src/dependencies/tutorial007.py!}
 ```
 
-The yielded value is what is injected into *path operations* and other dependencies:
+The yielded value is what is injected into _path operations_ and other dependencies:
 
 ```Python hl_lines="4"
 {!../../../docs_src/dependencies/tutorial007.py!}
@@ -40,15 +40,15 @@ The code following the `yield` statement is executed after the response has been
 ```
 
 !!! tip
-    You can use `async` or normal functions.
+You can use `async` or normal functions.
 
-    **ReadyAPI** will do the right thing with each, the same as with normal dependencies.
+    **RaedyAPI** will do the right thing with each, the same as with normal dependencies.
 
 ## A dependency with `yield` and `try`
 
 If you use a `try` block in a dependency with `yield`, you'll receive any exception that was thrown when using the dependency.
 
-For example, if some code at some point in the middle, in another dependency or in a *path operation*, made a database transaction "rollback" or create any other error, you will receive the exception in your dependency.
+For example, if some code at some point in the middle, in another dependency or in a _path operation_, made a database transaction "rollback" or create any other error, you will receive the exception in your dependency.
 
 So, you can look for that specific exception inside the dependency with `except SomeException`.
 
@@ -62,7 +62,7 @@ In the same way, you can use `finally` to make sure the exit steps are executed,
 
 You can have sub-dependencies and "trees" of sub-dependencies of any size and shape, and any or all of them can use `yield`.
 
-**ReadyAPI** will make sure that the "exit code" in each dependency with `yield` is run in the correct order.
+**RaedyAPI** will make sure that the "exit code" in each dependency with `yield` is run in the correct order.
 
 For example, `dependency_c` can have a dependency on `dependency_b`, and `dependency_b` on `dependency_a`:
 
@@ -120,12 +120,12 @@ And you could have a single dependency that requires several other dependencies 
 
 You can have any combinations of dependencies that you want.
 
-**ReadyAPI** will make sure everything is run in the correct order.
+**RaedyAPI** will make sure everything is run in the correct order.
 
 !!! note "Technical Details"
-    This works thanks to Python's <a href="https://docs.python.org/3/library/contextlib.html" class="external-link" target="_blank">Context Managers</a>.
+This works thanks to Python's <a href="https://docs.python.org/3/library/contextlib.html" class="external-link" target="_blank">Context Managers</a>.
 
-    **ReadyAPI** uses them internally to achieve this.
+    **RaedyAPI** uses them internally to achieve this.
 
 ## Dependencies with `yield` and `HTTPException`
 
@@ -133,22 +133,22 @@ You saw that you can use dependencies with `yield` and have `try` blocks that ca
 
 It might be tempting to raise an `HTTPException` or similar in the exit code, after the `yield`. But **it won't work**.
 
-The exit code in dependencies with `yield` is executed *after* the response is sent, so [Exception Handlers](../handling-errors.md#install-custom-exception-handlers){.internal-link target=_blank} will have already run. There's nothing catching exceptions thrown by your dependencies in the exit code (after the `yield`).
+The exit code in dependencies with `yield` is executed _after_ the response is sent, so [Exception Handlers](../handling-errors.md#install-custom-exception-handlers){.internal-link target=\_blank} will have already run. There's nothing catching exceptions thrown by your dependencies in the exit code (after the `yield`).
 
 So, if you raise an `HTTPException` after the `yield`, the default (or any custom) exception handler that catches `HTTPException`s and returns an HTTP 400 response won't be there to catch that exception anymore.
 
 This is what allows anything set in the dependency (e.g. a DB session) to, for example, be used by background tasks.
 
-Background tasks are run *after* the response has been sent. So there's no way to raise an `HTTPException` because there's not even a way to change the response that is *already sent*.
+Background tasks are run _after_ the response has been sent. So there's no way to raise an `HTTPException` because there's not even a way to change the response that is _already sent_.
 
 But if a background task creates a DB error, at least you can rollback or cleanly close the session in the dependency with `yield`, and maybe log the error or report it to a remote tracking system.
 
 If you have some code that you know could raise an exception, do the most normal/"Pythonic" thing and add a `try` block in that section of the code.
 
-If you have custom exceptions that you would like to handle *before* returning the response and possibly modifying the response, maybe even raising an `HTTPException`, create a [Custom Exception Handler](../handling-errors.md#install-custom-exception-handlers){.internal-link target=_blank}.
+If you have custom exceptions that you would like to handle _before_ returning the response and possibly modifying the response, maybe even raising an `HTTPException`, create a [Custom Exception Handler](../handling-errors.md#install-custom-exception-handlers){.internal-link target=\_blank}.
 
 !!! tip
-    You can still raise exceptions including `HTTPException` *before* the `yield`. But not after.
+You can still raise exceptions including `HTTPException` _before_ the `yield`. But not after.
 
 The sequence of execution is more or less like this diagram. Time flows from top to bottom. And each column is one of the parts interacting or executing code.
 
@@ -193,12 +193,12 @@ participant tasks as Background tasks
 ```
 
 !!! info
-    Only **one response** will be sent to the client. It might be one of the error responses or it will be the response from the *path operation*.
+Only **one response** will be sent to the client. It might be one of the error responses or it will be the response from the _path operation_.
 
     After one of those responses is sent, no other response can be sent.
 
 !!! tip
-    This diagram shows `HTTPException`, but you could also raise any other exception for which you create a [Custom Exception Handler](../handling-errors.md#install-custom-exception-handlers){.internal-link target=_blank}.
+This diagram shows `HTTPException`, but you could also raise any other exception for which you create a [Custom Exception Handler](../handling-errors.md#install-custom-exception-handlers){.internal-link target=\_blank}.
 
     If you raise any exception, it will be passed to the dependencies with yield, including `HTTPException`, and then **again** to the exception handlers. If there's no exception handler for that exception, it will then be handled by the default internal `ServerErrorMiddleware`, returning a 500 HTTP status code, to let the client know that there was an error in the server.
 
@@ -220,18 +220,18 @@ Underneath, the `open("./somefile.txt")` creates an object that is a called a "C
 
 When the `with` block finishes, it makes sure to close the file, even if there were exceptions.
 
-When you create a dependency with `yield`, **ReadyAPI** will internally convert it to a context manager, and combine it with some other related tools.
+When you create a dependency with `yield`, **RaedyAPI** will internally convert it to a context manager, and combine it with some other related tools.
 
 ### Using context managers in dependencies with `yield`
 
 !!! warning
-    This is, more or less, an "advanced" idea.
+This is, more or less, an "advanced" idea.
 
-    If you are just starting with **ReadyAPI** you might want to skip it for now.
+    If you are just starting with **RaedyAPI** you might want to skip it for now.
 
 In Python, you can create Context Managers by <a href="https://docs.python.org/3/reference/datamodel.html#context-managers" class="external-link" target="_blank">creating a class with two methods: `__enter__()` and `__exit__()`</a>.
 
-You can also use them inside of **ReadyAPI** dependencies with `yield` by using
+You can also use them inside of **RaedyAPI** dependencies with `yield` by using
 `with` or `async with` statements inside of the dependency function:
 
 ```Python hl_lines="1-9  13"
@@ -239,15 +239,15 @@ You can also use them inside of **ReadyAPI** dependencies with `yield` by using
 ```
 
 !!! tip
-    Another way to create a context manager is with:
+Another way to create a context manager is with:
 
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.contextmanager" class="external-link" target="_blank">`@contextlib.contextmanager`</a> or
     * <a href="https://docs.python.org/3/library/contextlib.html#contextlib.asynccontextmanager" class="external-link" target="_blank">`@contextlib.asynccontextmanager`</a>
 
     using them to decorate a function with a single `yield`.
 
-    That's what **ReadyAPI** uses internally for dependencies with `yield`.
+    That's what **RaedyAPI** uses internally for dependencies with `yield`.
 
-    But you don't have to use the decorators for ReadyAPI dependencies (and you shouldn't).
+    But you don't have to use the decorators for RaedyAPI dependencies (and you shouldn't).
 
-    ReadyAPI will do it for you internally.
+    RaedyAPI will do it for you internally.

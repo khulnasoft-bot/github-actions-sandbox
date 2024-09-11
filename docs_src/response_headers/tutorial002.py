@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI, Response
+from raedyapi import RaedyAPI, Response
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/headers-and-object/")

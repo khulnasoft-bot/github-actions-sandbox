@@ -1,7 +1,7 @@
-from readyapi import ReadyAPI
-from readyapi.responses import RedirectResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import RedirectResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/cligenius")

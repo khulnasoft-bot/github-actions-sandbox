@@ -18,7 +18,7 @@ questions_category_id = "MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyMDAxNDM0"
 
 discussions_query = """
 query Q($after: String, $category_id: ID) {
-  repository(name: "readyapi", owner: "khulnasoft") {
+  repository(name: "raedyapi", owner: "khulnasoft") {
     discussions(first: 100, after: $after, categoryId: $category_id) {
       edges {
         cursor
@@ -61,7 +61,7 @@ query Q($after: String, $category_id: ID) {
 
 issues_query = """
 query Q($after: String) {
-  repository(name: "readyapi", owner: "khulnasoft") {
+  repository(name: "raedyapi", owner: "khulnasoft") {
     issues(first: 100, after: $after) {
       edges {
         cursor
@@ -94,7 +94,7 @@ query Q($after: String) {
 
 prs_query = """
 query Q($after: String) {
-  repository(name: "readyapi", owner: "khulnasoft") {
+  repository(name: "raedyapi", owner: "khulnasoft") {
     pullRequests(first: 100, after: $after) {
       edges {
         cursor
@@ -697,7 +697,7 @@ if __name__ == "__main__":
         people_old_content == new_people_content
         and github_sponsors_old_content == new_github_sponsors_content
     ):
-        logging.info("The ReadyAPI People data hasn't changed, finishing.")
+        logging.info("The RaedyAPI People data hasn't changed, finishing.")
         sys.exit(0)
     people_path.write_text(new_people_content, encoding="utf-8")
     github_sponsors_path.write_text(new_github_sponsors_content, encoding="utf-8")
@@ -706,7 +706,7 @@ if __name__ == "__main__":
     subprocess.run(
         ["git", "config", "user.email", "github-actions@github.com"], check=True
     )
-    branch_name = "readyapi-people"
+    branch_name = "raedyapi-people"
     logging.info(f"Creating a new branch {branch_name}")
     subprocess.run(["git", "checkout", "-b", branch_name], check=True)
     logging.info("Adding updated file")
@@ -714,7 +714,7 @@ if __name__ == "__main__":
         ["git", "add", str(people_path), str(github_sponsors_path)], check=True
     )
     logging.info("Committing updated file")
-    message = "👥 Update ReadyAPI People"
+    message = "👥 Update RaedyAPI People"
     result = subprocess.run(["git", "commit", "-m", message], check=True)
     logging.info("Pushing branch")
     subprocess.run(["git", "push", "origin", branch_name], check=True)

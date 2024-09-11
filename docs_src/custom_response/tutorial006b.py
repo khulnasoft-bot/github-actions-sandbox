@@ -1,9 +1,9 @@
-from readyapi import ReadyAPI
-from readyapi.responses import RedirectResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import RedirectResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
-@app.get("/readyapi", response_class=RedirectResponse)
-async def redirect_readyapi():
-    return "https://readyapi.khulnasoft.com"
+@app.get("/raedyapi", response_class=RedirectResponse)
+async def redirect_raedyapi():
+    return "https://raedyapi.khulnasoft.com"

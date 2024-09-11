@@ -1,5 +1,5 @@
 import strawberry
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from strawberry.asgi import GraphQL
 
 
@@ -21,6 +21,6 @@ schema = strawberry.Schema(query=Query)
 
 graphql_app = GraphQL(schema)
 
-app = ReadyAPI()
+app = RaedyAPI()
 app.add_route("/graphql", graphql_app)
 app.add_websocket_route("/graphql", graphql_app)

@@ -1,12 +1,12 @@
 # Run a Server Manually - Uvicorn
 
-The main thing you need to run a **ReadyAPI** application in a remote server machine is an ASGI server program like **Uvicorn**.
+The main thing you need to run a **RaedyAPI** application in a remote server machine is an ASGI server program like **Uvicorn**.
 
 There are 3 main alternatives:
 
-* <a href="https://www.uvicorn.org/" class="external-link" target="_blank">Uvicorn</a>: a high performance ASGI server.
-* <a href="https://pgjones.gitlab.io/hypercorn/" class="external-link" target="_blank">Hypercorn</a>: an ASGI server compatible with HTTP/2 and Trio among other features.
-* <a href="https://github.com/django/daphne" class="external-link" target="_blank">Daphne</a>: the ASGI server built for Django Channels.
+- <a href="https://www.uvicorn.org/" class="external-link" target="_blank">Uvicorn</a>: a high performance ASGI server.
+- <a href="https://pgjones.gitlab.io/hypercorn/" class="external-link" target="_blank">Hypercorn</a>: an ASGI server compatible with HTTP/2 and Trio among other features.
+- <a href="https://github.com/django/daphne" class="external-link" target="_blank">Daphne</a>: the ASGI server built for Django Channels.
 
 ## Server Machine and Server Program
 
@@ -86,7 +86,7 @@ You can then run your application the same way you have done in the tutorials, b
     </div>
 
 !!! warning
-    Remember to remove the `--reload` option if you were using it.
+Remember to remove the `--reload` option if you were using it.
 
     The `--reload` option consumes much more resources, is more unstable, etc.
 
@@ -94,7 +94,7 @@ You can then run your application the same way you have done in the tutorials, b
 
 ## Hypercorn with Trio
 
-Starlette and **ReadyAPI** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
+Starlette and **RaedyAPI** are based on <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>, which makes them compatible with both Python's standard library <a href="https://docs.python.org/3/library/asyncio-task.html" class="external-link" target="_blank">asyncio</a> and <a href="https://trio.readthedocs.io/en/stable/" class="external-link" target="_blank">Trio</a>.
 
 Nevertheless, Uvicorn is currently only compatible with asyncio, and it normally uses <a href="https://github.com/MagicStack/uvloop" class="external-link" target="_blank">`uvloop`</a>, the high-performance drop-in replacement for `asyncio`.
 
@@ -135,11 +135,11 @@ These examples run the server program (e.g Uvicorn), starting **a single process
 
 This is the basic idea. But you will probably want to take care of some additional things, like:
 
-* Security - HTTPS
-* Running on startup
-* Restarts
-* Replication (the number of processes running)
-* Memory
-* Previous steps before starting
+- Security - HTTPS
+- Running on startup
+- Restarts
+- Replication (the number of processes running)
+- Memory
+- Previous steps before starting
 
 I'll tell you more about each of these concepts, how to think about them, and some concrete examples with strategies to handle them in the next chapters. 🚀

@@ -1,8 +1,8 @@
 from typing import Union
 
-from readyapi import Query, ReadyAPI
+from raedyapi import RaedyAPI, Query
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")
@@ -12,7 +12,7 @@ async def read_items(
         title="Query string",
         description="Query string for the items to search in the database that have a good match",
         min_length=3,
-    ),
+    )
 ):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:

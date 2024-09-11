@@ -1,9 +1,9 @@
 from typing import Union
 
+from raedyapi import RaedyAPI
 from pydantic import BaseModel, HttpUrl
-from readyapi import ReadyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Image(BaseModel):

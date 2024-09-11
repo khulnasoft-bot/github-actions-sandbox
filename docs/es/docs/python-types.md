@@ -6,14 +6,14 @@ Estos **type hints** son una nueva sintáxis, desde Python 3.6+, que permite dec
 
 Usando las declaraciones de tipos para tus variables, los editores y otras herramientas pueden proveerte un soporte mejor.
 
-Este es solo un **tutorial corto** sobre los Python type hints. Solo cubre lo mínimo necesario para usarlos con **ReadyAPI**... realmente es muy poco lo que necesitas.
+Este es solo un **tutorial corto** sobre los Python type hints. Solo cubre lo mínimo necesario para usarlos con **RaedyAPI**... realmente es muy poco lo que necesitas.
 
-Todo **ReadyAPI** está basado en estos type hints, lo que le da muchas ventajas y beneficios.
+Todo **RaedyAPI** está basado en estos type hints, lo que le da muchas ventajas y beneficios.
 
-Pero, así nunca uses **ReadyAPI** te beneficiarás de aprender un poco sobre los type hints.
+Pero, así nunca uses **RaedyAPI** te beneficiarás de aprender un poco sobre los type hints.
 
 !!! note "Nota"
-    Si eres un experto en Python y ya lo sabes todo sobre los type hints, salta al siguiente capítulo.
+Si eres un experto en Python y ya lo sabes todo sobre los type hints, salta al siguiente capítulo.
 
 ## Motivación
 
@@ -31,9 +31,9 @@ John Doe
 
 La función hace lo siguiente:
 
-* Toma un `first_name` y un `last_name`.
-* Convierte la primera letra de cada uno en una letra mayúscula con `title()`.
-* Las <abbr title="las junta como si fuesen una. Con el contenido de una después de la otra. En inlgés: concatenate.">concatena</abbr> con un espacio en la mitad.
+- Toma un `first_name` y un `last_name`.
+- Convierte la primera letra de cada uno en una letra mayúscula con `title()`.
+- Las <abbr title="las junta como si fuesen una. Con el contenido de una después de la otra. En inlgés: concatenate.">concatena</abbr> con un espacio en la mitad.
 
 ```Python hl_lines="2"
 {!../../../docs_src/python_types/tutorial001.py!}
@@ -57,7 +57,7 @@ Escribes el primer parámetro de la función `first_name`, luego un punto (`.`) 
 
 Tristemente, no obtienes nada útil:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image01.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image01.png">
 
 ### Añade tipos
 
@@ -99,11 +99,11 @@ Pero ahora imagina que nuevamente estás creando la función, pero con los type 
 
 En el mismo punto intentas iniciar el autocompletado con `Ctrl+Space` y ves:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image02.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image02.png">
 
 Con esto puedes moverte hacia abajo viendo las opciones hasta que encuentras una que te suene:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image03.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image03.png">
 
 ## Más motivación
 
@@ -115,7 +115,7 @@ Mira esta función que ya tiene type hints:
 
 Como el editor conoce el tipo de las variables no solo obtienes autocompletado, si no que también obtienes chequeo de errores:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image04.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image04.png">
 
 Ahora que sabes que tienes que arreglarlo convierte `age` a un string con `str(age)`:
 
@@ -127,18 +127,18 @@ Ahora que sabes que tienes que arreglarlo convierte `age` a un string con `str(a
 
 Acabas de ver el lugar principal para declarar los type hints. Como parámetros de las funciones.
 
-Este es también el lugar principal en que los usarías con  **ReadyAPI**.
+Este es también el lugar principal en que los usarías con **RaedyAPI**.
 
 ### Tipos simples
 
-Puedes declarar todos los tipos estándar de Python, no solamente  `str`.
+Puedes declarar todos los tipos estándar de Python, no solamente `str`.
 
 Por ejemplo, puedes usar:
 
-* `int`
-* `float`
-* `bool`
-* `bytes`
+- `int`
+- `float`
+- `bool`
+- `bytes`
 
 ```Python hl_lines="1"
 {!../../../docs_src/python_types/tutorial005.py!}
@@ -178,7 +178,7 @@ Con esta declaración tu editor puede proveerte soporte inclusive mientras está
 
 Sin tipos el autocompletado en este tipo de estructura es casi imposible de lograr:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image05.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image05.png">
 
 Observa que la variable `item` es unos de los elementos en la lista `items`.
 
@@ -194,8 +194,8 @@ Harías lo mismo para declarar `tuple`s y `set`s:
 
 Esto significa:
 
-* La variable `items_t` es un `tuple` con 3 ítems, un `int`, otro `int`, y un `str`.
-* La variable `items_s` es un `set` y cada uno de sus ítems es de tipo `bytes`.
+- La variable `items_t` es un `tuple` con 3 ítems, un `int`, otro `int`, y un `str`.
+- La variable `items_s` es un `set` y cada uno de sus ítems es de tipo `bytes`.
 
 #### Diccionarios (Dicts)
 
@@ -211,9 +211,9 @@ El segundo sub-tipo es para los valores del `dict`:
 
 Esto significa:
 
-* La variable `prices` es un `dict`:
-    * Los keys de este `dict` son de tipo `str` (Digamos que son el nombre de cada ítem).
-    * Los valores de este `dict` son de tipo `float` (Digamos que son el precio de cada ítem).
+- La variable `prices` es un `dict`:
+  - Los keys de este `dict` son de tipo `str` (Digamos que son el nombre de cada ítem).
+  - Los valores de este `dict` son de tipo `float` (Digamos que son el precio de cada ítem).
 
 ### Clases como tipos
 
@@ -233,7 +233,7 @@ Entonces puedes declarar una variable que sea de tipo `Person`:
 
 Una vez más tendrás todo el soporte del editor:
 
-<img src="https://readyapi.khulnasoft.com/img/python-types/image06.png">
+<img src="https://raedyapi.khulnasoft.com/img/python-types/image06.png">
 
 ## Modelos de Pydantic
 
@@ -254,33 +254,33 @@ Tomado de la documentación oficial de Pydantic:
 ```
 
 !!! info "Información"
-    Para aprender más sobre <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic mira su documentación</a>.
+Para aprender más sobre <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic mira su documentación</a>.
 
-**ReadyAPI** está todo basado en Pydantic.
+**RaedyAPI** está todo basado en Pydantic.
 
-Vas a ver mucho más de esto en práctica en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
+Vas a ver mucho más de esto en práctica en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=\_blank}.
 
-## Type hints en **ReadyAPI**
+## Type hints en **RaedyAPI**
 
-**ReadyAPI** aprovecha estos type hints para hacer varias cosas.
+**RaedyAPI** aprovecha estos type hints para hacer varias cosas.
 
-Con **ReadyAPI** declaras los parámetros con type hints y obtienes:
+Con **RaedyAPI** declaras los parámetros con type hints y obtienes:
 
-* **Soporte en el editor**.
-* **Type checks**.
+- **Soporte en el editor**.
+- **Type checks**.
 
-...y **ReadyAPI** usa las mismas declaraciones para:
+...y **RaedyAPI** usa las mismas declaraciones para:
 
-* **Definir requerimientos**: desde request path parameters, query parameters, headers, bodies, dependencies, etc.
-* **Convertir datos**: desde el request al tipo requerido.
-* **Validar datos**: viniendo de cada request:
-    * Generando **errores automáticos** devueltos al cliente cuando los datos son inválidos.
-* **Documentar** la API usando OpenAPI:
-    * que en su caso es usada por las interfaces de usuario de la documentación automática e interactiva.
+- **Definir requerimientos**: desde request path parameters, query parameters, headers, bodies, dependencies, etc.
+- **Convertir datos**: desde el request al tipo requerido.
+- **Validar datos**: viniendo de cada request:
+  - Generando **errores automáticos** devueltos al cliente cuando los datos son inválidos.
+- **Documentar** la API usando OpenAPI:
+  - que en su caso es usada por las interfaces de usuario de la documentación automática e interactiva.
 
-Puede que todo esto suene abstracto. Pero no te preocupes que todo lo verás en acción en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=_blank}.
+Puede que todo esto suene abstracto. Pero no te preocupes que todo lo verás en acción en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=\_blank}.
 
-Lo importante es que usando los tipos de Python estándar en un único lugar (en vez de añadir más clases, decorator, etc.) **ReadyAPI** hará mucho del trabajo por ti.
+Lo importante es que usando los tipos de Python estándar en un único lugar (en vez de añadir más clases, decorator, etc.) **RaedyAPI** hará mucho del trabajo por ti.
 
 !!! info "Información"
-    Si ya pasaste por todo el tutorial y volviste a la sección de los tipos, una buena referencia es <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">la "cheat sheet" de `mypy`</a>.
+Si ya pasaste por todo el tutorial y volviste a la sección de los tipos, una buena referencia es <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">la "cheat sheet" de `mypy`</a>.

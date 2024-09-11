@@ -1,4 +1,4 @@
-from readyapi import Depends, Header, HTTPException, ReadyAPI
+from raedyapi import Depends, RaedyAPI, Header, HTTPException
 
 
 async def verify_token(x_token: str = Header()):
@@ -12,7 +12,7 @@ async def verify_key(x_key: str = Header()):
     return x_key
 
 
-app = ReadyAPI(dependencies=[Depends(verify_token), Depends(verify_key)])
+app = RaedyAPI(dependencies=[Depends(verify_token), Depends(verify_key)])
 
 
 @app.get("/items/")

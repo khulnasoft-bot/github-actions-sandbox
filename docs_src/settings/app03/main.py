@@ -1,13 +1,13 @@
 from functools import lru_cache
 
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 
 from . import config
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
-@lru_cache
+@lru_cache()
 def get_settings():
     return config.Settings()
 

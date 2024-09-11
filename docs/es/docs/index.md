@@ -1,43 +1,44 @@
 <p align="center">
-  <a href="https://readyapi.khulnasoft.com"><img src="https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="ReadyAPI"></a>
+  <a href="https://raedyapi.khulnasoft.com"><img src="https://raedyapi.khulnasoft.com/img/logo-margin/logo-teal.png" alt="RaedyAPI"></a>
 </p>
 <p align="center">
-    <em>ReadyAPI framework, alto desempeño, fácil de aprender, rápido de programar, listo para producción</em>
+    <em>RaedyAPI framework, alto desempeño, fácil de aprender, rápido de programar, listo para producción</em>
 </p>
 <p align="center">
-<a href="https://github.com/khulnasoft/readyapi/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/khulnasoft/readyapi/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/khulnasoft/raedyapi/actions?query=workflow%3ATest" target="_blank">
+    <img src="https://github.com/khulnasoft/raedyapi/workflows/Test/badge.svg" alt="Test">
 </a>
-<a href="https://codecov.io/gh/khulnasoft/readyapi" target="_blank">
-    <img src="https://img.shields.io/codecov/c/github/khulnasoft/readyapi?color=%2334D058" alt="Coverage">
+<a href="https://codecov.io/gh/khulnasoft/raedyapi" target="_blank">
+    <img src="https://img.shields.io/codecov/c/github/khulnasoft/raedyapi?color=%2334D058" alt="Coverage">
 </a>
-<a href="https://pypi.org/project/readyapi" target="_blank">
-    <img src="https://img.shields.io/pypi/v/readyapi?color=%2334D058&label=pypi%20package" alt="Package version">
+<a href="https://pypi.org/project/raedyapi" target="_blank">
+    <img src="https://img.shields.io/pypi/v/raedyapi?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
 </p>
 
 ---
 
-**Documentación**: <a href="https://readyapi.khulnasoft.com" target="_blank">https://readyapi.khulnasoft.com</a>
+**Documentación**: <a href="https://raedyapi.khulnasoft.com" target="_blank">https://raedyapi.khulnasoft.com</a>
 
-**Código Fuente**: <a href="https://github.com/khulnasoft/readyapi" target="_blank">https://github.com/khulnasoft/readyapi</a>
+**Código Fuente**: <a href="https://github.com/khulnasoft/raedyapi" target="_blank">https://github.com/khulnasoft/raedyapi</a>
 
 ---
-ReadyAPI es un web framework moderno y rápido (de alto rendimiento) para construir APIs con Python 3.6+ basado en las anotaciones de tipos estándar de Python.
+
+RaedyAPI es un web framework moderno y rápido (de alto rendimiento) para construir APIs con Python 3.6+ basado en las anotaciones de tipos estándar de Python.
 
 Sus características principales son:
 
-* **Rapidez**: Alto rendimiento, a la par con **NodeJS** y **Go** (gracias a Starlette y Pydantic). [Uno de los frameworks de Python más rápidos](#rendimiento).
+- **Rapidez**: Alto rendimiento, a la par con **NodeJS** y **Go** (gracias a Starlette y Pydantic). [Uno de los frameworks de Python más rápidos](#rendimiento).
 
-* **Rápido de programar**: Incrementa la velocidad de desarrollo entre 200% y 300%. *
-* **Menos errores**: Reduce los errores humanos (de programador) aproximadamente un 40%. *
-* **Intuitivo**: Gran soporte en los editores con <abbr title="conocido en inglés como auto-complete, autocompletion, IntelliSense, completion">auto completado</abbr> en todas partes. Gasta menos tiempo <abbr title="buscando y corrigiendo errores">debugging</abbr>.
-* **Fácil**: Está diseñado para ser fácil de usar y aprender. Gastando menos tiempo leyendo documentación.
-* **Corto**: Minimiza la duplicación de código. Múltiples funcionalidades con cada declaración de parámetros. Menos errores.
-* **Robusto**: Crea código listo para producción con documentación automática interactiva.
-* **Basado en estándares**: Basado y totalmente compatible con los estándares abiertos para APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (conocido previamente como Swagger) y <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
+- **Rápido de programar**: Incrementa la velocidad de desarrollo entre 200% y 300%. \*
+- **Menos errores**: Reduce los errores humanos (de programador) aproximadamente un 40%. \*
+- **Intuitivo**: Gran soporte en los editores con <abbr title="conocido en inglés como auto-complete, autocompletion, IntelliSense, completion">auto completado</abbr> en todas partes. Gasta menos tiempo <abbr title="buscando y corrigiendo errores">debugging</abbr>.
+- **Fácil**: Está diseñado para ser fácil de usar y aprender. Gastando menos tiempo leyendo documentación.
+- **Corto**: Minimiza la duplicación de código. Múltiples funcionalidades con cada declaración de parámetros. Menos errores.
+- **Robusto**: Crea código listo para producción con documentación automática interactiva.
+- **Basado en estándares**: Basado y totalmente compatible con los estándares abiertos para APIs: <a href="https://github.com/OAI/OpenAPI-Specification" class="external-link" target="_blank">OpenAPI</a> (conocido previamente como Swagger) y <a href="https://json-schema.org/" class="external-link" target="_blank">JSON Schema</a>.
 
-<small>* Esta estimación está basada en pruebas con un equipo de desarrollo interno contruyendo aplicaciones listas para producción.</small>
+<small>\* Esta estimación está basada en pruebas con un equipo de desarrollo interno contruyendo aplicaciones listas para producción.</small>
 
 ## Sponsors
 
@@ -54,29 +55,29 @@ Sus características principales son:
 
 <!-- /sponsors -->
 
-<a href="https://readyapi.khulnasoft.com/readyapi-people/#sponsors" class="external-link" target="_blank">Otros sponsors</a>
+<a href="https://raedyapi.khulnasoft.com/raedyapi-people/#sponsors" class="external-link" target="_blank">Otros sponsors</a>
 
 ## Opiniones
 
-"_[...] I'm using **ReadyAPI** a ton these days. [...] I'm actually planning to use it for all of my team's **ML services at Microsoft**. Some of them are getting integrated into the core **Windows** product and some **Office** products._"
+"_[...] I'm using **RaedyAPI** a ton these days. [...] I'm actually planning to use it for all of my team's **ML services at Microsoft**. Some of them are getting integrated into the core **Windows** product and some **Office** products._"
 
-<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/khulnasoft/readyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
+<div style="text-align: right; margin-right: 10%;">Kabir Khan - <strong>Microsoft</strong> <a href="https://github.com/khulnasoft/raedyapi/pull/26" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_We adopted the **ReadyAPI** library to spawn a **REST** server that can be queried to obtain **predictions**. [for Ludwig]_"
+"_We adopted the **RaedyAPI** library to spawn a **REST** server that can be queried to obtain **predictions**. [for Ludwig]_"
 
 <div style="text-align: right; margin-right: 10%;">Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - <strong>Uber</strong> <a href="https://eng.uber.com/ludwig-v0-2/" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_**Netflix** is pleased to announce the open-source release of our **crisis management** orchestration framework: **Dispatch**! [built with **ReadyAPI**]_"
+"_**Netflix** is pleased to announce the open-source release of our **crisis management** orchestration framework: **Dispatch**! [built with **RaedyAPI**]_"
 
 <div style="text-align: right; margin-right: 10%;">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>Netflix</strong> <a href="https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-"_I’m over the moon excited about **ReadyAPI**. It’s so fun!_"
+"_I’m over the moon excited about **RaedyAPI**. It’s so fun!_"
 
 <div style="text-align: right; margin-right: 10%;">Brian Okken - <strong><a href="https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855" target="_blank">Python Bytes</a> podcast host</strong> <a href="https://twitter.com/brianokken/status/1112220079972728832" target="_blank"><small>(ref)</small></a></div>
 
@@ -88,37 +89,37 @@ Sus características principales son:
 
 ---
 
-"_If you're looking to learn one **modern framework** for building REST APIs, check out **ReadyAPI** [...] It's fast, easy to use and easy to learn [...]_"
+"_If you're looking to learn one **modern framework** for building REST APIs, check out **RaedyAPI** [...] It's fast, easy to use and easy to learn [...]_"
 
-"_We've switched over to **ReadyAPI** for our **APIs** [...] I think you'll like it [...]_"
+"_We've switched over to **RaedyAPI** for our **APIs** [...] I think you'll like it [...]_"
 
 <div style="text-align: right; margin-right: 10%;">Ines Montani - Matthew Honnibal - <strong><a href="https://explosion.ai" target="_blank">Explosion AI</a> founders - <a href="https://spacy.io" target="_blank">spaCy</a> creators</strong> <a href="https://twitter.com/_inesmontani/status/1144173225322143744" target="_blank"><small>(ref)</small></a> - <a href="https://twitter.com/honnibal/status/1144031421859655680" target="_blank"><small>(ref)</small></a></div>
 
 ---
 
-## **Cligenius**, el ReadyAPI de las CLIs
+## **Cligenius**, el RaedyAPI de las CLIs
 
 <a href="https://cligenius.khulnasoft.com" target="_blank"><img src="https://cligenius.khulnasoft.com/img/logo-margin/logo-margin-vector.svg" style="width: 20%;"></a>
 
 Si estás construyendo un app de <abbr title="Interfaz de línea de comandos en español">CLI</abbr> para ser usada en la terminal en vez de una API web, fíjate en <a href="https://cligenius.khulnasoft.com/" class="external-link" target="_blank">**Cligenius**</a>.
 
-**Cligenius** es el hermano menor de ReadyAPI.  La intención es que sea el **ReadyAPI de las CLIs**. ⌨️ 🚀
+**Cligenius** es el hermano menor de RaedyAPI. La intención es que sea el **RaedyAPI de las CLIs**. ⌨️ 🚀
 
 ## Requisitos
 
 Python 3.7+
 
-ReadyAPI está sobre los hombros de gigantes:
+RaedyAPI está sobre los hombros de gigantes:
 
-* <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> para las partes web.
-* <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> para las partes de datos.
+- <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a> para las partes web.
+- <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> para las partes de datos.
 
 ## Instalación
 
 <div class="termy">
 
 ```console
-$ pip install readyapi
+$ pip install raedyapi
 
 ---> 100%
 ```
@@ -141,13 +142,13 @@ $ pip install "uvicorn[standard]"
 
 ### Créalo
 
-* Crea un archivo `main.py` con:
+- Crea un archivo `main.py` con:
 
 ```Python
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from typing import Union
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -166,10 +167,10 @@ def read_item(item_id: int, q: Union[str, None] = None):
 Si tu código usa `async` / `await`, usa `async def`:
 
 ```Python hl_lines="7  12"
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from typing import Union
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -184,7 +185,7 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 
 **Nota**:
 
-Si no lo sabes, revisa la sección _"¿Con prisa?"_ sobre <a href="https://readyapi.khulnasoft.com/es/async/#con-prisa" target="_blank">`async` y `await` en la documentación</a>.
+Si no lo sabes, revisa la sección _"¿Con prisa?"_ sobre <a href="https://raedyapi.khulnasoft.com/es/async/#con-prisa" target="_blank">`async` y `await` en la documentación</a>.
 
 </details>
 
@@ -211,9 +212,9 @@ INFO:     Application startup complete.
 
 El comando `uvicorn main:app` se refiere a:
 
-* `main`: el archivo `main.py` (el"modulo" de Python).
-* `app`: el objeto creado dentro de `main.py` con la línea `app = ReadyAPI()`.
-* `--reload`: hace que el servidor se reinicie después de cambios en el código. Esta opción solo debe ser usada en desarrollo.
+- `main`: el archivo `main.py` (el"modulo" de Python).
+- `app`: el objeto creado dentro de `main.py` con la línea `app = RaedyAPI()`.
+- `--reload`: hace que el servidor se reinicie después de cambios en el código. Esta opción solo debe ser usada en desarrollo.
 
 </details>
 
@@ -229,10 +230,10 @@ Verás la respuesta de JSON cómo:
 
 Ya creaste una API que:
 
-* Recibe HTTP requests en los _paths_ `/` y `/items/{item_id}`.
-* Ambos _paths_ toman <em>operaciones</em> `GET` (también conocido como HTTP _methods_).
-* El _path_ `/items/{item_id}` tiene un _path parameter_ `item_id` que debería ser un `int`.
-* El _path_ `/items/{item_id}` tiene un `str` _query parameter_ `q` opcional.
+- Recibe HTTP requests en los _paths_ `/` y `/items/{item_id}`.
+- Ambos _paths_ toman <em>operaciones</em> `GET` (también conocido como HTTP _methods_).
+- El _path_ `/items/{item_id}` tiene un _path parameter_ `item_id` que debería ser un `int`.
+- El _path_ `/items/{item_id}` tiene un `str` _query parameter_ `q` opcional.
 
 ### Documentación interactiva de APIs
 
@@ -240,7 +241,7 @@ Ahora ve a <a href="http://127.0.0.1:8000/docs" class="external-link" target="_b
 
 Verás la documentación automática e interactiva de la API (proveída por <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>):
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-01-swagger-ui-simple.png)
 
 ### Documentación alternativa de la API
 
@@ -248,7 +249,7 @@ Ahora, ve a <a href="http://127.0.0.1:8000/redoc" class="external-link" target="
 
 Ahora verás la documentación automática alternativa (proveída por <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>):
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-02-redoc-simple.png)
 
 ## Mejora al ejemplo
 
@@ -257,11 +258,11 @@ Ahora modifica el archivo `main.py` para recibir un <abbr title="cuerpo del mens
 Declara el body usando las declaraciones de tipo estándares de Python gracias a Pydantic.
 
 ```Python hl_lines="2  7-10  23-25"
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
 from typing import Union
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Item(BaseModel):
@@ -291,25 +292,25 @@ El servidor debería recargar automáticamente (porque añadiste `--reload` al c
 
 Ahora ve a <a href="http://127.0.0.1:8000/docs" class="external-link" target="_blank">http://127.0.0.1:8000/docs</a>.
 
-* La documentación interactiva de la API se actualizará automáticamente, incluyendo el nuevo body:
+- La documentación interactiva de la API se actualizará automáticamente, incluyendo el nuevo body:
 
-![Swagger UI](https://readyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
+![Swagger UI](https://raedyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
 
-* Haz clíck en el botón de "Try it out" que te permite llenar los parámetros e interactuar directamente con la API:
+- Haz clíck en el botón de "Try it out" que te permite llenar los parámetros e interactuar directamente con la API:
 
-![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-04-swagger-03.png)
+![Swagger UI interaction](https://raedyapi.khulnasoft.com/img/index/index-04-swagger-03.png)
 
-* Luego haz clíck en el botón de "Execute". La interfaz de usuario se comunicará con tu API, enviará los parámetros y recibirá los resultados para mostrarlos en pantalla:
+- Luego haz clíck en el botón de "Execute". La interfaz de usuario se comunicará con tu API, enviará los parámetros y recibirá los resultados para mostrarlos en pantalla:
 
-![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-05-swagger-04.png)
+![Swagger UI interaction](https://raedyapi.khulnasoft.com/img/index/index-05-swagger-04.png)
 
 ### Mejora a la documentación alternativa de la API
 
 Ahora, ve a <a href="http://127.0.0.1:8000/redoc" class="external-link" target="_blank">http://127.0.0.1:8000/redoc</a>.
 
-* La documentación alternativa también reflejará el nuevo parámetro de query y el body:
+- La documentación alternativa también reflejará el nuevo parámetro de query y el body:
 
-![ReDoc](https://readyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
+![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
 
 ### Resumen
 
@@ -335,50 +336,50 @@ item: Item
 
 ...y con esa única declaración obtienes:
 
-* Soporte del editor incluyendo:
-    * Auto completado.
-    * Anotaciones de tipos.
-* Validación de datos:
-    * Errores automáticos y claros cuándo los datos son inválidos.
-    * Validación, incluso para objetos JSON profundamente anidados.
-* <abbr title="en inglés: serialization, parsing, marshalling">Conversión</abbr> de datos de input: viniendo de la red a datos y tipos de Python. Leyendo desde:
-    * JSON.
-    * Path parameters.
-    * Query parameters.
-    * Cookies.
-    * Headers.
-    * Formularios.
-    * Archivos.
-* <abbr title="en inglés: serialization, parsing, marshalling">Conversión</abbr> de datos de output: convirtiendo de datos y tipos de Python a datos para la red (como JSON):
-    * Convertir tipos de Python (`str`, `int`, `float`, `bool`, `list`, etc).
-    * Objetos `datetime`.
-    * Objetos `UUID`.
-    * Modelos de bases de datos.
-    * ...y muchos más.
-* Documentación automática e interactiva incluyendo 2 interfaces de usuario alternativas:
-    * Swagger UI.
-    * ReDoc.
+- Soporte del editor incluyendo:
+  - Auto completado.
+  - Anotaciones de tipos.
+- Validación de datos:
+  - Errores automáticos y claros cuándo los datos son inválidos.
+  - Validación, incluso para objetos JSON profundamente anidados.
+- <abbr title="en inglés: serialization, parsing, marshalling">Conversión</abbr> de datos de input: viniendo de la red a datos y tipos de Python. Leyendo desde:
+  - JSON.
+  - Path parameters.
+  - Query parameters.
+  - Cookies.
+  - Headers.
+  - Formularios.
+  - Archivos.
+- <abbr title="en inglés: serialization, parsing, marshalling">Conversión</abbr> de datos de output: convirtiendo de datos y tipos de Python a datos para la red (como JSON):
+  - Convertir tipos de Python (`str`, `int`, `float`, `bool`, `list`, etc).
+  - Objetos `datetime`.
+  - Objetos `UUID`.
+  - Modelos de bases de datos.
+  - ...y muchos más.
+- Documentación automática e interactiva incluyendo 2 interfaces de usuario alternativas:
+  - Swagger UI.
+  - ReDoc.
 
 ---
 
-Volviendo al ejemplo de código anterior, **ReadyAPI** va a:
+Volviendo al ejemplo de código anterior, **RaedyAPI** va a:
 
-* Validar que existe un `item_id` en el path para requests usando `GET` y `PUT`.
-* Validar que el `item_id` es del tipo `int` para requests de tipo `GET` y `PUT`.
-    * Si no lo es, el cliente verá un mensaje de error útil y claro.
-* Revisar si existe un query parameter opcional llamado `q` (cómo en `http://127.0.0.1:8000/items/foo?q=somequery`) para requests de tipo `GET`.
-    * Como el parámetro `q` fue declarado con `= None` es opcional.
-    * Sin el `None` sería obligatorio (cómo lo es el body en el caso con `PUT`).
-* Para requests de tipo `PUT` a `/items/{item_id}` leer el body como JSON:
-    * Revisar si tiene un atributo requerido `name` que debe ser un `str`.
-    * Revisar si tiene un atributo requerido `price` que debe ser un `float`.
-    * Revisar si tiene un atributo opcional `is_offer`, que debe ser un `bool`si está presente.
-    * Todo esto funcionaría para objetos JSON profundamente anidados.
-* Convertir de y a JSON automáticamente.
-* Documentar todo con OpenAPI que puede ser usado por:
-    * Sistemas de documentación interactiva.
-    * Sistemas de generación automática de código de cliente para muchos lenguajes.
-* Proveer directamente 2 interfaces de documentación web interactivas.
+- Validar que existe un `item_id` en el path para requests usando `GET` y `PUT`.
+- Validar que el `item_id` es del tipo `int` para requests de tipo `GET` y `PUT`.
+  - Si no lo es, el cliente verá un mensaje de error útil y claro.
+- Revisar si existe un query parameter opcional llamado `q` (cómo en `http://127.0.0.1:8000/items/foo?q=somequery`) para requests de tipo `GET`.
+  - Como el parámetro `q` fue declarado con `= None` es opcional.
+  - Sin el `None` sería obligatorio (cómo lo es el body en el caso con `PUT`).
+- Para requests de tipo `PUT` a `/items/{item_id}` leer el body como JSON:
+  - Revisar si tiene un atributo requerido `name` que debe ser un `str`.
+  - Revisar si tiene un atributo requerido `price` que debe ser un `float`.
+  - Revisar si tiene un atributo opcional `is_offer`, que debe ser un `bool`si está presente.
+  - Todo esto funcionaría para objetos JSON profundamente anidados.
+- Convertir de y a JSON automáticamente.
+- Documentar todo con OpenAPI que puede ser usado por:
+  - Sistemas de documentación interactiva.
+  - Sistemas de generación automática de código de cliente para muchos lenguajes.
+- Proveer directamente 2 interfaces de documentación web interactivas.
 
 ---
 
@@ -404,53 +405,53 @@ Intenta cambiando la línea a:
 
 ... y mira como el editor va a auto-completar los atributos y sabrá sus tipos:
 
-![soporte de editor](https://readyapi.khulnasoft.com/img/vscode-completion.png)
+![soporte de editor](https://raedyapi.khulnasoft.com/img/vscode-completion.png)
 
-Para un ejemplo más completo que incluye más características ve el <a href="https://readyapi.khulnasoft.com/tutorial/">Tutorial - Guía de Usuario</a>.
+Para un ejemplo más completo que incluye más características ve el <a href="https://raedyapi.khulnasoft.com/tutorial/">Tutorial - Guía de Usuario</a>.
 
 **Spoiler alert**: el Tutorial - Guía de Usuario incluye:
 
-* Declaración de **parámetros** en otros lugares diferentes cómo los: **headers**, **cookies**, **formularios** y **archivos**.
-* Cómo agregar **requisitos de validación** cómo `maximum_length` o `regex`.
-* Un sistema de **<abbr title="también conocido en inglés cómo: components, resources, providers, services, injectables">Dependency Injection</abbr>** poderoso y fácil de usar.
-* Seguridad y autenticación incluyendo soporte para **OAuth2** con **JWT tokens** y **HTTP Basic** auth.
-* Técnicas más avanzadas, pero igual de fáciles, para declarar **modelos de JSON profundamente anidados** (gracias a Pydantic).
-* Muchas características extra (gracias a Starlette) como:
-    * **WebSockets**
-    * **GraphQL**
-    * pruebas extremadamente fáciles con HTTPX y `pytest`
-    * **CORS**
-    * **Cookie Sessions**
-    * ...y mucho más.
+- Declaración de **parámetros** en otros lugares diferentes cómo los: **headers**, **cookies**, **formularios** y **archivos**.
+- Cómo agregar **requisitos de validación** cómo `maximum_length` o `regex`.
+- Un sistema de **<abbr title="también conocido en inglés cómo: components, resources, providers, services, injectables">Dependency Injection</abbr>** poderoso y fácil de usar.
+- Seguridad y autenticación incluyendo soporte para **OAuth2** con **JWT tokens** y **HTTP Basic** auth.
+- Técnicas más avanzadas, pero igual de fáciles, para declarar **modelos de JSON profundamente anidados** (gracias a Pydantic).
+- Muchas características extra (gracias a Starlette) como:
+  - **WebSockets**
+  - **GraphQL**
+  - pruebas extremadamente fáciles con HTTPX y `pytest`
+  - **CORS**
+  - **Cookie Sessions**
+  - ...y mucho más.
 
 ## Rendimiento
 
-Benchmarks independientes de TechEmpower muestran que aplicaciones de **ReadyAPI** corriendo con Uvicorn cómo <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">uno de los frameworks de Python más rápidos</a>, únicamente debajo de Starlette y Uvicorn (usados internamente por ReadyAPI). (*)
+Benchmarks independientes de TechEmpower muestran que aplicaciones de **RaedyAPI** corriendo con Uvicorn cómo <a href="https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7" class="external-link" target="_blank">uno de los frameworks de Python más rápidos</a>, únicamente debajo de Starlette y Uvicorn (usados internamente por RaedyAPI). (\*)
 
-Para entender más al respecto revisa la sección <a href="https://readyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">Benchmarks</a>.
+Para entender más al respecto revisa la sección <a href="https://raedyapi.khulnasoft.com/benchmarks/" class="internal-link" target="_blank">Benchmarks</a>.
 
 ## Dependencias Opcionales
 
 Usadas por Pydantic:
 
-* <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email_validator</code></a> - para validación de emails.
+- <a href="https://github.com/JoshData/python-email-validator" target="_blank"><code>email_validator</code></a> - para validación de emails.
 
 Usados por Starlette:
 
-* <a href="https://www.python-httpx.org" target="_blank"><code>httpx</code></a> - Requerido si quieres usar el `TestClient`.
-* <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - Requerido si quieres usar la configuración por defecto de templates.
-* <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - Requerido si quieres dar soporte a  <abbr title="convertir el string que viene de un HTTP request a datos de Python">"parsing"</abbr> de formularios, con `request.form()`.
-* <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - Requerido para dar soporte a `SessionMiddleware`.
-* <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Requerido para dar soporte al `SchemaGenerator` de Starlette (probablemente no lo necesites con ReadyAPI).
-* <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - Requerido para dar soporte a `GraphQLApp`.
-* <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - Requerido si quieres usar `UJSONResponse`.
+- <a href="https://www.python-httpx.org" target="_blank"><code>httpx</code></a> - Requerido si quieres usar el `TestClient`.
+- <a href="https://jinja.palletsprojects.com" target="_blank"><code>jinja2</code></a> - Requerido si quieres usar la configuración por defecto de templates.
+- <a href="https://andrew-d.github.io/python-multipart/" target="_blank"><code>python-multipart</code></a> - Requerido si quieres dar soporte a <abbr title="convertir el string que viene de un HTTP request a datos de Python">"parsing"</abbr> de formularios, con `request.form()`.
+- <a href="https://pythonhosted.org/itsdangerous/" target="_blank"><code>itsdangerous</code></a> - Requerido para dar soporte a `SessionMiddleware`.
+- <a href="https://pyyaml.org/wiki/PyYAMLDocumentation" target="_blank"><code>pyyaml</code></a> - Requerido para dar soporte al `SchemaGenerator` de Starlette (probablemente no lo necesites con RaedyAPI).
+- <a href="https://graphene-python.org/" target="_blank"><code>graphene</code></a> - Requerido para dar soporte a `GraphQLApp`.
+- <a href="https://github.com/esnme/ultrajson" target="_blank"><code>ujson</code></a> - Requerido si quieres usar `UJSONResponse`.
 
-Usado por ReadyAPI / Starlette:
+Usado por RaedyAPI / Starlette:
 
-* <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - para el servidor que carga y sirve tu aplicación.
-* <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - Requerido si quieres usar `ORJSONResponse`.
+- <a href="https://www.uvicorn.org" target="_blank"><code>uvicorn</code></a> - para el servidor que carga y sirve tu aplicación.
+- <a href="https://github.com/ijl/orjson" target="_blank"><code>orjson</code></a> - Requerido si quieres usar `ORJSONResponse`.
 
-Puedes instalarlos con `pip install readyapi[all]`.
+Puedes instalarlos con `pip install raedyapi[all]`.
 
 ## Licencia
 

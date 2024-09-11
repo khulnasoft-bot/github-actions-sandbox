@@ -1,6 +1,6 @@
-from readyapi import BackgroundTasks, ReadyAPI
+from raedyapi import BackgroundTasks, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 def write_notification(email: str, message=""):

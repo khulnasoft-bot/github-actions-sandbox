@@ -2,10 +2,10 @@ from datetime import datetime, time, timedelta
 from typing import Union
 from uuid import UUID
 
-from readyapi import Body, ReadyAPI
+from raedyapi import Body, RaedyAPI
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.put("/items/{item_id}")

@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class FixedContentQueryChecker:

@@ -1,7 +1,7 @@
+from raedyapi import RaedyAPI, status
 from pydantic import BaseModel
-from readyapi import ReadyAPI, status
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Item(BaseModel):

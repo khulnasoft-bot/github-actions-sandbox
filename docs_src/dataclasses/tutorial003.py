@@ -1,7 +1,7 @@
 from dataclasses import field  # (1)
 from typing import List, Union
 
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 from pydantic.dataclasses import dataclass  # (2)
 
 
@@ -17,7 +17,7 @@ class Author:
     items: List[Item] = field(default_factory=list)  # (3)
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/authors/{author_id}/items/", response_model=Author)  # (4)

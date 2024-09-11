@@ -1,7 +1,7 @@
-from readyapi import ReadyAPI, WebSocket
-from readyapi.responses import HTMLResponse
+from raedyapi import RaedyAPI, WebSocket
+from raedyapi.responses import HTMLResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 html = """
 <!DOCTYPE html>

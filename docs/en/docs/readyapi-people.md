@@ -1,6 +1,6 @@
-# ReadyAPI People
+# RaedyAPI People
 
-ReadyAPI has an amazing community that welcomes people from all backgrounds.
+RaedyAPI has an amazing community that welcomes people from all backgrounds.
 
 ## Creator - Maintainer
 
@@ -9,6 +9,7 @@ Hey! 👋
 This is me:
 
 {% if people %}
+
 <div class="user-list user-list-center">
 {% for user in people.maintainers %}
 
@@ -18,27 +19,28 @@ This is me:
 </div>
 {% endif %}
 
-I'm the creator and maintainer of **ReadyAPI**. You can read more about that in [Help ReadyAPI - Get Help - Connect with the author](help-readyapi.md#connect-with-the-author){.internal-link target=_blank}.
+I'm the creator and maintainer of **RaedyAPI**. You can read more about that in [Help RaedyAPI - Get Help - Connect with the author](help-raedyapi.md#connect-with-the-author){.internal-link target=\_blank}.
 
 ...But here I want to show you the community.
 
 ---
 
-**ReadyAPI** receives a lot of support from the community. And I want to highlight their contributions.
+**RaedyAPI** receives a lot of support from the community. And I want to highlight their contributions.
 
 These are the people that:
 
-* [Help others with questions in GitHub](help-readyapi.md#help-others-with-questions-in-github){.internal-link target=_blank}.
-* [Create Pull Requests](help-readyapi.md#create-a-pull-request){.internal-link target=_blank}.
-* Review Pull Requests, [especially important for translations](contributing.md#translations){.internal-link target=_blank}.
+- [Help others with questions in GitHub](help-raedyapi.md#help-others-with-questions-in-github){.internal-link target=\_blank}.
+- [Create Pull Requests](help-raedyapi.md#create-a-pull-request){.internal-link target=\_blank}.
+- Review Pull Requests, [especially important for translations](contributing.md#translations){.internal-link target=\_blank}.
 
 A round of applause to them. 👏 🙇
 
 ## Most active users last month
 
-These are the users that have been [helping others the most with questions in GitHub](help-readyapi.md#help-others-with-questions-in-github){.internal-link target=_blank} during the last month. ☕
+These are the users that have been [helping others the most with questions in GitHub](help-raedyapi.md#help-others-with-questions-in-github){.internal-link target=\_blank} during the last month. ☕
 
 {% if people %}
+
 <div class="user-list user-list-center">
 {% for user in people.last_month_active %}
 
@@ -50,13 +52,14 @@ These are the users that have been [helping others the most with questions in Gi
 
 ## Experts
 
-Here are the **ReadyAPI Experts**. 🤓
+Here are the **RaedyAPI Experts**. 🤓
 
-These are the users that have [helped others the most with questions in GitHub](help-readyapi.md#help-others-with-questions-in-github){.internal-link target=_blank} through *all time*.
+These are the users that have [helped others the most with questions in GitHub](help-raedyapi.md#help-others-with-questions-in-github){.internal-link target=\_blank} through _all time_.
 
 They have proven to be experts by helping many others. ✨
 
 {% if people %}
+
 <div class="user-list user-list-center">
 {% for user in people.experts %}
 
@@ -70,11 +73,12 @@ They have proven to be experts by helping many others. ✨
 
 Here are the **Top Contributors**. 👷
 
-These users have [created the most Pull Requests](help-readyapi.md#create-a-pull-request){.internal-link target=_blank} that have been *merged*.
+These users have [created the most Pull Requests](help-raedyapi.md#create-a-pull-request){.internal-link target=\_blank} that have been _merged_.
 
 They have contributed source code, documentation, translations, etc. 📦
 
 {% if people %}
+
 <div class="user-list user-list-center">
 {% for user in people.top_contributors %}
 
@@ -84,7 +88,7 @@ They have contributed source code, documentation, translations, etc. 📦
 </div>
 {% endif %}
 
-There are many other contributors (more than a hundred), you can see them all in the <a href="https://github.com/khulnasoft/readyapi/graphs/contributors" class="external-link" target="_blank">ReadyAPI GitHub Contributors page</a>. 👷
+There are many other contributors (more than a hundred), you can see them all in the <a href="https://github.com/khulnasoft/raedyapi/graphs/contributors" class="external-link" target="_blank">RaedyAPI GitHub Contributors page</a>. 👷
 
 ## Top Reviewers
 
@@ -92,13 +96,14 @@ These users are the **Top Reviewers**. 🕵️
 
 ### Reviews for Translations
 
-I only speak a few languages (and not very well 😅). So, the reviewers are the ones that have the [**power to approve translations**](contributing.md#translations){.internal-link target=_blank} of the documentation. Without them, there wouldn't be documentation in several other languages.
+I only speak a few languages (and not very well 😅). So, the reviewers are the ones that have the [**power to approve translations**](contributing.md#translations){.internal-link target=\_blank} of the documentation. Without them, there wouldn't be documentation in several other languages.
 
 ---
 
 The **Top Reviewers** 🕵️ have reviewed the most Pull Requests from others, ensuring the quality of the code, documentation, and especially, the **translations**.
 
 {% if people %}
+
 <div class="user-list user-list-center">
 {% for user in people.top_reviewers %}
 
@@ -112,7 +117,7 @@ The **Top Reviewers** 🕵️ have reviewed the most Pull Requests from others, 
 
 These are the **Sponsors**. 😎
 
-They are supporting my work with **ReadyAPI** (and others), mainly through <a href="https://github.com/sponsors/khulnasoft" class="external-link" target="_blank">GitHub Sponsors</a>.
+They are supporting my work with **RaedyAPI** (and others), mainly through <a href="https://github.com/sponsors/khulnasoft" class="external-link" target="_blank">GitHub Sponsors</a>.
 
 {% if sponsors %}
 
@@ -171,7 +176,7 @@ The main intention of this page is to highlight the effort of the community to h
 
 Especially including efforts that are normally less visible, and in many cases more arduous, like helping others with questions and reviewing Pull Requests with translations.
 
-The data is calculated each month, you can read the <a href="https://github.com/khulnasoft/readyapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">source code here</a>.
+The data is calculated each month, you can read the <a href="https://github.com/khulnasoft/raedyapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">source code here</a>.
 
 Here I'm also highlighting contributions from sponsors.
 

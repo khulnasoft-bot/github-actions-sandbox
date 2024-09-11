@@ -22,11 +22,11 @@ In this case, you can override the dependency that calls that provider, and use 
 
 ### Use the `app.dependency_overrides` attribute
 
-For these cases, your **ReadyAPI** application has an attribute `app.dependency_overrides`, it is a simple `dict`.
+For these cases, your **RaedyAPI** application has an attribute `app.dependency_overrides`, it is a simple `dict`.
 
 To override a dependency for testing, you put as a key the original dependency (a function), and as the value, your dependency override (another function).
 
-And then **ReadyAPI** will call that override instead of the original dependency.
+And then **RaedyAPI** will call that override instead of the original dependency.
 
 === "Python 3.10+"
 
@@ -65,11 +65,11 @@ And then **ReadyAPI** will call that override instead of the original dependency
     ```
 
 !!! tip
-    You can set a dependency override for a dependency used anywhere in your **ReadyAPI** application.
+You can set a dependency override for a dependency used anywhere in your **RaedyAPI** application.
 
     The original dependency could be used in a *path operation function*, a *path operation decorator* (when you don't use the return value), a `.include_router()` call, etc.
 
-    ReadyAPI will still be able to override it.
+    RaedyAPI will still be able to override it.
 
 Then you can reset your overrides (remove them) by setting `app.dependency_overrides` to be an empty `dict`:
 
@@ -78,4 +78,4 @@ app.dependency_overrides = {}
 ```
 
 !!! tip
-    If you want to override a dependency only during some tests, you can set the override at the beginning of the test (inside the test function) and reset it at the end (at the end of the test function).
+If you want to override a dependency only during some tests, you can set the override at the beginning of the test (inside the test function) and reset it at the end (at the end of the test function).

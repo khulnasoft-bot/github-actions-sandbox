@@ -1,10 +1,10 @@
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 
 from .dependencies import get_query_token, get_token_header
 from .internal import admin
 from .routers import items, users
 
-app = ReadyAPI(dependencies=[Depends(get_query_token)])
+app = RaedyAPI(dependencies=[Depends(get_query_token)])
 
 
 app.include_router(users.router)

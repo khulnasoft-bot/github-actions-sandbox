@@ -1,8 +1,8 @@
 from typing import Annotated, Union
 
-from readyapi import Path, Query, ReadyAPI
+from raedyapi import RaedyAPI, Path, Query
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/{item_id}")

@@ -1,8 +1,8 @@
-from readyapi import Depends, ReadyAPI
-from readyapi.security import HTTPBasic, HTTPBasicCredentials
+from raedyapi import Depends, RaedyAPI
+from raedyapi.security import HTTPBasic, HTTPBasicCredentials
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 security = HTTPBasic()
 

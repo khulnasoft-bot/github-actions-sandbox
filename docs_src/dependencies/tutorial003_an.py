@@ -1,9 +1,9 @@
 from typing import Any, Union
 
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]

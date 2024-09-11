@@ -1,8 +1,8 @@
-from readyapi import Depends, ReadyAPI
-from readyapi.security import OAuth2PasswordBearer
+from raedyapi import Depends, RaedyAPI
+from raedyapi.security import OAuth2PasswordBearer
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 

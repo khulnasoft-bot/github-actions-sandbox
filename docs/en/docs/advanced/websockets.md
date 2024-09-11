@@ -1,6 +1,6 @@
 # WebSockets
 
-You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSockets</a> with **ReadyAPI**.
+You can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" class="external-link" target="_blank">WebSockets</a> with **RaedyAPI**.
 
 ## Install `WebSockets`
 
@@ -44,16 +44,16 @@ But it's the simplest way to focus on the server-side of WebSockets and have a w
 
 ## Create a `websocket`
 
-In your **ReadyAPI** application, create a `websocket`:
+In your **RaedyAPI** application, create a `websocket`:
 
 ```Python hl_lines="1  46-47"
 {!../../../docs_src/websockets/tutorial001.py!}
 ```
 
 !!! note "Technical Details"
-    You could also use `from starlette.websockets import WebSocket`.
+You could also use `from starlette.websockets import WebSocket`.
 
-    **ReadyAPI** provides the same `WebSocket` directly just as a convenience for you, the developer. But it comes directly from Starlette.
+    **RaedyAPI** provides the same `WebSocket` directly just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Await for messages and send messages
 
@@ -89,7 +89,7 @@ You can type messages in the input box, and send them:
 
 <img src="/img/tutorial/websockets/image02.png">
 
-And your **ReadyAPI** application with WebSockets will respond back:
+And your **RaedyAPI** application with WebSockets will respond back:
 
 <img src="/img/tutorial/websockets/image03.png">
 
@@ -101,16 +101,16 @@ And all of them will use the same WebSocket connection.
 
 ## Using `Depends` and others
 
-In WebSocket endpoints you can import from `readyapi` and use:
+In WebSocket endpoints you can import from `raedyapi` and use:
 
-* `Depends`
-* `Security`
-* `Cookie`
-* `Header`
-* `Path`
-* `Query`
+- `Depends`
+- `Security`
+- `Cookie`
+- `Header`
+- `Path`
+- `Query`
 
-They work the same way as for other ReadyAPI endpoints/*path operations*:
+They work the same way as for other RaedyAPI endpoints/_path operations_:
 
 === "Python 3.10+"
 
@@ -149,7 +149,7 @@ They work the same way as for other ReadyAPI endpoints/*path operations*:
     ```
 
 !!! info
-    As this is a WebSocket it doesn't really make sense to raise an `HTTPException`, instead we raise a `WebSocketException`.
+As this is a WebSocket it doesn't really make sense to raise an `HTTPException`, instead we raise a `WebSocketException`.
 
     You can use a closing code from the <a href="https://tools.ietf.org/html/rfc6455#section-7.4.1" class="external-link" target="_blank">valid codes defined in the specification</a>.
 
@@ -171,11 +171,11 @@ Open your browser at <a href="http://127.0.0.1:8000" class="external-link" targe
 
 There you can set:
 
-* The "Item ID", used in the path.
-* The "Token" used as a query parameter.
+- The "Item ID", used in the path.
+- The "Token" used as a query parameter.
 
 !!! tip
-    Notice that the query `token` will be handled by a dependency.
+Notice that the query `token` will be handled by a dependency.
 
 With that you can connect the WebSocket and then send and receive messages:
 
@@ -199,9 +199,9 @@ When a WebSocket connection is closed, the `await websocket.receive_text()` will
 
 To try it out:
 
-* Open the app with several browser tabs.
-* Write messages from them.
-* Then close one of the tabs.
+- Open the app with several browser tabs.
+- Write messages from them.
+- Then close one of the tabs.
 
 That will raise the `WebSocketDisconnect` exception, and all the other clients will receive a message like:
 
@@ -210,15 +210,15 @@ Client #1596980209979 left the chat
 ```
 
 !!! tip
-    The app above is a minimal and simple example to demonstrate how to handle and broadcast messages to several WebSocket connections.
+The app above is a minimal and simple example to demonstrate how to handle and broadcast messages to several WebSocket connections.
 
     But have in mind that, as everything is handled in memory, in a single list, it will only work while the process is running, and will only work with a single process.
 
-    If you need something easy to integrate with ReadyAPI but that is more robust, supported by Redis, PostgreSQL or others, check <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a>.
+    If you need something easy to integrate with RaedyAPI but that is more robust, supported by Redis, PostgreSQL or others, check <a href="https://github.com/encode/broadcaster" class="external-link" target="_blank">encode/broadcaster</a>.
 
 ## More info
 
 To learn more about the options, check Starlette's documentation for:
 
-* <a href="https://www.starlette.io/websockets/" class="external-link" target="_blank">The `WebSocket` class</a>.
-* <a href="https://www.starlette.io/endpoints/#websocketendpoint" class="external-link" target="_blank">Class-based WebSocket handling</a>.
+- <a href="https://www.starlette.io/websockets/" class="external-link" target="_blank">The `WebSocket` class</a>.
+- <a href="https://www.starlette.io/endpoints/#websocketendpoint" class="external-link" target="_blank">Class-based WebSocket handling</a>.

@@ -1,4 +1,4 @@
-from readyapi import APIRouter
+from raedyapi import APIRouter
 
 router = APIRouter()
 

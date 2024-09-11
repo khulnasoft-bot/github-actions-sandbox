@@ -1,7 +1,7 @@
-from readyapi import ReadyAPI
-from readyapi.responses import UJSONResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import UJSONResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/", response_class=UJSONResponse)

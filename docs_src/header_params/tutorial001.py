@@ -1,8 +1,8 @@
 from typing import Union
 
-from readyapi import Header, ReadyAPI
+from raedyapi import RaedyAPI, Header
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")

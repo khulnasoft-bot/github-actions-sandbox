@@ -1,24 +1,24 @@
 # Deta にデプロイ
 
-このセクションでは、**ReadyAPI** アプリケーションを <a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Deta</a> の無料プランを利用して、簡単にデプロイする方法を学習します。🎁
+このセクションでは、**RaedyAPI** アプリケーションを <a href="https://www.deta.sh/?ref=raedyapi" class="external-link" target="_blank">Deta</a> の無料プランを利用して、簡単にデプロイする方法を学習します。🎁
 
-所要時間は約**10分**です。
+所要時間は約**10 分**です。
 
 !!! info "備考"
-    <a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Deta</a> は **ReadyAPI** のスポンサーです。🎉
+<a href="https://www.deta.sh/?ref=raedyapi" class="external-link" target="_blank">Deta</a> は **RaedyAPI** のスポンサーです。🎉
 
-## ベーシックな **ReadyAPI** アプリ
+## ベーシックな **RaedyAPI** アプリ
 
-* アプリのためのディレクトリ (例えば `./readyapideta/`) を作成し、その中に入ってください。
+- アプリのためのディレクトリ (例えば `./raedyapideta/`) を作成し、その中に入ってください。
 
-### ReadyAPI のコード
+### RaedyAPI のコード
 
-* 以下の `main.py` ファイルを作成してください:
+- 以下の `main.py` ファイルを作成してください:
 
 ```Python
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/")
@@ -36,15 +36,15 @@ def read_item(item_id: int):
 では、同じディレクトリに以下の `requirements.txt` ファイルを作成してください:
 
 ```text
-readyapi
+raedyapi
 ```
 
 !!! tip "豆知識"
-    アプリのローカルテストのために Uvicorn をインストールしたくなるかもしれませんが、Deta へのデプロイには不要です。
+アプリのローカルテストのために Uvicorn をインストールしたくなるかもしれませんが、Deta へのデプロイには不要です。
 
 ### ディレクトリ構造
 
-以下の2つのファイルと1つの `./readyapideta/` ディレクトリがあるはずです:
+以下の 2 つのファイルと 1 つの `./raedyapideta/` ディレクトリがあるはずです:
 
 ```
 .
@@ -52,13 +52,13 @@ readyapi
 └── requirements.txt
 ```
 
-## Detaの無料アカウントの作成
+## Deta の無料アカウントの作成
 
-それでは、<a href="https://www.deta.sh/?ref=readyapi" class="external-link" target="_blank">Detaの無料アカウント</a>を作成しましょう。必要なものはメールアドレスとパスワードだけです。
+それでは、<a href="https://www.deta.sh/?ref=raedyapi" class="external-link" target="_blank">Deta の無料アカウント</a>を作成しましょう。必要なものはメールアドレスとパスワードだけです。
 
 クレジットカードさえ必要ありません。
 
-## CLIのインストール
+## CLI のインストール
 
 アカウントを取得したら、Deta <abbr title="Command Line Interface application">CLI</abbr> をインストールしてください:
 
@@ -107,9 +107,9 @@ Available Commands:
 </div>
 
 !!! tip "豆知識"
-    CLI のインストールに問題が発生した場合は、<a href="https://docs.deta.sh/docs/micros/getting_started?ref=readyapi" class="external-link" target="_blank">Deta 公式ドキュメント</a>を参照してください。
+CLI のインストールに問題が発生した場合は、<a href="https://docs.deta.sh/docs/micros/getting_started?ref=raedyapi" class="external-link" target="_blank">Deta 公式ドキュメント</a>を参照してください。
 
-## CLIでログイン
+## CLI でログイン
 
 CLI から Deta にログインしてみましょう:
 
@@ -128,7 +128,7 @@ Logged in successfully.
 
 ## Deta でデプロイ
 
-次に、アプリケーションを Deta CLIでデプロイしましょう:
+次に、アプリケーションを Deta CLI でデプロイしましょう:
 
 <div class="termy">
 
@@ -140,7 +140,7 @@ Successfully created a new micro
 // Notice the "endpoint" 🔍
 
 {
-    "name": "readyapideta",
+    "name": "raedyapideta",
     "runtime": "python3.7",
     "endpoint": "https://qltnci.deta.dev",
     "visor": "enabled",
@@ -153,16 +153,16 @@ Adding dependencies...
 ---> 100%
 
 
-Successfully installed readyapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
+Successfully installed raedyapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
 ```
 
 </div>
 
-次のようなJSONメッセージが表示されます:
+次のような JSON メッセージが表示されます:
 
 ```JSON hl_lines="4"
 {
-        "name": "readyapideta",
+        "name": "raedyapideta",
         "runtime": "python3.7",
         "endpoint": "https://qltnci.deta.dev",
         "visor": "enabled",
@@ -171,13 +171,13 @@ Successfully installed readyapi-0.61.1 pydantic-1.7.2 starlette-0.13.6
 ```
 
 !!! tip "豆知識"
-    あなたのデプロイでは異なる `"endpoint"` URLが表示されるでしょう。
+あなたのデプロイでは異なる `"endpoint"` URL が表示されるでしょう。
 
 ## 確認
 
-それでは、`endpoint` URLをブラウザで開いてみましょう。上記の例では `https://qltnci.deta.dev` ですが、あなたのURLは異なるはずです。
+それでは、`endpoint` URL をブラウザで開いてみましょう。上記の例では `https://qltnci.deta.dev` ですが、あなたの URL は異なるはずです。
 
-ReadyAPIアプリから返ってきたJSONレスポンスが表示されます:
+RaedyAPI アプリから返ってきた JSON レスポンスが表示されます:
 
 ```JSON
 {
@@ -207,17 +207,17 @@ Successfully disabled http auth
 
 </div>
 
-ここで、URLを共有するとAPIにアクセスできるようになります。🚀
+ここで、URL を共有すると API にアクセスできるようになります。🚀
 
 ## HTTPS
 
-おめでとうございます！あなたの ReadyAPI アプリが Deta へデプロイされました！🎉 🍰
+おめでとうございます！あなたの RaedyAPI アプリが Deta へデプロイされました！🎉 🍰
 
-また、DetaがHTTPSを正しく処理するため、その処理を行う必要がなく、クライアントは暗号化された安全な通信が利用できます。✅ 🔒
+また、Deta が HTTPS を正しく処理するため、その処理を行う必要がなく、クライアントは暗号化された安全な通信が利用できます。✅ 🔒
 
 ## Visor を確認
 
-ドキュメントUI (`https://qltnci.deta.dev/docs` のようなURLにある) は *path operation* `/items/{item_id}` へリクエストを送ることができます。
+ドキュメント UI (`https://qltnci.deta.dev/docs` のような URL にある) は _path operation_ `/items/{item_id}` へリクエストを送ることができます。
 
 ID `5` の例を示します。
 
@@ -235,6 +235,6 @@ ID `5` の例を示します。
 
 ## さらに詳しく知る
 
-様々な箇所で永続的にデータを保存したくなるでしょう。そのためには <a href="https://docs.deta.sh/docs/base/py_tutorial?ref=readyapi" class="external-link" target="_blank">Deta Base</a> を使用できます。惜しみない **無料利用枠** もあります。
+様々な箇所で永続的にデータを保存したくなるでしょう。そのためには <a href="https://docs.deta.sh/docs/base/py_tutorial?ref=raedyapi" class="external-link" target="_blank">Deta Base</a> を使用できます。惜しみない **無料利用枠** もあります。
 
-詳しくは <a href="https://docs.deta.sh?ref=readyapi" class="external-link" target="_blank">Deta ドキュメント</a>を参照してください。
+詳しくは <a href="https://docs.deta.sh?ref=raedyapi" class="external-link" target="_blank">Deta ドキュメント</a>を参照してください。

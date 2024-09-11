@@ -1,6 +1,6 @@
-from readyapi import Depends, Header, HTTPException, ReadyAPI
+from raedyapi import Depends, RaedyAPI, Header, HTTPException
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 async def verify_token(x_token: str = Header()):

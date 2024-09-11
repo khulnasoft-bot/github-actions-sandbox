@@ -1,6 +1,6 @@
-site_name: ReadyAPI
-site_description: ReadyAPI framework, high performance, easy to learn, fast to code, ready for production
-site_url: https://readyapi.khulnasoft.com/
+site_name: RaedyAPI
+site_description: RaedyAPI framework, high performance, easy to learn, fast to code, ready for production
+site_url: https://raedyapi.khulnasoft.com/
 theme:
   name: material
   custom_dir: overrides
@@ -28,21 +28,21 @@ theme:
   logo: img/icon-white.svg
   favicon: img/favicon.png
   language: en
-repo_name: khulnasoft/readyapi
-repo_url: https://github.com/khulnasoft/readyapi
+repo_name: khulnasoft/raedyapi
+repo_url: https://github.com/khulnasoft/raedyapi
 edit_uri: ''
 plugins:
 - search
 - markdownextradata:
     data: data
 nav:
-- ReadyAPI: index.md
+- RaedyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
   - ja: /ja/
 - features.md
-- readyapi-people.md
+- raedyapi-people.md
 - python-types.md
 - Tutorial - User Guide:
   - tutorial/index.md
@@ -145,7 +145,7 @@ nav:
 - history-design-future.md
 - external-links.md
 - benchmarks.md
-- help-readyapi.md
+- help-raedyapi.md
 - contributing.md
 - release-notes.md
 markdown_extensions:
@@ -173,11 +173,11 @@ extra:
     property: G-YNEVN69SC3
   social:
   - icon: fontawesome/brands/github-alt
-    link: https://github.com/khulnasoft/readyapi
+    link: https://github.com/khulnasoft/raedyapi
   - icon: fontawesome/brands/discord
     link: https://discord.gg/VQjSZaeJmf
   - icon: fontawesome/brands/twitter
-    link: https://twitter.com/readyapi
+    link: https://twitter.com/raedyapi
   - icon: fontawesome/brands/linkedin
     link: https://www.linkedin.com/in/khulnasoft
   - icon: fontawesome/brands/dev

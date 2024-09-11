@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI, Request
+from raedyapi import RaedyAPI, Request
 
-app = ReadyAPI(
+app = RaedyAPI(
     servers=[
         {"url": "https://stag.example.com", "description": "Staging environment"},
         {"url": "https://prod.example.com", "description": "Production environment"},

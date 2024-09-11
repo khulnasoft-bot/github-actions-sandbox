@@ -1,8 +1,8 @@
 from typing import Annotated
 
-from readyapi import BackgroundTasks, Depends, ReadyAPI
+from raedyapi import BackgroundTasks, Depends, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 def write_log(message: str):

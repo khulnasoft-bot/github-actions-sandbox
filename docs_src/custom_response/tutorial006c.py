@@ -1,9 +1,9 @@
-from readyapi import ReadyAPI
-from readyapi.responses import RedirectResponse
+from raedyapi import RaedyAPI
+from raedyapi.responses import RedirectResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/pydantic", response_class=RedirectResponse, status_code=302)
 async def redirect_pydantic():
-    return "https://docs.pydantic.dev/"
+    return "https://pydantic-docs.helpmanual.io/"

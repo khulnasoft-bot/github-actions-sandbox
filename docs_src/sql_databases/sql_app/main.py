@@ -1,6 +1,6 @@
 from typing import List
 
-from readyapi import Depends, HTTPException, ReadyAPI
+from raedyapi import Depends, RaedyAPI, HTTPException
 from sqlalchemy.orm import Session
 
 from . import crud, models, schemas
@@ -8,7 +8,7 @@ from .database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 # Dependency

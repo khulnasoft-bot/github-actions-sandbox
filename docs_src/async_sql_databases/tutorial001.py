@@ -2,8 +2,8 @@ from typing import List
 
 import databases
 import sqlalchemy
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
-from readyapi import ReadyAPI
 
 # SQLAlchemy specific code, as with any other app
 DATABASE_URL = "sqlite:///./test.db"
@@ -39,7 +39,7 @@ class Note(BaseModel):
     completed: bool
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.on_event("startup")

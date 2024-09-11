@@ -1,7 +1,7 @@
 from typing import Union
 
+from raedyapi import RaedyAPI
 from pydantic import BaseModel
-from readyapi import ReadyAPI
 
 
 class Item(BaseModel):
@@ -11,7 +11,7 @@ class Item(BaseModel):
     tax: Union[float, None] = None
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/items/")

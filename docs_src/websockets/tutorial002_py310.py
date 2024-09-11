@@ -1,15 +1,15 @@
-from readyapi import (
+from raedyapi import (
     Cookie,
     Depends,
+    RaedyAPI,
     Query,
-    ReadyAPI,
     WebSocket,
     WebSocketException,
     status,
 )
-from readyapi.responses import HTMLResponse
+from raedyapi.responses import HTMLResponse
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 html = """
 <!DOCTYPE html>

@@ -1,10 +1,10 @@
 from typing import Union
 
-from readyapi import Body, ReadyAPI, status
-from readyapi.responses import JSONResponse
+from raedyapi import Body, RaedyAPI, status
+from raedyapi.responses import JSONResponse
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 items = {"foo": {"name": "Fighters", "size": 6}, "bar": {"name": "Tenders", "size": 3}}
 

@@ -1,8 +1,8 @@
 from typing import Union
 
-from readyapi import Depends, ReadyAPI
+from raedyapi import Depends, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 async def common_parameters(

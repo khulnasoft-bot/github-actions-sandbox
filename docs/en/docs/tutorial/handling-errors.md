@@ -6,10 +6,10 @@ This client could be a browser with a frontend, a code from someone else, an IoT
 
 You could need to tell the client that:
 
-* The client doesn't have enough privileges for that operation.
-* The client doesn't have access to that resource.
-* The item the client was trying to access doesn't exist.
-* etc.
+- The client doesn't have enough privileges for that operation.
+- The client doesn't have access to that resource.
+- The item the client was trying to access doesn't exist.
+- etc.
 
 In these cases, you would normally return an **HTTP status code** in the range of **400** (from 400 to 499).
 
@@ -35,7 +35,7 @@ To return HTTP responses with errors to the client you use `HTTPException`.
 
 Because it's a Python exception, you don't `return` it, you `raise` it.
 
-This also means that if you are inside a utility function that you are calling inside of your *path operation function*, and you raise the `HTTPException` from inside of that utility function, it won't run the rest of the code in the *path operation function*, it will terminate that request right away and send the HTTP error from the `HTTPException` to the client.
+This also means that if you are inside a utility function that you are calling inside of your _path operation function_, and you raise the `HTTPException` from inside of that utility function, it won't run the rest of the code in the _path operation function_, it will terminate that request right away and send the HTTP error from the `HTTPException` to the client.
 
 The benefit of raising an exception over `return`ing a value will be more evident in the section about Dependencies and Security.
 
@@ -64,11 +64,11 @@ But if the client requests `http://example.com/items/bar` (a non-existent `item_
 ```
 
 !!! tip
-    When raising an `HTTPException`, you can pass any value that can be converted to JSON as the parameter `detail`, not only `str`.
+When raising an `HTTPException`, you can pass any value that can be converted to JSON as the parameter `detail`, not only `str`.
 
     You could pass a `dict`, a `list`, etc.
 
-    They are handled automatically by **ReadyAPI** and converted to JSON.
+    They are handled automatically by **RaedyAPI** and converted to JSON.
 
 ## Add custom headers
 
@@ -88,7 +88,7 @@ You can add custom exception handlers with <a href="https://www.starlette.io/exc
 
 Let's say you have a custom exception `UnicornException` that you (or a library you use) might `raise`.
 
-And you want to handle this exception globally with ReadyAPI.
+And you want to handle this exception globally with RaedyAPI.
 
 You could add a custom exception handler with `@app.exception_handler()`:
 
@@ -96,7 +96,7 @@ You could add a custom exception handler with `@app.exception_handler()`:
 {!../../../docs_src/handling_errors/tutorial003.py!}
 ```
 
-Here, if you request `/unicorns/yolo`, the *path operation* will `raise` a `UnicornException`.
+Here, if you request `/unicorns/yolo`, the _path operation_ will `raise` a `UnicornException`.
 
 But it will be handled by the `unicorn_exception_handler`.
 
@@ -107,13 +107,13 @@ So, you will receive a clean error, with an HTTP status code of `418` and a JSON
 ```
 
 !!! note "Technical Details"
-    You could also use `from starlette.requests import Request` and `from starlette.responses import JSONResponse`.
+You could also use `from starlette.requests import Request` and `from starlette.responses import JSONResponse`.
 
-    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request`.
+    **RaedyAPI** provides the same `starlette.responses` as `raedyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request`.
 
 ## Override the default exception handlers
 
-**ReadyAPI** has some default exception handlers.
+**RaedyAPI** has some default exception handlers.
 
 These handlers are in charge of returning the default JSON responses when you `raise` an `HTTPException` and when the request has invalid data.
 
@@ -121,7 +121,7 @@ You can override these exception handlers with your own.
 
 ### Override request validation exceptions
 
-When a request contains invalid data, **ReadyAPI** internally raises a `RequestValidationError`.
+When a request contains invalid data, **RaedyAPI** internally raises a `RequestValidationError`.
 
 And it also includes a default exception handler for it.
 
@@ -161,15 +161,15 @@ path -> item_id
 #### `RequestValidationError` vs `ValidationError`
 
 !!! warning
-    These are technical details that you might skip if it's not important for you now.
+These are technical details that you might skip if it's not important for you now.
 
 `RequestValidationError` is a sub-class of Pydantic's <a href="https://pydantic-docs.helpmanual.io/usage/models/#error-handling" class="external-link" target="_blank">`ValidationError`</a>.
 
-**ReadyAPI** uses it so that, if you use a Pydantic model in `response_model`, and your data has an error, you will see the error in your log.
+**RaedyAPI** uses it so that, if you use a Pydantic model in `response_model`, and your data has an error, you will see the error in your log.
 
 But the client/user will not see it. Instead, the client will receive an "Internal Server Error" with a HTTP status code `500`.
 
-It should be this way because if you have a Pydantic `ValidationError` in your *response* or anywhere in your code (not in the client's *request*), it's actually a bug in your code.
+It should be this way because if you have a Pydantic `ValidationError` in your _response_ or anywhere in your code (not in the client's _request_), it's actually a bug in your code.
 
 And while you fix it, your clients/users shouldn't have access to internal information about the error, as that could expose a security vulnerability.
 
@@ -184,9 +184,9 @@ For example, you could want to return a plain text response instead of JSON for 
 ```
 
 !!! note "Technical Details"
-    You could also use `from starlette.responses import PlainTextResponse`.
+You could also use `from starlette.responses import PlainTextResponse`.
 
-    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
+    **RaedyAPI** provides the same `starlette.responses` as `raedyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
 
 ### Use the `RequestValidationError` body
 
@@ -228,17 +228,17 @@ You will receive a response telling you that the data is invalid containing the 
 }
 ```
 
-#### ReadyAPI's `HTTPException` vs Starlette's `HTTPException`
+#### RaedyAPI's `HTTPException` vs Starlette's `HTTPException`
 
-**ReadyAPI** has its own `HTTPException`.
+**RaedyAPI** has its own `HTTPException`.
 
-And **ReadyAPI**'s `HTTPException` error class inherits from Starlette's `HTTPException` error class.
+And **RaedyAPI**'s `HTTPException` error class inherits from Starlette's `HTTPException` error class.
 
-The only difference, is that **ReadyAPI**'s `HTTPException` allows you to add headers to be included in the response.
+The only difference, is that **RaedyAPI**'s `HTTPException` allows you to add headers to be included in the response.
 
 This is needed/used internally for OAuth 2.0 and some security utilities.
 
-So, you can keep raising **ReadyAPI**'s `HTTPException` as normally in your code.
+So, you can keep raising **RaedyAPI**'s `HTTPException` as normally in your code.
 
 But when you register an exception handler, you should register it for Starlette's `HTTPException`.
 
@@ -250,9 +250,9 @@ In this example, to be able to have both `HTTPException`s in the same code, Star
 from starlette.exceptions import HTTPException as StarletteHTTPException
 ```
 
-### Re-use **ReadyAPI**'s exception handlers
+### Re-use **RaedyAPI**'s exception handlers
 
-If you want to use the exception along with the same default exception handlers from  **ReadyAPI**, You can import and re-use the default exception handlers from `readyapi.exception_handlers`:
+If you want to use the exception along with the same default exception handlers from **RaedyAPI**, You can import and re-use the default exception handlers from `raedyapi.exception_handlers`:
 
 ```Python hl_lines="2-5  15  21"
 {!../../../docs_src/handling_errors/tutorial006.py!}

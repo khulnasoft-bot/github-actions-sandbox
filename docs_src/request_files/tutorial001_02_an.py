@@ -1,9 +1,9 @@
 from typing import Union
 
-from readyapi import File, ReadyAPI, UploadFile
+from raedyapi import RaedyAPI, File, UploadFile
 from typing_extensions import Annotated
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.post("/files/")

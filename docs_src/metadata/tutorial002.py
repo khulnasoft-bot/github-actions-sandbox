@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI
+from raedyapi import RaedyAPI
 
-app = ReadyAPI(openapi_url="/api/v1/openapi.json")
+app = RaedyAPI(openapi_url="/api/v1/openapi.json")
 
 
 @app.get("/items/")

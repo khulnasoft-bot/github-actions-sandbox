@@ -1,7 +1,7 @@
+from raedyapi import Body, RaedyAPI
 from pydantic import BaseModel, Field
-from readyapi import Body, ReadyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 class Item(BaseModel):

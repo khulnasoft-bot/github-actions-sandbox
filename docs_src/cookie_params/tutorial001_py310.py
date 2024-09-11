@@ -1,6 +1,6 @@
-from readyapi import Cookie, ReadyAPI
+from raedyapi import Cookie, RaedyAPI
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.get("/items/")

@@ -1,6 +1,6 @@
 from typing import Annotated
 
-from readyapi import Depends
+from raedyapi import Depends
 
 
 async def dependency_a():

@@ -1,5 +1,5 @@
-from readyapi import ReadyAPI, Request
-from readyapi.responses import JSONResponse
+from raedyapi import RaedyAPI, Request
+from raedyapi.responses import JSONResponse
 
 
 class UnicornException(Exception):
@@ -7,7 +7,7 @@ class UnicornException(Exception):
         self.name = name
 
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 
 @app.exception_handler(UnicornException)

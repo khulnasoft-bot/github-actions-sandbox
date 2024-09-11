@@ -1,9 +1,9 @@
 import secrets
 
-from readyapi import Depends, HTTPException, ReadyAPI, status
-from readyapi.security import HTTPBasic, HTTPBasicCredentials
+from raedyapi import Depends, RaedyAPI, HTTPException, status
+from raedyapi.security import HTTPBasic, HTTPBasicCredentials
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 security = HTTPBasic()
 
@@ -22,7 +22,7 @@ def get_current_username(credentials: HTTPBasicCredentials = Depends(security)):
     if not (is_correct_username and is_correct_password):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
+            detail="Incorrect email or password",
             headers={"WWW-Authenticate": "Basic"},
         )
     return credentials.username

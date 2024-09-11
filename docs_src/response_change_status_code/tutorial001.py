@@ -1,6 +1,6 @@
-from readyapi import ReadyAPI, Response, status
+from raedyapi import RaedyAPI, Response, status
 
-app = ReadyAPI()
+app = RaedyAPI()
 
 tasks = {"foo": "Listen to the Bar Fighters"}
 
