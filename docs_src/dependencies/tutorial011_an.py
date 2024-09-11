@@ -1,7 +1,7 @@
-from raedyapi import Depends, RaedyAPI
+from readyapi import Depends, ReadyAPI
 from typing_extensions import Annotated
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class FixedContentQueryChecker:

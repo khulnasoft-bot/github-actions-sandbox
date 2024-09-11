@@ -1,6 +1,6 @@
 # Metadata and Docs URLs
 
-You can customize several metadata configurations in your **RaedyAPI** application.
+You can customize several metadata configurations in your **ReadyAPI** application.
 
 ## Metadata for API
 

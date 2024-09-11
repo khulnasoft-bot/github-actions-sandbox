@@ -1,6 +1,6 @@
 from enum import Enum
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
 
 class ModelName(str, Enum):
@@ -9,7 +9,7 @@ class ModelName(str, Enum):
     lenet = "lenet"
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/models/{model_name}")

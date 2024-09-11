@@ -1,5 +1,5 @@
-from raedyapi import RaedyAPI
-from raedyapi.responses import JSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import JSONResponse
 from pydantic import BaseModel
 
 
@@ -12,7 +12,7 @@ class Message(BaseModel):
     message: str
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get(

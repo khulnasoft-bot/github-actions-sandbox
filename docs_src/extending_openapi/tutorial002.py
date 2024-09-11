@@ -1,12 +1,12 @@
-from raedyapi import RaedyAPI
-from raedyapi.openapi.docs import (
+from readyapi import ReadyAPI
+from readyapi.openapi.docs import (
     get_redoc_html,
     get_swagger_ui_html,
     get_swagger_ui_oauth2_redirect_html,
 )
-from raedyapi.staticfiles import StaticFiles
+from readyapi.staticfiles import StaticFiles
 
-app = RaedyAPI(docs_url=None, redoc_url=None)
+app = ReadyAPI(docs_url=None, redoc_url=None)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

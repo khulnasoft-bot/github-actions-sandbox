@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel, HttpUrl
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class Image(BaseModel):

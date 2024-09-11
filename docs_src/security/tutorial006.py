@@ -1,7 +1,7 @@
-from raedyapi import Depends, RaedyAPI
-from raedyapi.security import HTTPBasic, HTTPBasicCredentials
+from readyapi import Depends, ReadyAPI
+from readyapi.security import HTTPBasic, HTTPBasicCredentials
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 security = HTTPBasic()
 

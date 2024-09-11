@@ -1,9 +1,9 @@
-from raedyapi import RaedyAPI, Request
-from raedyapi.responses import HTMLResponse
-from raedyapi.staticfiles import StaticFiles
-from raedyapi.templating import Jinja2Templates
+from readyapi import ReadyAPI, Request
+from readyapi.responses import HTMLResponse
+from readyapi.staticfiles import StaticFiles
+from readyapi.templating import Jinja2Templates
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

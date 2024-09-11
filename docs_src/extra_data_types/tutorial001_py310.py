@@ -1,9 +1,9 @@
 from datetime import datetime, time, timedelta
 from uuid import UUID
 
-from raedyapi import Body, RaedyAPI
+from readyapi import Body, ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.put("/items/{item_id}")

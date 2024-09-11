@@ -1,6 +1,6 @@
 # OAuth2 scopes
 
-You can use OAuth2 scopes directly with **RaedyAPI**, they are integrated to work seamlessly.
+You can use OAuth2 scopes directly with **ReadyAPI**, they are integrated to work seamlessly.
 
 This would allow you to have a more fine-grained permission system, following the OAuth2 standard, integrated into your OpenAPI application (and the API docs).
 
@@ -8,7 +8,7 @@ OAuth2 with scopes is the mechanism used by many big authentication providers, l
 
 Every time you "log in with" Facebook, Google, GitHub, Microsoft, Twitter, that application is using OAuth2 with scopes.
 
-In this section you will see how to manage authentication and authorization with the same OAuth2 with scopes in your **RaedyAPI** application.
+In this section you will see how to manage authentication and authorization with the same OAuth2 with scopes in your **ReadyAPI** application.
 
 !!! warning
 This is a more or less advanced section. If you are just starting, you can skip it.
@@ -224,7 +224,7 @@ For simplicity, here we are just adding the scopes received directly to the toke
 
 Now we declare that the _path operation_ for `/users/me/items/` requires the scope `items`.
 
-For this, we import and use `Security` from `raedyapi`.
+For this, we import and use `Security` from `readyapi`.
 
 You can use `Security` to declare dependencies (just like `Depends`), but `Security` also receives a parameter `scopes` with a list of scopes (strings).
 
@@ -239,7 +239,7 @@ In this case, it requires the scope `me` (it could require more than one scope).
 !!! note
 You don't necessarily need to add different scopes in different places.
 
-    We are doing it here to demonstrate how **RaedyAPI** handles scopes declared at different levels.
+    We are doing it here to demonstrate how **ReadyAPI** handles scopes declared at different levels.
 
 === "Python 3.10+"
 
@@ -289,9 +289,9 @@ You don't necessarily need to add different scopes in different places.
 !!! info "Technical Details"
 `Security` is actually a subclass of `Depends`, and it has just one extra parameter that we'll see later.
 
-    But by using `Security` instead of `Depends`, **RaedyAPI** will know that it can declare security scopes, use them internally, and document the API with OpenAPI.
+    But by using `Security` instead of `Depends`, **ReadyAPI** will know that it can declare security scopes, use them internally, and document the API with OpenAPI.
 
-    But when you import `Query`, `Path`, `Depends`, `Security` and others from `raedyapi`, those are actually functions that return special classes.
+    But when you import `Query`, `Path`, `Depends`, `Security` and others from `readyapi`, those are actually functions that return special classes.
 
 ## Use `SecurityScopes`
 
@@ -303,7 +303,7 @@ Here's were we are using the same OAuth2 scheme we created before, declaring it 
 
 Because this dependency function doesn't have any scope requirements itself, we can use `Depends` with `oauth2_scheme`, we don't have to use `Security` when we don't need to specify security scopes.
 
-We also declare a special parameter of type `SecurityScopes`, imported from `raedyapi.security`.
+We also declare a special parameter of type `SecurityScopes`, imported from `readyapi.security`.
 
 This `SecurityScopes` class is similar to `Request` (`Request` was used to get the request object directly).
 
@@ -590,7 +590,7 @@ It's common that each authentication provider names their flows in a different w
 
     But in the end, they are implementing the same OAuth2 standard.
 
-**RaedyAPI** includes utilities for all these OAuth2 authentication flows in `raedyapi.security.oauth2`.
+**ReadyAPI** includes utilities for all these OAuth2 authentication flows in `readyapi.security.oauth2`.
 
 ## `Security` in decorator `dependencies`
 

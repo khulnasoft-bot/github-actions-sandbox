@@ -9,7 +9,7 @@ For example, if you want to read or manipulate the request body before it is pro
 !!! danger
 This is an "advanced" feature.
 
-    If you are just starting with **RaedyAPI** you might want to skip this section.
+    If you are just starting with **ReadyAPI** you might want to skip this section.
 
 ## Use cases
 
@@ -42,7 +42,7 @@ That way, the same route class can handle gzip compressed or uncompressed reques
 
 ### Create a custom `GzipRoute` class
 
-Next, we create a custom subclass of `raedyapi.routing.APIRoute` that will make use of the `GzipRequest`.
+Next, we create a custom subclass of `readyapi.routing.APIRoute` that will make use of the `GzipRequest`.
 
 This time, it will overwrite the method `APIRoute.get_route_handler()`.
 
@@ -71,7 +71,7 @@ Doing this, our `GzipRequest` will take care of decompressing the data (if neces
 
 After that, all of the processing logic is the same.
 
-But because of our changes in `GzipRequest.body`, the request body will be automatically decompressed when it is loaded by **RaedyAPI** when needed.
+But because of our changes in `GzipRequest.body`, the request body will be automatically decompressed when it is loaded by **ReadyAPI** when needed.
 
 ## Accessing the request body in an exception handler
 

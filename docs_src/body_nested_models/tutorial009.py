@@ -1,8 +1,8 @@
 from typing import Dict
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.post("/index-weights/")

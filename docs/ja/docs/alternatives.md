@@ -1,14 +1,14 @@
 # 代替ツールから受けたインスピレーションと比較
 
-何が**RaedyAPI**にインスピレーションを与えたのか、他の代替ツールと比較してどうか、そしてそこから何を学んだのかについて。
+何が**ReadyAPI**にインスピレーションを与えたのか、他の代替ツールと比較してどうか、そしてそこから何を学んだのかについて。
 
 ## はじめに
 
-**RaedyAPI**は、代替ツールのこれまでの働きがなければ存在しなかったでしょう。
+**ReadyAPI**は、代替ツールのこれまでの働きがなければ存在しなかったでしょう。
 
 以前に作られた多くのツールが、作成における刺激として役立ってきました。
 
-私は数年前から新しいフレームワークの作成を避けてきました。まず、**RaedyAPI**でカバーされているすべての機能を、さまざまなフレームワーク、プラグイン、ツールを使って解決しようとしました。
+私は数年前から新しいフレームワークの作成を避けてきました。まず、**ReadyAPI**でカバーされているすべての機能を、さまざまなフレームワーク、プラグイン、ツールを使って解決しようとしました。
 
 しかし、その時点では、これらの機能をすべて提供し、以前のツールから優れたアイデアを取り入れ、可能な限り最高の方法でそれらを組み合わせ、それまで利用できなかった言語機能 (Python 3.6 以降の型ヒント) を利用したものを作る以外に選択肢はありませんでした。
 
@@ -28,12 +28,12 @@ Django REST Framework は、Django を下敷きにして Web API を構築する
 
 Mozilla、Red Hat、Eventbrite など多くの企業で利用されています。
 
-これは**自動的な API ドキュメント生成**の最初の例であり、これは**RaedyAPI**に向けた「調査」を触発した最初のアイデアの一つでした。
+これは**自動的な API ドキュメント生成**の最初の例であり、これは**ReadyAPI**に向けた「調査」を触発した最初のアイデアの一つでした。
 
 !!! note "備考"
-Django REST Framework は Tom Christie によって作成されました。Starlette と Uvicorn の生みの親であり、**RaedyAPI**のベースとなっています。
+Django REST Framework は Tom Christie によって作成されました。Starlette と Uvicorn の生みの親であり、**ReadyAPI**のベースとなっています。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 自動で API ドキュメントを生成する Web ユーザーインターフェースを持っている点。
 
 ### <a href="http://flask.pocoo.org/" class="external-link" target="_blank">Flask</a>
@@ -50,20 +50,20 @@ Flask は「マイクロフレームワーク」であり、データベース�
 
 Flask のシンプルさを考えると、API を構築するのに適しているように思えました。次に見つけるべきは、Flask 用の「Django REST Framework」でした。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 マイクロフレームワークであること。ツールやパーツを目的に合うように簡単に組み合わせられる点。
 
     シンプルで簡単なルーティングの仕組みを持っている点。
 
 ### <a href="http://docs.python-requests.org" class="external-link" target="_blank">Requests</a>
 
-**RaedyAPI**は実際には**Requests**の代替ではありません。それらのスコープは大きく異なります。
+**ReadyAPI**は実際には**Requests**の代替ではありません。それらのスコープは大きく異なります。
 
-実際には RaedyAPI アプリケーションの*内部*で Requests を使用するのが一般的です。
+実際には ReadyAPI アプリケーションの*内部*で Requests を使用するのが一般的です。
 
-しかし、RaedyAPI は Requests からかなりのインスピレーションを得ています。
+しかし、ReadyAPI は Requests からかなりのインスピレーションを得ています。
 
-**Requests**は (クライアントとして) API と*通信*するためのライブラリであり、**RaedyAPI**は (サーバーとして) API を*構築*するためのライブラリです。
+**Requests**は (クライアントとして) API と*通信*するためのライブラリであり、**ReadyAPI**は (サーバーとして) API を*構築*するためのライブラリです。
 
 これらは多かれ少なかれ両端にあり、お互いを補完し合っています。
 
@@ -79,7 +79,7 @@ Requests は非常にシンプルかつ直感的なデザインで使いやす�
 response = requests.get("http://example.com/some/url")
 ```
 
-対応する RaedyAPI のパスオペレーションはこのようになります:
+対応する ReadyAPI のパスオペレーションはこのようになります:
 
 ```Python hl_lines="1"
 @app.get("/some/url")
@@ -89,7 +89,7 @@ def read_url():
 
 `requests.get(...)` と`@app.get(...)` には類似点が見受けられます。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 _ シンプルで直感的な API を持っている点。
 _ HTTP メソッド名を直接利用し、単純で直感的である。 \* 適切なデフォルト値を持ちつつ、強力なカスタマイズ性を持っている。
 
@@ -105,7 +105,7 @@ _ HTTP メソッド名を直接利用し、単純で直感的である。 \* 適
 
 そのため、バージョン 2.0 では「Swagger」、バージョン 3 以上では「OpenAPI」と表記するのが一般的です。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 独自のスキーマの代わりに、API 仕様のオープンな標準を採用しました。
 
     そして、標準に基づくユーザーインターフェースツールを統合しています。
@@ -113,7 +113,7 @@ _ HTTP メソッド名を直接利用し、単純で直感的である。 \* 適
     * <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank">Swagger UI</a>
     * <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank">ReDoc</a>
 
-    この二つは人気で安定したものとして選択されましたが、少し検索してみると、 (**RaedyAPI**と同時に使用できる) OpenAPIのための多くの代替となるツールを見つけることができます。
+    この二つは人気で安定したものとして選択されましたが、少し検索してみると、 (**ReadyAPI**と同時に使用できる) OpenAPIのための多くの代替となるツールを見つけることができます。
 
 ### Flask REST フレームワーク
 
@@ -131,7 +131,7 @@ API が必要とするもう一つの大きな機能はデータのバリデー�
 
 しかし、それは Python の型ヒントが存在する前に作られたものです。そのため、すべての<abbr title="データがどのように形成されるべきかの定義">スキーマ</abbr>を定義するためには、Marshmallow が提供する特定のユーティリティやクラスを使用する必要があります。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 コードで「スキーマ」を定義し、データの型やバリデーションを自動で提供する点。
 
 ### <a href="https://webargs.readthedocs.io/en/latest/" class="external-link" target="_blank">Webargs</a>
@@ -142,12 +142,12 @@ Webargs は Flask をはじめとするいくつかのフレームワークの�
 
 データのバリデーションを行うために内部では Marshmallow を使用しており、同じ開発者によって作られました。
 
-素晴らしいツールで、私も**RaedyAPI**を持つ前はよく使っていました。
+素晴らしいツールで、私も**ReadyAPI**を持つ前はよく使っていました。
 
 !!! info "情報"
 Webargs は、Marshmallow と同じ開発者により作られました。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 受信したデータに対する自動的なバリデーションを持っている点。
 
 ### <a href="https://apispec.readthedocs.io/en/stable/" class="external-link" target="_blank">APISpec</a>
@@ -171,7 +171,7 @@ Flask, Starlette, Responder などにおいてはそのように動作します�
 !!! info "情報"
 APISpec は、Marshmallow と同じ開発者により作成されました。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 OpenAPI という、API についてのオープンな標準をサポートしている点。
 
 ### <a href="https://flask-apispec.readthedocs.io/en/latest/" class="external-link" target="_blank">Flask-apispec</a>
@@ -184,7 +184,7 @@ Webargs と Marshmallow の情報から、APISpec を使用して OpenAPI スキ
 
 これにより、Python の docstring に YAML (別の構文) を書く必要がなくなりました。
 
-Flask、Flask-apispec、Marshmallow、Webargs の組み合わせは、**RaedyAPI**を構築するまで私のお気に入りのバックエンドスタックでした。
+Flask、Flask-apispec、Marshmallow、Webargs の組み合わせは、**ReadyAPI**を構築するまで私のお気に入りのバックエンドスタックでした。
 
 これを使うことで、いくつかの Flask フルスタックジェネレータを作成することになりました。これらは私 (といくつかの外部のチーム) が今まで使ってきたメインのスタックです。
 
@@ -192,12 +192,12 @@ Flask、Flask-apispec、Marshmallow、Webargs の組み合わせは、**RaedyAPI
 - <a href="https://github.com/khulnasoft/full-stack-flask-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-flask-couchbase</a>
 - <a href="https://github.com/khulnasoft/full-stack-flask-couchdb" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-flask-couchdb</a>
 
-そして、これらのフルスタックジェネレーターは、[**RaedyAPI** Project Generators](project-generation.md){.internal-link target=\_blank}の元となっていました。
+そして、これらのフルスタックジェネレーターは、[**ReadyAPI** Project Generators](project-generation.md){.internal-link target=\_blank}の元となっていました。
 
 !!! info "情報"
 Flask-apispec は Marshmallow と同じ開発者により作成されました。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 シリアライゼーションとバリデーションを定義したコードから、OpenAPI スキーマを自動的に生成する点。
 
 ### <a href="https://nestjs.com/" class="external-link" target="_blank">NestJS</a> (と<a href="https://angular.io/" class="external-link" target="_blank">Angular</a>)
@@ -214,7 +214,7 @@ Angular 2 にインスピレーションを受けた、統合された依存性�
 
 入れ子になったモデルをうまく扱えません。そのため、リクエストの JSON ボディが内部フィールドを持つ JSON オブジェクトで、それが順番にネストされた JSON オブジェクトになっている場合、適切にドキュメント化やバリデーションをすることができません。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 素晴らしいエディターの補助を得るために、Python の型ヒントを利用している点。
 
     強力な依存性注入の仕組みを持ち、コードの繰り返しを最小化する方法を見つけた点。
@@ -228,10 +228,10 @@ Python の`asyncio`ループの代わりに、`uvloop`が利用されていま�
 
     `Uvicorn`と`Starlette`に明らかなインスピレーションを与えており、それらは現在オープンなベンチマークにおいてSanicより高速です。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 物凄い性能を出す方法を見つけた点。
 
-    **RaedyAPI**が、(サードパーティのベンチマークによりテストされた) 最も高速なフレームワークであるStarletteに基づいている理由です。
+    **ReadyAPI**が、(サードパーティのベンチマークによりテストされた) 最も高速なフレームワークであるStarletteに基づいている理由です。
 
 ### <a href="https://falconframework.org/" class="external-link" target="_blank">Falcon</a>
 
@@ -243,16 +243,16 @@ Python のウェブフレームワーク標準規格 (WSGI) を使用してい�
 
 そのため、データのバリデーション、シリアライゼーション、ドキュメント化は、自動的にできずコードの中で行わなければなりません。あるいは、Hug のように Falcon の上にフレームワークとして実装されなければなりません。このような分断は、パラメータとして 1 つのリクエストオブジェクトと 1 つのレスポンスオブジェクトを持つという Falcon のデザインにインスピレーションを受けた他のフレームワークでも起こります。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 素晴らしい性能を得るための方法を見つけた点。
 
-    Hug (HugはFalconをベースにしています) と一緒に、**RaedyAPI**が`response`引数を関数に持つことにインスピレーションを与えました。
+    Hug (HugはFalconをベースにしています) と一緒に、**ReadyAPI**が`response`引数を関数に持つことにインスピレーションを与えました。
 
-    **RaedyAPI**では任意ですが、ヘッダーやCookieやステータスコードを設定するために利用されています。
+    **ReadyAPI**では任意ですが、ヘッダーやCookieやステータスコードを設定するために利用されています。
 
 ### <a href="https://moltenframework.com/" class="external-link" target="_blank">Molten</a>
 
-**RaedyAPI**を構築する最初の段階で Molten を発見しました。そして、それは非常に似たようなアイデアを持っています。
+**ReadyAPI**を構築する最初の段階で Molten を発見しました。そして、それは非常に似たようなアイデアを持っています。
 
 - Python の型ヒントに基づいている
 - これらの型から行われるバリデーションとドキュメント化
@@ -266,7 +266,7 @@ Pydantic のようなデータのバリデーション、シリアライゼー�
 
 ルーティングは一つの場所で宣言され、他の場所で宣言された関数を使用します (エンドポイントを扱う関数のすぐ上に配置できるデコレータを使用するのではなく) 。これは Flask (や Starlette) よりも、Django に近いです。これは、比較的緊密に結合されているものをコードの中で分離しています。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 モデルの属性の「デフォルト」値を使用したデータ型の追加バリデーションを定義します。これはエディタの補助を改善するもので、以前は Pydantic では利用できませんでした。
 
     同様の方法でのバリデーションの宣言をサポートするよう、Pydanticを部分的にアップデートするインスピーレションを与えました。(現在はこれらの機能は全てPydanticで可能となっています。)
@@ -288,16 +288,16 @@ OpenAPI や JSON Schema のような標準に基づいたものではありま�
 !!! info "情報"
 Hug は Timothy Crosley により作成されました。彼は<a href="https://github.com/timothycrosley/isort" class="external-link" target="_blank">`isort`</a>など、Python のファイル内のインポートの並び替えを自動的におこうなう素晴らしいツールの開発者です。
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 Hug は APIStar に部分的なインスピレーションを与えており、私が発見した中では APIStar と同様に最も期待の持てるツールの一つでした。
 
-    Hugは、**RaedyAPI**がPythonの型ヒントを用いてパラメータを宣言し自動的にAPIを定義するスキーマを生成することを触発しました。
+    Hugは、**ReadyAPI**がPythonの型ヒントを用いてパラメータを宣言し自動的にAPIを定義するスキーマを生成することを触発しました。
 
-    Hugは、**RaedyAPI**がヘッダーやクッキーを設定するために関数に `response`引数を宣言することにインスピレーションを与えました。
+    Hugは、**ReadyAPI**がヘッダーやクッキーを設定するために関数に `response`引数を宣言することにインスピレーションを与えました。
 
 ### <a href="https://github.com/encode/apistar" class="external-link" target="_blank">APIStar</a> (<= 0.5)
 
-**RaedyAPI**を構築することを決める直前に、**APIStar**サーバーを見つけました。それは私が探していたものがほぼすべて含まれており、素晴らしいデザインでした。
+**ReadyAPI**を構築することを決める直前に、**APIStar**サーバーを見つけました。それは私が探していたものがほぼすべて含まれており、素晴らしいデザインでした。
 
 これは、私がこれまでに見た中で (NestJS や Molten の前に) Python の型ヒントを使ってパラメータやリクエストを宣言するフレームワークの最初の実装の一つでした。Hug と多かれ少なかれ同時期に見つけました。ただ、APIStar は OpenAPI 標準を使っていました。
 
@@ -323,21 +323,21 @@ Hug は APIStar に部分的なインスピレーションを与えており、�
 APIStar は Tom Christie により開発されました。以下の開発者でもあります:
 
     * Django REST Framework
-    * Starlette (**RaedyAPI**のベースになっています)
-    * Uvicorn (Starletteや**RaedyAPI**で利用されています)
+    * Starlette (**ReadyAPI**のベースになっています)
+    * Uvicorn (Starletteや**ReadyAPI**で利用されています)
 
-!!! check "**RaedyAPI**へ与えたインスピレーション"
+!!! check "**ReadyAPI**へ与えたインスピレーション"
 存在そのもの。
 
     複数の機能 (データのバリデーション、シリアライゼーション、ドキュメント化) を同じPython型で宣言し、同時に優れたエディタの補助を提供するというアイデアは、私にとって素晴らしいアイデアでした。
 
     そして、長い間同じようなフレームワークを探し、多くの異なる代替ツールをテストした結果、APIStarが最良の選択肢となりました。
 
-    その後、APIStarはサーバーとして存在しなくなり、Starletteが作られ、そのようなシステムのための新しくより良い基盤となりました。これが**RaedyAPI**を構築するための最終的なインスピレーションでした。
+    その後、APIStarはサーバーとして存在しなくなり、Starletteが作られ、そのようなシステムのための新しくより良い基盤となりました。これが**ReadyAPI**を構築するための最終的なインスピレーションでした。
 
-    私は、これまでのツールから学んだことをもとに、機能や型システムなどの部分を改善・拡充しながら、**RaedyAPI**をAPIStarの「精神的な後継者」と考えています。
+    私は、これまでのツールから学んだことをもとに、機能や型システムなどの部分を改善・拡充しながら、**ReadyAPI**をAPIStarの「精神的な後継者」と考えています。
 
-## **RaedyAPI**が利用しているもの
+## **ReadyAPI**が利用しているもの
 
 ### <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a>
 
@@ -347,10 +347,10 @@ Pydantic は、Python の型ヒントを元にデータのバリデーション�
 
 Marshmallow に匹敵しますが、ベンチマークでは Marshmallow よりも高速です。また、Python の型ヒントを元にしているので、エディタの補助が素晴らしいです。
 
-!!! check "**RaedyAPI**での使用用途"
+!!! check "**ReadyAPI**での使用用途"
 データのバリデーション、データのシリアライゼーション、自動的なモデルの (JSON Schema に基づいた) ドキュメント化の全てを扱えます。
 
-    **RaedyAPI**はJSON SchemaのデータをOpenAPIに利用します。
+    **ReadyAPI**はJSON SchemaのデータをOpenAPIに利用します。
 
 ### <a href="https://www.starlette.io/" class="external-link" target="_blank">Starlette</a>
 
@@ -378,30 +378,30 @@ Starlette は基本的な Web マイクロフレームワークの機能をす�
 
 しかし、自動的なデータバリデーション、シリアライゼーション、ドキュメント化は提供していません。
 
-これは **RaedyAPI** が追加する主な機能の一つで、すべての機能は Python の型ヒントに基づいています (Pydantic を使用しています) 。これに加えて、依存性注入の仕組み、セキュリティユーティリティ、OpenAPI スキーマ生成などがあります。
+これは **ReadyAPI** が追加する主な機能の一つで、すべての機能は Python の型ヒントに基づいています (Pydantic を使用しています) 。これに加えて、依存性注入の仕組み、セキュリティユーティリティ、OpenAPI スキーマ生成などがあります。
 
 !!! note "技術詳細"
 ASGI は Django のコアチームメンバーにより開発された新しい「標準」です。まだ「Python の標準 (PEP) 」ではありませんが、現在そうなるように進めています。
 
     しかしながら、いくつかのツールにおいてすでに「標準」として利用されています。このことは互換性を大きく改善するもので、Uvicornから他のASGIサーバー (DaphneやHypercorn) に乗り換えることができたり、あなたが`python-socketio`のようなASGI互換のツールを追加することもできます。
 
-!!! check "**RaedyAPI**での使用用途"
+!!! check "**ReadyAPI**での使用用途"
 web に関するコアな部分を全て扱います。その上に機能を追加します。
 
-    `RaedyAPI`クラスそのものは、`Starlette`クラスを直接継承しています。
+    `ReadyAPI`クラスそのものは、`Starlette`クラスを直接継承しています。
 
-    基本的にはStarletteの強化版であるため、Starletteで可能なことは**RaedyAPI**で直接可能です。
+    基本的にはStarletteの強化版であるため、Starletteで可能なことは**ReadyAPI**で直接可能です。
 
 ### <a href="https://www.uvicorn.org/" class="external-link" target="_blank">Uvicorn</a>
 
 Uvicorn は非常に高速な ASGI サーバーで、uvloop と httptools により構成されています。
 
-ウェブフレームワークではなくサーバーです。例えば、パスルーティングのツールは提供していません。それらは、Starlette (や**RaedyAPI**) のようなフレームワークがその上で提供するものです。
+ウェブフレームワークではなくサーバーです。例えば、パスルーティングのツールは提供していません。それらは、Starlette (や**ReadyAPI**) のようなフレームワークがその上で提供するものです。
 
-Starlette や**RaedyAPI**のサーバーとして推奨されています。
+Starlette や**ReadyAPI**のサーバーとして推奨されています。
 
-!!! check "**RaedyAPI**が推奨する理由"
-**RaedyAPI**アプリケーションを実行するメインのウェブサーバーである点。
+!!! check "**ReadyAPI**が推奨する理由"
+**ReadyAPI**アプリケーションを実行するメインのウェブサーバーである点。
 
     Gunicornと組み合わせることで、非同期でマルチプロセスなサーバーを持つことがきます。
 
@@ -409,4 +409,4 @@ Starlette や**RaedyAPI**のサーバーとして推奨されています。
 
 ## ベンチマーク と スピード
 
-Uvicorn、Starlette、RaedyAPI の違いを理解、比較、確認するには、[ベンチマーク](benchmarks.md){.internal-link target=\_blank}を確認してください。
+Uvicorn、Starlette、ReadyAPI の違いを理解、比較、確認するには、[ベンチマーク](benchmarks.md){.internal-link target=\_blank}を確認してください。

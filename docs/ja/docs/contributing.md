@@ -1,6 +1,6 @@
 # 開発 - 貢献
 
-まず、[RaedyAPI を応援 - ヘルプの入手](help-raedyapi.md){.internal-link target=\_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
+まず、[ReadyAPI を応援 - ヘルプの入手](help-readyapi.md){.internal-link target=\_blank}の基本的な方法を見て、ヘルプを得た方がいいかもしれません。
 
 ## 開発
 
@@ -65,7 +65,7 @@ $ python -m venv env
     ```console
     $ which pip
 
-    some/directory/raedyapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -77,7 +77,7 @@ $ python -m venv env
     ```console
     $ Get-Command pip
 
-    some/directory/raedyapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -103,13 +103,13 @@ $ pip install -r requirements.txt
 
 </div>
 
-これで、すべての依存関係と RaedyAPI を、ローカル環境にインストールします。
+これで、すべての依存関係と ReadyAPI を、ローカル環境にインストールします。
 
-#### ローカル環境で RaedyAPI を使う
+#### ローカル環境で ReadyAPI を使う
 
-RaedyAPI をインポートして使用する Python ファイルを作成し、ローカル環境で実行すると、ローカルの RaedyAPI ソースコードが使用されます。
+ReadyAPI をインポートして使用する Python ファイルを作成し、ローカル環境で実行すると、ローカルの ReadyAPI ソースコードが使用されます。
 
-そして、`-e` でインストールされているローカルの RaedyAPI ソースコードを更新した場合、その Python ファイルを再度実行すると、更新したばかりの新しいバージョンの RaedyAPI が使用されます。
+そして、`-e` でインストールされているローカルの ReadyAPI ソースコードを更新した場合、その Python ファイルを再度実行すると、更新したばかりの新しいバージョンの ReadyAPI が使用されます。
 
 これにより、ローカルバージョンを「インストール」しなくても、すべての変更をテストできます。
 
@@ -127,7 +127,7 @@ $ bash scripts/format.sh
 
 また、すべてのインポートを自動でソートします。
 
-正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、RaedyAPI をローカル環境にインストールしている必要があります。
+正しく並べ替えるには、上記セクションのコマンドで `-e` を使い、ReadyAPI をローカル環境にインストールしている必要があります。
 
 ### インポートの整形
 
@@ -235,14 +235,14 @@ Uvicorn はデフォルトでポート`8000`を使用するため、ポート`80
 
 #### 豆知識とガイドライン
 
-- あなたの言語の<a href="https://github.com/khulnasoft/raedyapi/pulls" class="external-link" target="_blank">今あるプルリクエスト</a>を確認し、変更や承認をするレビューを追加します。
+- あなたの言語の<a href="https://github.com/khulnasoft/readyapi/pulls" class="external-link" target="_blank">今あるプルリクエスト</a>を確認し、変更や承認をするレビューを追加します。
 
 !!! tip "豆知識"
 すでにあるプルリクエストに<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request" class="external-link" target="_blank">修正提案つきのコメントを追加</a>できます。
 
     修正提案の承認のために<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews" class="external-link" target="_blank">プルリクエストのレビューの追加</a>のドキュメントを確認してください。
 
-- <a href="https://github.com/khulnasoft/raedyapi/issues" class="external-link" target="_blank">issues</a>をチェックして、あなたの言語に対応する翻訳があるかどうかを確認してください。
+- <a href="https://github.com/khulnasoft/readyapi/issues" class="external-link" target="_blank">issues</a>をチェックして、あなたの言語に対応する翻訳があるかどうかを確認してください。
 
 - 翻訳したページごとに 1 つのプルリクエストを追加します。これにより、他のユーザーがレビューしやすくなります。
 
@@ -282,7 +282,7 @@ $ python ./scripts/docs.py live es
 
 これで<a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> を開いて、変更を確認できます。
 
-RaedyAPI docs Web サイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
+ReadyAPI docs Web サイトを見ると、すべての言語にすべてのページがあります。しかし、一部のページは翻訳されておらず、翻訳の欠落ページについて通知があります。
 
 しかし、このようにローカルで実行すると、翻訳済みのページのみが表示されます。
 
@@ -312,10 +312,10 @@ docs/en/docs/mkdocs.yml
 - 設定ファイルの中で、`docs/features.md`が記述されている箇所を見つけます:
 
 ```YAML hl_lines="8"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- RaedyAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -331,10 +331,10 @@ docs/es/docs/mkdocs.yml
 - 英語とまったく同じ場所に追加します。例えば:
 
 ```YAML hl_lines="8"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- RaedyAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -397,7 +397,7 @@ jinja2.exceptions.TemplateNotFound: partials/language/xx.html
 その必要がある場合は、新しい言語の`mkdocs.yml`を次のように編集してください:
 
 ```YAML hl_lines="5"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

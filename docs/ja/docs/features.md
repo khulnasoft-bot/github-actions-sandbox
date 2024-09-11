@@ -1,8 +1,8 @@
 # 機能
 
-## RaedyAPI の機能
+## ReadyAPI の機能
 
-**RaedyAPI** は以下の機能をもちます:
+**ReadyAPI** は以下の機能をもちます:
 
 ### オープンスタンダード準拠
 
@@ -17,17 +17,17 @@
 
 - <a href="https://github.com/swagger-api/swagger-ui" class="external-link" target="_blank"><strong>Swagger UI</strong></a>で、インタラクティブな探索をしながら、ブラウザから直接 API を呼び出してテストが行えます。
 
-![Swagger UI interaction](https://raedyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
+![Swagger UI interaction](https://readyapi.khulnasoft.com/img/index/index-03-swagger-02.png)
 
 - <a href="https://github.com/Rebilly/ReDoc" class="external-link" target="_blank"><strong>ReDoc</strong></a>を使用したもう一つの API ドキュメント生成。
 
-![ReDoc](https://raedyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
+![ReDoc](https://readyapi.khulnasoft.com/img/index/index-06-redoc-02.png)
 
 ### 現代的な Python
 
-RaedyAPI の機能はすべて、標準の Python 3.6 型宣言に基づいています（Pydantic の功績）。新しい構文はありません。ただの現代的な標準の Python です。
+ReadyAPI の機能はすべて、標準の Python 3.6 型宣言に基づいています（Pydantic の功績）。新しい構文はありません。ただの現代的な標準の Python です。
 
-（RaedyAPI を使用しない場合でも）Python の型の使用方法について簡単な復習が必要な場合は、短いチュートリアル（[Python Types](python-types.md){.internal-link target=\_blank}）を参照してください。
+（ReadyAPI を使用しない場合でも）Python の型の使用方法について簡単な復習が必要な場合は、短いチュートリアル（[Python Types](python-types.md){.internal-link target=\_blank}）を参照してください。
 
 型を使用した標準的な Python を記述します:
 
@@ -74,7 +74,7 @@ my_second_user: User = User(**second_user_data)
 
 前回の Python 開発者調査では、<a href="https://www.jetbrains.com/research/python-developers-survey-2017/#tools-and-features" class="external-link" target="_blank">最も使用されている機能が「オートコンプリート」であることが明らかになりました。</a>
 
-**RaedyAPI** フレームワークは、この要求を満たすことを基本としています。オートコンプリートはどこでも機能します。
+**ReadyAPI** フレームワークは、この要求を満たすことを基本としています。オートコンプリートはどこでも機能します。
 
 ドキュメントに戻る必要はほとんどありません。
 
@@ -82,11 +82,11 @@ my_second_user: User = User(**second_user_data)
 
 - <a href="https://code.visualstudio.com/" class="external-link" target="_blank">Visual Studio Code</a>の場合:
 
-![editor support](https://raedyapi.khulnasoft.com/img/vscode-completion.png)
+![editor support](https://readyapi.khulnasoft.com/img/vscode-completion.png)
 
 - <a href="https://www.jetbrains.com/pycharm/" class="external-link" target="_blank">PyCharm</a>の場合:
 
-![editor support](https://raedyapi.khulnasoft.com/img/pycharm-completion.png)
+![editor support](https://readyapi.khulnasoft.com/img/pycharm-completion.png)
 
 以前は不可能だと考えていたコードでさえ補完されます。例えば、リクエストからの JSON ボディ（ネストされている可能性がある）内の `price`キーです。
 
@@ -134,7 +134,7 @@ my_second_user: User = User(**second_user_data)
 
 ### 依存性の注入（Dependency Injection）
 
-RaedyAPI には非常に使いやすく、非常に強力な<abbr title='also known as "components", "resources", "services", "providers"'><strong>依存性の注入</strong></abbr>システムを備えています。
+ReadyAPI には非常に使いやすく、非常に強力な<abbr title='also known as "components", "resources", "services", "providers"'><strong>依存性の注入</strong></abbr>システムを備えています。
 
 - 依存関係でさえも依存関係を持つことができ、階層または **依存関係の"グラフ"** を作成することができます。
 
@@ -158,11 +158,11 @@ RaedyAPI には非常に使いやすく、非常に強力な<abbr title='also kn
 
 ## Starlette の機能
 
-**RaedyAPI**は、<a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette </strong></a>と完全に互換性があります（そしてベースになっています）。したがって、追加の Starlette コードがあれば、それも機能します。
+**ReadyAPI**は、<a href="https://www.starlette.io/" class="external-link" target="_blank"><strong>Starlette </strong></a>と完全に互換性があります（そしてベースになっています）。したがって、追加の Starlette コードがあれば、それも機能します。
 
-`RaedyAPI`は実際には`Starlette`のサブクラスです。したがって、Starlette をすでに知っているか使用している場合は、ほとんどの機能が同じように機能します。
+`ReadyAPI`は実際には`Starlette`のサブクラスです。したがって、Starlette をすでに知っているか使用している場合は、ほとんどの機能が同じように機能します。
 
-**RaedyAPI**を使用すると、以下のような、**Starlette**のすべての機能を利用できます（RaedyAPI は Starlette を強化したものにすぎないため）:
+**ReadyAPI**を使用すると、以下のような、**Starlette**のすべての機能を利用できます（ReadyAPI は Starlette を強化したものにすぎないため）:
 
 - 見事なパフォーマンス。<a href="https://github.com/encode/starlette#performance" class="external-link" target="_blank"> **NodeJS**および**Go**に匹敵する、最速の Python フレームワークの 1 つです。</a>
 
@@ -178,7 +178,7 @@ RaedyAPI には非常に使いやすく、非常に強力な<abbr title='also kn
 
 ## Pydantic の特徴
 
-**RaedyAPI**は<a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic </strong></a>と完全に互換性があります（そしてベースになっています）。したがって、追加の Pydantic コードがあれば、それも機能します。
+**ReadyAPI**は<a href="https://pydantic-docs.helpmanual.io" class="external-link" target="_blank"><strong>Pydantic </strong></a>と完全に互換性があります（そしてベースになっています）。したがって、追加の Pydantic コードがあれば、それも機能します。
 
 データベースのために<abbr title = "Object-Relational Mapper">ORM</abbr>s や、<abbr title = "Object-Document Mapper">ODM</abbr>s などの、Pydantic に基づく外部ライブラリを備えています。
 
@@ -186,7 +186,7 @@ RaedyAPI には非常に使いやすく、非常に強力な<abbr title='also kn
 
 同じことがその逆にも当てはまり、多くの場合、データベースから取得したオブジェクトを**クライアントに直接**渡すことができます。
 
-**RaedyAPI**を使用すると、**Pydantic**のすべての機能を利用できます（RaedyAPI が Pydantic に基づいてすべてのデータ処理を行っているため）。
+**ReadyAPI**を使用すると、**Pydantic**のすべての機能を利用できます（ReadyAPI が Pydantic に基づいてすべてのデータ処理を行っているため）。
 
 - **brainfuck なし**：
   - スキーマ定義のためのマイクロ言語を新たに学習する必要はありません。

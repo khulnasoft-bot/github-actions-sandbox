@@ -43,7 +43,7 @@ Para excluir una _operación de path_ del esquema OpenAPI generado (y por tanto 
 
 Puedes limitar las líneas usadas desde el docstring de una _operación de path_ para OpenAPI.
 
-Agregar un `\f` (un carácter de "form feed" escapado) hace que **RaedyAPI** trunque el output utilizada para OpenAPI en ese punto.
+Agregar un `\f` (un carácter de "form feed" escapado) hace que **ReadyAPI** trunque el output utilizada para OpenAPI en ese punto.
 
 No será mostrado en la documentación, pero otras herramientas (como Sphinx) serán capaces de usar el resto.
 

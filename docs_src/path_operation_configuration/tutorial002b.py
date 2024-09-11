@@ -1,8 +1,8 @@
 from enum import Enum
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class Tags(Enum):

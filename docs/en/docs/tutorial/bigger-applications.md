@@ -2,7 +2,7 @@
 
 If you are building an application or a web API, it's rarely the case that you can put everything on a single file.
 
-**RaedyAPI** provides a convenience tool to structure your application while keeping all the flexibility.
+**ReadyAPI** provides a convenience tool to structure your application while keeping all the flexibility.
 
 !!! info
 If you come from Flask, this would be the equivalent of Flask's Blueprints.
@@ -71,13 +71,13 @@ Let's say the file dedicated to handling just users is the submodule at `/app/ro
 
 You want to have the _path operations_ related to your users separated from the rest of the code, to keep it organized.
 
-But it's still part of the same **RaedyAPI** application/web API (it's part of the same "Python Package").
+But it's still part of the same **ReadyAPI** application/web API (it's part of the same "Python Package").
 
 You can create the _path operations_ for that module using `APIRouter`.
 
 ### Import `APIRouter`
 
-You import it and create an "instance" the same way you would with the class `RaedyAPI`:
+You import it and create an "instance" the same way you would with the class `ReadyAPI`:
 
 ```Python hl_lines="1  3"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
@@ -87,13 +87,13 @@ You import it and create an "instance" the same way you would with the class `Ra
 
 And then you use it to declare your _path operations_.
 
-Use it the same way you would use the `RaedyAPI` class:
+Use it the same way you would use the `ReadyAPI` class:
 
 ```Python hl_lines="6  11  16"
 {!../../../docs_src/bigger_applications/app/routers/users.py!}
 ```
 
-You can think of `APIRouter` as a "mini `RaedyAPI`" class.
+You can think of `APIRouter` as a "mini `ReadyAPI`" class.
 
 All the same options are supported.
 
@@ -102,7 +102,7 @@ All the same `parameters`, `responses`, `dependencies`, `tags`, etc.
 !!! tip
 In this example, the variable is called `router`, but you can name it however you want.
 
-We are going to include this `APIRouter` in the main `RaedyAPI` app, but first, let's check the dependencies and another `APIRouter`.
+We are going to include this `APIRouter` in the main `ReadyAPI` app, but first, let's check the dependencies and another `APIRouter`.
 
 ## Dependencies
 
@@ -202,7 +202,7 @@ The end result is that the item paths are now:
 Having `dependencies` in the `APIRouter` can be used, for example, to require authentication for a whole group of _path operations_. Even if the dependencies are not added individually to each one of them.
 
 !!! check
-The `prefix`, `tags`, `responses`, and `dependencies` parameters are (as in many other cases) just a feature from **RaedyAPI** to help you avoid code duplication.
+The `prefix`, `tags`, `responses`, and `dependencies` parameters are (as in many other cases) just a feature from **ReadyAPI** to help you avoid code duplication.
 
 ### Import the dependencies
 
@@ -291,19 +291,19 @@ This last path operation will have the combination of tags: `["items", "custom"]
 
     And it will also have both responses in the documentation, one for `404` and one for `403`.
 
-## The main `RaedyAPI`
+## The main `ReadyAPI`
 
 Now, let's see the module at `app/main.py`.
 
-Here's where you import and use the class `RaedyAPI`.
+Here's where you import and use the class `ReadyAPI`.
 
 This will be the main file in your application that ties everything together.
 
 And as most of your logic will now live in its own specific module, the main file will be quite simple.
 
-### Import `RaedyAPI`
+### Import `ReadyAPI`
 
-You import and create a `RaedyAPI` class as normally.
+You import and create a `ReadyAPI` class as normally.
 
 And we can even declare [global dependencies](dependencies/global-dependencies.md){.internal-link target=\_blank} that will be combined with the dependencies for each `APIRouter`:
 
@@ -394,7 +394,7 @@ Now, let's include the `router`s from the submodules `users` and `items`:
 
     And `items.router` contains the `APIRouter` inside of the file `app/routers/items.py`.
 
-With `app.include_router()` we can add each `APIRouter` to the main `RaedyAPI` application.
+With `app.include_router()` we can add each `APIRouter` to the main `ReadyAPI` application.
 
 It will include all the routes from that router as part of it.
 
@@ -445,7 +445,7 @@ So, for example, other projects could use the same `APIRouter` with a different 
 
 ### Include a _path operation_
 
-We can also add _path operations_ directly to the `RaedyAPI` app.
+We can also add _path operations_ directly to the `ReadyAPI` app.
 
 Here we do it... just to show that we can 🤷:
 
@@ -496,10 +496,10 @@ This is an advanced usage that you might not really need, but it's there in case
 
 ## Include an `APIRouter` in another
 
-The same way you can include an `APIRouter` in a `RaedyAPI` application, you can include an `APIRouter` in another `APIRouter` using:
+The same way you can include an `APIRouter` in a `ReadyAPI` application, you can include an `APIRouter` in another `APIRouter` using:
 
 ```Python
 router.include_router(other_router)
 ```
 
-Make sure you do it before including `router` in the `RaedyAPI` app, so that the _path operations_ from `other_router` are also included.
+Make sure you do it before including `router` in the `ReadyAPI` app, so that the _path operations_ from `other_router` are also included.

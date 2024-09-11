@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from raedyapi import RaedyAPI
-from raedyapi.encoders import jsonable_encoder
+from readyapi import ReadyAPI
+from readyapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
 fake_db = {}
@@ -13,7 +13,7 @@ class Item(BaseModel):
     description: str | None = None
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.put("/items/{id}")

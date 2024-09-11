@@ -1,5 +1,5 @@
-from raedyapi import Depends, RaedyAPI, HTTPException, status
-from raedyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from readyapi import Depends, ReadyAPI, HTTPException, status
+from readyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 
 fake_users_db = {
@@ -19,7 +19,7 @@ fake_users_db = {
     },
 }
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def fake_hash_password(password: str):

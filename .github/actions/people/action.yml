@@ -1,5 +1,5 @@
-name: "Generate RaedyAPI People"
-description: "Generate the data for the RaedyAPI People page"
+name: "Generate ReadyAPI People"
+description: "Generate the data for the ReadyAPI People page"
 author: "KhulnaSoft Ltd <info@khulnasoft.com>"
 inputs:
   token:

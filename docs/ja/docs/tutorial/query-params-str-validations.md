@@ -1,6 +1,6 @@
 # クエリパラメータと文字列の検証
 
-**RaedyAPI** ではパラメータの追加情報とバリデーションを宣言することができます。
+**ReadyAPI** ではパラメータの追加情報とバリデーションを宣言することができます。
 
 以下のアプリケーションを例にしてみましょう:
 
@@ -8,12 +8,12 @@
 {!../../../docs_src/query_params_str_validations/tutorial001.py!}
 ```
 
-クエリパラメータ `q` は `Optional[str]` 型で、`None` を許容する `str` 型を意味しており、デフォルトは `None` です。そのため、RaedyAPI はそれが必須ではないと理解します。
+クエリパラメータ `q` は `Optional[str]` 型で、`None` を許容する `str` 型を意味しており、デフォルトは `None` です。そのため、ReadyAPI はそれが必須ではないと理解します。
 
 !!! note "備考"
-RaedyAPI は、 `q` はデフォルト値が `=None` であるため、必須ではないと理解します。
+ReadyAPI は、 `q` はデフォルト値が `=None` であるため、必須ではないと理解します。
 
-    `Optional[str]` における `Optional` はRaedyAPIには利用されませんが、エディターによるより良いサポートとエラー検出を可能にします。
+    `Optional[str]` における `Optional` はReadyAPIには利用されませんが、エディターによるより良いサポートとエラー検出を可能にします。
 
 ## バリデーションの追加
 
@@ -21,7 +21,7 @@ RaedyAPI は、 `q` はデフォルト値が `=None` であるため、必須で
 
 ### `Query`のインポート
 
-そのために、まずは`raedyapi`から`Query`をインポートします:
+そのために、まずは`readyapi`から`Query`をインポートします:
 
 ```Python hl_lines="3"
 {!../../../docs_src/query_params_str_validations/tutorial002.py!}
@@ -52,7 +52,7 @@ q: Optional[str] = None
 しかし、これはクエリパラメータとして明示的に宣言しています。
 
 !!! info "情報"
-RaedyAPI は以下の部分を気にすることを覚えておいてください:
+ReadyAPI は以下の部分を気にすることを覚えておいてください:
 
     ```Python
     = None
@@ -100,7 +100,7 @@ q: Union[str, None] = Query(default=None, max_length=50)
 
 もしこれらすべての **正規表現**のアイデアについて迷っていても、心配しないでください。多くの人にとって難しい話題です。正規表現を必要としなくても、まだ、多くのことができます。
 
-しかし、あなたがそれらを必要とし、学ぶときにはすでに、 **RaedyAPI**で直接それらを使用することができます。
+しかし、あなたがそれらを必要とし、学ぶときにはすでに、 **ReadyAPI**で直接それらを使用することができます。
 
 ## デフォルト値
 
@@ -144,7 +144,7 @@ q: Union[str, None] = Query(default=None, min_length=3)
 !!! info "情報"
 これまで`...`を見たことがない方へ: これは特殊な単一値です。<a href="https://docs.python.org/3/library/constants.html#Ellipsis" class="external-link" target="_blank">Python の一部であり、"Ellipsis"と呼ばれています</a>。
 
-これは **RaedyAPI** にこのパラメータが必須であることを知らせます。
+これは **ReadyAPI** にこのパラメータが必須であることを知らせます。
 
 ## クエリパラメータのリスト / 複数の値
 
@@ -180,7 +180,7 @@ http://localhost:8000/items/?q=foo&q=bar
 
 対話的 API ドキュメントは複数の値を許可するために自動的に更新されます。
 
-<img src="https://raedyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image02.png">
+<img src="https://readyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image02.png">
 
 ### デフォルト値を持つ、クエリパラメータのリスト / 複数の値
 
@@ -216,7 +216,7 @@ http://localhost:8000/items/
 ```
 
 !!! note "備考"
-この場合、RaedyAPI はリストの内容をチェックしないことを覚えておいてください。
+この場合、ReadyAPI はリストの内容をチェックしないことを覚えておいてください。
 
     例えば`List[int]`はリストの内容が整数であるかどうかをチェックします(そして、文書化します)。しかし`list`だけではそうしません。
 
@@ -279,7 +279,7 @@ http://127.0.0.1:8000/items/?item-query=foobaritems
 
 ドキュメントは以下のようになります:
 
-<img src="https://raedyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image01.png">
+<img src="https://readyapi.khulnasoft.com/img/tutorial/query-params-str-validations/image01.png">
 
 ## まとめ
 

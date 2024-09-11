@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.testclient import TestClient
+from readyapi import ReadyAPI
+from readyapi.testclient import TestClient
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/")

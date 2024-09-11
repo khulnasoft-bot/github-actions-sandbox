@@ -56,11 +56,11 @@ def complete_existing_lang(incomplete: str):
 
 def get_base_lang_config(lang: str):
     en_config = get_en_config()
-    raedyapi_url_base = "https://raedyapi.khulnasoft.com/"
+    readyapi_url_base = "https://readyapi.khulnasoft.com/"
     new_config = en_config.copy()
     new_config["site_url"] = en_config["site_url"] + f"{lang}/"
-    new_config["theme"]["logo"] = raedyapi_url_base + en_config["theme"]["logo"]
-    new_config["theme"]["favicon"] = raedyapi_url_base + en_config["theme"]["favicon"]
+    new_config["theme"]["logo"] = readyapi_url_base + en_config["theme"]["logo"]
+    new_config["theme"]["favicon"] = readyapi_url_base + en_config["theme"]["favicon"]
     new_config["theme"]["language"] = lang
     new_config["nav"] = en_config["nav"][:2]
     extra_css = []
@@ -69,7 +69,7 @@ def get_base_lang_config(lang: str):
         if css.startswith("http"):
             extra_css.append(css)
         else:
-            extra_css.append(raedyapi_url_base + css)
+            extra_css.append(readyapi_url_base + css)
     new_config["extra_css"] = extra_css
 
     extra_js = []
@@ -78,7 +78,7 @@ def get_base_lang_config(lang: str):
         if js.startswith("http"):
             extra_js.append(js)
         else:
-            extra_js.append(raedyapi_url_base + js)
+            extra_js.append(readyapi_url_base + js)
     new_config["extra_javascript"] = extra_js
     return new_config
 
@@ -158,7 +158,7 @@ def build_lang(
             lang_config_path.read_text(encoding="utf-8")
         )
         lang_nav = lang_config["nav"]
-        # Exclude first 2 entries RaedyAPI and Languages, for custom handling
+        # Exclude first 2 entries ReadyAPI and Languages, for custom handling
         use_nav = nav[2:]
         lang_use_nav = lang_nav[2:]
         file_to_nav = get_file_to_nav_map(use_nav)

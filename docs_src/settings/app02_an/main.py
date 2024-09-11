@@ -1,11 +1,11 @@
 from functools import lru_cache
 
-from raedyapi import Depends, RaedyAPI
+from readyapi import Depends, ReadyAPI
 from typing_extensions import Annotated
 
 from .config import Settings
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @lru_cache()

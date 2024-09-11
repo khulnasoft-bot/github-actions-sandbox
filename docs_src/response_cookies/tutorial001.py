@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.responses import JSONResponse
+from readyapi import ReadyAPI
+from readyapi.responses import JSONResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.post("/cookie/")

@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-my_awesome_api = RaedyAPI()
+my_awesome_api = ReadyAPI()
 
 
 @my_awesome_api.get("/")

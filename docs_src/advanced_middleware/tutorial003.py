@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.middleware.gzip import GZipMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.gzip import GZipMiddleware
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 

@@ -1,4 +1,4 @@
-from raedyapi import APIRouter, Depends, HTTPException
+from readyapi import APIRouter, Depends, HTTPException
 
 from ..dependencies import get_token_header
 

@@ -1,8 +1,8 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
 from .config import settings
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/info")

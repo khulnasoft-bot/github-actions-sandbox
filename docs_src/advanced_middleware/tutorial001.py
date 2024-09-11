@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.middleware.httpsredirect import HTTPSRedirectMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 app.add_middleware(HTTPSRedirectMiddleware)
 

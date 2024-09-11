@@ -1,9 +1,9 @@
 from typing import Union
 
-from raedyapi import RaedyAPI, Response
-from raedyapi.responses import RedirectResponse
+from readyapi import ReadyAPI, Response
+from readyapi.responses import RedirectResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/portal")

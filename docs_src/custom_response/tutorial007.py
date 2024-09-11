@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.responses import StreamingResponse
+from readyapi import ReadyAPI
+from readyapi.responses import StreamingResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 async def fake_video_streamer():

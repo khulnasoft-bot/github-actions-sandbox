@@ -1,10 +1,10 @@
 # Templates
 
-You can use any template engine you want with **RaedyAPI**.
+You can use any template engine you want with **ReadyAPI**.
 
 A common choice is Jinja2, the same one used by Flask and other tools.
 
-There are utilities to configure it easily that you can use directly in your **RaedyAPI** application (provided by Starlette).
+There are utilities to configure it easily that you can use directly in your **ReadyAPI** application (provided by Starlette).
 
 ## Install dependencies
 
@@ -40,7 +40,7 @@ By declaring `response_class=HTMLResponse` the docs UI will be able to know that
 !!! note "Technical Details"
 You could also use `from starlette.templating import Jinja2Templates`.
 
-    **RaedyAPI** provides the same `starlette.templating` as `raedyapi.templating` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request` and `StaticFiles`.
+    **ReadyAPI** provides the same `starlette.templating` as `readyapi.templating` just as a convenience for you, the developer. But most of the available responses come directly from Starlette. The same with `Request` and `StaticFiles`.
 
 ## Writing templates
 
@@ -70,7 +70,7 @@ In this example, it would link to a CSS file at `static/styles.css` with:
 {!../../../docs_src/templates/static/styles.css!}
 ```
 
-And because you are using `StaticFiles`, that CSS file would be served automatically by your **RaedyAPI** application at the URL `/static/styles.css`.
+And because you are using `StaticFiles`, that CSS file would be served automatically by your **ReadyAPI** application at the URL `/static/styles.css`.
 
 ## More details
 

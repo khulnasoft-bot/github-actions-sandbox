@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.middleware.cors import CORSMiddleware
+from readyapi import ReadyAPI
+from readyapi.middleware.cors import CORSMiddleware
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 origins = [
     "http://localhost.khulnasoft.com",

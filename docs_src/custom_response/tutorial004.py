@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.responses import HTMLResponse
+from readyapi import ReadyAPI
+from readyapi.responses import HTMLResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def generate_html_response():

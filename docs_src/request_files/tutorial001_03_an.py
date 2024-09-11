@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI, File, UploadFile
+from readyapi import ReadyAPI, File, UploadFile
 from typing_extensions import Annotated
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.post("/files/")

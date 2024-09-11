@@ -43,7 +43,7 @@ First, you have to import it:
     ```
 
 !!! warning
-Notice that `Field` is imported directly from `pydantic`, not from `raedyapi` as are all the rest (`Query`, `Path`, `Body`, etc).
+Notice that `Field` is imported directly from `pydantic`, not from `readyapi` as are all the rest (`Query`, `Path`, `Body`, etc).
 
 ## Declare model attributes
 
@@ -94,7 +94,7 @@ Actually, `Query`, `Path` and others you'll see next create objects of subclasse
 
     `Body` also returns objects of a subclass of `FieldInfo` directly. And there are others you will see later that are subclasses of the `Body` class.
 
-    Remember that when you import `Query`, `Path`, and others from `raedyapi`, those are actually functions that return special classes.
+    Remember that when you import `Query`, `Path`, and others from `readyapi`, those are actually functions that return special classes.
 
 !!! tip
 Notice how each model's attribute with a type, default value and `Field` has the same structure as a _path operation function's_ parameter, with `Field` instead of `Path`, `Query` and `Body`.

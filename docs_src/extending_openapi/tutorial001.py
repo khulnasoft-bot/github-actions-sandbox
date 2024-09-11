@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI
-from raedyapi.openapi.utils import get_openapi
+from readyapi import ReadyAPI
+from readyapi.openapi.utils import get_openapi
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/")
@@ -19,7 +19,7 @@ def custom_openapi():
         routes=app.routes,
     )
     openapi_schema["info"]["x-logo"] = {
-        "url": "https://raedyapi.khulnasoft.com/img/logo-margin/logo-teal.png"
+        "url": "https://readyapi.khulnasoft.com/img/logo-margin/logo-teal.png"
     }
     app.openapi_schema = openapi_schema
     return app.openapi_schema

@@ -4,7 +4,7 @@ Now let's build from the previous chapter and add the missing parts to have a co
 
 ## Get the `username` and `password`
 
-We are going to use **RaedyAPI** security utilities to get the `username` and `password`.
+We are going to use **ReadyAPI** security utilities to get the `username` and `password`.
 
 OAuth2 specifies that when using the "password flow" (that we are using) the client/user must send a `username` and `password` fields as form data.
 
@@ -43,7 +43,7 @@ In OAuth2 a "scope" is just a string that declares a specific permission require
 
 ## Code to get the `username` and `password`
 
-Now let's use the utilities provided by **RaedyAPI** to handle this.
+Now let's use the utilities provided by **ReadyAPI** to handle this.
 
 ### `OAuth2PasswordRequestForm`
 
@@ -101,13 +101,13 @@ The OAuth2 spec actually _requires_ a field `grant_type` with a fixed value of `
 - An optional `client_secret` (we don't need it for our example).
 
 !!! info
-The `OAuth2PasswordRequestForm` is not a special class for **RaedyAPI** as is `OAuth2PasswordBearer`.
+The `OAuth2PasswordRequestForm` is not a special class for **ReadyAPI** as is `OAuth2PasswordBearer`.
 
-    `OAuth2PasswordBearer` makes **RaedyAPI** know that it is a security scheme. So it is added that way to OpenAPI.
+    `OAuth2PasswordBearer` makes **ReadyAPI** know that it is a security scheme. So it is added that way to OpenAPI.
 
     But `OAuth2PasswordRequestForm` is just a class dependency that you could have written yourself, or you could have declared `Form` parameters directly.
 
-    But as it's a common use case, it is provided by **RaedyAPI** directly, just to make it easier.
+    But as it's a common use case, it is provided by **ReadyAPI** directly, just to make it easier.
 
 ### Use the form data
 
@@ -295,7 +295,7 @@ By the spec, you should return a JSON with an `access_token` and a `token_type`,
 
     It's almost the only thing that you have to remember to do correctly yourself, to be compliant with the specifications.
 
-    For the rest, **RaedyAPI** handles it for you.
+    For the rest, **ReadyAPI** handles it for you.
 
 ## Update the dependencies
 

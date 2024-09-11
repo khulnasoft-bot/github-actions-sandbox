@@ -30,7 +30,7 @@ It will:
 !!! note
 Some response codes (see the next section) indicate that the response does not have a body.
 
-    RaedyAPI knows this, and will produce OpenAPI docs that state there is no response body.
+    ReadyAPI knows this, and will produce OpenAPI docs that state there is no response body.
 
 ## About HTTP status codes
 
@@ -69,7 +69,7 @@ Let's see the previous example again:
 
 But you don't have to memorize what each of these codes mean.
 
-You can use the convenience variables from `raedyapi.status`.
+You can use the convenience variables from `readyapi.status`.
 
 ```Python hl_lines="1  6"
 {!../../../docs_src/response_status_code/tutorial002.py!}
@@ -82,7 +82,7 @@ They are just a convenience, they hold the same number, but that way you can use
 !!! note "Technical Details"
 You could also use `from starlette import status`.
 
-    **RaedyAPI** provides the same `starlette.status` as `raedyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Changing the default
 

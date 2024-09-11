@@ -43,7 +43,7 @@ API の関数名を `operationId` として利用したい場合、すべての 
 
 _path operation 関数_ の docstring から OpenAPI に使用する行を制限することができます。
 
-`\f` (「書式送り (Form Feed)」のエスケープ文字) を付与することで、**RaedyAPI** は OpenAPI に使用される出力をその箇所までに制限します。
+`\f` (「書式送り (Form Feed)」のエスケープ文字) を付与することで、**ReadyAPI** は OpenAPI に使用される出力をその箇所までに制限します。
 
 ドキュメントには表示されませんが、他のツール (例えば Sphinx) では残りの部分を利用できるでしょう。
 

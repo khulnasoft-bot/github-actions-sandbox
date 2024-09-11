@@ -1,10 +1,10 @@
 # Testing
 
-Thanks to <a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">Starlette</a>, testing **RaedyAPI** applications is easy and enjoyable.
+Thanks to <a href="https://www.starlette.io/testclient/" class="external-link" target="_blank">Starlette</a>, testing **ReadyAPI** applications is easy and enjoyable.
 
 It is based on <a href="https://www.python-httpx.org" class="external-link" target="_blank">HTTPX</a>, which in turn is designed based on Requests, so it's very familiar and intuitive.
 
-With it, you can use <a href="https://docs.pytest.org/" class="external-link" target="_blank">pytest</a> directly with **RaedyAPI**.
+With it, you can use <a href="https://docs.pytest.org/" class="external-link" target="_blank">pytest</a> directly with **ReadyAPI**.
 
 ## Using `TestClient`
 
@@ -15,7 +15,7 @@ To use `TestClient`, first install <a href="https://www.python-httpx.org" class=
 
 Import `TestClient`.
 
-Create a `TestClient` by passing your **RaedyAPI** application to it.
+Create a `TestClient` by passing your **ReadyAPI** application to it.
 
 Create functions with a name that starts with `test_` (this is standard `pytest` conventions).
 
@@ -37,18 +37,18 @@ Notice that the testing functions are normal `def`, not `async def`.
 !!! note "Technical Details"
 You could also use `from starlette.testclient import TestClient`.
 
-    **RaedyAPI** provides the same `starlette.testclient` as `raedyapi.testclient` just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.testclient` as `readyapi.testclient` just as a convenience for you, the developer. But it comes directly from Starlette.
 
 !!! tip
-If you want to call `async` functions in your tests apart from sending requests to your RaedyAPI application (e.g. asynchronous database functions), have a look at the [Async Tests](../advanced/async-tests.md){.internal-link target=\_blank} in the advanced tutorial.
+If you want to call `async` functions in your tests apart from sending requests to your ReadyAPI application (e.g. asynchronous database functions), have a look at the [Async Tests](../advanced/async-tests.md){.internal-link target=\_blank} in the advanced tutorial.
 
 ## Separating tests
 
 In a real application, you probably would have your tests in a different file.
 
-And your **RaedyAPI** application might also be composed of several files/modules, etc.
+And your **ReadyAPI** application might also be composed of several files/modules, etc.
 
-### **RaedyAPI** app file
+### **ReadyAPI** app file
 
 Let's say you have a file structure as described in [Bigger Applications](./bigger-applications.md){.internal-link target=\_blank}:
 
@@ -59,7 +59,7 @@ Let's say you have a file structure as described in [Bigger Applications](./bigg
 │   └── main.py
 ```
 
-In the file `main.py` you have your **RaedyAPI** app:
+In the file `main.py` you have your **ReadyAPI** app:
 
 ```Python
 {!../../../docs_src/app_testing/main.py!}
@@ -89,7 +89,7 @@ Because this file is in the same package, you can use relative imports to import
 
 Now let's extend this example and add more details to see how to test different parts.
 
-### Extended **RaedyAPI** app file
+### Extended **ReadyAPI** app file
 
 Let's continue with the same file structure as before:
 
@@ -101,7 +101,7 @@ Let's continue with the same file structure as before:
 │   └── test_main.py
 ```
 
-Let's say that now the file `main.py` with your **RaedyAPI** app has some other **path operations**.
+Let's say that now the file `main.py` with your **ReadyAPI** app has some other **path operations**.
 
 It has a `GET` operation that could return an error.
 

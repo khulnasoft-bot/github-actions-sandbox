@@ -87,7 +87,7 @@ The first value is the default value, you can pass all the extra validation or a
 !!! note "Technical Details"
 `Header` is a "sister" class of `Path`, `Query` and `Cookie`. It also inherits from the same common `Param` class.
 
-    But remember that when you import `Query`, `Path`, `Header`, and others from `raedyapi`, those are actually functions that return special classes.
+    But remember that when you import `Query`, `Path`, `Header`, and others from `readyapi`, those are actually functions that return special classes.
 
 !!! info
 To declare headers, you need to use `Header`, because otherwise the parameters would be interpreted as query parameters.
@@ -224,4 +224,4 @@ The response would be like:
 
 Declare headers with `Header`, using the same common pattern as `Query`, `Path` and `Cookie`.
 
-And don't worry about underscores in your variables, **RaedyAPI** will take care of converting them.
+And don't worry about underscores in your variables, **ReadyAPI** will take care of converting them.

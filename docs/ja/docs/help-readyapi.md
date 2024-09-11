@@ -1,28 +1,28 @@
-# RaedyAPI を応援 - ヘルプの入手
+# ReadyAPI を応援 - ヘルプの入手
 
-**RaedyAPI** は気に入りましたか？
+**ReadyAPI** は気に入りましたか？
 
-RaedyAPI やユーザーや開発者を応援したいですか？
+ReadyAPI やユーザーや開発者を応援したいですか？
 
-もしくは、 **RaedyAPI** についてヘルプが必要ですか？
+もしくは、 **ReadyAPI** についてヘルプが必要ですか？
 
 とても簡単に応援できます (ただ 1、2 回クリックするだけのものもあります)。
 
 また、ヘルプを入手する手段がいくつかあります。
 
-## GitHub で **RaedyAPI** に Star
+## GitHub で **ReadyAPI** に Star
 
-GitHub で RaedyAPI に「Star」をつけることができます (右上部の Star ボタンをクリック): <a href="https://github.com/khulnasoft/raedyapi" class="external-link" target="_blank">https://github.com/khulnasoft/raedyapi</a>. ⭐️
+GitHub で ReadyAPI に「Star」をつけることができます (右上部の Star ボタンをクリック): <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">https://github.com/khulnasoft/readyapi</a>. ⭐️
 
 スターを増やすことで、他のユーザーの目につきやすくなり、多くの人にとって便利なものであることを示せます。
 
 ## GitHub レポジトリのリリースを Watch
 
-GitHub で RaedyAPI を「Watch」できます (右上部の Watch ボタンをクリック): <a href="https://github.com/khulnasoft/raedyapi" class="external-link" target="_blank">https://github.com/khulnasoft/raedyapi</a>. 👀
+GitHub で ReadyAPI を「Watch」できます (右上部の Watch ボタンをクリック): <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">https://github.com/khulnasoft/readyapi</a>. 👀
 
 そこで「Releases only」を選択できます。
 
-これを行うと、**RaedyAPI** バグ修正や新機能の実装などの新しいリリース (新しいバージョン) があるたびに (メールで) 通知を受け取れます。
+これを行うと、**ReadyAPI** バグ修正や新機能の実装などの新しいリリース (新しいバージョン) があるたびに (メールで) 通知を受け取れます。
 
 ## 開発者とつながる
 
@@ -32,7 +32,7 @@ GitHub で RaedyAPI を「Watch」できます (右上部の Watch ボタンを�
   - 他のオープンソースプロジェクトを確認できます。何かの助けになるものが見つかるかもしれません。
   - 新たなオープンソースプロジェクトを作成したときに通知されます。
 - <a href="https://twitter.com/khulnasoft" class="external-link" target="_blank">**Twitter** でフォロー</a>。
-  - RaedyAPI の使用用途を教えてください (聞いてみたいです)。
+  - ReadyAPI の使用用途を教えてください (聞いてみたいです)。
   - 新たなツールの発表やリリースが聞けます。
 - <a href="https://www.linkedin.com/in/khulnasoft/" class="external-link" target="_blank">**Linkedin** でつながる</a>。
   - 新たなツールの発表やリリースが聞けます (ただし Twitter の方が利用頻度が高いですが 🤷‍♂)。
@@ -40,25 +40,25 @@ GitHub で RaedyAPI を「Watch」できます (右上部の Watch ボタンを�
   - アイデアや作成ツールについての記事が読めます。
   - 新規記事の執筆を通知してくれます。
 
-## **RaedyAPI** に関するツイート
+## **ReadyAPI** に関するツイート
 
-<a href="https://twitter.com/compose/tweet?text=I'm loving RaedyAPI because... https://github.com/khulnasoft/raedyapi cc @khulnasoft" class="external-link" target="_blank">**RaedyAPI** についてツイート</a>し、開発者や他の人にどこが気に入ったのか教えてください。🎉
+<a href="https://twitter.com/compose/tweet?text=I'm loving ReadyAPI because... https://github.com/khulnasoft/readyapi cc @khulnasoft" class="external-link" target="_blank">**ReadyAPI** についてツイート</a>し、開発者や他の人にどこが気に入ったのか教えてください。🎉
 
-**RaedyAPI** がどのように使われ、どこが気に入られ、どんなプロジェクト/会社で使われているかなどについて知りたいです。
+**ReadyAPI** がどのように使われ、どこが気に入られ、どんなプロジェクト/会社で使われているかなどについて知りたいです。
 
-## RaedyAPI に投票
+## ReadyAPI に投票
 
-- <a href="https://www.slant.co/options/34241/~raedyapi-review" class="external-link" target="_blank">Slant で **RaedyAPI** に投票</a>
-- <a href="https://alternativeto.net/software/raedyapi/" class="external-link" target="_blank">AlternativeTo で **RaedyAPI** に投票</a>
-- <a href="https://github.com/marmelab/awesome-rest/pull/93" class="external-link" target="_blank">awesome-rest で **RaedyAPI** に投票</a>
+- <a href="https://www.slant.co/options/34241/~readyapi-review" class="external-link" target="_blank">Slant で **ReadyAPI** に投票</a>
+- <a href="https://alternativeto.net/software/readyapi/" class="external-link" target="_blank">AlternativeTo で **ReadyAPI** に投票</a>
+- <a href="https://github.com/marmelab/awesome-rest/pull/93" class="external-link" target="_blank">awesome-rest で **ReadyAPI** に投票</a>
 
 ## GitHub issues で他の人を助ける
 
-<a href="https://github.com/khulnasoft/raedyapi/issues" class="external-link" target="_blank">既存の issues</a>を確認して、他の人を助けてみてください。皆さんが回答を知っているかもしれない質問がほとんどです。🤓
+<a href="https://github.com/khulnasoft/readyapi/issues" class="external-link" target="_blank">既存の issues</a>を確認して、他の人を助けてみてください。皆さんが回答を知っているかもしれない質問がほとんどです。🤓
 
 ## GitHub レポジトリを Watch
 
-GitHub で RaedyAPI を「watch」できます (右上部の「watch」ボタンをクリック): <a href="https://github.com/khulnasoft/raedyapi" class="external-link" target="_blank">https://github.com/khulnasoft/raedyapi</a>. 👀
+GitHub で ReadyAPI を「watch」できます (右上部の「watch」ボタンをクリック): <a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">https://github.com/khulnasoft/readyapi</a>. 👀
 
 「Releases only」ではなく「Watching」を選択すると、新たな issue が立てられた際に通知されます。
 
@@ -66,7 +66,7 @@ GitHub で RaedyAPI を「watch」できます (右上部の「watch」ボタン
 
 ## issues を立てる
 
-GitHub レポジトリで<a href="https://github.com/khulnasoft/raedyapi/issues/new/choose" class="external-link" target="_blank">新たな issue を立てられます</a>。例えば:
+GitHub レポジトリで<a href="https://github.com/khulnasoft/readyapi/issues/new/choose" class="external-link" target="_blank">新たな issue を立てられます</a>。例えば:
 
 - 質問、または、問題の報告
 - 新機能の提案
@@ -75,7 +75,7 @@ GitHub レポジトリで<a href="https://github.com/khulnasoft/raedyapi/issues/
 
 ## プルリクエストをする
 
-以下の様な<a href="https://github.com/khulnasoft/raedyapi" class="external-link" target="_blank">プルリクエストを作成</a>できます:
+以下の様な<a href="https://github.com/khulnasoft/readyapi" class="external-link" target="_blank">プルリクエストを作成</a>できます:
 
 - ドキュメントのタイプミスを修正。
 - 新たなドキュメントセクションを提案。
@@ -84,7 +84,7 @@ GitHub レポジトリで<a href="https://github.com/khulnasoft/raedyapi/issues/
 
 ## チャットに参加
 
-Gitter でチャットに参加: <a href="https://gitter.im/khulnasoft/raedyapi" class="external-link" target="_blank">https://gitter.im/khulnasoft/raedyapi</a>.
+Gitter でチャットに参加: <a href="https://gitter.im/khulnasoft/readyapi" class="external-link" target="_blank">https://gitter.im/khulnasoft/readyapi</a>.
 
 そこで、他の人と手早く会話したり、手助けやアイデアの共有などができます。
 
@@ -102,9 +102,9 @@ Gitter での会話は GitHub ほど簡単に検索できないので、質問�
 
 そこで、感謝の気持ちを伝えるためにコーヒー ☕️ を買うことができます 😄。
 
-## RaedyAPI を強化するツールのスポンサーになる
+## ReadyAPI を強化するツールのスポンサーになる
 
-ドキュメントで見たように、RaedyAPI は Starlette と Pydantic という巨人の肩に乗っています。
+ドキュメントで見たように、ReadyAPI は Starlette と Pydantic という巨人の肩に乗っています。
 
 以下のスポンサーになることもできます:
 

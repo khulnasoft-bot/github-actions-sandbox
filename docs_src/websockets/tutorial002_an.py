@@ -1,18 +1,18 @@
 from typing import Union
 
-from raedyapi import (
+from readyapi import (
     Cookie,
     Depends,
-    RaedyAPI,
+    ReadyAPI,
     Query,
     WebSocket,
     WebSocketException,
     status,
 )
-from raedyapi.responses import HTMLResponse
+from readyapi.responses import HTMLResponse
 from typing_extensions import Annotated
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 html = """
 <!DOCTYPE html>

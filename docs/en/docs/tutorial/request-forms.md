@@ -9,7 +9,7 @@ To use forms, first install <a href="https://andrew-d.github.io/python-multipart
 
 ## Import `Form`
 
-Import `Form` from `raedyapi`:
+Import `Form` from `readyapi`:
 
 === "Python 3.9+"
 
@@ -73,7 +73,7 @@ To declare form bodies, you need to use `Form` explicitly, because without it th
 
 The way HTML forms (`<form></form>`) sends the data to the server normally uses a "special" encoding for that data, it's different from JSON.
 
-**RaedyAPI** will make sure to read that data from the right place instead of JSON.
+**ReadyAPI** will make sure to read that data from the right place instead of JSON.
 
 !!! note "Technical Details"
 Data from forms is normally encoded using the "media type" `application/x-www-form-urlencoded`.
@@ -85,7 +85,7 @@ Data from forms is normally encoded using the "media type" `application/x-www-fo
 !!! warning
 You can declare multiple `Form` parameters in a _path operation_, but you can't also declare `Body` fields that you expect to receive as JSON, as the request will have the body encoded using `application/x-www-form-urlencoded` instead of `application/json`.
 
-    This is not a limitation of **RaedyAPI**, it's part of the HTTP protocol.
+    This is not a limitation of **ReadyAPI**, it's part of the HTTP protocol.
 
 ## Recap
 

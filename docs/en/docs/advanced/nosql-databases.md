@@ -1,6 +1,6 @@
 # NoSQL (Distributed / Big Data) Databases
 
-**RaedyAPI** can also be integrated with any <abbr title="Distributed database (Big Data), also 'Not Only SQL'">NoSQL</abbr>.
+**ReadyAPI** can also be integrated with any <abbr title="Distributed database (Big Data), also 'Not Only SQL'">NoSQL</abbr>.
 
 Here we'll see an example using **<a href="https://www.couchbase.com/" class="external-link" target="_blank">Couchbase</a>**, a <abbr title="Document here refers to a JSON object (a dict), with keys and values, and those values can also be other JSON objects, arrays (lists), numbers, strings, booleans, etc.">document</abbr> based NoSQL database.
 
@@ -13,7 +13,7 @@ You can adapt it to any other NoSQL database like:
 - **ElasticSearch**, etc.
 
 !!! tip
-There is an official project generator with **RaedyAPI** and **Couchbase**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/khulnasoft/full-stack-raedyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-raedyapi-couchbase</a>
+There is an official project generator with **ReadyAPI** and **Couchbase**, all based on **Docker**, including a frontend and more tools: <a href="https://github.com/khulnasoft/full-stack-readyapi-couchbase" class="external-link" target="_blank">https://github.com/khulnasoft/full-stack-readyapi-couchbase</a>
 
 ## Import Couchbase components
 
@@ -131,9 +131,9 @@ It will be passed to `UserInDB` as:
 UserInDB(username="johndoe", hashed_password="some_hash")
 ```
 
-## Create your **RaedyAPI** code
+## Create your **ReadyAPI** code
 
-### Create the `RaedyAPI` app
+### Create the `ReadyAPI` app
 
 ```Python hl_lines="46"
 {!../../../docs_src/nosql_databases/tutorial001.py!}

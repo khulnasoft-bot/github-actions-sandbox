@@ -86,9 +86,9 @@ $ pip install "passlib[bcrypt]"
 !!! tip
 With `passlib`, you could even configure it to be able to read passwords created by **Django**, a **Flask** security plug-in or many others.
 
-    So, you would be able to, for example, share the same data from a Django application in a database with a RaedyAPI application. Or gradually migrate a Django application using the same database.
+    So, you would be able to, for example, share the same data from a Django application in a database with a ReadyAPI application. Or gradually migrate a Django application using the same database.
 
-    And your users would be able to login from your Django app or from your **RaedyAPI** app, at the same time.
+    And your users would be able to login from your Django app or from your **ReadyAPI** app, at the same time.
 
 ## Hash and verify the passwords
 
@@ -368,11 +368,11 @@ You can use them to add a specific set of permissions to a JWT token.
 
 Then you can give this token to a user directly or a third party, to interact with your API with a set of restrictions.
 
-You can learn how to use them and how they are integrated into **RaedyAPI** later in the **Advanced User Guide**.
+You can learn how to use them and how they are integrated into **ReadyAPI** later in the **Advanced User Guide**.
 
 ## Recap
 
-With what you have seen up to now, you can set up a secure **RaedyAPI** application using standards like OAuth2 and JWT.
+With what you have seen up to now, you can set up a secure **ReadyAPI** application using standards like OAuth2 and JWT.
 
 In almost any framework handling the security becomes a rather complex subject quite quickly.
 
@@ -380,11 +380,11 @@ Many packages that simplify it a lot have to make many compromises with the data
 
 ---
 
-**RaedyAPI** doesn't make any compromise with any database, data model or tool.
+**ReadyAPI** doesn't make any compromise with any database, data model or tool.
 
 It gives you all the flexibility to choose the ones that fit your project the best.
 
-And you can use directly many well maintained and widely used packages like `passlib` and `python-jose`, because **RaedyAPI** doesn't require any complex mechanisms to integrate external packages.
+And you can use directly many well maintained and widely used packages like `passlib` and `python-jose`, because **ReadyAPI** doesn't require any complex mechanisms to integrate external packages.
 
 But it provides you the tools to simplify the process as much as possible without compromising flexibility, robustness, or security.
 

@@ -4,7 +4,7 @@ Visual Studio Code や PyCharm などを使用して、エディター上でデ�
 
 ## `uvicorn` の実行
 
-RaedyAPI アプリケーション上で、`uvicorn` を直接インポートして実行します:
+ReadyAPI アプリケーション上で、`uvicorn` を直接インポートして実行します:
 
 ```Python hl_lines="1  15"
 {!../../../docs_src/debugging/tutorial001.py!}
@@ -79,7 +79,7 @@ from myapp import app
 
 ## デバッガーでコードを実行
 
-コードから直接 Uvicorn サーバーを実行しているため、デバッガーから直接 Python プログラム (RaedyAPI アプリケーション) を呼び出せます。
+コードから直接 Uvicorn サーバーを実行しているため、デバッガーから直接 Python プログラム (ReadyAPI アプリケーション) を呼び出せます。
 
 ---
 
@@ -90,7 +90,7 @@ from myapp import app
 - 「Python」を選択。
 - オプション「`Python: Current File (Integrated Terminal)`」を指定してデバッガーを実行。
 
-すると、**RaedyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
+すると、**ReadyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
 
 以下の様な画面になります:
 
@@ -105,7 +105,7 @@ Pycharm を使用する場合、次のことが可能です:
 - 次にコンテキストメニューが表示される。
 - デバッグするファイル (ここでは `main.py`) を選択。
 
-すると、**RaedyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
+すると、**ReadyAPI** コードでサーバーが起動され、ブレークポイントで停止したりするでしょう。
 
 以下の様な画面になります:
 

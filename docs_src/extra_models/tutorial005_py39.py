@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/keyword-weights/", response_model=dict[str, float])

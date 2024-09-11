@@ -23,7 +23,7 @@ Then your API will (let's imagine):
 - Send a notification back to the API user (the external developer).
   - This will be done by sending a POST request (from _your API_) to some _external API_ provided by that external developer (this is the "callback").
 
-## The normal **RaedyAPI** app
+## The normal **ReadyAPI** app
 
 Let's first see how the normal API app would look like before adding the callback.
 
@@ -70,7 +70,7 @@ The actual callback is just an HTTP request.
 
 This code won't be executed in your app, we only need it to _document_ how that _external API_ should look like.
 
-But, you already know how to easily create automatic documentation for an API with **RaedyAPI**.
+But, you already know how to easily create automatic documentation for an API with **ReadyAPI**.
 
 So we are going to use that same knowledge to document how the _external API_ should look like... by creating the _path operation(s)_ that the external API should implement (the ones your API will call).
 
@@ -91,7 +91,7 @@ First create a new `APIRouter` that will contain one or more callbacks.
 
 To create the callback _path operation_ use the same `APIRouter` you created above.
 
-It should look just like a normal RaedyAPI _path operation_:
+It should look just like a normal ReadyAPI _path operation_:
 
 - It should probably have a declaration of the body it should receive, e.g. `body: InvoiceEvent`.
 - And it could also have a declaration of the response it should return, e.g. `response_model=InvoiceEventReceived`.

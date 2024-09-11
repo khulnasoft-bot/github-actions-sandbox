@@ -1,8 +1,8 @@
 import time
 
-from raedyapi import RaedyAPI, Request
+from readyapi import ReadyAPI, Request
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.middleware("http")

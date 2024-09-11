@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
+app = ReadyAPI(swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"})
 
 
 @app.get("/users/{username}")

@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI(swagger_ui_parameters={"deepLinking": False})
+app = ReadyAPI(swagger_ui_parameters={"deepLinking": False})
 
 
 @app.get("/users/{username}")

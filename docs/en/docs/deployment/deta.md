@@ -1,31 +1,31 @@
-# Deploy RaedyAPI on Deta Space
+# Deploy ReadyAPI on Deta Space
 
-In this section you will learn how to easily deploy a **RaedyAPI** application on <a href="https://deta.space?ref=raedyapi" class="external-link" target="_blank">Deta Space</a>, for free. 🎁
+In this section you will learn how to easily deploy a **ReadyAPI** application on <a href="https://deta.space?ref=readyapi" class="external-link" target="_blank">Deta Space</a>, for free. 🎁
 
 It will take you about **10 minutes** to deploy an API that you can use. After that, you can optionally release it to anyone.
 
 Let's dive in.
 
 !!! info
-<a href="https://deta.space?ref=raedyapi" class="external-link" target="_blank">Deta</a> is a **RaedyAPI** sponsor. 🎉
+<a href="https://deta.space?ref=readyapi" class="external-link" target="_blank">Deta</a> is a **ReadyAPI** sponsor. 🎉
 
-## A simple **RaedyAPI** app
+## A simple **ReadyAPI** app
 
-- To start, create an empty directory with the name of your app, for example `./raedyapi-deta/`, and then navigate into it.
+- To start, create an empty directory with the name of your app, for example `./readyapi-deta/`, and then navigate into it.
 
 ```console
-$ mkdir raedyapi-deta
-$ cd raedyapi-deta
+$ mkdir readyapi-deta
+$ cd readyapi-deta
 ```
 
-### RaedyAPI code
+### ReadyAPI code
 
 - Create a `main.py` file with:
 
 ```Python
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -43,13 +43,13 @@ def read_item(item_id: int):
 Now, in the same directory create a file `requirements.txt` with:
 
 ```text
-raedyapi
+readyapi
 uvicorn[standard]
 ```
 
 ### Directory structure
 
-You will now have a directory `./raedyapi-deta/` with two files:
+You will now have a directory `./readyapi-deta/` with two files:
 
 ```
 .
@@ -59,7 +59,7 @@ You will now have a directory `./raedyapi-deta/` with two files:
 
 ## Create a free **Deta Space** account
 
-Next, create a free account on <a href="https://deta.space/signup?dev_mode=true&ref=raedyapi" class="external-link" target="_blank">Deta Space</a>, you just need an email and password.
+Next, create a free account on <a href="https://deta.space/signup?dev_mode=true&ref=readyapi" class="external-link" target="_blank">Deta Space</a>, you just need an email and password.
 
 You don't even need a credit card, but make sure **Developer Mode** is enabled when you sign up.
 
@@ -118,13 +118,13 @@ Available Commands:
 </div>
 
 !!! tip
-If you have problems installing the CLI, check the official <a href="https://deta.space/docs/en/basics/cli?ref=raedyapi" class="external-link" target="_blank">Deta Space Documentation</a>.
+If you have problems installing the CLI, check the official <a href="https://deta.space/docs/en/basics/cli?ref=readyapi" class="external-link" target="_blank">Deta Space Documentation</a>.
 
 ## Login with the CLI
 
 In order to authenticate your CLI with Deta Space, you will need an access token.
 
-To obtain this token, open your <a href="https://deta.space/login?ref=raedyapi" class="external-link" target="_blank">Deta Space Canvas</a>, open the **Teletype** (command bar at the bottom of the Canvas), and then click on **Settings**. From there, select **Generate Token** and copy the resulting token.
+To obtain this token, open your <a href="https://deta.space/login?ref=readyapi" class="external-link" target="_blank">Deta Space Canvas</a>, open the **Teletype** (command bar at the bottom of the Canvas), and then click on **Settings**. From there, select **Generate Token** and copy the resulting token.
 
 <img src="/img/deployment/deta/image03.png">
 
@@ -151,10 +151,10 @@ Now that you've authenticated with the Space CLI, use it to create a new <a href
 ```console
 $ space new
 
-# What is your project's name? >$ raedyapi-deta
+# What is your project's name? >$ readyapi-deta
 ```
 
-The Space CLI will ask you to name the project, we will call ours `raedyapi-deta`.
+The Space CLI will ask you to name the project, we will call ours `readyapi-deta`.
 
 Then, it will try to automatically detect which framework or language you are using, showing you what it finds. In our case it will identify the Python app with the following message, prompting you to confirm:
 
@@ -163,21 +163,21 @@ Then, it will try to automatically detect which framework or language you are us
 👇 Deta detected the following configuration:
 
 Micros:
-name: raedyapi-deta
+name: readyapi-deta
  L src: .
  L engine: python3.9
 
-# Do you want to bootstrap "raedyapi-deta" with this configuration? (y/n)$ y
+# Do you want to bootstrap "readyapi-deta" with this configuration? (y/n)$ y
 ```
 
-After you confirm, your project will be created in Deta Space inside a special app called <a href="https://deta.space/docs/en/basics/projects#projects-in-builder?ref=raedyapi" class="external-link" target="_blank">Builder</a>. Builder is a toolbox that helps you to create and manage your apps in Deta Space.
+After you confirm, your project will be created in Deta Space inside a special app called <a href="https://deta.space/docs/en/basics/projects#projects-in-builder?ref=readyapi" class="external-link" target="_blank">Builder</a>. Builder is a toolbox that helps you to create and manage your apps in Deta Space.
 
-The CLI will also create a `Spacefile` locally in the `raedyapi-deta` directory. The <a href="https://deta.space/docs/en/reference/spacefile?ref=raedyapi" class="external-link" target="_blank">Spacefile</a> is a configuration file which tells Deta Space how to run your app. The `Spacefile` for your app will be as follows:
+The CLI will also create a `Spacefile` locally in the `readyapi-deta` directory. The <a href="https://deta.space/docs/en/reference/spacefile?ref=readyapi" class="external-link" target="_blank">Spacefile</a> is a configuration file which tells Deta Space how to run your app. The `Spacefile` for your app will be as follows:
 
 ```yaml
 v: 0
 micros:
-  - name: raedyapi-deta
+  - name: readyapi-deta
     src: .
     engine: python3.9
 ```
@@ -194,7 +194,7 @@ The `run` command in the Spacefile tells Space what command should be executed t
 ```diff
 v: 0
 micros:
-  - name: raedyapi-deta
+  - name: readyapi-deta
     src: .
     engine: python3.9
 +   run: uvicorn main:app
@@ -202,7 +202,7 @@ micros:
 
 ## Deploy to Deta Space
 
-To get your RaedyAPI live in the cloud, use one more CLI command:
+To get your ReadyAPI live in the cloud, use one more CLI command:
 
 <div class="termy">
 
@@ -230,9 +230,9 @@ The live instance of your API will also be added automatically to your Canvas (t
 
 <img src="/img/deployment/deta/image04.png">
 
-Click on the new app called `raedyapi-deta`, and it will open your API in a new browser tab on a URL like `https://raedyapi-deta-gj7ka8.deta.app/`.
+Click on the new app called `readyapi-deta`, and it will open your API in a new browser tab on a URL like `https://readyapi-deta-gj7ka8.deta.app/`.
 
-You will get a JSON response from your RaedyAPI app:
+You will get a JSON response from your ReadyAPI app:
 
 ```JSON
 {
@@ -240,7 +240,7 @@ You will get a JSON response from your RaedyAPI app:
 }
 ```
 
-And now you can head over to the `/docs` of your API. For this example, it would be `https://raedyapi-deta-gj7ka8.deta.app/docs`.
+And now you can head over to the `/docs` of your API. For this example, it would be `https://readyapi-deta-gj7ka8.deta.app/docs`.
 
 <img src="/img/deployment/deta/image05.png">
 
@@ -257,7 +257,7 @@ Set your `public_routes` to `"*"` to open every route of your API to the public:
 ```yaml
 v: 0
 micros:
-  - name: raedyapi-deta
+  - name: readyapi-deta
     src: .
     engine: python3.9
     public_routes:
@@ -270,7 +270,7 @@ Once it deploys, you can share your URL with anyone and they will be able to acc
 
 ## HTTPS
 
-Congrats! You deployed your RaedyAPI app to Deta Space! 🎉 🍰
+Congrats! You deployed your ReadyAPI app to Deta Space! 🎉 🍰
 
 Also, notice that Deta Space correctly handles HTTPS for you, so you don't have to take care of that and can be sure that your users will have a secure encrypted connection. ✅ 🔒
 
@@ -294,7 +294,7 @@ $ space release
 creating release...
 publishing release in edge locations..
 completed...
-released: raedyapi-deta-exp-msbu
+released: readyapi-deta-exp-msbu
 https://deta.space/discovery/r/5kjhgyxewkdmtotx
 
  Lift off -- successfully created a new Release!
@@ -320,8 +320,8 @@ $ space release --listed
 creating release...
 publishing release in edge locations..
 completed...
-released: raedyapi-deta-exp-msbu
-https://deta.space/discovery/@user/raedyapi-deta
+released: readyapi-deta-exp-msbu
+https://deta.space/discovery/@user/readyapi-deta
 
  Lift off -- successfully created a new Release!
  Your Release is available globally on 5 Deta Edges
@@ -331,7 +331,7 @@ https://deta.space/discovery/@user/raedyapi-deta
 
 </div>
 
-This will allow anyone to find and install your app via <a href="https://deta.space/discovery?ref=raedyapi" class="external-link" target="_blank">Deta Discovery</a>. Read more about <a href="https://deta.space/docs/en/basics/releases?ref=raedyapi" class="external-link" target="_blank">releasing your app in the docs</a>.
+This will allow anyone to find and install your app via <a href="https://deta.space/discovery?ref=readyapi" class="external-link" target="_blank">Deta Discovery</a>. Read more about <a href="https://deta.space/docs/en/basics/releases?ref=readyapi" class="external-link" target="_blank">releasing your app in the docs</a>.
 
 ## Check runtime logs
 
@@ -340,9 +340,9 @@ Deta Space also lets you inspect the logs of every app you build or install.
 Add some logging functionality to your app by adding a `print` statement to your `main.py` file.
 
 ```py
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/")
@@ -356,17 +356,17 @@ def read_item(item_id: int):
     return {"item_id": item_id}
 ```
 
-The code within the `read_item` function includes a print statement that will output the `item_id` that is included in the URL. Send a request to your _path operation_ `/items/{item_id}` from the docs UI (which will have a URL like `https://raedyapi-deta-gj7ka8.deta.app/docs`), using an ID like `5` as an example.
+The code within the `read_item` function includes a print statement that will output the `item_id` that is included in the URL. Send a request to your _path operation_ `/items/{item_id}` from the docs UI (which will have a URL like `https://readyapi-deta-gj7ka8.deta.app/docs`), using an ID like `5` as an example.
 
-Now go to your <a href="https://deta.space?ref=raedyapi" class="external-link" target="_blank">Space's Canvas</a>. Click on the context menu (`...`) of your live app instance, and then click on **View Logs**. Here you can view your app's logs, sorted by time.
+Now go to your <a href="https://deta.space?ref=readyapi" class="external-link" target="_blank">Space's Canvas</a>. Click on the context menu (`...`) of your live app instance, and then click on **View Logs**. Here you can view your app's logs, sorted by time.
 
 <img src="/img/deployment/deta/image06.png">
 
 ## Learn more
 
-At some point, you will probably want to store some data for your app in a way that persists through time. For that you can use <a href="https://deta.space/docs/en/basics/data#deta-base?ref=raedyapi" class="external-link" target="_blank">Deta Base</a> and <a href="https://deta.space/docs/en/basics/data#deta-drive?ref=raedyapi" class="external-link" target="_blank">Deta Drive</a>, both of which have a generous **free tier**.
+At some point, you will probably want to store some data for your app in a way that persists through time. For that you can use <a href="https://deta.space/docs/en/basics/data#deta-base?ref=readyapi" class="external-link" target="_blank">Deta Base</a> and <a href="https://deta.space/docs/en/basics/data#deta-drive?ref=readyapi" class="external-link" target="_blank">Deta Drive</a>, both of which have a generous **free tier**.
 
-You can also read more in the <a href="https://deta.space/docs/?ref=raedyapi" class="external-link" target="_blank">Deta Space Documentation</a>.
+You can also read more in the <a href="https://deta.space/docs/?ref=readyapi" class="external-link" target="_blank">Deta Space Documentation</a>.
 
 !!! tip
 If you have any Deta related questions, comments, or feedback, head to the <a href="https://go.deta.dev/discord" class="external-link" target="_blank">Deta Discord server</a>.
@@ -381,11 +381,11 @@ Coming back to the concepts we discussed in [Deployments Concepts](./concepts.md
 - **Replication**: Handled by Deta Space, as part of their service.
 - **Authentication**: Handled by Deta Space, as part of their service.
 - **Memory**: Limit predefined by Deta Space, you could contact them to increase it.
-- **Previous steps before starting**: Can be configured using the <a href="https://deta.space/docs/en/reference/spacefile?ref=raedyapi" class="external-link" target="_blank">`Spacefile`</a>.
+- **Previous steps before starting**: Can be configured using the <a href="https://deta.space/docs/en/reference/spacefile?ref=readyapi" class="external-link" target="_blank">`Spacefile`</a>.
 
 !!! note
 Deta Space is designed to make it easy and free to build cloud applications for yourself. Then you can optionally share them with anyone.
 
     It can simplify several use cases, but at the same time, it doesn't support others, like using external databases (apart from Deta's own NoSQL database system), custom virtual machines, etc.
 
-    You can read more details in the <a href="https://deta.space/docs/en/basics/micros?ref=raedyapi" class="external-link" target="_blank">Deta Space Documentation</a> to see if it's the right choice for you.
+    You can read more details in the <a href="https://deta.space/docs/en/basics/micros?ref=readyapi" class="external-link" target="_blank">Deta Space Documentation</a> to see if it's the right choice for you.

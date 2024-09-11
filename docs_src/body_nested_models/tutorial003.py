@@ -1,9 +1,9 @@
 from typing import Set, Union
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

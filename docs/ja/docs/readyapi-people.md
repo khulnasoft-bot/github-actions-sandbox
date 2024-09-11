@@ -1,6 +1,6 @@
-# RaedyAPI People
+# ReadyAPI People
 
-RaedyAPI には、様々なバックグラウンドの人々を歓迎する素晴らしいコミュニティがあります。
+ReadyAPI には、様々なバックグラウンドの人々を歓迎する素晴らしいコミュニティがあります。
 
 ## Creator - Maintainer
 
@@ -20,25 +20,25 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 
 {% endif %}
 
-私は **RaedyAPI** の作成者および Maintainer です。詳しくは [RaedyAPI を応援 - ヘルプの入手 - 開発者とつながる](help-raedyapi.md#開発者とつながる){.internal-link target=\_blank} に記載しています。
+私は **ReadyAPI** の作成者および Maintainer です。詳しくは [ReadyAPI を応援 - ヘルプの入手 - 開発者とつながる](help-readyapi.md#開発者とつながる){.internal-link target=\_blank} に記載しています。
 
 ...ところで、ここではコミュニティを紹介したいと思います。
 
 ---
 
-**RaedyAPI** は、コミュニティから多くのサポートを受けています。そこで、彼らの貢献にスポットライトを当てたいと思います。
+**ReadyAPI** は、コミュニティから多くのサポートを受けています。そこで、彼らの貢献にスポットライトを当てたいと思います。
 
 紹介するのは次のような人々です:
 
-- [GitHub issues で他の人を助ける](help-raedyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}。
-- [プルリクエストをする](help-raedyapi.md#create-a-pull-request){.internal-link target=\_blank}。
+- [GitHub issues で他の人を助ける](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}。
+- [プルリクエストをする](help-readyapi.md#create-a-pull-request){.internal-link target=\_blank}。
 - プルリクエストのレビューをする ([特に翻訳に重要](contributing.md#translations){.internal-link target=\_blank})。
 
 彼らに大きな拍手を。👏 🙇
 
 ## 先月最もアクティブだったユーザー
 
-彼らは、先月の[GitHub issues で最も多くの人を助けた](help-raedyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}ユーザーです。☕
+彼らは、先月の[GitHub issues で最も多くの人を助けた](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}ユーザーです。☕
 
 {% if people %}
 
@@ -53,9 +53,9 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 
 ## Experts
 
-**RaedyAPI experts** を紹介します。🤓
+**ReadyAPI experts** を紹介します。🤓
 
-彼らは、_これまでに_ [GitHub issues で最も多くの人を助けた](help-raedyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}ユーザーです。
+彼らは、_これまでに_ [GitHub issues で最も多くの人を助けた](help-readyapi.md#help-others-with-issues-in-github){.internal-link target=\_blank}ユーザーです。
 
 多くの人を助けることで experts であると示されています。✨
 
@@ -74,7 +74,7 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 
 **Top Contributors** を紹介します。👷
 
-彼らは、_マージされた_ [最も多くのプルリクエストを作成した](help-raedyapi.md#create-a-pull-request){.internal-link target=\_blank}ユーザーです。
+彼らは、_マージされた_ [最も多くのプルリクエストを作成した](help-readyapi.md#create-a-pull-request){.internal-link target=\_blank}ユーザーです。
 
 ソースコード、ドキュメント、翻訳などに貢献してくれました。📦
 
@@ -89,7 +89,7 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 </div>
 {% endif %}
 
-他にもたくさん (100 人以上) の contributors がいます。<a href="https://github.com/khulnasoft/raedyapi/graphs/contributors" class="external-link" target="_blank">RaedyAPI GitHub Contributors ページ</a>ですべての contributors を確認できます。👷
+他にもたくさん (100 人以上) の contributors がいます。<a href="https://github.com/khulnasoft/readyapi/graphs/contributors" class="external-link" target="_blank">ReadyAPI GitHub Contributors ページ</a>ですべての contributors を確認できます。👷
 
 ## Top Reviewers
 
@@ -118,7 +118,7 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 
 **Sponsors** を紹介します。😎
 
-彼らは、<a href="https://github.com/sponsors/khulnasoft" class="external-link" target="_blank">GitHub Sponsors</a> を介して私の **RaedyAPI** などに関する活動を支援してくれています。
+彼らは、<a href="https://github.com/sponsors/khulnasoft" class="external-link" target="_blank">GitHub Sponsors</a> を介して私の **ReadyAPI** などに関する活動を支援してくれています。
 
 {% if sponsors %}
 
@@ -177,7 +177,7 @@ RaedyAPI には、様々なバックグラウンドの人々を歓迎する素�
 
 特に、他の人の issues を支援したり、翻訳のプルリクエストを確認したりするなど、通常は目立たず、多くの場合、より困難な作業を含みます。
 
-データは毎月集計されます。<a href="https://github.com/khulnasoft/raedyapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">ソースコードはこちら</a>で確認できます。
+データは毎月集計されます。<a href="https://github.com/khulnasoft/readyapi/blob/master/.github/actions/people/app/main.py" class="external-link" target="_blank">ソースコードはこちら</a>で確認できます。
 
 ここでは、スポンサーの貢献も強調しています。
 

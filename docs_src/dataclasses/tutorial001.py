@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Union
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
 
 @dataclass
@@ -12,7 +12,7 @@ class Item:
     tax: Union[float, None] = None
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.post("/items/")

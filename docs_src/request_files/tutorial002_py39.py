@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI, File, UploadFile
-from raedyapi.responses import HTMLResponse
+from readyapi import ReadyAPI, File, UploadFile
+from readyapi.responses import HTMLResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.post("/files/")

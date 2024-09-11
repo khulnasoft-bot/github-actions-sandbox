@@ -1,7 +1,7 @@
-from raedyapi import RaedyAPI, Response
-from raedyapi.responses import JSONResponse, RedirectResponse
+from readyapi import ReadyAPI, Response
+from readyapi.responses import JSONResponse, RedirectResponse
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/portal")

@@ -1,10 +1,10 @@
 from typing import Union
 
-from raedyapi import Depends, RaedyAPI
-from raedyapi.security import OAuth2PasswordBearer
+from readyapi import Depends, ReadyAPI
+from readyapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 

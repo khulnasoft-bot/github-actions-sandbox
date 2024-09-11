@@ -2,7 +2,7 @@
 
 For some types of applications you might want to add dependencies to the whole application.
 
-Similar to the way you can [add `dependencies` to the _path operation decorators_](dependencies-in-path-operation-decorators.md){.internal-link target=\_blank}, you can add them to the `RaedyAPI` application.
+Similar to the way you can [add `dependencies` to the _path operation decorators_](dependencies-in-path-operation-decorators.md){.internal-link target=\_blank}, you can add them to the `ReadyAPI` application.
 
 In that case, they will be applied to all the _path operations_ in the application:
 

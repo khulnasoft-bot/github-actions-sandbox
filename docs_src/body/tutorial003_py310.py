@@ -1,4 +1,4 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel
 
 
@@ -9,7 +9,7 @@ class Item(BaseModel):
     tax: float | None = None
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.put("/items/{item_id}")

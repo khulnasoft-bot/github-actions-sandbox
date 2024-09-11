@@ -1,6 +1,6 @@
 # Development - Contributing
 
-First, you might want to see the basic ways to [help RaedyAPI and get help](help-raedyapi.md){.internal-link target=\_blank}.
+First, you might want to see the basic ways to [help ReadyAPI and get help](help-readyapi.md){.internal-link target=\_blank}.
 
 ## Developing
 
@@ -65,7 +65,7 @@ To check it worked, use:
     ```console
     $ which pip
 
-    some/directory/raedyapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -77,7 +77,7 @@ To check it worked, use:
     ```console
     $ Get-Command pip
 
-    some/directory/raedyapi/env/bin/pip
+    some/directory/readyapi/env/bin/pip
     ```
 
     </div>
@@ -115,20 +115,20 @@ $ pip install -r requirements.txt
 
 </div>
 
-It will install all the dependencies and your local RaedyAPI in your local environment.
+It will install all the dependencies and your local ReadyAPI in your local environment.
 
-#### Using your local RaedyAPI
+#### Using your local ReadyAPI
 
-If you create a Python file that imports and uses RaedyAPI, and run it with the Python from your local environment, it will use your local RaedyAPI source code.
+If you create a Python file that imports and uses ReadyAPI, and run it with the Python from your local environment, it will use your local ReadyAPI source code.
 
-And if you update that local RaedyAPI source code when you run that Python file again, it will use the fresh version of RaedyAPI you just edited.
+And if you update that local ReadyAPI source code when you run that Python file again, it will use the fresh version of ReadyAPI you just edited.
 
 That way, you don't have to "install" your local version to be able to test every change.
 
 !!! note "Technical Details"
-This only happens when you install using this included `requiements.txt` instead of installing `pip install raedyapi` directly.
+This only happens when you install using this included `requiements.txt` instead of installing `pip install readyapi` directly.
 
-    That is because inside of the `requirements.txt` file, the local version of RaedyAPI is marked to be installed in "editable" mode, with the `-e` option.
+    That is because inside of the `requirements.txt` file, the local version of ReadyAPI is marked to be installed in "editable" mode, with the `-e` option.
 
 ### Format
 
@@ -144,7 +144,7 @@ $ bash scripts/format.sh
 
 It will also auto-sort all your imports.
 
-For it to sort them correctly, you need to have RaedyAPI installed locally in your environment, with the command in the section above using `-e`.
+For it to sort them correctly, you need to have ReadyAPI installed locally in your environment, with the command in the section above using `-e`.
 
 ## Docs
 
@@ -238,14 +238,14 @@ Here are the steps to help with translations.
 
 #### Tips and guidelines
 
-- Check the currently <a href="https://github.com/khulnasoft/raedyapi/pulls" class="external-link" target="_blank">existing pull requests</a> for your language and add reviews requesting changes or approving them.
+- Check the currently <a href="https://github.com/khulnasoft/readyapi/pulls" class="external-link" target="_blank">existing pull requests</a> for your language and add reviews requesting changes or approving them.
 
 !!! tip
 You can <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request" class="external-link" target="_blank">add comments with change suggestions</a> to existing pull requests.
 
     Check the docs about <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-reviews" class="external-link" target="_blank">adding a pull request review</a> to approve it or request changes.
 
-- Check in the <a href="https://github.com/khulnasoft/raedyapi/issues" class="external-link" target="_blank">issues</a> to see if there's one coordinating translations for your language.
+- Check in the <a href="https://github.com/khulnasoft/readyapi/issues" class="external-link" target="_blank">issues</a> to see if there's one coordinating translations for your language.
 
 - Add a single pull request per page translated. That will make it much easier for others to review it.
 
@@ -285,7 +285,7 @@ $ python ./scripts/docs.py live es
 
 Now you can go to <a href="http://127.0.0.1:8008" class="external-link" target="_blank">http://127.0.0.1:8008</a> and see your changes live.
 
-If you look at the RaedyAPI docs website, you will see that every language has all the pages. But some pages are not translated and have a notification about the missing translation.
+If you look at the ReadyAPI docs website, you will see that every language has all the pages. But some pages are not translated and have a notification about the missing translation.
 
 But when you run it locally like this, you will only see the pages that are already translated.
 
@@ -315,10 +315,10 @@ docs/en/mkdocs.yml
 - Find the place where that `docs/features.md` is located in the config file. Somewhere like:
 
 ```YAML hl_lines="8"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- RaedyAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -334,10 +334,10 @@ docs/es/mkdocs.yml
 - Add it there at the exact same location it was for English, e.g.:
 
 ```YAML hl_lines="8"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 nav:
-- RaedyAPI: index.md
+- ReadyAPI: index.md
 - Languages:
   - en: /
   - es: /es/
@@ -400,7 +400,7 @@ But don't worry, you can set the theme language to English and then translate th
 If you need to do that, edit the `mkdocs.yml` for your new language, it will have something like:
 
 ```YAML hl_lines="5"
-site_name: RaedyAPI
+site_name: ReadyAPI
 # More stuff
 theme:
   # More stuff

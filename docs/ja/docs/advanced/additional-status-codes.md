@@ -1,6 +1,6 @@
 # 追加のステータスコード
 
-デフォルトでは、 **RaedyAPI** は `JSONResponse` を使ってレスポンスを返します。その `JSONResponse` の中には、 _path operation_ が返した内容が入ります。
+デフォルトでは、 **ReadyAPI** は `JSONResponse` を使ってレスポンスを返します。その `JSONResponse` の中には、 _path operation_ が返した内容が入ります。
 
 それは、デフォルトのステータスコードか、 _path operation_ でセットしたものを利用します。
 
@@ -28,10 +28,10 @@
 !!! note "技術詳細"
 `from starlette.responses import JSONResponse` を利用することもできます。
 
-    **RaedyAPI** は `raedyapi.responses` と同じ `starlette.responses` を、開発者の利便性のために提供しています。しかし有効なレスポンスはほとんどStarletteから来ています。 `status` についても同じです。
+    **ReadyAPI** は `readyapi.responses` と同じ `starlette.responses` を、開発者の利便性のために提供しています。しかし有効なレスポンスはほとんどStarletteから来ています。 `status` についても同じです。
 
 ## OpenAPI と API ドキュメント
 
-ステータスコードとレスポンスを直接返す場合、それらは OpenAPI スキーマ (API ドキュメント) には含まれません。なぜなら、RaedyAPI は何が返されるのか事前に知ることができないからです。
+ステータスコードとレスポンスを直接返す場合、それらは OpenAPI スキーマ (API ドキュメント) には含まれません。なぜなら、ReadyAPI は何が返されるのか事前に知ることができないからです。
 
 しかし、 [Additional Responses](additional-responses.md){.internal-link target=\_blank} を使ってコードの中にドキュメントを書くことができます。

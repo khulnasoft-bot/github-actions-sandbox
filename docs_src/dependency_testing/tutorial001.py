@@ -1,9 +1,9 @@
 from typing import Union
 
-from raedyapi import Depends, RaedyAPI
-from raedyapi.testclient import TestClient
+from readyapi import Depends, ReadyAPI
+from readyapi.testclient import TestClient
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 async def common_parameters(

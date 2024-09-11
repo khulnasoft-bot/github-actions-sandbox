@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 from typing import Union
 
-from raedyapi import Depends, RaedyAPI, HTTPException, Security, status
-from raedyapi.security import (
+from readyapi import Depends, ReadyAPI, HTTPException, Security, status
+from readyapi.security import (
     OAuth2PasswordBearer,
     OAuth2PasswordRequestForm,
     SecurityScopes,
@@ -64,7 +64,7 @@ oauth2_scheme = OAuth2PasswordBearer(
     scopes={"me": "Read information about the current user.", "items": "Read items."},
 )
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def verify_password(plain_password, hashed_password):

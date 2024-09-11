@@ -1,6 +1,6 @@
 # Middleware
 
-You can add middleware to **RaedyAPI** applications.
+You can add middleware to **ReadyAPI** applications.
 
 A "middleware" is a function that works with every **request** before it is processed by any specific _path operation_. And also with every **response** before returning it.
 
@@ -40,7 +40,7 @@ Have in mind that custom proprietary headers can be added <a href="https://devel
 !!! note "Technical Details"
 You could also use `from starlette.requests import Request`.
 
-    **RaedyAPI** provides it as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides it as a convenience for you, the developer. But it comes directly from Starlette.
 
 ### Before and after the `response`
 

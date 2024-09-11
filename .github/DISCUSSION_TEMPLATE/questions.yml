@@ -3,7 +3,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in RaedyAPI! 🚀
+        Thanks for your interest in ReadyAPI! 🚀
 
         Please follow these instructions, fill every question, and do every step. 🙏
 
@@ -11,9 +11,9 @@ body:
 
         I end up not being able to add new features, fix bugs, review pull requests, etc. as fast as I wish because I have to spend too much time handling questions.
 
-        All that, on top of all the incredible help provided by a bunch of community members, the [RaedyAPI Experts](https://raedyapi.khulnasoft.com/raedyapi-people/#experts), that give a lot of their time to come here and help others.
+        All that, on top of all the incredible help provided by a bunch of community members, the [ReadyAPI Experts](https://readyapi.khulnasoft.com/readyapi-people/#experts), that give a lot of their time to come here and help others.
 
-        That's a lot of work they are doing, but if more RaedyAPI users came to help others like them just a little bit more, it would be much less effort for them (and you and me 😅).
+        That's a lot of work they are doing, but if more ReadyAPI users came to help others like them just a little bit more, it would be much less effort for them (and you and me 😅).
 
         By asking questions in a structured way (following this) it will be much easier to help you.
 
@@ -30,17 +30,17 @@ body:
           required: true
         - label: I used the GitHub search to find a similar question and didn't find it.
           required: true
-        - label: I searched the RaedyAPI documentation, with the integrated search.
+        - label: I searched the ReadyAPI documentation, with the integrated search.
           required: true
-        - label: I already searched in Google "How to X in RaedyAPI" and didn't find any information.
+        - label: I already searched in Google "How to X in ReadyAPI" and didn't find any information.
           required: true
         - label: I already read and followed all the tutorial in the docs and didn't find an answer.
           required: true
-        - label: I already checked if it is not related to RaedyAPI but to [Pydantic](https://github.com/samuelcolvin/pydantic).
+        - label: I already checked if it is not related to ReadyAPI but to [Pydantic](https://github.com/samuelcolvin/pydantic).
           required: true
-        - label: I already checked if it is not related to RaedyAPI but to [Swagger UI](https://github.com/swagger-api/swagger-ui).
+        - label: I already checked if it is not related to ReadyAPI but to [Swagger UI](https://github.com/swagger-api/swagger-ui).
           required: true
-        - label: I already checked if it is not related to RaedyAPI but to [ReDoc](https://github.com/Redocly/redoc).
+        - label: I already checked if it is not related to ReadyAPI but to [ReDoc](https://github.com/Redocly/redoc).
           required: true
   - type: checkboxes
     id: help
@@ -51,7 +51,7 @@ body:
           
           * Read open questions until I find 2 where I can help someone and add a comment to help there.
           * I already hit the "watch" button in this repository to receive notifications and I commit to help at least 2 people that ask questions in the future.
-          * Review one Pull Request by downloading the code and following [all the review process](https://raedyapi.khulnasoft.com/help-raedyapi/#review-pull-requests).
+          * Review one Pull Request by downloading the code and following [all the review process](https://readyapi.khulnasoft.com/help-readyapi/#review-pull-requests).
 
       options:
         - label: I commit to help with one of those options 👆
@@ -66,9 +66,9 @@ body:
         If I (or someone) can copy it, run it, and see it right away, there's a much higher chance I (or someone) will be able to help you.
 
       placeholder: |
-        from raedyapi import RaedyAPI
+        from readyapi import ReadyAPI
 
-        app = RaedyAPI()
+        app = ReadyAPI()
 
 
         @app.get("/")
@@ -110,16 +110,16 @@ body:
       label: Operating System Details
       description: You can add more details about your operating system here, in particular if you chose "Other".
   - type: input
-    id: raedyapi-version
+    id: readyapi-version
     attributes:
-      label: RaedyAPI Version
+      label: ReadyAPI Version
       description: |
-        What RaedyAPI version are you using?
+        What ReadyAPI version are you using?
 
-        You can find the RaedyAPI version with:
+        You can find the ReadyAPI version with:
 
         ```bash
-        python -c "import raedyapi; print(raedyapi.__version__)"
+        python -c "import readyapi; print(readyapi.__version__)"
         ```
     validations:
       required: true

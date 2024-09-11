@@ -1,6 +1,6 @@
 # Custom Response - HTML, Stream, File, others
 
-By default, **RaedyAPI** will return the responses using `JSONResponse`.
+By default, **ReadyAPI** will return the responses using `JSONResponse`.
 
 You can override it by returning a `Response` directly as seen in [Return a Response directly](response-directly.md){.internal-link target=\_blank}.
 
@@ -13,7 +13,7 @@ The contents that you return from your _path operation function_ will be put ins
 And if that `Response` has a JSON media type (`application/json`), like is the case with the `JSONResponse` and `UJSONResponse`, the data you return will be automatically converted (and filtered) with any Pydantic `response_model` that you declared in the _path operation decorator_.
 
 !!! note
-If you use a response class with no media type, RaedyAPI will expect your response to have no content, so it will not document the response format in its generated OpenAPI docs.
+If you use a response class with no media type, ReadyAPI will expect your response to have no content, so it will not document the response format in its generated OpenAPI docs.
 
 ## Use `ORJSONResponse`
 
@@ -23,9 +23,9 @@ Import the `Response` class (sub-class) you want to use and declare it in the _p
 
 For large responses, returning a `Response` directly is much faster than returning a dictionary.
 
-This is because by default, RaedyAPI will inspect every item inside and make sure it is serializable with JSON, using the same [JSON Compatible Encoder](../tutorial/encoder.md){.internal-link target=\_blank} explained in the tutorial. This is what allows you to return **arbitrary objects**, for example database models.
+This is because by default, ReadyAPI will inspect every item inside and make sure it is serializable with JSON, using the same [JSON Compatible Encoder](../tutorial/encoder.md){.internal-link target=\_blank} explained in the tutorial. This is what allows you to return **arbitrary objects**, for example database models.
 
-But if you are certain that the content that you are returning is **serializable with JSON**, you can pass it directly to the response class and avoid the extra overhead that RaedyAPI would have by passing your return content through the `jsonable_encoder` before passing it to the response class.
+But if you are certain that the content that you are returning is **serializable with JSON**, you can pass it directly to the response class and avoid the extra overhead that ReadyAPI would have by passing your return content through the `jsonable_encoder` before passing it to the response class.
 
 ```Python hl_lines="2  7"
 {!../../../docs_src/custom_response/tutorial001b.py!}
@@ -39,11 +39,11 @@ The parameter `response_class` will also be used to define the "media type" of t
     And it will be documented as such in OpenAPI.
 
 !!! tip
-The `ORJSONResponse` is currently only available in RaedyAPI, not in Starlette.
+The `ORJSONResponse` is currently only available in ReadyAPI, not in Starlette.
 
 ## HTML Response
 
-To return a response with HTML directly from **RaedyAPI**, use `HTMLResponse`.
+To return a response with HTML directly from **ReadyAPI**, use `HTMLResponse`.
 
 - Import `HTMLResponse`.
 - Pass `HTMLResponse` as the parameter `response_class` of your _path operation decorator_.
@@ -91,9 +91,9 @@ For example, it could be something like:
 
 In this example, the function `generate_html_response()` already generates and returns a `Response` instead of returning the HTML in a `str`.
 
-By returning the result of calling `generate_html_response()`, you are already returning a `Response` that will override the default **RaedyAPI** behavior.
+By returning the result of calling `generate_html_response()`, you are already returning a `Response` that will override the default **ReadyAPI** behavior.
 
-But as you passed the `HTMLResponse` in the `response_class` too, **RaedyAPI** will know how to document it in OpenAPI and the interactive docs as HTML with `text/html`:
+But as you passed the `HTMLResponse` in the `response_class` too, **ReadyAPI** will know how to document it in OpenAPI and the interactive docs as HTML with `text/html`:
 
 <img src="/img/tutorial/custom-response/image01.png">
 
@@ -106,7 +106,7 @@ Have in mind that you can use `Response` to return anything else, or even create
 !!! note "Technical Details"
 You could also use `from starlette.responses import HTMLResponse`.
 
-    **RaedyAPI** provides the same `starlette.responses` as `raedyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
+    **ReadyAPI** provides the same `starlette.responses` as `readyapi.responses` just as a convenience for you, the developer. But most of the available responses come directly from Starlette.
 
 ### `Response`
 
@@ -121,7 +121,7 @@ It accepts the following parameters:
 - `headers` - A `dict` of strings.
 - `media_type` - A `str` giving the media type. E.g. `"text/html"`.
 
-RaedyAPI (actually Starlette) will automatically include a Content-Length header. It will also include a Content-Type header, based on the media_type and appending a charset for text types.
+ReadyAPI (actually Starlette) will automatically include a Content-Length header. It will also include a Content-Type header, based on the media_type and appending a charset for text types.
 
 ```Python hl_lines="1  18"
 {!../../../docs_src/response_directly/tutorial002.py!}
@@ -143,7 +143,7 @@ Takes some text or bytes and returns an plain text response.
 
 Takes some data and returns an `application/json` encoded response.
 
-This is the default response used in **RaedyAPI**, as you read above.
+This is the default response used in **ReadyAPI**, as you read above.
 
 ### `ORJSONResponse`
 
@@ -281,11 +281,11 @@ Of course, you will probably find much better ways to take advantage of this tha
 
 ## Default response class
 
-When creating a **RaedyAPI** class instance or an `APIRouter` you can specify which response class to use by default.
+When creating a **ReadyAPI** class instance or an `APIRouter` you can specify which response class to use by default.
 
 The parameter that defines this is `default_response_class`.
 
-In the example below, **RaedyAPI** will use `ORJSONResponse` by default, in all _path operations_, instead of `JSONResponse`.
+In the example below, **ReadyAPI** will use `ORJSONResponse` by default, in all _path operations_, instead of `JSONResponse`.
 
 ```Python hl_lines="2  4"
 {!../../../docs_src/custom_response/tutorial010.py!}

@@ -144,7 +144,7 @@ The supporting additional functions are just to demo a possible flow of the data
 
 ## Reduce duplication
 
-Reducing code duplication is one of the core ideas in **RaedyAPI**.
+Reducing code duplication is one of the core ideas in **ReadyAPI**.
 
 As code duplication increments the chances of bugs, security issues, code desynchronization issues (when you update in one place but not in the others), etc.
 

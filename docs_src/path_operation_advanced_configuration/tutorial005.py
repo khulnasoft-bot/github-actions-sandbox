@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get("/items/", openapi_extra={"x-aperture-labs-portal": "blue"})

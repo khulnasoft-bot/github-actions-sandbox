@@ -93,11 +93,11 @@ And to create `fluffy`, you are "calling" `Cat`.
 
 So, a Python class is also a **callable**.
 
-Then, in **RaedyAPI**, you could use a Python class as a dependency.
+Then, in **ReadyAPI**, you could use a Python class as a dependency.
 
-What RaedyAPI actually checks is that it is a "callable" (function, class or anything else) and the parameters defined.
+What ReadyAPI actually checks is that it is a "callable" (function, class or anything else) and the parameters defined.
 
-If you pass a "callable" as a dependency in **RaedyAPI**, it will analyze the parameters for that "callable", and process them in the same way as the parameters for a _path operation function_. Including sub-dependencies.
+If you pass a "callable" as a dependency in **ReadyAPI**, it will analyze the parameters for that "callable", and process them in the same way as the parameters for a _path operation function_. Including sub-dependencies.
 
 That also applies to callables with no parameters at all. The same as it would be for _path operation functions_ with no parameters.
 
@@ -215,7 +215,7 @@ Pay attention to the `__init__` method used to create the instance of the class:
     {!> ../../../docs_src/dependencies/tutorial001.py!}
     ```
 
-Those parameters are what **RaedyAPI** will use to "solve" the dependency.
+Those parameters are what **ReadyAPI** will use to "solve" the dependency.
 
 In both cases, it will have:
 
@@ -265,7 +265,7 @@ Now you can declare your dependency using this class.
     {!> ../../../docs_src/dependencies/tutorial002.py!}
     ```
 
-**RaedyAPI** calls the `CommonQueryParams` class. This creates an "instance" of that class and the instance will be passed as the parameter `commons` to your function.
+**ReadyAPI** calls the `CommonQueryParams` class. This creates an "instance" of that class and the instance will be passed as the parameter `commons` to your function.
 
 ## Type annotation vs `Depends`
 
@@ -292,9 +292,9 @@ The last `CommonQueryParams`, in:
 ... Depends(CommonQueryParams)
 ```
 
-...is what **RaedyAPI** will actually use to know what is the dependency.
+...is what **ReadyAPI** will actually use to know what is the dependency.
 
-From it is that RaedyAPI will extract the declared parameters and that is what RaedyAPI will actually call.
+From it is that ReadyAPI will extract the declared parameters and that is what ReadyAPI will actually call.
 
 ---
 
@@ -315,7 +315,7 @@ In this case, the first `CommonQueryParams`, in:
     commons: CommonQueryParams ...
     ```
 
-...doesn't have any special meaning for **RaedyAPI**. RaedyAPI won't use it for data conversion, validation, etc. (as it is using the `Depends(CommonQueryParams)` for that).
+...doesn't have any special meaning for **ReadyAPI**. ReadyAPI won't use it for data conversion, validation, etc. (as it is using the `Depends(CommonQueryParams)` for that).
 
 You could actually write just:
 
@@ -395,7 +395,7 @@ But you see that we are having some code repetition here, writing `CommonQueryPa
     commons: Annotated[CommonQueryParams, Depends(CommonQueryParams)]
     ```
 
-**RaedyAPI** provides a shortcut for these cases, in where the dependency is _specifically_ a class that **RaedyAPI** will "call" to create an instance of the class itself.
+**ReadyAPI** provides a shortcut for these cases, in where the dependency is _specifically_ a class that **ReadyAPI** will "call" to create an instance of the class itself.
 
 For those specific cases, you can do the following:
 
@@ -473,9 +473,9 @@ The same example would then look like:
     {!> ../../../docs_src/dependencies/tutorial004.py!}
     ```
 
-...and **RaedyAPI** will know what to do.
+...and **ReadyAPI** will know what to do.
 
 !!! tip
 If that seems more confusing than helpful, disregard it, you don't _need_ it.
 
-    It is just a shortcut. Because **RaedyAPI** cares about helping you minimize code repetition.
+    It is just a shortcut. Because **ReadyAPI** cares about helping you minimize code repetition.

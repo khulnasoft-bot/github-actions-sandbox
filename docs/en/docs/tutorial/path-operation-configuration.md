@@ -36,7 +36,7 @@ That status code will be used in the response and will be added to the OpenAPI s
 !!! note "Technical Details"
 You could also use `from starlette import status`.
 
-    **RaedyAPI** provides the same `starlette.status` as `raedyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
+    **ReadyAPI** provides the same `starlette.status` as `readyapi.status` just as a convenience for you, the developer. But it comes directly from Starlette.
 
 ## Tags
 
@@ -70,7 +70,7 @@ If you have a big application, you might end up accumulating **several tags**, a
 
 In these cases, it could make sense to store the tags in an `Enum`.
 
-**RaedyAPI** supports that the same way as with plain strings:
+**ReadyAPI** supports that the same way as with plain strings:
 
 ```Python hl_lines="1  8-10  13  18"
 {!../../../docs_src/path_operation_configuration/tutorial002b.py!}
@@ -100,7 +100,7 @@ You can add a `summary` and `description`:
 
 ## Description from docstring
 
-As descriptions tend to be long and cover multiple lines, you can declare the _path operation_ description in the function <abbr title="a multi-line string as the first expression inside a function (not assigned to any variable) used for documentation">docstring</abbr> and **RaedyAPI** will read it from there.
+As descriptions tend to be long and cover multiple lines, you can declare the _path operation_ description in the function <abbr title="a multi-line string as the first expression inside a function (not assigned to any variable) used for documentation">docstring</abbr> and **ReadyAPI** will read it from there.
 
 You can write <a href="https://en.wikipedia.org/wiki/Markdown" class="external-link" target="_blank">Markdown</a> in the docstring, it will be interpreted and displayed correctly (taking into account docstring indentation).
 
@@ -154,7 +154,7 @@ Notice that `response_description` refers specifically to the response, the `des
 !!! check
 OpenAPI specifies that each _path operation_ requires a response description.
 
-    So, if you don't provide one, **RaedyAPI** will automatically generate one of "Successful response".
+    So, if you don't provide one, **ReadyAPI** will automatically generate one of "Successful response".
 
 <img src="/img/tutorial/path-operation-configuration/image03.png">
 

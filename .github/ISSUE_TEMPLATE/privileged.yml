@@ -4,7 +4,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in RaedyAPI! 🚀
+        Thanks for your interest in ReadyAPI! 🚀
 
         If you are not @khulnasoft or he didn't ask you directly to create an issue here, please start the conversation in a [Question in GitHub Discussions](https://github.com/khulnasoft/github-actions-sandbox/discussions/categories/questions) instead.
   - type: checkboxes

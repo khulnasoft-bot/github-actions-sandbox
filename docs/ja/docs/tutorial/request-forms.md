@@ -9,7 +9,7 @@ JSON の代わりにフィールドを受け取る場合は、`Form`を使用し
 
 ## `Form`のインポート
 
-`raedyapi`から`Form`をインポートします:
+`readyapi`から`Form`をインポートします:
 
 ```Python hl_lines="1"
 {!../../../docs_src/request_forms/tutorial001.py!}
@@ -39,7 +39,7 @@ JSON の代わりにフィールドを受け取る場合は、`Form`を使用し
 
 HTML フォーム（`<form></form>`）がサーバにデータを送信する方法は、通常、そのデータに「特別な」エンコーディングを使用していますが、これは JSON とは異なります。
 
-**RaedyAPI** は、JSON の代わりにそのデータを適切な場所から読み込むようにします。
+**ReadyAPI** は、JSON の代わりにそのデータを適切な場所から読み込むようにします。
 
 !!! note "技術詳細"
 フォームからのデータは通常、`application/x-www-form-urlencoded`の「media type」を使用してエンコードされます。
@@ -51,7 +51,7 @@ HTML フォーム（`<form></form>`）がサーバにデータを送信する方
 !!! warning "注意"
 *path operation*で複数の`Form`パラメータを宣言することができますが、JSON として受け取ることを期待している`Body`フィールドを宣言することはできません。なぜなら、リクエストは`application/json`の代わりに`application/x-www-form-urlencoded`を使ってボディをエンコードするからです。
 
-    これは **RaedyAPI**の制限ではなく、HTTPプロトコルの一部です。
+    これは **ReadyAPI**の制限ではなく、HTTPプロトコルの一部です。
 
 ## まとめ
 

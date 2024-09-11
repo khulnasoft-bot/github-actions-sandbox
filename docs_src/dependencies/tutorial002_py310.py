@@ -1,6 +1,6 @@
-from raedyapi import Depends, RaedyAPI
+from readyapi import Depends, ReadyAPI
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]

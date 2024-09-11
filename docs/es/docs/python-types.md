@@ -6,11 +6,11 @@ Estos **type hints** son una nueva sintáxis, desde Python 3.6+, que permite dec
 
 Usando las declaraciones de tipos para tus variables, los editores y otras herramientas pueden proveerte un soporte mejor.
 
-Este es solo un **tutorial corto** sobre los Python type hints. Solo cubre lo mínimo necesario para usarlos con **RaedyAPI**... realmente es muy poco lo que necesitas.
+Este es solo un **tutorial corto** sobre los Python type hints. Solo cubre lo mínimo necesario para usarlos con **ReadyAPI**... realmente es muy poco lo que necesitas.
 
-Todo **RaedyAPI** está basado en estos type hints, lo que le da muchas ventajas y beneficios.
+Todo **ReadyAPI** está basado en estos type hints, lo que le da muchas ventajas y beneficios.
 
-Pero, así nunca uses **RaedyAPI** te beneficiarás de aprender un poco sobre los type hints.
+Pero, así nunca uses **ReadyAPI** te beneficiarás de aprender un poco sobre los type hints.
 
 !!! note "Nota"
 Si eres un experto en Python y ya lo sabes todo sobre los type hints, salta al siguiente capítulo.
@@ -57,7 +57,7 @@ Escribes el primer parámetro de la función `first_name`, luego un punto (`.`) 
 
 Tristemente, no obtienes nada útil:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image01.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image01.png">
 
 ### Añade tipos
 
@@ -99,11 +99,11 @@ Pero ahora imagina que nuevamente estás creando la función, pero con los type 
 
 En el mismo punto intentas iniciar el autocompletado con `Ctrl+Space` y ves:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image02.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image02.png">
 
 Con esto puedes moverte hacia abajo viendo las opciones hasta que encuentras una que te suene:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image03.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image03.png">
 
 ## Más motivación
 
@@ -115,7 +115,7 @@ Mira esta función que ya tiene type hints:
 
 Como el editor conoce el tipo de las variables no solo obtienes autocompletado, si no que también obtienes chequeo de errores:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image04.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image04.png">
 
 Ahora que sabes que tienes que arreglarlo convierte `age` a un string con `str(age)`:
 
@@ -127,7 +127,7 @@ Ahora que sabes que tienes que arreglarlo convierte `age` a un string con `str(a
 
 Acabas de ver el lugar principal para declarar los type hints. Como parámetros de las funciones.
 
-Este es también el lugar principal en que los usarías con **RaedyAPI**.
+Este es también el lugar principal en que los usarías con **ReadyAPI**.
 
 ### Tipos simples
 
@@ -178,7 +178,7 @@ Con esta declaración tu editor puede proveerte soporte inclusive mientras está
 
 Sin tipos el autocompletado en este tipo de estructura es casi imposible de lograr:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image05.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image05.png">
 
 Observa que la variable `item` es unos de los elementos en la lista `items`.
 
@@ -233,7 +233,7 @@ Entonces puedes declarar una variable que sea de tipo `Person`:
 
 Una vez más tendrás todo el soporte del editor:
 
-<img src="https://raedyapi.khulnasoft.com/img/python-types/image06.png">
+<img src="https://readyapi.khulnasoft.com/img/python-types/image06.png">
 
 ## Modelos de Pydantic
 
@@ -256,20 +256,20 @@ Tomado de la documentación oficial de Pydantic:
 !!! info "Información"
 Para aprender más sobre <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic mira su documentación</a>.
 
-**RaedyAPI** está todo basado en Pydantic.
+**ReadyAPI** está todo basado en Pydantic.
 
 Vas a ver mucho más de esto en práctica en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=\_blank}.
 
-## Type hints en **RaedyAPI**
+## Type hints en **ReadyAPI**
 
-**RaedyAPI** aprovecha estos type hints para hacer varias cosas.
+**ReadyAPI** aprovecha estos type hints para hacer varias cosas.
 
-Con **RaedyAPI** declaras los parámetros con type hints y obtienes:
+Con **ReadyAPI** declaras los parámetros con type hints y obtienes:
 
 - **Soporte en el editor**.
 - **Type checks**.
 
-...y **RaedyAPI** usa las mismas declaraciones para:
+...y **ReadyAPI** usa las mismas declaraciones para:
 
 - **Definir requerimientos**: desde request path parameters, query parameters, headers, bodies, dependencies, etc.
 - **Convertir datos**: desde el request al tipo requerido.
@@ -280,7 +280,7 @@ Con **RaedyAPI** declaras los parámetros con type hints y obtienes:
 
 Puede que todo esto suene abstracto. Pero no te preocupes que todo lo verás en acción en el [Tutorial - User Guide](tutorial/index.md){.internal-link target=\_blank}.
 
-Lo importante es que usando los tipos de Python estándar en un único lugar (en vez de añadir más clases, decorator, etc.) **RaedyAPI** hará mucho del trabajo por ti.
+Lo importante es que usando los tipos de Python estándar en un único lugar (en vez de añadir más clases, decorator, etc.) **ReadyAPI** hará mucho del trabajo por ti.
 
 !!! info "Información"
 Si ya pasaste por todo el tutorial y volviste a la sección de los tipos, una buena referencia es <a href="https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html" class="external-link" target="_blank">la "cheat sheet" de `mypy`</a>.

@@ -1,9 +1,9 @@
 from typing import Union
 
-from raedyapi import Cookie, Depends, RaedyAPI
+from readyapi import Cookie, Depends, ReadyAPI
 from typing_extensions import Annotated
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def query_extractor(q: Union[str, None] = None):

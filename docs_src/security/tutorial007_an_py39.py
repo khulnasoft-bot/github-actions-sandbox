@@ -1,10 +1,10 @@
 import secrets
 from typing import Annotated
 
-from raedyapi import Depends, RaedyAPI, HTTPException, status
-from raedyapi.security import HTTPBasic, HTTPBasicCredentials
+from readyapi import Depends, ReadyAPI, HTTPException, status
+from readyapi.security import HTTPBasic, HTTPBasicCredentials
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 security = HTTPBasic()
 

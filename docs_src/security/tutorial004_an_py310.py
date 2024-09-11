@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 from typing import Annotated
 
-from raedyapi import Depends, RaedyAPI, HTTPException, status
-from raedyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from readyapi import Depends, ReadyAPI, HTTPException, status
+from readyapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
@@ -49,7 +49,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def verify_password(plain_password, hashed_password):

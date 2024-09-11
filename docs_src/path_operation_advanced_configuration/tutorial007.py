@@ -1,10 +1,10 @@
 from typing import List
 
 import yaml
-from raedyapi import RaedyAPI, HTTPException, Request
+from readyapi import ReadyAPI, HTTPException, Request
 from pydantic import BaseModel, ValidationError
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class Item(BaseModel):

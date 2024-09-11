@@ -1,7 +1,7 @@
 from typing import Union
 
-from raedyapi import RaedyAPI
-from raedyapi.responses import FileResponse
+from readyapi import ReadyAPI
+from readyapi.responses import FileResponse
 from pydantic import BaseModel
 
 
@@ -10,7 +10,7 @@ class Item(BaseModel):
     value: str
 
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 @app.get(

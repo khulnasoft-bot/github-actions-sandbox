@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI, Request
+from readyapi import ReadyAPI, Request
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 def magic_data_reader(raw_body: bytes):

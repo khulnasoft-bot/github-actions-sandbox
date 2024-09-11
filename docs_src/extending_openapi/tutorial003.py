@@ -1,6 +1,6 @@
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 
-app = RaedyAPI(swagger_ui_parameters={"syntaxHighlight": False})
+app = ReadyAPI(swagger_ui_parameters={"syntaxHighlight": False})
 
 
 @app.get("/users/{username}")

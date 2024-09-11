@@ -1,4 +1,4 @@
-from raedyapi import Header, HTTPException
+from readyapi import Header, HTTPException
 from typing_extensions import Annotated
 
 

@@ -1,6 +1,6 @@
 # Generate Clients
 
-As **RaedyAPI** is based on the OpenAPI specification, you get automatic compatibility with many tools, including the automatic API docs (provided by Swagger UI).
+As **ReadyAPI** is based on the OpenAPI specification, you get automatic compatibility with many tools, including the automatic API docs (provided by Swagger UI).
 
 One particular advantage that is not necessarily obvious is that you can **generate clients** (sometimes called <abbr title="Software Development Kits">**SDKs**</abbr> ) for your API, for many different **programming languages**.
 
@@ -14,7 +14,7 @@ If you are building a **frontend**, a very interesting alternative is <a href="h
 
 ## Generate a TypeScript Frontend Client
 
-Let's start with a simple RaedyAPI application:
+Let's start with a simple ReadyAPI application:
 
 === "Python 3.9+"
 
@@ -112,7 +112,7 @@ You will also get autocompletion for the payload to send:
 <img src="/img/tutorial/generate-clients/image03.png">
 
 !!! tip
-Notice the autocompletion for `name` and `price`, that was defined in the RaedyAPI application, in the `Item` model.
+Notice the autocompletion for `name` and `price`, that was defined in the ReadyAPI application, in the `Item` model.
 
 You will have inline errors for the data that you send:
 
@@ -122,9 +122,9 @@ The response object will also have autocompletion:
 
 <img src="/img/tutorial/generate-clients/image05.png">
 
-## RaedyAPI App with Tags
+## ReadyAPI App with Tags
 
-In many cases your RaedyAPI app will be bigger, and you will probably use tags to separate different groups of _path operations_.
+In many cases your ReadyAPI app will be bigger, and you will probably use tags to separate different groups of _path operations_.
 
 For example, you could have a section for **items** and another section for **users**, and they could be separated by tags:
 
@@ -142,7 +142,7 @@ For example, you could have a section for **items** and another section for **us
 
 ### Generate a TypeScript Client with Tags
 
-If you generate a client for a RaedyAPI app using tags, it will normally also separate the client code based on the tags.
+If you generate a client for a ReadyAPI app using tags, it will normally also separate the client code based on the tags.
 
 This way you will be able to have things ordered and grouped correctly for the client code:
 
@@ -163,7 +163,7 @@ ItemsService.createItemItemsPost({name: "Plumbus", price: 5})
 
 ...that's because the client generator uses the OpenAPI internal **operation ID** for each _path operation_.
 
-OpenAPI requires that each operation ID is unique across all the _path operations_, so RaedyAPI uses the **function name**, the **path**, and the **HTTP method/operation** to generate that operation ID, because that way it can make sure that the operation IDs are unique.
+OpenAPI requires that each operation ID is unique across all the _path operations_, so ReadyAPI uses the **function name**, the **path**, and the **HTTP method/operation** to generate that operation ID, because that way it can make sure that the operation IDs are unique.
 
 But I'll show you how to improve that next. 🤓
 
@@ -177,13 +177,13 @@ For example, you could make sure that each _path operation_ has a tag, and then 
 
 ### Custom Generate Unique ID Function
 
-RaedyAPI uses a **unique ID** for each _path operation_, it is used for the **operation ID** and also for the names of any needed custom models, for requests or responses.
+ReadyAPI uses a **unique ID** for each _path operation_, it is used for the **operation ID** and also for the names of any needed custom models, for requests or responses.
 
 You can customize that function. It takes an `APIRoute` and outputs a string.
 
 For example, here it is using the first tag (you will probably have only one tag) and the _path operation_ name (the function name).
 
-You can then pass that custom function to **RaedyAPI** as the `generate_unique_id_function` parameter:
+You can then pass that custom function to **ReadyAPI** as the `generate_unique_id_function` parameter:
 
 === "Python 3.9+"
 

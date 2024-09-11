@@ -1,9 +1,9 @@
 from typing import Union
 
-from raedyapi import RaedyAPI
+from readyapi import ReadyAPI
 from pydantic import BaseModel, EmailStr
 
-app = RaedyAPI()
+app = ReadyAPI()
 
 
 class BaseUser(BaseModel):
